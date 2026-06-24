@@ -1,0 +1,13 @@
+entity_code,entity_name,functional_ccy,consolidation_method,parent_entity_code,is_active
+ZAAC,Zamara Actuaries Administrators & Consultants Limited,KES,Full,,true
+ZARIB,Zamara Risk and Insurance Brokers Ltd,KES,Full,,true
+ZAMRE,Zamara Reinsurance,KES,Full,,true
+ZHL,Zamara Holdings Limited,KES,Full,,true
+ZATL,Zamara Actuaries Tanzania Limited,TZS,Full,,true
+C&P,Corporate and Pension Trust Services Ltd,KES,Sub-consolidated,ZAAC,true
+MENA,Zamara Actuarial MENA Ltd,AED,Full,,true
+MALAWI,Zamara Pensions Administration Ltd Malawi,MWK,Full,,true
+NIGERIA,Zamara Consulting Actuaries Nigeria Limited,NGN,Full,,true
+RWANDA,Zamara Actuaries Administrators and Insurance Brokers Rwanda,RWF,Full,,true
+DRC,Zamara DRC,USD,Full,,true
+UGANDA,Zamara Associate Uganda,UGX,Equity,,true

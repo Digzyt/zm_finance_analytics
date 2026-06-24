@@ -1,0 +1,62 @@
+version: 2
+
+seeds:
+  # --- reference ---
+  - name: entity
+    description: "Entity register. 11 fully-consolidated entities + Uganda Associate (equity)."
+    columns:
+      - name: entity_code
+        tests: [not_null, unique]
+      - name: functional_ccy
+        tests: [not_null]
+
+  - name: statement_line
+    description: "Canonical SCI / SFP line catalogue."
+    columns:
+      - name: statement_line_code
+        tests: [not_null, unique]
+
+  - name: account_map
+    description: "Per-entity local account -> statement line mapping. TODO: lift from Consolidated TB workbook formulas."
+    columns:
+      - name: company_name
+        tests: [not_null]
+      - name: local_account_no
+        tests: [not_null]
+
+  - name: fx_rate
+    description: "Closing and Average FX rates by currency-period."
+
+  - name: elimination_journal
+    description: "Intercompany elimination journal. Empty today; populated as IC pairs are identified in Module A."
+
+  # --- bronze (per-entity raw — replaced by Fabric tables at switch time) ---
+  - name: gl_entry_zaac
+    description: "BC Table 17 (G/L Entry) for ZAAC, loaded from workbook for the demo."
+  - name: gl_entry_zarib
+  - name: gl_entry_zamre
+  - name: gl_entry_zhl
+  - name: gl_entry_zatl
+  - name: gl_entry_c_p
+  - name: gl_entry_mena
+    description: "MENA — descriptive lines, no account codes. Custom column shape — see seed CSV."
+  - name: gl_entry_malawi
+  - name: gl_entry_nigeria
+    description: "Nigeria — descriptive lines with Category column. Custom column shape — see seed CSV."
+  - name: gl_entry_rwanda
+  - name: gl_entry_drc
+  - name: gl_entry_uganda_assoc
+    description: "Uganda Associate — equity-accounted. Carries only share-of-profit and investment-carrying-value rows."
+
+  - name: gl_account_zaac
+  - name: gl_account_zarib
+  - name: gl_account_zamre
+  - name: gl_account_zhl
+  - name: gl_account_zatl
+  - name: gl_account_c_p
+  - name: gl_account_mena
+  - name: gl_account_malawi
+  - name: gl_account_nigeria
+  - name: gl_account_rwanda
+  - name: gl_account_drc
+  - name: gl_account_uganda_assoc

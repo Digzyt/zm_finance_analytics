@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: fct_consolidated_tb
+    description: >
+      Group-level consolidated trial balance. Decomposes into subsidiary_sum,
+      elimination, and equity_pickup components for traceability.
+    columns:
+      - name: period
+        tests: [not_null]
+      - name: statement_line_code
+        tests: [not_null]
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - period
+            - statement_line_code
+          quote_columns: true
+
+  - name: rpt_consolidated_sci
+    description: "Group Statement of Comprehensive Income — Power BI surface."
+
+  - name: rpt_consolidated_sfp
+    description: "Group Statement of Financial Position — Power BI surface."

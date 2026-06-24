@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: rpt_subsidiary_sci
+    description: >
+      Subsidiary-grain Statement of Comprehensive Income. Power BI consumers
+      filter by company_name. Equity-accounted entities (Uganda) are NOT here
+      — they appear only in the consolidated reports as a single equity-pickup line.
+
+  - name: rpt_subsidiary_sfp
+    description: >
+      Subsidiary-grain Statement of Financial Position. Power BI consumers
+      filter by company_name.

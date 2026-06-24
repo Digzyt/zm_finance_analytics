@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: dim_entity
+    description: "Entity register. 11 consolidated entities + Uganda Associate (equity-accounted)."
+    columns:
+      - name: entity_code
+        tests: [not_null, unique]
+      - name: consolidation_method
+        tests:
+          - accepted_values:
+              values: ['Full','Equity','Sub-consolidated']
+
+  - name: dim_statement_line
+    description: "Canonical SCI / SFP line catalogue."
+    columns:
+      - name: statement_line_code
+        tests: [not_null, unique]
+      - name: statement_type
+        tests:
+          - accepted_values:
+              values: ['SCI','SFP']
+
+  - name: dim_calendar
+    description: "Date dimension. Generated via dbt_utils.date_spine for cross-DB portability."
+    columns:
+      - name: calendar_date
+        tests: [not_null, unique]
+
+  - name: fct_trial_balance
+    description: "Entity-grain trial balance fact. Aggregate of int_fx_translation."
+    columns:
+      - name: company_name
+        tests: [not_null]
+      - name: period
+        tests: [not_null]
+      - name: statement_line_code
+        tests: [not_null]
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - company_name
+            - period
+            - statement_line_code
+          quote_columns: true

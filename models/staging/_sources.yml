@@ -1,0 +1,269 @@
+version: 2
+
+# -----------------------------------------------------------------------------
+# Bronze source declarations.
+#
+# Today (PostgreSQL): the tables below are created by `dbt seed` loading the
+# per-entity CSVs from seeds/bronze/* into the bronze_source schema.
+#
+# At Fabric switch time: this YAML is the ONLY thing that needs to change to
+# repoint the sources. The model code (which references these via source())
+# does not change.
+#
+# Per-company physical separation mirrors BC's own architecture — each entity
+# has its own gl_entry, gl_account, etc. tables. Company_Name is derived in
+# staging at union time (it is NOT a column on the source tables).
+#
+# Columns intentionally use BC OData naming (PascalCase, underscores instead
+# of spaces and special chars) so that downstream model code does not change
+# when real BC data lands. Note quote_columns: true in dbt_project.yml — this
+# preserves the case in PostgreSQL.
+# -----------------------------------------------------------------------------
+
+sources:
+
+  - name: bronze_source
+    description: >
+      Raw landing zone. Today populated by dbt seeds from the Finance Templates
+      workbook's hidden per-entity TB tabs. When Fabric is provisioned, this
+      schema points at the Fabric Lakehouse SQL endpoint where the BC ingestion
+      pipeline lands raw extracts. Per-company tables match BC's physical schema.
+
+    # Database / schema overrides via target. Override at switch time:
+    #   database: "{{ 'zamara_finance' if target.type == 'postgres' else 'fabric_bronze_lakehouse' }}"
+    schema: bronze_source
+
+    # Default freshness loaded once for the demo; set to real values for Fabric
+    loaded_at_field: "Created_At"
+    freshness:
+      warn_after:  { count: 7,  period: day }
+      error_after: { count: 30, period: day }
+
+    tables:
+
+      # -----------------------------------------------------------------
+      # G/L Entry — BC Table 17. One source per company, identical schema.
+      # -----------------------------------------------------------------
+      - name: gl_entry_zaac
+        description: "BC Table 17 (G/L Entry) for ZAAC. KES-functional."
+        columns: &gl_entry_columns
+          - name: Entry_No
+            description: "BC field: Entry No. — PK in BC."
+          - name: Posting_Date
+            description: "BC field: Posting Date."
+          - name: Document_Type
+            description: "BC field: Document Type. Enum (Payment, Invoice, Credit Memo, Finance Charge Memo, Reminder, Refund, blank)."
+          - name: Document_No
+            description: "BC field: Document No."
+          - name: External_Document_No
+            description: "BC field: External Document No."
+          - name: Transaction_No
+            description: "BC field: Transaction No."
+          - name: G_L_Account_No
+            description: "BC field: G/L Account No. FK to gl_account_<entity>.G_L_Account_No."
+          - name: Description
+            description: "BC field: Description."
+          - name: Amount
+            description: "BC field: Amount. Net amount in company LCY (debit positive, credit negative)."
+          - name: Debit_Amount
+            description: "BC field: Debit Amount."
+          - name: Credit_Amount
+            description: "BC field: Credit Amount."
+          - name: Source_Code
+            description: "BC field: Source Code."
+          - name: Source_Type
+            description: "BC field: Source Type. Enum (Customer, Vendor, Bank Account, Fixed Asset, ...)."
+          - name: Source_No
+            description: "BC field: Source No."
+          - name: Dimension_Set_ID
+            description: "BC field: Dimension Set ID. FK to dimension_set_entry.Dimension_Set_ID."
+          - name: Global_Dimension_1_Code
+            description: "BC field: Global Dimension 1 Code (typically Department)."
+          - name: Global_Dimension_2_Code
+            description: "BC field: Global Dimension 2 Code."
+          - name: Business_Unit_Code
+            description: "BC field: Business Unit Code."
+          - name: IC_Partner_Code
+            description: "BC field: IC Partner Code. Identifies intercompany counterparty for eliminations."
+          - name: User_ID
+            description: "BC field: User ID. Who posted."
+          - name: Reversed
+            description: "BC field: Reversed (boolean)."
+          - name: Reversed_by_Entry_No
+            description: "BC field: Reversed by Entry No."
+          - name: Reversed_Entry_No
+            description: "BC field: Reversed Entry No."
+
+      - name: gl_entry_zarib
+        description: "BC Table 17 (G/L Entry) for ZARIB. KES-functional."
+        columns: *gl_entry_columns
+
+      - name: gl_entry_zamre
+        description: "BC Table 17 (G/L Entry) for ZAMRE. KES-functional."
+        columns: *gl_entry_columns
+
+      - name: gl_entry_zhl
+        description: "BC Table 17 (G/L Entry) for ZHL. KES-functional."
+        columns: *gl_entry_columns
+
+      - name: gl_entry_zatl
+        description: "BC Table 17 (G/L Entry) for ZATL. TZS-functional."
+        columns: *gl_entry_columns
+
+      - name: gl_entry_c_p
+        description: "BC Table 17 (G/L Entry) for C & P. KES-functional. Note: rolls up into ZAAC at sub-consolidation."
+        columns: *gl_entry_columns
+
+      - name: gl_entry_mena
+        description: "BC Table 17 (G/L Entry) for Zamara MENA. AED-functional."
+        columns: *gl_entry_columns
+
+      - name: gl_entry_malawi
+        description: "BC Table 17 (G/L Entry) for ZPAL Malawi. MWK-functional."
+        columns: *gl_entry_columns
+
+      - name: gl_entry_nigeria
+        description: "BC Table 17 (G/L Entry) for Zamara Nigeria. NGN-functional."
+        columns: *gl_entry_columns
+
+      - name: gl_entry_rwanda
+        description: "BC Table 17 (G/L Entry) for ZAAIB Rwanda. RWF-functional."
+        columns: *gl_entry_columns
+
+      - name: gl_entry_drc
+        description: "BC Table 17 (G/L Entry) for DRC. USD-functional (to confirm — may be CDF)."
+        columns: *gl_entry_columns
+
+      - name: gl_entry_uganda_assoc
+        description: >
+          BC Table 17 (G/L Entry) for Uganda associate. UGX-functional.
+          Equity-accounted — NOT included in the consolidation union. See stg_uganda_associate.sql.
+        columns: *gl_entry_columns
+
+      # -----------------------------------------------------------------
+      # G/L Account — BC Table 15. One per company.
+      # -----------------------------------------------------------------
+      - name: gl_account_zaac
+        description: "BC Table 15 (G/L Account) for ZAAC. Local Chart of Accounts."
+        columns: &gl_account_columns
+          - name: G_L_Account_No
+            description: "BC field: No. (G/L Account No.). PK."
+          - name: Name
+            description: "BC field: Name."
+          - name: Account_Type
+            description: "BC field: Account Type. Enum (Posting, Heading, Total, Begin-Total, End-Total). Only Posting carries movements."
+          - name: Account_Category
+            description: "BC field: Account Category. Enum (Assets, Liabilities, Equity, Income, Cost of Goods Sold, Expense)."
+          - name: Income_Balance
+            description: "BC field: Income/Balance. 'Income Statement' (SCI) or 'Balance Sheet' (SFP)."
+          - name: Debit_Credit
+            description: "BC field: Debit/Credit. Natural balance direction."
+          - name: Direct_Posting
+            description: "BC field: Direct Posting (boolean)."
+          - name: Blocked
+            description: "BC field: Blocked (boolean)."
+          - name: Indentation
+            description: "BC field: Indentation. CoA tree depth."
+          - name: Totaling
+            description: "BC field: Totaling. Formula for Total / End-Total accounts."
+          - name: Consol_Translation_Method
+            description: "BC field: Consol. Translation Method. BC's per-account FX translation rule on consolidation."
+
+      - name: gl_account_zarib
+        description: "BC Table 15 (G/L Account) for ZARIB."
+        columns: *gl_account_columns
+
+      - name: gl_account_zamre
+        columns: *gl_account_columns
+
+      - name: gl_account_zhl
+        columns: *gl_account_columns
+
+      - name: gl_account_zatl
+        columns: *gl_account_columns
+
+      - name: gl_account_c_p
+        columns: *gl_account_columns
+
+      - name: gl_account_mena
+        columns: *gl_account_columns
+
+      - name: gl_account_malawi
+        columns: *gl_account_columns
+
+      - name: gl_account_nigeria
+        columns: *gl_account_columns
+
+      - name: gl_account_rwanda
+        columns: *gl_account_columns
+
+      - name: gl_account_drc
+        columns: *gl_account_columns
+
+      - name: gl_account_uganda_assoc
+        columns: *gl_account_columns
+
+      # -----------------------------------------------------------------
+      # Dimension Set Entry — BC Table 480. Per company.
+      # -----------------------------------------------------------------
+      - name: dimension_set_entry_zaac
+        description: "BC Table 480. Resolves Dimension_Set_ID -> individual dimension values."
+        columns: &dim_set_columns
+          - name: Dimension_Set_ID
+          - name: Dimension_Code
+          - name: Dimension_Value_Code
+          - name: Dimension_Value_ID
+
+      - name: dimension_set_entry_zarib
+        columns: *dim_set_columns
+      - name: dimension_set_entry_zamre
+        columns: *dim_set_columns
+      - name: dimension_set_entry_zhl
+        columns: *dim_set_columns
+      - name: dimension_set_entry_zatl
+        columns: *dim_set_columns
+      - name: dimension_set_entry_c_p
+        columns: *dim_set_columns
+      - name: dimension_set_entry_mena
+        columns: *dim_set_columns
+      - name: dimension_set_entry_malawi
+        columns: *dim_set_columns
+      - name: dimension_set_entry_nigeria
+        columns: *dim_set_columns
+      - name: dimension_set_entry_rwanda
+        columns: *dim_set_columns
+      - name: dimension_set_entry_drc
+        columns: *dim_set_columns
+
+      # -----------------------------------------------------------------
+      # Dimension Value — BC Table 349. Per company.
+      # -----------------------------------------------------------------
+      - name: dimension_value_zaac
+        description: "BC Table 349. Dimension value master."
+        columns: &dim_value_columns
+          - name: Dimension_Code
+          - name: Code
+          - name: Name
+          - name: Dimension_Value_Type
+          - name: Totaling
+
+      - name: dimension_value_zarib
+        columns: *dim_value_columns
+      - name: dimension_value_zamre
+        columns: *dim_value_columns
+      - name: dimension_value_zhl
+        columns: *dim_value_columns
+      - name: dimension_value_zatl
+        columns: *dim_value_columns
+      - name: dimension_value_c_p
+        columns: *dim_value_columns
+      - name: dimension_value_mena
+        columns: *dim_value_columns
+      - name: dimension_value_malawi
+        columns: *dim_value_columns
+      - name: dimension_value_nigeria
+        columns: *dim_value_columns
+      - name: dimension_value_rwanda
+        columns: *dim_value_columns
+      - name: dimension_value_drc
+        columns: *dim_value_columns

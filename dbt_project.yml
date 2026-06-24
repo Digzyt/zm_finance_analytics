@@ -1,0 +1,82 @@
+name: 'zamara_finance'
+version: '0.1.0'
+config-version: 2
+
+profile: 'zamara_finance'
+
+# Project paths
+model-paths:    ["models"]
+analysis-paths: ["analyses"]
+test-paths:     ["tests"]
+seed-paths:     ["seeds"]
+macro-paths:    ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+  - "logs"
+
+# Variables — adjust at the project level (override per target if needed)
+vars:
+  reporting_period: '2026-04'
+  group_currency:   'KES'
+
+# Model configurations
+# IMPORTANT: see DISCIPLINES.md before adding materialization=materialized_view anywhere —
+# Fabric Warehouse doesn't support them the same way. Stick to view / table / incremental.
+models:
+  zamara_finance:
+    +materialized: view
+    # persist_docs intentionally disabled — dbt's COMMENT ON COLUMN statements
+    # fold quoted PascalCase identifiers to lowercase on Postgres, which then
+    # fails to match our case-preserved columns like "Company_Name". Column
+    # documentation lives in YAML and dbt docs instead.
+    +persist_docs:
+      relation: false
+      columns: false
+
+    staging:
+      +materialized: view
+      +schema: staging
+      per_subsidiary:
+        +schema: staging
+        +tags: ['per_subsidiary']
+
+    intermediate:
+      +materialized: view
+      +schema: intermediate
+
+    marts:
+      +materialized: table
+      core:
+        +schema: core
+      subsidiary:
+        +schema: subsidiary
+      consolidation:
+        +schema: consolidation
+
+# Seed configurations
+# Bronze seeds land in the bronze_source schema, mimicking where real BC raw data
+# will sit in Fabric. Reference seeds land in a separate ref schema.
+#
+# Column types are deliberately NOT specified per-seed — dbt's inference is good
+# enough for the demo and avoids type-mismatch errors in cross-entity UNION ALL
+# when only one entity carries an explicit type.
+seeds:
+  zamara_finance:
+    +quote_columns: true        # preserve PascalCase column names exactly
+    bronze:
+      +schema: bronze_source
+    reference:
+      +schema: ref
+
+# Snapshot configurations (none yet — slowly-changing dims may use these later)
+snapshots:
+  zamara_finance:
+    +target_schema: snapshots
+    +strategy: timestamp
+
+# Tests — apply default severity
+tests:
+  +severity: warn

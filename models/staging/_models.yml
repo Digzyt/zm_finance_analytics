@@ -1,0 +1,65 @@
+version: 2
+
+models:
+
+  - name: stg_gl_entry
+    description: >
+      Unioned G/L Entry across the standard-shape entities (ZAAC, ZARIB, ZAMRE,
+      ZHL, ZATL, C&P, MALAWI, RWANDA, DRC). BC column names preserved verbatim.
+      Company_Name is the only derived column. Reversed entries filtered out.
+    columns:
+      - name: Company_Name
+        description: "Derived metadata. Identifies the source BC company. Mirrors BC's own per-company semantic."
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['ZAAC','ZARIB','ZAMRE','ZHL','ZATL','C&P','MALAWI','RWANDA','DRC']
+      - name: Entry_No
+        description: "BC field: Entry No."
+        tests:
+          - not_null
+      - name: Posting_Date
+        tests:
+          - not_null
+      - name: G_L_Account_No
+        tests:
+          - not_null
+      - name: Amount
+        description: "BC field: Amount. Net (debit positive, credit negative) in company LCY."
+
+  - name: stg_gl_account
+    description: "Per-entity Chart of Accounts. PK is (Company_Name, G_L_Account_No)."
+    columns:
+      - name: Company_Name
+        tests:
+          - not_null
+      - name: G_L_Account_No
+        tests:
+          - not_null
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - Company_Name
+            - G_L_Account_No
+          quote_columns: true
+
+  - name: stg_dimension_set_entry
+    description: "Per-entity Dimension Set Entry, used to resolve Dimension_Set_ID -> dimension code/value pairs."
+
+  - name: stg_dimension_value
+    description: "Per-entity Dimension Value master."
+
+  - name: stg_mena_descriptive_tb
+    description: >
+      MENA-specific staging. Source has no account codes; synthesises codes
+      from description hash so the standard account_map join works.
+
+  - name: stg_nigeria_descriptive_tb
+    description: >
+      Nigeria-specific staging. Source has descriptive line items; synthesises
+      account codes from name hash.
+
+  - name: stg_uganda_associate
+    description: >
+      Uganda Associate. Equity-accounted; NOT unioned with stg_gl_entry.
+      Carries only the SCI share-of-profit and SFP investment carrying-value lines.

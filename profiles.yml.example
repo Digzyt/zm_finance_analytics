@@ -1,0 +1,60 @@
+# Template — copy to ~/.dbt/profiles.yml and fill in real credentials.
+# DO NOT commit credentials to the repo.
+
+zamara_finance:
+  # default target — switched to prod_fabric when BC access is available
+  target: dev_pg
+
+  outputs:
+
+    # -----------------------------------------------------------------------
+    # PostgreSQL — used for the seed-based demo while we wait on BC access
+    # -----------------------------------------------------------------------
+    dev_pg:
+      type: postgres
+      host: localhost
+      port: 5432
+      user: zamara_dev
+      password: "{{ env_var('PG_PASSWORD') }}"
+      dbname: zamara_finance
+      schema: dbt_dev          # default schema; per-folder schemas overridden in dbt_project.yml
+      threads: 4
+      keepalives_idle: 0
+      search_path: "dbt_dev,public"
+      sslmode: prefer
+
+    # -----------------------------------------------------------------------
+    # Microsoft Fabric Warehouse — target once BC access lands
+    # See DISCIPLINES.md for the switch protocol.
+    # Auth uses an Entra ID service principal; provision before switching.
+    # -----------------------------------------------------------------------
+    prod_fabric:
+      type: fabric
+      driver: 'ODBC Driver 18 for SQL Server'
+      server: '<workspace>-<id>.datawarehouse.fabric.microsoft.com'
+      port: 1433
+      database: zamara_finance_dw
+      schema: dbt_prod
+      authentication: ActiveDirectoryServicePrincipal
+      tenant_id:     "{{ env_var('FABRIC_TENANT_ID') }}"
+      client_id:     "{{ env_var('FABRIC_CLIENT_ID') }}"
+      client_secret: "{{ env_var('FABRIC_CLIENT_SECRET') }}"
+      threads: 4
+      retries: 2
+      schema_authorization: dbo
+
+    # -----------------------------------------------------------------------
+    # Optional — Fabric dev / sandbox target for parity tests (see Discipline 5)
+    # -----------------------------------------------------------------------
+    sandbox_fabric:
+      type: fabric
+      driver: 'ODBC Driver 18 for SQL Server'
+      server: '<workspace>-<id>.datawarehouse.fabric.microsoft.com'
+      port: 1433
+      database: zamara_finance_sandbox
+      schema: dbt_sandbox
+      authentication: ActiveDirectoryServicePrincipal
+      tenant_id:     "{{ env_var('FABRIC_TENANT_ID') }}"
+      client_id:     "{{ env_var('FABRIC_CLIENT_ID') }}"
+      client_secret: "{{ env_var('FABRIC_CLIENT_SECRET') }}"
+      threads: 2
