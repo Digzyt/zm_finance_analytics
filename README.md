@@ -143,16 +143,19 @@ Then point Power BI at the four report tables in your Postgres database — see 
 
 You're operating and extending the pipeline. The high-leverage things to focus on, roughly in priority order:
 
-**1. Extend `seeds/reference/account_map.csv`.**
+**1. `seeds/reference/account_map.csv` — populated (provisional, pending Finance confirmation).**
 
-This is the single biggest unlock for accuracy. Today there are ~30 example mappings; the real workbook has hundreds. The mapping is the connective tissue between local account codes and the 24-category statement_line bucket — every unmapped account drops out of the SCI/SFP reports.
+The seed now carries **775 auto-mapped accounts across the 11 standard entities** (98.7% coverage of the 793 unique accounts in the bronze TBs). The mappings were derived by pattern-matching each account's description against the 38 statement lines — see `Zamara/Internal/Phase1_Account_Map_For_Finance_Review.xlsx` for the full mapping with proposed line per row, ready for Finance to confirm or correct.
 
-The current `account_map.csv` schema is `(company_name, local_account_no, statement_line_code, effective_from, effective_to)`. To extend:
-- Open the Consolidated TB workbook → look at the formulas in `KES consolidated TB` and `SCI Detailed` / `SFP Detailed` to see which local account rolls into which line.
-- Add rows to `account_map.csv` for each entity-account combination.
-- Run `dbt build --select int_account_mapping+` to rebuild from there.
+Status of the mapping today:
+- 775 accounts mapped automatically with high confidence (descriptive patterns covering Zamara conventions like `Emol.Pack-*`, `Trav.*`, `Due to/from *`, `MV-*` etc., plus correct disambiguation between asset-side `MV-Cost`/`Furn-Cost` and expense-side `MV-Leasing Costs`/`Furn-Depreciation`).
+- 10 accounts still unmapped — genuinely ambiguous (staff debtor names in ZARIB, the ESOP intercompany line, etc.). Listed in the review xlsx with empty proposed-line for Finance to classify.
 
-The `assert_no_unmapped_accounts` test warns you of accounts that have movements but no mapping — use it as your worklist.
+The provisional mappings will need walkthrough with Finance in Module A. Once Finance returns the confirmed review xlsx, the data engineer converts it back to `account_map.csv` (drop the review-only columns, keep `company_name`, `local_account_no`, `statement_line_code`, `effective_from`, `effective_to`).
+
+Schema: `(company_name, local_account_no, statement_line_code, effective_from, effective_to)`.
+
+Run `dbt build --select int_account_mapping+` to rebuild downstream models when this seed changes. The `assert_no_unmapped_accounts` test now reports approximately 10 unmapped accounts (down from ~750 before this pass) — use it as the remaining worklist.
 
 **2. Extend `seeds/reference/statement_line.csv` if needed.**
 
@@ -231,7 +234,7 @@ Match the existing Zamara Group dashboard requirements doc (in the parent `Zamar
 
 ### Things to be aware of
 
-- **The data is real but the mapping is partial.** Until the data engineer extends `account_map.csv`, many accounts will be unmapped (so won't appear on the SCI/SFP). Expect the totals to be incomplete in the first pass — that's by design, it drives the mapping completeness conversation with Finance.
+- **The data is real and the mapping is now ~99% populated (provisional).** 775 accounts auto-mapped via pattern matching pending Finance confirmation. Expect the SCI/SFP totals to look meaningful in the first pass — but the green rows in the review xlsx need Finance walkthrough before we treat the numbers as truth.
 - **`assert_tb_balances_per_entity` warns**, meaning some entities' debits and credits don't perfectly match. This is because the workbook source has off-system adjustments (`Accruals` columns) that we don't yet fully wire in. The TB-correctness conversation is a Finance discussion, not a Power BI one.
 - **Reload mechanics.** When the data engineer updates a seed (e.g., adds mappings) and runs `dbt build`, the mart tables refresh in Postgres. Power BI then needs a manual or scheduled refresh to pick up the new data. We can set up a scheduled refresh once we're past the demo.
 
@@ -243,7 +246,7 @@ Match the existing Zamara Group dashboard requirements doc (in the parent `Zamar
 |---|---|---|
 | All YAML generic tests (`not_null`, `unique`, `accepted_values`, `unique_combination_of_columns`) | ✅ PASS | Schema-level integrity OK |
 | `assert_tb_balances_per_entity` | ⚠️ WARN (4 entities unbalanced) | Workbook source has off-system adjustments — Finance discussion |
-| `assert_no_unmapped_accounts` | ⚠️ WARN | Expected — mapping is partial. Drives the data engineer's worklist. |
+| `assert_no_unmapped_accounts` | ⚠️ WARN (~10 rows) | The 10 accounts in the review xlsx that need Finance to classify. |
 
 Both warnings are diagnostic by design and don't block downstream models.
 
@@ -251,7 +254,7 @@ Both warnings are diagnostic by design and don't block downstream models.
 
 ## Open items / what's not built yet
 
-- Real `account_map.csv` mapping (today: 30 example rows; needed: hundreds)
+- **`account_map.csv` confirmation by Finance.** Seed carries 775 auto-mapped accounts (provisional). Walkthrough with Finance via `Internal/Phase1_Account_Map_For_Finance_Review.xlsx` — they confirm green rows and fill in the 10 still-unmapped ones, then the confirmed file replaces the auto-generated seed.
 - `elimination_journal.csv` entries (today: empty header; needed: IC pairs from BC `IC_Partner_Code`)
 - `dimension_set_entry_*` and `dimension_value_*` seeds (today: empty headers; needed: when real BC data lands)
 - Module G — Executive support workstream (not in the data pipeline; it's the steering / governance cadence)
