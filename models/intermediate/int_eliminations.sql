@@ -28,7 +28,7 @@ with elims as (
 
 select
     company_name,
-    '{{ var('reporting_period') }}'                  as period,
+    cast(period as text)                             as period,
     statement_line_code,
     statement_type,
     journal_id,
@@ -36,4 +36,3 @@ select
     cast(elimination_amount_kes as numeric(20, 4))  as amount_kes
 from elims
 where coalesce(cast(posted as text), 'true') in ('true','TRUE','t','1')
-  and cast(period as text) = '{{ var('reporting_period') }}'

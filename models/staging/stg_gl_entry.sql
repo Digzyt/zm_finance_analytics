@@ -34,6 +34,18 @@ with unioned as (
 
 )
 
-select *
-from unioned
-where lower(coalesce("Reversed", 'false')) not in ('true', 't', '1')
+, periods as (
+    select * from {{ ref('stg_report_periods') }}
+)
+
+-- Periodise: each movement row is repeated for every reporting period whose
+-- month-end is on/after the movement's posting month. Summing downstream by
+-- (company, period, statement_line) therefore yields the cumulative balance
+-- "as at" each period. period is now a real dimension in every mart.
+select
+    u.*,
+    p.period
+from unioned u
+cross join periods p
+where lower(coalesce(u."Reversed", 'false')) not in ('true', 't', '1')
+  and cast(u."Posting_Date" as date) <= p.period_end

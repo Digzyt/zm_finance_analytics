@@ -48,18 +48,20 @@ uganda as (
     -- Equity pickup: maps the Uganda associate lines into the SCI / SFP lines
     -- via the equity_treatment_code carried on the staging row.
     select
-        '{{ var('reporting_period') }}'                  as period,
-        case "Equity_Treatment_Code"
+        p.period                                         as period,
+        case u."Equity_Treatment_Code"
             when 'SCI_SHARE_OF_PROFIT'            then 'share_of_assoc_profit'
             when 'SFP_INVESTMENT_IN_ASSOCIATE'    then 'investment_in_associate'
         end                                              as statement_line_code,
-        case "Equity_Treatment_Code"
+        case u."Equity_Treatment_Code"
             when 'SCI_SHARE_OF_PROFIT'            then 'SCI'
             when 'SFP_INVESTMENT_IN_ASSOCIATE'    then 'SFP'
         end                                              as statement_type,
-        sum("Amount_KES")                                as amount_kes
-    from {{ ref('stg_uganda_associate') }}
-    group by "Equity_Treatment_Code"
+        sum(u."Amount_KES")                              as amount_kes
+    from {{ ref('stg_uganda_associate') }} u
+    cross join {{ ref('stg_report_periods') }} p
+    where cast(u."Posting_Date" as date) <= p.period_end
+    group by p.period, u."Equity_Treatment_Code"
 ),
 
 combined as (

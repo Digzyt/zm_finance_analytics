@@ -34,7 +34,7 @@ fx as (
 select
     s.company_name,
     e.functional_ccy,
-    '{{ var('reporting_period') }}'                     as period,
+    s.period                                            as period,
 
     s.local_account_no,
     s.description,
@@ -69,9 +69,9 @@ left join ent e
        on e.entity_code = s.company_name
 left join fx fx_c
        on fx_c.currency  = e.functional_ccy
-      and fx_c.period    = '{{ var('reporting_period') }}'
+      and fx_c.period    = s.period
       and fx_c.rate_type = 'CLOSING'
 left join fx fx_a
        on fx_a.currency  = e.functional_ccy
-      and fx_a.period    = '{{ var('reporting_period') }}'
+      and fx_a.period    = s.period
       and fx_a.rate_type = 'AVERAGE'

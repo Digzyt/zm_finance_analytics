@@ -1,0 +1,26 @@
+report_line_code,section,presentation_sign,line_order,line_label
+zaac_revenue,INCOME,1,10,ZAAC
+cp_revenue,INCOME,1,20,C&P (Retail)
+zarib_revenue,INCOME,1,30,ZARIB
+zhl_interest,INCOME,1,40,Interest Income ZHL
+zamre_revenue,INCOME,1,50,ZAMRE
+zarinet_revenue,INCOME,1,60,Zarinet
+mena_revenue,INCOME,1,70,MENA
+personnel_costs,EXPENSE,-1,100,Personnel Costs
+travelling,EXPENSE,-1,110,Travelling
+entertainment,EXPENSE,-1,120,Entertainment
+it_costs,EXPENSE,-1,130,IT Costs
+communications,EXPENSE,-1,140,Communications
+printing_stationery,EXPENSE,-1,150,Printing & Stationery
+premises,EXPENSE,-1,160,Premises
+advertising_pr,EXPENSE,-1,170,Advertising & PR
+insurance,EXPENSE,-1,180,Insurance
+professional_fees,EXPENSE,-1,190,Professional Fees
+depreciation,EXPENSE,-1,200,Depreciation
+motor_vehicle,EXPENSE,-1,210,Motor Vehicle Expenses
+general_expenses,EXPENSE,-1,220,General Expenses
+finance_costs,EXPENSE,-1,230,Finance cost
+bad_debt_provision,EXPENSE,-1,240,Bad Debts Provision
+zamre_expense,EXPENSE,-1,250,ZAMRE
+zarinet_expense,EXPENSE,-1,260,Zarinet
+mena_expense,EXPENSE,-1,270,MENA

@@ -21,6 +21,7 @@ with mapped as (
 
 select
     company_name,
+    period,
     local_account_no,
     description,
     account_name,

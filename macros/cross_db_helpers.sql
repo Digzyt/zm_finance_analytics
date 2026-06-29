@@ -93,12 +93,28 @@
 
 
 {# -----------------------------------------------------------------------------
-   Dialect lint regex (for CI use).
-   Run this against the models/ tree before each PR to surface accidental
-   Postgres-isms that would break on Fabric.
+   period_end_date(period)
 
-   Example (bash):
-       grep -RIEn '\\|\\||TO_CHAR\\(|DATE_TRUNC\\(|EXTRACT\\(|::|ILIKE|JSONB|GENERATE_SERIES\\(' \\
-            datamodel/models/ datamodel/macros/ \\
-            && echo "ERROR: Postgres-specific syntax found"
+   Pure-Jinja helper: given a reporting period 'YYYY-MM', returns the last
+   calendar day of that month as a 'YYYY-MM-DD' string. Used to filter the
+   cumulative G/L movement seeds to the balance "as at" the reporting period.
+   Pure Jinja (no SQL) so it is identical on Postgres and Fabric.
+   ----------------------------------------------------------------------------- #}
+{% macro period_end_date(period) %}
+  {%- set parts = period.split('-') -%}
+  {%- set y = parts[0] | int -%}
+  {%- set m = parts[1] | int -%}
+  {%- set last = {1:31, 2:28, 3:31, 4:30, 5:31, 6:30, 7:31, 8:31, 9:30, 10:31, 11:30, 12:31} -%}
+  {%- set d = last[m] -%}
+  {%- if m == 2 and (y % 4 == 0 and (y % 100 != 0 or y % 400 == 0)) -%}
+    {%- set d = 29 -%}
+  {%- endif -%}
+  {{- '%04d-%02d-%02d' | format(y, m, d) -}}
+{% endmacro %}
+
+
+{# -----------------------------------------------------------------------------
+   Dialect lint regex (for CI use). Surface accidental Postgres-isms before a PR:
+       grep -RIEn '\|\||TO_CHAR\(|DATE_TRUNC\(|EXTRACT\(|::|ILIKE|JSONB' \
+            datamodel/models/ datamodel/macros/ && echo "ERROR: Postgres-specific syntax found"
 ----------------------------------------------------------------------------- #}

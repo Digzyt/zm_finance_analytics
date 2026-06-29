@@ -8,10 +8,9 @@
 -- =============================================================================
 -- stg_nigeria_descriptive_tb — Nigeria-specific staging.
 --
--- Nigeria's source TB carries an Account_Name and Category column but no
--- BC account code. We synthesise a stable code from the description so the
--- downstream account_map join works uniformly. Category is preserved as it
--- gives a coarser SCI / SFP classification that's useful as a sanity check.
+-- Nigeria's source carries Account_Name and Category but no BC code; we
+-- synthesise a stable code from the name. Seed carries monthly movements with
+-- Posting_Date; cross-join the period spine to make period a real dimension.
 -- =============================================================================
 
 with src as (
@@ -20,17 +19,25 @@ with src as (
         "Account_Name",
         "Category",
         "Amount",
-        "Amount_KES"
+        "Amount_KES",
+        cast("Posting_Date" as date)              as posting_date
     from {{ source('bronze_source', 'gl_entry_nigeria') }}
+),
+
+periods as (
+    select * from {{ ref('stg_report_periods') }}
 )
 
 select
-    "Company_Name",
-    'NGA-' || upper(substr(md5("Account_Name"), 1, 10)) as "G_L_Account_No",
-    "Account_Name"                                       as "Description",
-    "Category"                                           as "Source_Category",
-    "Amount",
-    "Amount_KES"
+    src."Company_Name",
+    'NGA-' || upper(substr(md5(src."Account_Name"), 1, 10)) as "G_L_Account_No",
+    src."Account_Name"                                       as "Description",
+    src."Category"                                           as "Source_Category",
+    src."Amount",
+    src."Amount_KES",
+    p.period
 from src
-where "Account_Name" is not null
-  and trim("Account_Name") <> ''
+cross join periods p
+where src."Account_Name" is not null
+  and trim(src."Account_Name") <> ''
+  and src.posting_date <= p.period_end

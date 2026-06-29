@@ -25,7 +25,8 @@ mena as (
         "G_L_Account_No",
         "Description",
         cast("Amount"     as numeric(20, 4)) as "Amount",
-        cast("Amount_KES" as numeric(20, 4)) as "Amount_KES"
+        cast("Amount_KES" as numeric(20, 4)) as "Amount_KES",
+        period
     from {{ ref('stg_mena_descriptive_tb') }}
 ),
 
@@ -35,7 +36,8 @@ nigeria as (
         "G_L_Account_No",
         "Description",
         cast("Amount"     as numeric(20, 4)) as "Amount",
-        cast("Amount_KES" as numeric(20, 4)) as "Amount_KES"
+        cast("Amount_KES" as numeric(20, 4)) as "Amount_KES",
+        period
     from {{ ref('stg_nigeria_descriptive_tb') }}
 ),
 
@@ -46,7 +48,8 @@ gl_minimal as (
         "G_L_Account_No",
         "Description",
         cast("Amount" as numeric(20, 4))    as "Amount",
-        cast(null     as numeric(20, 4))    as "Amount_KES"   -- standard entities aren't pre-translated
+        cast(null     as numeric(20, 4))    as "Amount_KES",  -- standard entities aren't pre-translated
+        period
     from gl
 ),
 
@@ -72,6 +75,7 @@ select
     l."Company_Name"                              as company_name,
     l."G_L_Account_No"                            as local_account_no,
     l."Description"                               as description,
+    l.period                                      as period,
 
     coa."Name"                                    as account_name,
     coa."Account_Type"                            as account_type,

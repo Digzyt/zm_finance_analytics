@@ -7,12 +7,13 @@
 with totals as (
     select
         "Company_Name"                                                                                  as company_name,
+        period                                                                                          as period,
         sum(coalesce(cast("Debit_Amount"  as numeric(20,4)), 0))                                        as total_debits,
         sum(coalesce(cast("Credit_Amount" as numeric(20,4)), 0))                                        as total_credits,
         sum(coalesce(cast("Debit_Amount"  as numeric(20,4)), 0)
             - coalesce(cast("Credit_Amount" as numeric(20,4)), 0))                                       as net
     from {{ ref('stg_gl_entry') }}
-    group by "Company_Name"
+    group by "Company_Name", period
 )
 
 select *

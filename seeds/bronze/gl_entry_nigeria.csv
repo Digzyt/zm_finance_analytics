@@ -1,69 +1,283 @@
-Account_Name,Category,Amount,Amount_KES
-Fee Income,Income,-310530070.0,-29277659.6447
-Other Income,Income,-3423497.0,-322777.0501
-Advertising & PR - General,Expenses,500000.0,47141.4244
-Bank Charges,Expenses,326013.0,30737.4344
-Communication- Courier Service Cost,Expenses,232000.0,21873.6209
-Communication- Internet Cost,Expenses,2707775.0,255296.741
-Depreciation,Expenses,835564.0,78779.3543
-Depreciation - F&F,Expenses,163298.0,15396.2006
-Depreciation - MV,Expenses,2495834.0,235314.3397
-Emolument Pack - Group Life,Expenses,1040389.0,98090.8388
-Emolument Pack - ITF Contribution,Expenses,436140.0,41120.5217
-Emolument Pack - Medical Contr,Expenses,2708395.0,255355.1963
-Emolument Pack - NSITF Contribution,Expenses,307112.0,28955.3943
-Emolument Pack - Pension Contr Employee,Expenses,1648304.0,155406.7968
-Emolument Pack - Pension Contr Employer,Expenses,2060925.0,194309.8802
-Emolument Pack - Salaries,Expenses,43384944.0,4090456.1163
-Emolument Pack - Temporary Staff Gen,Expenses,35980000.0,3392296.9006
-Emolument Pack - Training External/Internal,Expenses,2763333.0,260534.9075
-Emoluments - Bonus & 13th Month,Expenses,450000.0,42427.282
-Entertainment: Conference Given by Us,Expenses,669620.0,63133.6812
-Entertainment: End of the Year Party,Expenses,428540.0,40403.972
-General Expenses,Expenses,1321250.0,124571.214
-Insurance - Directors & Officers,Expenses,125001.0,11785.4504
-Insurance - MV,Expenses,870000.0,82026.0785
-Insurance - Others,Expenses,431874.0,40718.3111
-Insurance - P.I.,Expenses,363176.0,34241.2679
-Inter Company Expenses,Expenses,18493083.0,1743580.5488
-IT - Cost Hardware Maintenace,Expenses,976667.0,92082.9471
-IT Cost - Toner,Expenses,848200.0,79970.7124
-Motor Vehicle Expenses,Expenses,4643554.0,437807.4998
-Premises - Electricity,Expenses,1481857.0,139713.6995
-Premises - Rent & Service Charge,Expenses,7284999.0,686850.4594
-Premises - Repairs & Maintenance,Expenses,1150800.0,108500.7024
-Printing & Stationery,Expenses,677450.0,63871.9159
-Prof. Fees - Audit Fees,Expenses,1000000.0,94282.8488
-Prof. Fees - Legal,Expenses,1837843.0,173277.0737
-Prof. Fees - Others,Expenses,3487216.0,328784.6589
-Prof. Fees - TAX,Expenses,4268750.0,402469.9109
-Travel Airfare Fares Local,Expenses,1278833.0,120572.0184
-Travel Airfare Fares Overseas,Expenses,1890055.0,178199.7698
-Travel Exps : Car Hire Sundry,Expenses,5364500.0,505780.3425
-Fixed Assets - Equipment,Non-Current Assets,27672222.0,2597355.1718
-Fixed Assets - Furniture & Fittings,Non-Current Assets,10721000.0,1006288.7179
-Fixed Assets - Motor Vehicles,Non-Current Assets,29200000.0,2740754.6461
-Fixed Assets - Leasehold Improvement,Non-Current Assets,3690042.0,346352.7314
-Investment in Subsidiary- Stonebridge,Current Assets,10000000.0,938614.6048
-Trade Receivables,Current Assets,325324519.0,30535434.4847
-Cash,Current Assets,1441576.0,135308.4288
-Deferred tax asset,Current Assets,627909.0,58936.4558
-Receipts,Current Assets,46023017.0,4319787.5915
-Zamara Consultin Actuaries Nig Ltd,Current Assets,113556618.0,10658590.0131
-Prepayment - Insurance,Current Assets,8519148.0,799619.6734
-Prepayment - Others,Current Assets,40040551.0,3758264.5955
-Prepayment - Rent,Current Assets,21967916.0,2061940.6796
-Income Tax Payable,Current Liabilities,-67118541.0,-6299844.2838
-WHT Assets -Credit Notes,Current Liabilities,-4497479.0,-422139.9474
-VAT Payable,Current Liabilities,-49028037.0,-4601843.1575
-PAYE - Payable,Current Liabilities,-1105830.0,-103794.8188
-Pension - Payable ( Employer/EE),Current Liabilities,-1537304.0,-144293.5986
-Accum Depreciation - Equipment,Current Liabilities,-6874932.0,-645291.1583
-Accum Depreciation - F&F,Current Liabilities,-5617411.0,-527258.4006
-Accum Depreciation - Leasehold Improv,Current Liabilities,-3690042.0,-346352.7314
-Accum Dep. Motor vehicle,Current Liabilities,-17043755.0,-1599751.7364
-Intercompany,Current Liabilities,-152775672.0,-14339747.7004
-Provisons - Bonus/13th Month,Current Liabilities,-450000.0,-42237.6572
-Provisions - Others,Current Liabilities,-16504811.0,-1549165.6655
-Retained Income,Owners Equity,-85520432.0,-8027072.6488
-Share Capital,Owners Equity,-70000000.0,-6570302.2339
+Posting_Date,Account_Name,Category,Amount,Amount_KES
+2026-01-31,Actuarial - Once-off,,-34675000,-34675000
+2026-02-28,Actuarial - Once-off,,-99785000,-99785000
+2026-03-31,Actuarial - Once-off,,-100200000,112302625.6995
+2026-04-30,Actuarial - Once-off,,-75870070,-7120285.3442
+2026-05-31,Actuarial - Once-off,,-72871000,-6877159.9836
+2026-01-31,Bank Charges,Expenses,36139.4,36139.4
+2026-02-28,Bank Charges,Expenses,51623.81,51623.81
+2026-03-31,Bank Charges,Expenses,173433.83,-63226.3771
+2026-04-30,Bank Charges,Expenses,64815.48,6063.1784
+2026-05-31,Bank Charges,Expenses,190693.6,18161.4896
+2026-01-31,Bonus(General provision),,-19378727.21,-19378727.21
+2026-03-31,Bonus(General provision),,-450000,17506433.122
+2026-04-30,Bonus(General provision),,19378727,1829866.7862
+2026-05-31,Bonus(General provision),,-6280913.95,-592299.6368
+2026-03-31,Bonuses & 13th cheque,,450000,42490.4902
+2026-04-30,Bonuses & 13th cheque,,0,-63.2083
+2026-05-31,Bonuses & 13th cheque,,7287100,687183.2404
+2026-04-30,Bus.Advert-General,,500000,47141.4244
+2026-05-31,Bus.Advert-General,,1000000,94308.9618
+2026-01-31,Co.Contrib-Life Assurance,,276945,276945
+2026-02-28,Co.Contrib-Life Assurance,,254481.29,254481.29
+2026-03-31,Co.Contrib-Life Assurance,,254481.29,-457218.2937
+2026-04-30,Co.Contrib-Life Assurance,,254481,23882.8029
+2026-05-31,Co.Contrib-Life Assurance,,254481.58,24015.7903
+2026-02-28,Conference Given By Us,,151900,151900
+2026-03-31,Conference Given By Us,,263120,-112712.4372
+2026-04-30,Conference Given By Us,,254600,23946.1184
+2026-05-31,Conference Given By Us,,0,11.6572
+2026-02-28,Courier Services Cost,,100000,100000
+2026-03-31,Courier Services Cost,,50000,-85836.5033
+2026-04-30,Courier Services Cost,,2789775,263006.8652
+2026-05-31,Courier Services Cost,,352275,33270.8008
+2026-01-31,Deferred Tax,,17000,17000
+2026-03-31,Deferred Tax,,0,-15394.8037
+2026-04-30,Deferred Tax,,610909,57595.853
+2026-05-31,Deferred Tax,,0,10.9311
+2026-01-31,Directors and Officers Insurance,,41667,41667
+2026-02-28,Directors and Officers Insurance,,41667,41667
+2026-03-31,Directors and Officers Insurance,,41667,-71591.4142
+2026-04-30,Directors and Officers Insurance,,-125001,-11742.5858
+2026-01-31,Distr.Reser-Retained Inc,,-206007163.6,-206007163.6
+2026-03-31,Distr.Reser-Retained Inc,,0,186555284.9992
+2026-04-30,Distr.Reser-Retained Inc,,120486731.17,11388768.5988
+2026-05-31,Distr.Reser-Retained Inc,,0,-1488.798
+2026-01-31,Drs Prepaid - Insurance Other,,2941854.86,2941854.86
+2026-02-28,Drs Prepaid - Insurance Other,,10389208.51,10389208.51
+2026-03-31,Drs Prepaid - Insurance Other,,-1369953.73,-12201655.7874
+2026-04-30,Drs Prepaid - Insurance Other,,36598589.12,3448939.1544
+2026-05-31,Drs Prepaid - Insurance Other,,-9249216.98,-871358.1826
+2026-01-31,Drs Prepaid - Other,,14683417,14683417
+2026-02-28,Drs Prepaid - Other,,-2215434.6,-2215434.6
+2026-03-31,Drs Prepaid - Other,,31489442.48,-8317376.7733
+2026-04-30,Drs Prepaid - Other,,-21989508.85,-2079407.9207
+2026-05-31,Drs Prepaid - Other,,-2494166,-234818.0636
+2026-01-31,Drs-Income Control,,211770408.75,211770408.75
+2026-02-28,Drs-Income Control,,45025127.69,45025127.69
+2026-03-31,Drs-Income Control,,24580627,-230227067.2822
+2026-04-30,Drs-Income Control,,43948355.44,4104053.274
+2026-05-31,Drs-Income Control,,-3814450.5,-354040.1935
+2026-01-31,Due to/from ZAAC,,-134282588.22,-134282588.22
+2026-03-31,Due to/from ZAAC,,-14329875,120250107.2975
+2026-04-30,Due to/from ZAAC,,-4163208.33,-371644.622
+2026-05-31,Due to/from ZAAC,,7239395.67,680017.2529
+2026-04-30,Emol.Pack-Med.Contribut.,,2708394.76,255355.1737
+2026-05-31,Emol.Pack-Med.Contribut.,,725454.76,68457.7203
+2026-01-31,Emol.Pack-Pens.Contribut.,,988832,988832
+2026-02-28,Emol.Pack-Pens.Contribut.,,988832,988832
+2026-03-31,Emol.Pack-Pens.Contribut.,,982712.07,-1698135.4879
+2026-04-30,Emol.Pack-Pens.Contribut.,,1055964.72,99143.5394
+2026-05-31,Emol.Pack-Pens.Contribut.,,1055965.28,99647.717
+2026-01-31,Emol.Pack-Salaries,,19039570.15,19039570.15
+2026-02-28,Emol.Pack-Salaries,,22425994.85,22425994.85
+2026-03-31,Emol.Pack-Salaries,,19595397.44,-35699986.7168
+2026-04-30,Emol.Pack-Salaries,,18303982.95,1717174.8648
+2026-05-31,Emol.Pack-Salaries,,18303981.08,1727451.7682
+2026-01-31,Emolument Pack - Medical Contr,Expenses,532032,532032
+2026-02-28,Emolument Pack - Medical Contr,Expenses,725454.38,725454.38
+2026-03-31,Emolument Pack - Medical Contr,Expenses,725454.38,-1070250.5467
+2026-04-30,Emolument Pack - Medical Contr,Expenses,-1982940.76,-187235.8333
+2026-01-31,ENTERTAINMENT DINNER,,428540,428540
+2026-03-31,ENTERTAINMENT DINNER,,0,-388282.9803
+2026-04-30,ENTERTAINMENT DINNER,,0,-33.6294
+2026-05-31,ENTERTAINMENT DINNER,,234700,22366.497
+2026-01-31,Equip Accum-Depr,,-6181716,-6181716
+2026-02-28,Equip Accum-Depr,,-142348,-142348
+2026-03-31,Equip Accum-Depr,,-142348,5713483.9648
+2026-04-30,Equip Accum-Depr,,-408520,-37608.1392
+2026-05-31,Equip Accum-Depr,,-408520,-38643.2247
+2026-01-31,Equip-Cost Open Balance,,26516322.08,26516322.08
+2026-03-31,Equip-Cost Open Balance,,0,-24012563.1377
+2026-04-30,Equip-Cost Open Balance,,1155900,105256.9887
+2026-05-31,Equip-Cost Open Balance,,479500,45698.7104
+2026-01-31,Equip-Depreciation,,142348,142348
+2026-02-28,Equip-Depreciation,,142348,142348
+2026-03-31,Equip-Depreciation,,142348,-244373.0913
+2026-04-30,Equip-Depreciation,,408520,38104.3487
+2026-05-31,Equip-Depreciation,,408520,38976.8156
+2026-01-31,Furn Accum-Depreciation,,-5481396,-5481396
+2026-02-28,Furn Accum-Depreciation,,-27283,-27283
+2026-03-31,Furn Accum-Depreciation,,-27283,4985955.1351
+2026-04-30,Furn Accum-Depreciation,,-81449,-6901.6471
+2026-05-31,Furn Accum-Depreciation,,-81449,-7778.4534
+2026-01-31,Furn-Cost Open Balance,,9756000,9756000
+2026-03-31,Furn-Cost Open Balance,,0,-8834806.172
+2026-04-30,Furn-Cost Open Balance,,965000,89612.5942
+2026-05-31,Furn-Cost Open Balance,,815800,77116.7885
+2026-01-31,Furn-Depreciation,,27283,27283
+2026-02-28,Furn-Depreciation,,27283,27283
+2026-03-31,Furn-Depreciation,,27283,-46837.5464
+2026-04-30,Furn-Depreciation,,81449,7598.9351
+2026-05-31,Furn-Depreciation,,81449,7769.3592
+2026-01-31,Hardware maintenance,,416667,416667
+2026-03-31,Hardware maintenance,,560000,-324918.9657
+2026-04-30,Hardware maintenance,,0,-76.6433
+2026-05-31,Hardware maintenance,,833334,79138.2083
+2026-01-31,Insurance-Other,,487536.06,487536.06
+2026-02-28,Insurance-Other,,257557.06,257557.06
+2026-03-31,Insurance-Other,,257557.06,-650904.2275
+2026-04-30,Insurance-Other,,424225.06,39739.7014
+2026-05-31,Insurance-Other,,299224.06,28963.211
+2026-01-31,Insurance-P.I.,,90794,90794
+2026-02-28,Insurance-P.I.,,90794,90794
+2026-03-31,Insurance-P.I.,,90794,-156000.4527
+2026-04-30,Insurance-P.I.,,90794,8500.6825
+2026-05-31,Insurance-P.I.,,90794,8752.8702
+2026-03-31,Intergroup Management Fee,,14329875,1353074.2523
+2026-04-30,Intergroup Management Fee,,4163208.33,390506.3275
+2026-05-31,Intergroup Management Fee,,4163208.33,392913.5578
+2026-01-31,Investment in Subsidiary Co,,13500000,13500000
+2026-03-31,Investment in Subsidiary Co,,0,-12225285.2934
+2026-04-30,Investment in Subsidiary Co,,-3500000,-331886.2184
+2026-05-31,Investment in Subsidiary Co,,0,174.0868
+2026-01-31,Leased Prem-Bldg Depr. Prov.,,-3690042,-3690042
+2026-03-31,Leased Prem-Bldg Depr. Prov.,,0,3341616.0144
+2026-04-30,Leased Prem-Bldg Depr. Prov.,,0,518.3136
+2026-05-31,Leased Prem-Bldg Depr. Prov.,,0,-64.2388
+2026-01-31,Leased Prem-Improvements,,3690042,3690042
+2026-03-31,Leased Prem-Improvements,,0,-3341616.0144
+2026-04-30,Leased Prem-Improvements,,0,-518.3136
+2026-05-31,Leased Prem-Improvements,,0,64.2388
+2026-01-31,MV Accum-Depr Open Balance,,-15177087.63,-15177087.63
+2026-02-28,MV Accum-Depr Open Balance,,-629167,-629167
+2026-03-31,MV Accum-Depr Open Balance,,-629167,14254367.6921
+2026-04-30,MV Accum-Depr Open Balance,,-608333,-55046.8033
+2026-05-31,MV Accum-Depr Open Balance,,-608333,-57662.6678
+2026-01-31,MV-Cost Opening Balance,,29200000,29200000
+2026-03-31,MV-Cost Opening Balance,,0,-26442839.3012
+2026-04-30,MV-Cost Opening Balance,,0,-4101.5132
+2026-05-31,MV-Cost Opening Balance,,0,508.3335
+2026-01-31,MV-Depreciation,,629167,629167
+2026-02-28,MV-Depreciation,,629167,629167
+2026-03-31,MV-Depreciation,,629167,-1080109.9049
+2026-04-30,MV-Depreciation,,608333,56038.5293
+2026-05-31,MV-Depreciation,,608333,58461.1231
+2026-02-28,MV-Running Costs,,695200,695200
+2026-03-31,MV-Running Costs,,1780353.57,-462646.659
+2026-04-30,MV-Running Costs,,2168000,203297.3789
+2026-05-31,MV-Running Costs,,0,2360.93
+2026-01-31,O/Seas Trav-Air Fares,,1890055,1890055
+2026-03-31,O/Seas Trav-Air Fares,,0,-1711589.7478
+2026-04-30,O/Seas Trav-Air Fares,,0,-265.4824
+2026-05-31,O/Seas Trav-Air Fares,,0,32.9034
+2026-01-31,Ord.Share Capital,,-70000000,-70000000
+2026-03-31,Ord.Share Capital,,0,63390368.1879
+2026-04-30,Ord.Share Capital,,0,9832.3946
+2026-05-31,Ord.Share Capital,,0,-1218.6077
+2026-01-31,Other Income,Income,-3423497.3,-3423497.3
+2026-03-31,Other Income,Income,0,3100239.3477
+2026-04-30,Other Income,Income,0,480.8739
+2026-05-31,Other Income,Income,0,-59.5986
+2026-01-31,Other Provisions,,-10868437.28,-10868437.28
+2026-02-28,Other Provisions,,-250000,-250000
+2026-03-31,Other Provisions,,3025000,10354228.1298
+2026-04-30,Other Provisions,,-8411373.36,-791911.4162
+2026-05-31,Other Provisions,,5750000,541939.1537
+2026-01-31,Other Receivable,,64766129.06,64766129.06
+2026-02-28,Other Receivable,,1708.08,1708.08
+2026-03-31,Other Receivable,,1764123,-58485669.1362
+2026-04-30,Other Receivable,,-20508942.75,-1942986.8128
+2026-05-31,Other Receivable,,-20756827.5,-1956572.9782
+2026-05-31,Other Tax expenses,,20801827.5,1963066.2194
+2026-01-31,Paymaster General (PAYE,,-95656.47,-95656.47
+2026-02-28,Paymaster General (PAYE,,-1363168.19,-1363168.19
+2026-03-31,Paymaster General (PAYE,,-24.66,1321075.2761
+2026-04-30,Paymaster General (PAYE,,353018.91,33488.5426
+2026-05-31,Paymaster General (PAYE,,0,-19.251
+2026-01-31,PETTY CASH - OFFICE,,19328253.25,19328253.25
+2026-02-28,PETTY CASH - OFFICE,,5093615.43,5093615.43
+2026-03-31,PETTY CASH - OFFICE,,882030,-22032590.7702
+2026-04-30,PETTY CASH - OFFICE,,-23862322.75,-2253362.0243
+2026-05-31,PETTY CASH - OFFICE,,1601221,151020.6486
+2026-01-31,Prem-Electricity,,312009.31,312009.31
+2026-02-28,Prem-Electricity,,402325.28,402325.28
+2026-03-31,Prem-Electricity,,462626.61,-603202.0159
+2026-04-30,Prem-Electricity,,304896.05,28581.1489
+2026-05-31,Prem-Electricity,,525295.52,49561.3
+2026-01-31,Prem-Rental(INTERNAL),,1292333.33,1292333.33
+2026-02-28,Prem-Rental(INTERNAL),,1160333.33,1160333.33
+2026-03-31,Prem-Rental(INTERNAL),,2506166.66,-1984437.1962
+2026-04-30,Prem-Rental(INTERNAL),,3476966,327121.7282
+2026-05-31,Prem-Rental(INTERNAL),,2554166,241005.3677
+2026-01-31,Printing-General,,16850,16850
+2026-02-28,Printing-General,,456200,456200
+2026-03-31,Printing-General,,140000,-415163.7888
+2026-04-30,Printing-General,,64400,5985.7048
+2026-05-31,Printing-General,,136100,12846.0586
+2026-01-31,Prof.Fees-Audit Fees,,250000,250000
+2026-02-28,Prof.Fees-Audit Fees,,250000,250000
+2026-03-31,Prof.Fees-Audit Fees,,250000,-429182.5163
+2026-04-30,Prof.Fees-Audit Fees,,250000,23465.3651
+2026-05-31,Prof.Fees-Audit Fees,,250000,23592.4731
+2026-01-31,Prof.Fees-Legal,,587842,587842
+2026-02-28,Prof.Fees-Legal,,416667,416667
+2026-03-31,Prof.Fees-Legal,,416667,-870316.8557
+2026-04-30,Prof.Fees-Legal,,416667,39084.9294
+2026-05-31,Prof.Fees-Legal,,416667,39323.7998
+2026-02-28,Prof.Fees-Legal Tax Deduct,,3500000,3500000
+2026-03-31,Prof.Fees-Legal Tax Deduct,,0,-3169518.4094
+2026-04-30,Prof.Fees-Legal Tax Deduct,,768750,71988.3203
+2026-05-31,Prof.Fees-Legal Tax Deduct,,0,74.3133
+2026-01-31,Prof.Fees-Other,,250000,250000
+2026-02-28,Prof.Fees-Other,,666667,666667
+2026-03-31,Prof.Fees-Other,,1731667,-666602.5335
+2026-04-30,Prof.Fees-Other,,838881.74,78720.1679
+2026-05-31,Prof.Fees-Other,,1800000,169801.1713
+2026-01-31,Subscriptions General,Expenses,101879,101879
+2026-02-28,Subscriptions General,Expenses,101879,101879
+2026-03-31,Subscriptions General,Expenses,116191,-173702.0118
+2026-04-30,Subscriptions General,Expenses,116191,10880.7492
+2026-05-31,Subscriptions General,Expenses,116191,11186.6796
+2026-01-31,Summary:Gen Exp Other,,514000,514000
+2026-02-28,Summary:Gen Exp Other,,105500,105500
+2026-03-31,Summary:Gen Exp Other,,648750,-500360.6777
+2026-04-30,Summary:Gen Exp Other,,53000,4875.1323
+2026-05-31,Summary:Gen Exp Other,,557500,53282.9804
+2026-04-30,Tax Provision-Other,,-67118540.64,-6328127.2203
+2026-05-31,Tax Provision-Other,,0,-1168.4453
+2026-01-31,Telephone-Variable,Expenses,113150,113150
+2026-02-28,Telephone-Variable,Expenses,63050,63050
+2026-03-31,Telephone-Variable,Expenses,222900,-138515.6563
+2026-04-30,Telephone-Variable,Expenses,-399100,-37684.3437
+2026-02-28,Toner,,848200,848200
+2026-03-31,Toner,,0,-768520.1473
+2026-04-30,Toner,,0,-66.5619
+2026-05-31,Toner,,0,431.2518
+2026-01-31,Training EXTERNAL,,1000000,1000000
+2026-02-28,Training EXTERNAL,,950000,950000
+2026-03-31,Training EXTERNAL,,0,-1765874.5424
+2026-04-30,Training EXTERNAL,,813333,76409.4499
+2026-05-31,Training EXTERNAL,,631333.25,59582.994
+2026-04-30,Trav. Accom.,,1278833,120572.0184
+2026-05-31,Trav. Accom.,,1278833,120616.544
+2026-01-31,Trav. Sundry exp.,,1008000,1008000
+2026-02-28,Trav. Sundry exp.,,1741000,1741000
+2026-03-31,Trav. Sundry exp.,,957500,-2399019.9955
+2026-04-30,Trav. Sundry exp.,,1658000,155800.3381
+2026-05-31,Trav. Sundry exp.,,1721979,162476.452
+2026-01-31,UBA Current Account,Current Assets,22253967.15,22253967.15
+2026-02-28,UBA Current Account,Current Assets,10895034.72,10895034.72
+2026-03-31,UBA Current Account,Current Assets,7463291.65,-29314254.6241
+2026-04-30,UBA Current Account,Current Assets,-27817900.06,-2628455.3815
+2026-05-31,UBA Current Account,Current Assets,20779321.45,1959718.097
+2026-01-31,UBA Dom Account,Current Assets,114509307.64,114509307.64
+2026-02-28,UBA Dom Account,Current Assets,0.2,0.2
+2026-03-31,UBA Dom Account,Current Assets,0,-103696959.7845
+2026-04-30,UBA Dom Account,Current Assets,-13747083.13,-1312198.4561
+2026-05-31,UBA Dom Account,Current Assets,14706904.8,1388619.0472
+2026-01-31,VAT Control Account,,-52458720.21,-52458720.21
+2026-02-28,VAT Control Account,,-4236236.35,-4236236.35
+2026-03-31,VAT Control Account,,238261.03,51364128.406
+2026-04-30,VAT Control Account,,7428658.69,708325.1686
+2026-05-31,VAT Control Account,,-1486671.25,-141046.9952
+2026-01-31,Withholding tax 5 %,,-376872.1,-376872.1
+2026-02-28,Withholding tax 5 %,,0.07,0.07
+2026-03-31,Withholding tax 5 %,,0,341286.5249
+2026-04-30,Withholding tax 5 %,,-4120606.71,-388449.603
+2026-05-31,Withholding tax 5 %,,0,-78.2952
+2026-01-31,Zamara pension Scheme,,-1309437.02,-1309437.02
+2026-02-28,Zamara pension Scheme,,-181.62,-181.62
+2026-03-31,Zamara pension Scheme,,-100235.62,1176495.5319
+2026-04-30,Zamara pension Scheme,,-127450.08,-11818.3246
+2026-05-31,Zamara pension Scheme,,-0.7,-26.8285

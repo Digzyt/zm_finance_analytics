@@ -1,37 +1,56 @@
 # Zamara Finance — dbt Project
 
-> dbt project for the Phase 1 Finance Reporting Modernization. Built today against PostgreSQL with the Consolidated TB workbook's per-entity tabs landed as seeds. Designed to switch cleanly to Microsoft Fabric Warehouse the moment BC access lands — see the **"How this switches to Fabric"** section below.
+> dbt project for the Phase 1 Finance Reporting Modernization. Built today against PostgreSQL with the Zamara monthly Trial Balance pack landed as seeds. Designed to switch cleanly to Microsoft Fabric Warehouse the moment BC access lands — see the **"How this switches to Fabric"** section below.
 
 ---
 
 ## What this project does today
 
-Twelve subsidiary trial balances (lifted from the *Finance Templates → Consolidated TB as at April 2026.xlsx* hidden tabs) flow through a layered dbt pipeline:
+The 2026 monthly Trial Balance pack (Jan–May, *Finance Templates → 2026 TBs*) is landed as **monthly G/L movement seeds** and flows through a layered dbt pipeline. `period` is a first-class dimension: every reporting mart carries one row per period, so you get the full month-by-month history, not a single snapshot.
 
 ```
-seeds/bronze/*.csv         (real workbook data, 807 rows total)
+seeds/bronze/*.csv          monthly G/L MOVEMENTS per entity (each row = that month's delta)
     │
     ▼
-bronze_source.*            (per-company landing tables — mirrors BC's schema)
+bronze_source.*             per-company landing tables — mirrors BC's schema
     │
     ▼
-staging.stg_*              (unioned with Company_Name added; BC PascalCase preserved)
+staging.stg_report_periods  the period spine (distinct month-ends: 2026-01 … 2026-05)
+staging.stg_*               unioned + Company_Name; CROSS JOINED to the spine so each
+                            movement contributes to every period >= its own month
+    │                       (cumulative sum to a period = the TB "as at" that month)
+    ▼
+intermediate.int_*          account mapping → sign normalisation → FX→KES (per period)
+                            → eliminations, ZAAC sub-consol
     │
     ▼
-intermediate.int_*         (account mapping, sign normalisation, FX → KES, eliminations, ZAAC sub-consol)
+core.fct_trial_balance      company × PERIOD × statement_line spine fact
     │
-    ▼
-core.fct_trial_balance     (entity × period × statement_line spine fact)
+    ├──▶  subsidiary.rpt_subsidiary_sci        per-entity SCI  (slice by company_name, period)
+    ├──▶  subsidiary.rpt_subsidiary_sfp        per-entity SFP
+    ├──▶  consolidation.rpt_consolidated_sci   Group SCI (IFRS)
+    ├──▶  consolidation.rpt_consolidated_sfp   Group SFP (IFRS)
     │
-    ├──▶  subsidiary.rpt_subsidiary_sci   (filter by Company_Name in Power BI)
-    ├──▶  subsidiary.rpt_subsidiary_sfp
-    ├──▶  consolidation.rpt_consolidated_sci
-    └──▶  consolidation.rpt_consolidated_sfp
+    └──▶  intermediate.int_report_pl ──▶ consolidation.rpt_group_pl
+                            the management P&L behind the monthly "Zamara Group
+                            Financial Report" (Group sheet): Actual / Budget /
+                            Variance / Prior-Year, revenue at entity grain +
+                            expense-by-nature.
 ```
 
-The four `rpt_*` tables are what Power BI connects to.
+**Every `rpt_*` table has a `period` column** valued `2026-01` … `2026-05`. Each period is the **cumulative year-to-date position as at that month-end**, translated at that month's FX rate. `select * from consolidation.rpt_consolidated_sci` returns all five months; filter `where period = '2026-03'` for one month.
 
-**The seeds contain real workbook values, not random data.** They were extracted directly from the hidden TB tabs (`ZAAC TB`, `ZARIB TB`, `Zamre TB`, etc.) of the Consolidated TB workbook on April-end 2026. Each subsidiary's row count matches what's in the workbook (ZAAC: 162 rows; ZARIB: 129; etc.). Uganda Associate is two rows representing the equity-pickup amounts. So the Power BI dashboards produced from this build will show the *actual* Zamara financials — not synthetic — which is the point: we can demonstrate the end-to-end flow to Finance with numbers they recognise.
+**The seeds contain real workbook values, not random data.** They are the per-entity TB tabs from the monthly pack, differenced into monthly movements so the bronze layer behaves like BC's G/L Entry table (transactions that accumulate to a balance). Cumulative movements reconcile to each month's source closing balance to within rounding.
+
+---
+
+## Period model — read this first
+
+- Bronze `gl_entry_*` seeds hold **movements**, not balances. `gl_entry_zaac` row for `2026-03-31` is *March's change*, not the March balance.
+- `stg_report_periods` lists the distinct month-ends. Staging cross-joins it: a movement dated `2026-02-28` appears under periods `2026-02`, `2026-03`, `2026-04`, `2026-05` (every period on/after its month).
+- Downstream `group by (company, period, statement_line)` therefore yields the **cumulative balance as at each period** = the trial balance "as at" that month. This is standard YTD reporting.
+- `reporting_period` in `dbt_project.yml` is **no longer used to filter** — period selection is a `WHERE period = …` in your query / BI slicer. (The var is retained only as harmless metadata.)
+- Adding June: drop the June movement rows into the `gl_entry_*` seeds (dated `2026-06-30`) and add June's rates to `fx_rate.csv`. The spine and every mart pick the new period up automatically — no model changes.
 
 ---
 
@@ -41,23 +60,19 @@ The whole point of this project is that **when BC access lands, the model code d
 
 1. **The profile target** — add `prod_fabric` to `profiles.yml` (template in `profiles.yml.example`); run `dbt build --target prod_fabric`.
 2. **The source definitions** — edit `models/staging/_sources.yml` so the per-company source tables point at the Fabric Lakehouse raw extracts instead of the seeded Postgres tables.
-3. **The seeds (mostly) retire** — bronze seeds get replaced by real BC extracts; reference seeds (`entity`, `statement_line`, `account_map`, `fx_rate`, `elimination_journal`) stay.
+3. **The seeds (mostly) retire** — bronze seeds get replaced by real BC extracts; reference seeds (`entity`, `statement_line`, `account_map`, `report_line`, `report_line_map`, `budget`, `fx_rate`, `elimination_journal`) stay.
 
-Everything else — staging models, intermediate models, marts, tests, macros — is unchanged.
-
-This is achieved through five disciplines we've baked into the project from day one. **Read `DISCIPLINES.md` before adding any model**, but the headline summary:
+Everything else — staging, intermediate, marts, tests, macros — is unchanged. See `DISCIPLINES.md` before adding any model. Headline rules:
 
 | Discipline | Why |
 |---|---|
 | Sources declared from day one, never `ref()` on seeds | Source YAML is the single point of change at switch time |
-| No PostgreSQL-specific SQL in models — use `dbt.date_trunc`, dbt-utils, or `adapter.dispatch` macros | T-SQL doesn't recognise `TO_CHAR`, `\|\|`, `JSONB`, etc. |
+| No PostgreSQL-specific SQL in models — use `dbt.*`, dbt-utils, or `adapter.dispatch` macros | T-SQL doesn't recognise `TO_CHAR`, `\|\|`, `JSONB`, etc. |
 | Warehouse-specific quirks absorbed in staging only | Marts stay dialect-neutral |
 | Target Fabric **Warehouse** (writable T-SQL), not Lakehouse (read-only) | Only the Warehouse supports dbt materialisations |
 | Run parity tests against both adapters from day one of Fabric availability | Dialect drift is silent — catch early |
 
-The macros in `macros/cross_db_helpers.sql` already include `adapter.dispatch` implementations for `date_part`, `year_month_string`, and `safe_string_md5` — Postgres versions today, Fabric versions ready for when access lands. Adding a new dialect-specific macro means writing a `postgres__foo` and `fabric__foo` next to a `default__foo`.
-
-The `macros/staging_column_lists.sql` macros are the other portability hinge — every BC column is cast to an explicit type in the staging union, so it doesn't matter whether the underlying data came from a seed CSV (inferred types) or a Fabric Lakehouse Delta table (typed via the BC connector). The contract is the same.
+`macros/cross_db_helpers.sql` carries `adapter.dispatch` implementations for `date_part`, `year_month_string`, `safe_string_md5`, `safe_divide`, plus the pure-Jinja `period_end_date`. `macros/staging_column_lists.sql` casts every BC column explicitly so seed-inferred types and Fabric Delta types meet the same contract.
 
 ---
 
@@ -66,45 +81,47 @@ The `macros/staging_column_lists.sql` macros are the other portability hinge —
 ```
 datamodel/
 ├── README.md                       # this file
-├── DISCIPLINES.md                  # the 5 rules for Postgres → Fabric portability — READ FIRST
+├── DISCIPLINES.md                  # the 5 portability rules — READ FIRST
 ├── dbt_project.yml
-├── packages.yml
-├── profiles.yml.example            # template; copy to ~/.dbt/profiles.yml
+├── profiles.yml.example
 │
 ├── models/
 │   ├── staging/
-│   │   ├── _sources.yml            # 46 per-company bronze tables declared
-│   │   ├── _models.yml             # column docs + tests
-│   │   ├── stg_gl_entry.sql        # unions standard entities, adds Company_Name
+│   │   ├── _sources.yml
+│   │   ├── _models.yml
+│   │   ├── stg_report_periods.sql  # the period spine (distinct month-ends)
+│   │   ├── stg_gl_entry.sql        # unions standard entities, cross-joins the spine
 │   │   ├── stg_gl_account.sql
 │   │   ├── stg_dimension_set_entry.sql
 │   │   ├── stg_dimension_value.sql
-│   │   └── per_subsidiary/         # MENA, Nigeria, Uganda — genuinely different source shapes
+│   │   └── per_subsidiary/         # MENA, Nigeria (descriptive), Uganda (equity)
 │   │
 │   ├── intermediate/
 │   │   ├── int_account_mapping.sql
 │   │   ├── int_sign_normalisation.sql
 │   │   ├── int_fx_translation.sql
 │   │   ├── int_zaac_subconsolidation.sql
-│   │   └── int_eliminations.sql
+│   │   ├── int_eliminations.sql
+│   │   └── int_report_pl.sql       # management P&L layer (feeds rpt_group_pl)
 │   │
 │   └── marts/
 │       ├── core/                   # dim_entity, dim_statement_line, dim_calendar, fct_trial_balance
-│       ├── subsidiary/             # ONE rpt_subsidiary_sci, ONE rpt_subsidiary_sfp — slice in BI
-│       └── consolidation/          # fct_consolidated_tb + rpt_consolidated_sci/sfp
+│       ├── subsidiary/             # rpt_subsidiary_sci / _sfp  (slice by company_name)
+│       └── consolidation/          # fct_consolidated_tb, rpt_consolidated_sci/_sfp, rpt_group_pl
 │
 ├── seeds/
-│   ├── bronze/                     # 45 CSVs — real workbook data + per-entity templates
-│   └── reference/                  # entity, statement_line, account_map, fx_rate, elimination_journal
+│   ├── bronze/                     # per-entity monthly MOVEMENT seeds (gl_entry_*, gl_account_*, …)
+│   └── reference/                  # entity, statement_line, account_map, fx_rate, elimination_journal,
+│                                   #   report_line, report_line_map, budget
 │
 ├── macros/
-│   ├── generate_schema_name.sql    # override — use schema names literally (no dbt_dev_ prefix)
-│   ├── cross_db_helpers.sql        # adapter dispatch: date_part, year_month_string, safe_string_md5
-│   ├── staging_column_lists.sql    # column-list + cast macros used by the union staging models
-│   └── test_overrides.sql          # override generic tests to quote column refs (Postgres case-sensitivity)
+│   ├── generate_schema_name.sql
+│   ├── cross_db_helpers.sql        # adapter dispatch + period_end_date
+│   ├── staging_column_lists.sql
+│   └── test_overrides.sql
 │
-└── tests/                          # singular tests
-    ├── assert_tb_balances_per_entity.sql
+└── tests/
+    ├── assert_tb_balances_per_entity.sql   # now per (entity, period)
     └── assert_no_unmapped_accounts.sql
 ```
 
@@ -116,127 +133,119 @@ datamodel/
 # from the datamodel/ folder
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
-
 python -m pip install --upgrade pip
 python -m pip install "dbt-core>=1.7,<2.0" "dbt-postgres>=1.7,<2.0"
 
-# copy the profile template and fill in your Postgres creds
 cp profiles.yml.example $env:USERPROFILE\.dbt\profiles.yml
-
-# set the password (one-time, persists)
 [System.Environment]::SetEnvironmentVariable("PG_PASSWORD", "your-actual-password", "User")
 # close & reopen PowerShell for the env var to be visible
 
-# build
 dbt deps
-dbt seed --full-refresh
+dbt seed --full-refresh     # required: seed schemas changed (movements, new ref seeds)
 dbt build
 ```
 
-If you hit `dbt-fusion 2.0.0-preview...` instead of dbt-core, the Fusion engine is taking precedence on PATH. The venv's `dbt` should override it — confirm with `Get-Command dbt | Select-Object Source`.
+`dbt seed --full-refresh` is needed because seed *schemas* changed (MENA/Nigeria gained `Posting_Date`; `gl_account_*` for re-coded entities regenerated; new `report_line` / `report_line_map` / `budget` seeds). After the first full-refresh, model-only changes need just `dbt build`.
 
-Then point Power BI at the four report tables in your Postgres database — see the BI engineer section below.
-
----
-
-## What the Data Engineer owns
-
-You're operating and extending the pipeline. The high-leverage things to focus on, roughly in priority order:
-
-**1. `seeds/reference/account_map.csv` — populated (provisional, pending Finance confirmation).**
-
-The seed now carries **775 auto-mapped accounts across the 11 standard entities** (98.7% coverage of the 793 unique accounts in the bronze TBs). The mappings were derived by pattern-matching each account's description against the 38 statement lines — see `Zamara/Internal/Phase1_Account_Map_For_Finance_Review.xlsx` for the full mapping with proposed line per row, ready for Finance to confirm or correct.
-
-Status of the mapping today:
-- 775 accounts mapped automatically with high confidence (descriptive patterns covering Zamara conventions like `Emol.Pack-*`, `Trav.*`, `Due to/from *`, `MV-*` etc., plus correct disambiguation between asset-side `MV-Cost`/`Furn-Cost` and expense-side `MV-Leasing Costs`/`Furn-Depreciation`).
-- 10 accounts still unmapped — genuinely ambiguous (staff debtor names in ZARIB, the ESOP intercompany line, etc.). Listed in the review xlsx with empty proposed-line for Finance to classify.
-
-The provisional mappings will need walkthrough with Finance in Module A. Once Finance returns the confirmed review xlsx, the data engineer converts it back to `account_map.csv` (drop the review-only columns, keep `company_name`, `local_account_no`, `statement_line_code`, `effective_from`, `effective_to`).
-
-Schema: `(company_name, local_account_no, statement_line_code, effective_from, effective_to)`.
-
-Run `dbt build --select int_account_mapping+` to rebuild downstream models when this seed changes. The `assert_no_unmapped_accounts` test now reports approximately 10 unmapped accounts (down from ~750 before this pass) — use it as the remaining worklist.
-
-**2. Extend `seeds/reference/statement_line.csv` if needed.**
-
-The 38 lines today are illustrative based on insurance-industry conventions. The Module A diagnostic should confirm the canonical SCI / SFP line list and labels. When Finance confirms, update this seed and re-run.
-
-**3. When BC access lands — the Fabric switch.**
-
-Follow the checklist at the bottom of `DISCIPLINES.md`. The mechanics:
-- Add `prod_fabric` block to `profiles.yml` (template already in `profiles.yml.example`).
-- Update `models/staging/_sources.yml`: change `schema: bronze_source` to wherever the BC ingestion landed the raw tables, or use a Jinja conditional on `target.type`.
-- `dbt-postgres` keeps working for dev / parity testing; `dbt-fabric` becomes the prod target.
-- The staging `column_list` macros (`macros/staging_column_lists.sql`) absorb any column-type changes from real BC data — they explicitly cast everything to canonical types.
-
-**4. Populate `elimination_journal.csv` as IC pairs are identified.**
-
-Today empty. The structure is `(journal_id, period, journal_description, company_name, statement_line_code, statement_type, elimination_amount_kes, posted)`. Look for `IC_Partner_Code` populated in real BC GL entries — those are your intercompany pairs.
-
-**5. Documentation tasks.**
-
-- `dbt docs generate && dbt docs serve --port 8080` — gives Finance an interactive view of the lineage. Worth showing them in Module A.
-- The YAML descriptions in `_sources.yml` and `_models.yml` carry the BC field mapping ("BC field: G/L Account No.", etc.) — keep them updated as you learn more.
-
-**Things to avoid:**
-
-- Don't use Postgres-specific syntax in models (see `DISCIPLINES.md` for the table of what to replace). If you must, write an `adapter.dispatch` macro in `cross_db_helpers.sql` with a `postgres__foo` and `fabric__foo`.
-- Don't add `column_types:` per-seed in `dbt_project.yml`. We tried — it causes type mismatches in the UNION when only some seeds have explicit types. The staging `column_list` macros do the casting instead.
-- Don't enable `persist_docs: columns: true`. On Postgres it generates COMMENT statements that case-fold our `"Company_Name"` columns to lowercase and fails.
+To rebuild only the management P&L after editing its inputs: `dbt build --select int_report_pl+ rpt_group_pl`.
 
 ---
 
 ## What the Power BI Engineer owns
 
-Once `dbt build` succeeds, four tables are ready to consume. Connect Power BI directly to the Postgres database (DirectQuery or Import — Import is faster for the volumes we're working with today).
+Once `dbt build` succeeds, connect Power BI to the Postgres database (Import is fine at these volumes). Import schemas `consolidation`, `subsidiary`, `core`, `ref`.
 
-### Connection
+### The golden rule: filter on `period`
 
-- **Get Data → PostgreSQL database**
-- Host / port / database from your `profiles.yml`
-- Schemas to import: `consolidation`, `subsidiary`, `core`, `ref`
+Every reporting table has a `period` column (`'2026-01'` … `'2026-05'`). Each row is the **cumulative YTD position as at that month-end**. Put a **`period` slicer** on every page. `dim_calendar` (in `core`) is the period dimension to anchor it.
 
-### Tables / views to connect
+### Which table for which report
 
-| Schema | Table | Use |
+| Report | Table(s) | Notes |
 |---|---|---|
-| `consolidation` | `rpt_consolidated_sci` | Group Statement of Comprehensive Income |
-| `consolidation` | `rpt_consolidated_sfp` | Group Statement of Financial Position |
-| `subsidiary` | `rpt_subsidiary_sci` | Per-entity SCI — slice by `company_name` |
-| `subsidiary` | `rpt_subsidiary_sfp` | Per-entity SFP — slice by `company_name` |
-| `core` | `dim_entity` | Entity register for slicers / lookups |
-| `core` | `dim_statement_line` | Statement-line hierarchy (4 levels) for row drilldown |
-| `core` | `dim_calendar` | Date dimension |
-| `core` | `fct_trial_balance` | Underlying spine fact — use for any custom views |
+| **Zamara Group Financial Report — "Group" P&L** (the monthly CEO pack) | `consolidation.rpt_group_pl` + `ref.report_line` | The management P&L. See dedicated section below. |
+| Group Statement of Comprehensive Income (IFRS) | `consolidation.rpt_consolidated_sci` | |
+| Group Statement of Financial Position (IFRS) | `consolidation.rpt_consolidated_sfp` | |
+| Subsidiary P&L (per entity) | `subsidiary.rpt_subsidiary_sci` | Slice by `company_name` + `period` |
+| Subsidiary Balance Sheet (per entity) | `subsidiary.rpt_subsidiary_sfp` | Slice by `company_name` + `period` |
+| Entity register / slicers | `core.dim_entity` | |
+| Statement-line hierarchy (rows) | `core.dim_statement_line` | 4-level: `category_l1 → l2 → l3 → line_label` |
+| Date / period dimension | `core.dim_calendar` | |
+| Custom views / drill-through | `core.fct_trial_balance` | company × period × statement_line spine |
+
+### Building the "Zamara Group Financial Report" (Group P&L)
+
+This is the centrepiece of the monthly pack. Use **`consolidation.rpt_group_pl`**, joined to **`ref.report_line`** for ordering and section labels. One row per `report_line_code` per `period`.
+
+Columns:
+
+| Column | Meaning |
+|---|---|
+| `period` | `'2026-01'` … `'2026-05'` — slice on this |
+| `report_line_code` / `line_label` | the management line (e.g. `zaac_revenue`, `personnel_costs`) |
+| `section` | `INCOME` or `EXPENSE` — drives subtotals |
+| `line_order` | display order (use to sort rows) |
+| `amount_actual_gross_kes` | Actual before bad-debt provision |
+| `bad_debt_provision_kes` | NULL today — separate Wave 3.2 computation |
+| `amount_actual_net_kes` | Actual after provision (= gross until Wave 3.2 lands) |
+| `amount_budget_kes` | Budget (2026-04 loaded today; other months as the budget seed is extended) |
+| `variance_kes` / `variance_pct` | Actual(Net) vs Budget |
+| `amount_prior_year_kes` | NULL today — needs 2025 monthly TBs |
+
+Suggested visual — a **matrix**:
+- Rows: `report_line.section` then `report_line.line_label`, sorted by `line_order`.
+- Values: `amount_actual_net_kes`, `amount_budget_kes`, `variance_kes`, `variance_pct`.
+- **Subtotals** (`Total Income`, `Total Expenses`, `PBT`) are not stored — let the matrix subtotal by `section`, and compute `PBT = sum(amount_actual_net_kes)` across all lines (income is positive, expenses negative, so a straight sum gives PBT).
+- Period slicer drives the "as at" month.
+
+Reconciliation status to be transparent about with Finance (as at 2026-04 vs the workbook):
+- **Ties:** the Kenyan expense-by-nature block (Personnel, Premises, Communications, Printing, Insurance, Professional Fees, Motor Vehicle exact; others within a few %), plus ZAMRE and ZHL.
+- **Known variances — all from the provisional `account_map`, not the report logic:** MENA P&L (its descriptive mapping is mostly balance-sheet), Zarinet/African subs (unmapped accounts from the Finance review list), ZARIB/ZAAC revenue (management gross-vs-net + intercompany HOFF definition), and bad-debt (= 0; Wave 3.2). These improve as the account map is confirmed.
+- Revenue is at **entity grain** today. The finer revenue-stream split (Actuarial / Multicarrier / Grouplife / Medical / Special Projects …) needs BC department dimensions or a Finance allocation table — tracked as a backlog item.
 
 ### Recommended semantic model
 
-- **Relationships:**
+- Relationships:
   - `fct_trial_balance.company_name` → `dim_entity.entity_code`
   - `fct_trial_balance.statement_line_code` → `dim_statement_line.statement_line_code`
-  - `fct_trial_balance.period` → `dim_calendar.period` (or build a period mapping if calendar uses YYYY-MM-DD)
-
-- **For the group reports**, the consolidated tables carry the same `statement_line_code` + `dim_statement_line` lineage — use `dim_statement_line` for sorting/grouping/hierarchy on rows.
-
-- **For per-entity views**, add `company_name` as a slicer/filter on the subsidiary report visuals. ONE model serves all entities — the BI slicer is what produces the per-subsidiary view.
-
-### Recommended visuals
-
-For the SCI/SFP demo to Finance, the simplest compelling layout is a matrix visual:
-
-- Rows: `category_l1 → category_l2 → category_l3 → line_label` (the 4-level hierarchy from `dim_statement_line`)
-- Values: `consolidated_kes` (for the group report) or `amount_kes` (for subsidiary)
-- For the consolidated reports, also show the three component columns side-by-side: `subsidiary_sum_kes`, `elimination_kes`, `equity_pickup_kes` → this is what makes the consolidation auditable. Finance will appreciate seeing where Uganda's equity pickup lands separately from the subsidiary sum.
-
-### Branding / theming
-
-Match the existing Zamara Group dashboard requirements doc (in the parent `Zamara/` folder) for colour palette and logo placement once we get those from the client.
+  - `*.period` → `dim_calendar.period`
+  - `rpt_group_pl.report_line_code` → `report_line.report_line_code`
+- For the IFRS group/subsidiary statements, use `dim_statement_line` for row hierarchy and sorting (`line_order`).
+- For the consolidated reports, the three component columns `subsidiary_sum_kes`, `elimination_kes`, `equity_pickup_kes` make the consolidation auditable — show them side by side so Finance sees where the Uganda equity pickup and eliminations land.
+- ONE subsidiary model serves all entities — the `company_name` slicer produces the per-subsidiary view.
 
 ### Things to be aware of
 
-- **The data is real and the mapping is now ~99% populated (provisional).** 775 accounts auto-mapped via pattern matching pending Finance confirmation. Expect the SCI/SFP totals to look meaningful in the first pass — but the green rows in the review xlsx need Finance walkthrough before we treat the numbers as truth.
-- **`assert_tb_balances_per_entity` warns**, meaning some entities' debits and credits don't perfectly match. This is because the workbook source has off-system adjustments (`Accruals` columns) that we don't yet fully wire in. The TB-correctness conversation is a Finance discussion, not a Power BI one.
-- **Reload mechanics.** When the data engineer updates a seed (e.g., adds mappings) and runs `dbt build`, the mart tables refresh in Postgres. Power BI then needs a manual or scheduled refresh to pick up the new data. We can set up a scheduled refresh once we're past the demo.
+- **Cumulative, not monthly-movement, in the marts.** A period row is YTD-to-that-month. To show a single month's movement in BI, subtract the prior period (or add a measure that does).
+- **The mapping is provisional (~99% by value for the standard entities).** Treat numbers as demonstrably-shaped, not signed-off, until Finance confirms the account map.
+- **Reload mechanics.** After the data engineer runs `dbt build`, Power BI needs a refresh to pick up new data. Schedule once past the demo.
+
+---
+
+## What the Data Engineer owns
+
+**1. `seeds/reference/account_map.csv` — populated (provisional, pending Finance confirmation).**
+
+Carries **828 mappings** keyed on `(company_name, local_account_no)`. The 2026 pack re-codes several entities to BC account numbers (ZARIB, Zamre, ZHL, Malawi, Rwanda); mappings were carried across by description / canonical-BC code / the Rwanda BC-Codes sheet. **67 genuinely new accounts** could not be auto-mapped and are listed in `Zamara/Internal/Phase1_NewAccounts_For_Finance_Review.xlsx` for Finance to classify. When Finance returns the file, fold it back into this seed (keep `company_name, local_account_no, statement_line_code, effective_from, effective_to`).
+
+Schema: `(company_name, local_account_no, statement_line_code, effective_from, effective_to)`. Rebuild downstream with `dbt build --select int_account_mapping+`.
+
+**2. Management-reporting seeds (for the Group P&L).**
+
+- `report_line.csv` — the management P&L taxonomy: `report_line_code, section, presentation_sign, line_order, line_label`.
+- `report_line_map.csv` — `(company_name, local_account_no, report_line_code)`. Revenue at entity grain; expenses classified to nature by description; P&L restricted to `I`-codes. Add the ZARIB/ZAAC revenue-stream split here once Finance provides the department allocation.
+- `budget.csv` — `(report_line_code, period, amount_budget_kes)`. 2026-04 loaded from the workbook Group sheet; extend with monthly budgets from the `2026_Income_Budget` / `2026_Expense_Budget` tabs.
+
+**3. `seeds/reference/fx_rate.csv`** — `(currency, period, rate_type, rate_to_kes, rate_source)`, monthly closing/average per currency, 2026-01…05. Implied from each pack's KES column (Rates-tab fallback). Add new months here.
+
+**4. `elimination_journal.csv`** — empty today; populate from BC `IC_Partner_Code` as IC pairs are identified. It carries its own `period`, so eliminations are period-aware automatically.
+
+**5. Adding a new month.** Difference the new month's TB into movements, append to `gl_entry_*` (dated month-end), add the month's `fx_rate` rows, `dbt seed --full-refresh && dbt build`. Every mart gains the new period with no model change.
+
+**Things to avoid:**
+- No Postgres-specific syntax in models (see `DISCIPLINES.md`). Use an `adapter.dispatch` macro with `postgres__foo` / `fabric__foo`.
+- No per-seed `column_types:` — it breaks the cross-entity UNION; the `column_list` macros cast instead.
+- Don't enable `persist_docs: columns: true` (Postgres case-folds quoted `"Company_Name"`).
 
 ---
 
@@ -244,9 +253,9 @@ Match the existing Zamara Group dashboard requirements doc (in the parent `Zamar
 
 | Test | Status | Meaning |
 |---|---|---|
-| All YAML generic tests (`not_null`, `unique`, `accepted_values`, `unique_combination_of_columns`) | ✅ PASS | Schema-level integrity OK |
-| `assert_tb_balances_per_entity` | ⚠️ WARN (4 entities unbalanced) | Workbook source has off-system adjustments — Finance discussion |
-| `assert_no_unmapped_accounts` | ⚠️ WARN (~10 rows) | The 10 accounts in the review xlsx that need Finance to classify. |
+| YAML generic tests (`not_null`, `unique`, `accepted_values`, `unique_combination_of_columns`) | PASS | Schema-level integrity OK |
+| `assert_tb_balances_per_entity` | WARN | Per (entity, period): workbook off-system accrual adjustments mean some entities don't net to zero — a Finance discussion |
+| `assert_no_unmapped_accounts` | WARN | The new accounts awaiting Finance classification (see review xlsx) |
 
 Both warnings are diagnostic by design and don't block downstream models.
 
@@ -254,20 +263,20 @@ Both warnings are diagnostic by design and don't block downstream models.
 
 ## Open items / what's not built yet
 
-- **`account_map.csv` confirmation by Finance.** Seed carries 775 auto-mapped accounts (provisional). Walkthrough with Finance via `Internal/Phase1_Account_Map_For_Finance_Review.xlsx` — they confirm green rows and fill in the 10 still-unmapped ones, then the confirmed file replaces the auto-generated seed.
-- `elimination_journal.csv` entries (today: empty header; needed: IC pairs from BC `IC_Partner_Code`)
-- `dimension_set_entry_*` and `dimension_value_*` seeds (today: empty headers; needed: when real BC data lands)
-- Module G — Executive support workstream (not in the data pipeline; it's the steering / governance cadence)
-- The other three Phase 1 reports beyond SCI/SFP (Debtor Analysis, Commission Sharing, Cash Position) — out of scope for this demo; will come as separate marts when AR sub-ledger / Beyontec-named system / bank statement data are wired in
+- **`account_map.csv` confirmation by Finance** — 828 provisional mappings; 67 new accounts in `Internal/Phase1_NewAccounts_For_Finance_Review.xlsx`.
+- **Group P&L revenue-stream split** (Actuarial / Multicarrier / Grouplife / Medical / Special Projects …) — needs BC department dimensions or a Finance allocation table; revenue is at entity grain until then.
+- **Bad-debt provision** in `rpt_group_pl` — NULL today; Wave 3.2 (Bad Debt Provisioning) computation.
+- **Prior-Year columns** — need the 2025 monthly TBs loaded as movement seeds.
+- `elimination_journal.csv` entries (from BC `IC_Partner_Code`).
+- `dimension_set_entry_*` / `dimension_value_*` seeds (when real BC data lands).
+- The other Phase 1 reports beyond the P&L / balance sheet (Debtor Analysis, Commission Sharing, Cash Position) — separate marts when AR sub-ledger / bank statement data are wired in.
 
 ---
 
 ## Reference documents (in the parent `Zamara/` folder)
 
-- **`Project_Handover.md`** — full engagement context, history, design decisions
-- **`Phase1_Roadmap_Notion.md`** — 12-week project plan
-- **`Internal/Phase1_Initial_Review_Note.docx`** — what we found in the Finance Templates pack
-- **`Internal/Phase1_Report_Data_Requirements.docx`** — data needs per report
-- **`Internal/Phase1_KPI_Dictionary.xlsx`** — 59 KPIs with definitions
-- **`Internal/Phase1_Mapping_Documents.xlsx`** — mapping templates
-- **`Internal/Delivery Scope - Finance AI Foundation.pdf`** — the SOW (Schedule 1 has the canonical wave/phase/module names)
+- **`Project_Handover.md`** — full engagement context, history, design decisions (see the changelog for the multi-month + Group P&L + multi-period work).
+- **`Phase1_Roadmap_Notion.md`** — 12-week project plan.
+- **`Internal/Phase1_NewAccounts_For_Finance_Review.xlsx`** — new accounts needing Finance mapping.
+- **`Internal/Phase1_Initial_Review_Note.docx`** — what we found in the Finance Templates pack.
+- **`Internal/Delivery Scope - Finance AI Foundation.pdf`** — the SOW (Schedule 1 has the canonical wave/phase/module names).
