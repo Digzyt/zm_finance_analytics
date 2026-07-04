@@ -1,43 +1,27 @@
 {{
   config(
     materialized = 'view',
-    tags = ['staging', 'per_subsidiary', 'nigeria']
+    tags = ['staging', 'per_subsidiary', 'deprecated']
   )
 }}
 
 -- =============================================================================
--- stg_nigeria_descriptive_tb — Nigeria-specific staging.
+-- DEPRECATED — Nigeria now uses BC codes via the standard stg_gl_entry union.
 --
--- Nigeria's source carries Account_Name and Category but no BC code; we
--- synthesise a stable code from the name. Seed carries monthly movements with
--- Posting_Date; cross-join the period spine to make period a real dimension.
+-- The multi-month TB workbooks in Finance Templates/2026 TBs/ include a
+-- "BC Codes" column on the Nigeria tab, so we no longer need to synthesise
+-- account codes from MD5-hashed descriptions. Nigeria flows through
+-- stg_gl_entry.sql alongside ZAAC, ZARIB, Rwanda, DRC, etc.
+--
+-- This model is kept as an empty no-op to avoid breaking any historical refs.
+-- Safe to remove once all downstream references are audited.
 -- =============================================================================
 
-with src as (
-    select
-        'NIGERIA'                                  as "Company_Name",
-        "Account_Name",
-        "Category",
-        "Amount",
-        "Amount_KES",
-        cast("Posting_Date" as date)              as posting_date
-    from {{ source('bronze_source', 'gl_entry_nigeria') }}
-),
-
-periods as (
-    select * from {{ ref('stg_report_periods') }}
-)
-
 select
-    src."Company_Name",
-    'NGA-' || upper(substr(md5(src."Account_Name"), 1, 10)) as "G_L_Account_No",
-    src."Account_Name"                                       as "Description",
-    src."Category"                                           as "Source_Category",
-    src."Amount",
-    src."Amount_KES",
-    p.period
-from src
-cross join periods p
-where src."Account_Name" is not null
-  and trim(src."Account_Name") <> ''
-  and src.posting_date <= p.period_end
+    cast(null as text)                as "Company_Name",
+    cast(null as text)                as "G_L_Account_No",
+    cast(null as text)                as "Description",
+    cast(null as numeric(20, 4))      as "Amount",
+    cast(null as numeric(20, 4))      as "Amount_KES",
+    cast(null as text)                as period
+where false

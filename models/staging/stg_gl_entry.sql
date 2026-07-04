@@ -28,9 +28,11 @@ with unioned as (
     union all
     select {{ zamara_finance.gl_entry_column_list('MALAWI') }} from {{ source('bronze_source', 'gl_entry_malawi') }}
     union all
-    select {{ zamara_finance.gl_entry_column_list('RWANDA') }} from {{ source('bronze_source', 'gl_entry_rwanda') }}
+    select {{ zamara_finance.gl_entry_column_list('RWANDA')  }} from {{ source('bronze_source', 'gl_entry_rwanda')  }}
     union all
-    select {{ zamara_finance.gl_entry_column_list('DRC')    }} from {{ source('bronze_source', 'gl_entry_drc')    }}
+    select {{ zamara_finance.gl_entry_column_list('NIGERIA') }} from {{ source('bronze_source', 'gl_entry_nigeria') }}
+    union all
+    select {{ zamara_finance.gl_entry_column_list('DRC')     }} from {{ source('bronze_source', 'gl_entry_drc')     }}
 
 )
 

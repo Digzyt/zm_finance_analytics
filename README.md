@@ -121,8 +121,9 @@ datamodel/
 │   └── test_overrides.sql
 │
 └── tests/
-    ├── assert_tb_balances_per_entity.sql   # now per (entity, period)
-    └── assert_no_unmapped_accounts.sql
+    ├── assert_tb_balances_per_entity.sql        # per (entity, period)
+    ├── assert_no_unmapped_accounts.sql
+    └── assert_elimination_journals_balance.sql  # each journal nets Dr = Cr
 ```
 
 ---
@@ -226,19 +227,25 @@ Reconciliation status to be transparent about with Finance (as at 2026-04 vs the
 
 **1. `seeds/reference/account_map.csv` — populated (provisional, pending Finance confirmation).**
 
-Carries **828 mappings** keyed on `(company_name, local_account_no)`. The 2026 pack re-codes several entities to BC account numbers (ZARIB, Zamre, ZHL, Malawi, Rwanda); mappings were carried across by description / canonical-BC code / the Rwanda BC-Codes sheet. **67 genuinely new accounts** could not be auto-mapped and are listed in `Zamara/Internal/Phase1_NewAccounts_For_Finance_Review.xlsx` for Finance to classify. When Finance returns the file, fold it back into this seed (keep `company_name, local_account_no, statement_line_code, effective_from, effective_to`).
+Carries **838 mappings** keyed on `(company_name, local_account_no)`. The 2026 pack re-codes several entities to BC account numbers (ZARIB, Zamre, ZHL, Malawi, Rwanda, Nigeria); mappings were carried across by description / canonical-BC code / the in-workbook BC-Codes sheets. Remaining unmapped and open classification items are tracked in `Zamara/Internal/Phase1_Exceptions_Register.xlsx`, and the full mapping is presented for Finance sign-off in `Zamara/Internal/Phase1_Group_Mapping_Tables.xlsx`. When Finance confirms, fold corrections back into this seed (keep `company_name, local_account_no, statement_line_code, effective_from, effective_to`).
 
 Schema: `(company_name, local_account_no, statement_line_code, effective_from, effective_to)`. Rebuild downstream with `dbt build --select int_account_mapping+`.
 
 **2. Management-reporting seeds (for the Group P&L).**
 
 - `report_line.csv` — the management P&L taxonomy: `report_line_code, section, presentation_sign, line_order, line_label`.
-- `report_line_map.csv` — `(company_name, local_account_no, report_line_code)`. Revenue at entity grain; expenses classified to nature by description; P&L restricted to `I`-codes. Add the ZARIB/ZAAC revenue-stream split here once Finance provides the department allocation.
+- `report_line_map.csv` — `(company_name, local_account_no, report_line_code)`, 363 rows (regenerated from the current `account_map`, incl. Nigeria on BC codes). Revenue at entity grain; expenses classified to nature by description; P&L restricted to `I`-codes. Add the ZARIB/ZAAC revenue-stream split here once Finance provides the department allocation (see `Phase1_Revenue_Stream_Mapping_Plan.docx`).
 - `budget.csv` — `(report_line_code, period, amount_budget_kes)`. 2026-04 loaded from the workbook Group sheet; extend with monthly budgets from the `2026_Income_Budget` / `2026_Expense_Budget` tabs.
 
 **3. `seeds/reference/fx_rate.csv`** — `(currency, period, rate_type, rate_to_kes, rate_source)`, monthly closing/average per currency, 2026-01…05. Implied from each pack's KES column (Rates-tab fallback). Add new months here.
 
-**4. `elimination_journal.csv`** — empty today; populate from BC `IC_Partner_Code` as IC pairs are identified. It carries its own `period`, so eliminations are period-aware automatically.
+**4. `elimination_journal.csv` — populated (double-entry standard).**
+
+Holds the manual consolidation journals (these are NOT in BC): investment-in-subsidiary cancellations, intercompany balances, goodwill, translation reserve and NCI. Schema `(journal_id, period, journal_description, elimination_type, entity_scope, statement_line_code, statement_type, debit_kes, credit_kes, posted, notes)`. `int_eliminations` converts Dr/Cr to presentation sign via `statement_line.sign_multiplier`, feeding `fct_consolidated_tb`:
+
+`consolidated = subsidiary_sum + eliminations + equity_pickup`
+
+April is loaded (16 journals, 52 lines) from the consolidation workbook and cancels ~1.32bn of investment-in-subsidiary. Four SFP lines were added for these entries — `goodwill, translation_reserve, non_controlling_interests, deferred_tax` (statement_line is now 42 lines). Finance maintains this monthly via `Internal/Phase1_Elimination_Journal_Template.xlsx` (standard: `Phase1_Elimination_Journal_Standard.docx`). `assert_elimination_journals_balance` verifies each journal nets to zero.
 
 **5. Adding a new month.** Difference the new month's TB into movements, append to `gl_entry_*` (dated month-end), add the month's `fx_rate` rows, `dbt seed --full-refresh && dbt build`. Every mart gains the new period with no model change.
 
@@ -255,7 +262,8 @@ Schema: `(company_name, local_account_no, statement_line_code, effective_from, e
 |---|---|---|
 | YAML generic tests (`not_null`, `unique`, `accepted_values`, `unique_combination_of_columns`) | PASS | Schema-level integrity OK |
 | `assert_tb_balances_per_entity` | WARN | Per (entity, period): workbook off-system accrual adjustments mean some entities don't net to zero — a Finance discussion |
-| `assert_no_unmapped_accounts` | WARN | The new accounts awaiting Finance classification (see review xlsx) |
+| `assert_no_unmapped_accounts` | WARN | ~15 material accounts awaiting Finance classification (see Exceptions Register) |
+| `assert_elimination_journals_balance` | PASS | All 16 April journals balance Dr = Cr |
 
 Both warnings are diagnostic by design and don't block downstream models.
 
@@ -263,11 +271,13 @@ Both warnings are diagnostic by design and don't block downstream models.
 
 ## Open items / what's not built yet
 
-- **`account_map.csv` confirmation by Finance** — 828 provisional mappings; 67 new accounts in `Internal/Phase1_NewAccounts_For_Finance_Review.xlsx`.
-- **Group P&L revenue-stream split** (Actuarial / Multicarrier / Grouplife / Medical / Special Projects …) — needs BC department dimensions or a Finance allocation table; revenue is at entity grain until then.
+- **`account_map.csv` confirmation by Finance** — 838 provisional mappings; open items in `Internal/Phase1_Exceptions_Register.xlsx`, full set for sign-off in `Internal/Phase1_Group_Mapping_Tables.xlsx`.
+- **Subsidiary-sum SFP mapping gap** — consolidated SFP is ~2.2bn below the workbook pre-elimination total: balance-sheet accounts still unmapped (deposits, placements, premium-receivable split, accrued income). Biggest remaining reconciliation item (see the Module C pack).
+- **Tax expense** — tax accounts largely unmapped (consolidated tax ~12m vs ~235m); map before use.
+- **Group P&L revenue-stream split** (Actuarial / Multicarrier / Grouplife / Medical / Special Projects …) — needs BC department dimensions or a Finance allocation; revenue is at entity grain until then.
 - **Bad-debt provision** in `rpt_group_pl` — NULL today; Wave 3.2 (Bad Debt Provisioning) computation.
 - **Prior-Year columns** — need the 2025 monthly TBs loaded as movement seeds.
-- `elimination_journal.csv` entries (from BC `IC_Partner_Code`).
+- **Eliminations** — April loaded; Finance to supply subsequent months via the template. Once BC carries `IC_Partner_Code`, the intercompany journals can be generated automatically.
 - `dimension_set_entry_*` / `dimension_value_*` seeds (when real BC data lands).
 - The other Phase 1 reports beyond the P&L / balance sheet (Debtor Analysis, Commission Sharing, Cash Position) — separate marts when AR sub-ledger / bank statement data are wired in.
 
@@ -277,6 +287,10 @@ Both warnings are diagnostic by design and don't block downstream models.
 
 - **`Project_Handover.md`** — full engagement context, history, design decisions (see the changelog for the multi-month + Group P&L + multi-period work).
 - **`Phase1_Roadmap_Notion.md`** — 12-week project plan.
-- **`Internal/Phase1_NewAccounts_For_Finance_Review.xlsx`** — new accounts needing Finance mapping.
-- **`Internal/Phase1_Initial_Review_Note.docx`** — what we found in the Finance Templates pack.
+- **`Internal/Phase1_ModuleC_TB_to_Report_Reconciliation_Apr2026.xlsx`** — the TB-to-report reconciliation + Reconciliation Control Matrix (Module C).
+- **`Internal/Phase1_Group_Mapping_Tables.xlsx`** — all mappings in one workbook for Finance sign-off (Module B).
+- **`Internal/Phase1_Exceptions_Register.xlsx`** — open mapping/classification/standardisation items needing a client decision.
+- **`Internal/Phase1_KPI_Dictionary.xlsx`** — metric definitions, source basis, owners, sign-off points.
+- **`Internal/Phase1_Elimination_Journal_Standard.docx`** + **`Phase1_Elimination_Journal_Template.xlsx`** — consolidation-eliminations standard & monthly submission template.
+- **`Internal/Phase1_Revenue_Stream_Mapping_Plan.docx`** + **`Phase1_Revenue_Stream_Allocation_Template.xlsx`** — revenue product/BU split standard & template.
 - **`Internal/Delivery Scope - Finance AI Foundation.pdf`** — the SOW (Schedule 1 has the canonical wave/phase/module names).

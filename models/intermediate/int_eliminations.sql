@@ -8,31 +8,45 @@
 -- =============================================================================
 -- int_eliminations
 --
--- Scaffold for consolidation eliminations. The elimination_journal seed
--- carries IC pairs and adjustment entries — empty today, populated as the
--- Module A diagnostic identifies them.
+-- Consolidation elimination & adjustment journals. These do NOT come from BC —
+-- they are manual consolidation entries (cancel investment-in-subsidiary vs
+-- subsidiary equity, intercompany balances, goodwill, translation reserve, NCI,
+-- etc.). Finance supplies them each period in the elimination_journal seed
+-- using plain double-entry (debit_kes / credit_kes) against a report line.
 --
--- Output is at the same grain as int_fx_translation (period x statement_line
--- x company), with amount_kes representing the elimination adjustment to
--- apply against the unionised group totals.
+-- Convention bridge: the seed is in natural debit-positive/credit book form.
+-- We multiply (debit - credit) by the statement line's sign_multiplier so the
+-- result lands in the same sign-normalised space as subsidiary_sum_kes; then
+-- fct_consolidated_tb adds them:
+--     consolidated = subsidiary_sum + eliminations + equity_pickup
 --
--- Example entries we expect to be added:
---   1. Investment in Subsidiary (ZHL) <-> Share Capital (operating sub)
---   2. Intercompany Receivable/Payable (Head Office Receivable Account)
---   3. Intercompany Revenue <-> Intercompany Expense pairs
+-- Each journal must balance (sum debit = sum credit) — see
+-- tests/assert_elimination_journals_balance.sql.
 -- =============================================================================
 
 with elims as (
     select * from {{ ref('elimination_journal') }}
+),
+
+sl as (
+    select statement_line_code, statement_type, sign_multiplier
+    from {{ ref('statement_line') }}
 )
 
 select
-    company_name,
-    cast(period as text)                             as period,
-    statement_line_code,
-    statement_type,
-    journal_id,
-    journal_description,
-    cast(elimination_amount_kes as numeric(20, 4))  as amount_kes
-from elims
-where coalesce(cast(posted as text), 'true') in ('true','TRUE','t','1')
+    e.entity_scope                                   as company_name,
+    cast(e.period as text)                           as period,
+    e.statement_line_code,
+    e.statement_type,
+    e.journal_id,
+    e.journal_description,
+    e.elimination_type,
+    cast(
+        (coalesce(cast(e.debit_kes  as numeric(20,4)), 0)
+       - coalesce(cast(e.credit_kes as numeric(20,4)), 0))
+        * coalesce(sl.sign_multiplier, 1)
+    as numeric(20, 4))                               as amount_kes
+from elims e
+left join sl
+       on sl.statement_line_code = e.statement_line_code
+where upper(coalesce(cast(e.posted as text), 'Y')) in ('Y','YES','TRUE','T','1')

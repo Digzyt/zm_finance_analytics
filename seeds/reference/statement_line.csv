@@ -37,3 +37,7 @@ bad_debt_expense,SCI,1,2050,EXPENSES,Operating expenses,Provisions,Bad Debt Expe
 depreciation_amortisation,SCI,1,2060,EXPENSES,Operating expenses,Depreciation,Depreciation & Amortisation
 finance_costs,SCI,1,2100,EXPENSES,Finance costs,Finance,Finance Costs
 tax_expense,SCI,1,2200,EXPENSES,Tax,Tax,Tax Expense
+translation_reserve,SFP,-1,125,EQUITY AND LIABILITIES,Equity,Reserves,Translation Reserve
+non_controlling_interests,SFP,-1,130,EQUITY AND LIABILITIES,Equity,Non-controlling interests,Non-controlling Interests
+goodwill,SFP,1,435,ASSETS,Non-current assets,Intangibles,Goodwill
+deferred_tax,SFP,1,450,ASSETS,Non-current assets,Deferred tax,Deferred Tax

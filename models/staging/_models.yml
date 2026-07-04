@@ -13,7 +13,7 @@ models:
         tests:
           - not_null
           - accepted_values:
-              values: ['ZAAC','ZARIB','ZAMRE','ZHL','ZATL','C&P','MALAWI','RWANDA','DRC']
+              values: ['ZAAC','ZARIB','ZAMRE','ZHL','ZATL','C&P','MALAWI','RWANDA','NIGERIA','DRC']
       - name: Entry_No
         description: "BC field: Entry No."
         tests:

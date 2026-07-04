@@ -30,18 +30,11 @@ mena as (
     from {{ ref('stg_mena_descriptive_tb') }}
 ),
 
-nigeria as (
-    select
-        "Company_Name",
-        "G_L_Account_No",
-        "Description",
-        cast("Amount"     as numeric(20, 4)) as "Amount",
-        cast("Amount_KES" as numeric(20, 4)) as "Amount_KES",
-        period
-    from {{ ref('stg_nigeria_descriptive_tb') }}
-),
+-- Nigeria now flows through stg_gl_entry with real BC codes (as of the
+-- multi-month TB workbooks). The old stg_nigeria_descriptive_tb model is
+-- retired — no longer referenced.
 
--- Bring the standard-entity GL into the same minimal shape as MENA / Nigeria
+-- Bring the standard-entity GL into the same minimal shape as MENA
 gl_minimal as (
     select
         "Company_Name",
@@ -56,7 +49,6 @@ gl_minimal as (
 all_lines as (
     select * from gl_minimal
     union all select * from mena
-    union all select * from nigeria
 ),
 
 coa as (
