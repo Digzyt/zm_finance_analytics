@@ -33,20 +33,47 @@ map as (
 
 rl as (
     select * from {{ ref('report_line') }}
+),
+
+-- TB-derived report-line amounts (presentation-signed)
+tb_lines as (
+    select
+        tb.period,
+        map.report_line_code,
+        sum(tb.amount_kes * cast(rl.presentation_sign as int)) as amount_kes
+    from tb
+    join map
+      on map.company_name     = tb.company_name
+     and map.local_account_no = tb.local_account_no
+    join rl
+      on rl.report_line_code  = map.report_line_code
+    group by tb.period, map.report_line_code
+),
+
+-- Manual P&L adjustments NOT in the TB (e.g. Exceptional Items). Amounts are
+-- already in report presentation terms (positive = increases profit).
+manual as (
+    select
+        period,
+        report_line_code,
+        sum(cast(amount_kes as numeric(20,4))) as amount_kes
+    from {{ ref('manual_pl_adjustments') }}
+    group by period, report_line_code
+),
+
+combined as (
+    select period, report_line_code, amount_kes from tb_lines
+    union all
+    select period, report_line_code, amount_kes from manual
 )
 
 select
-    tb.period,
-    rl.report_line_code,
+    c.period,
+    c.report_line_code,
     rl.section,
     rl.line_order,
     rl.line_label,
-    sum(tb.amount_kes * cast(rl.presentation_sign as int)) as amount_actual_kes
-from tb
-join map
-  on map.company_name     = tb.company_name
- and map.local_account_no = tb.local_account_no
-join rl
-  on rl.report_line_code  = map.report_line_code
-group by
-    tb.period, rl.report_line_code, rl.section, rl.line_order, rl.line_label
+    sum(c.amount_kes) as amount_actual_kes
+from combined c
+join rl on rl.report_line_code = c.report_line_code
+group by c.period, c.report_line_code, rl.section, rl.line_order, rl.line_label

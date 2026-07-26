@@ -1,43 +1,52 @@
 statement_line_code,statement_type,sign_multiplier,line_order,category_l1,category_l2,category_l3,line_label
-share_capital,SFP,-1,100,EQUITY AND LIABILITIES,Equity,Capital,Share Capital
-funds_awaiting_capitalisation,SFP,-1,105,EQUITY AND LIABILITIES,Equity,Capital,Funds Awaiting Capitalisation
-retained_earnings,SFP,-1,110,EQUITY AND LIABILITIES,Equity,Reserves,Retained Earnings
-other_reserves,SFP,-1,120,EQUITY AND LIABILITIES,Equity,Reserves,Other Reserves
-non_current_liabilities,SFP,-1,200,EQUITY AND LIABILITIES,Non-current liabilities,Non-current,Non-current Liabilities
-trade_and_other_payables,SFP,-1,300,EQUITY AND LIABILITIES,Current liabilities,Payables,Trade and Other Payables
-intercompany_payable,SFP,-1,310,EQUITY AND LIABILITIES,Current liabilities,Payables,Intercompany Payable
-tax_payable,SFP,-1,320,EQUITY AND LIABILITIES,Current liabilities,Tax,Tax Payable
-ppe_cost,SFP,1,400,ASSETS,Non-current assets,Property plant and equipment,PPE - Cost
-ppe_depreciation,SFP,-1,405,ASSETS,Non-current assets,Property plant and equipment,PPE - Accumulated Depreciation
-motor_vehicles_cost,SFP,1,410,ASSETS,Non-current assets,Motor vehicles,Motor Vehicles - Cost
-motor_vehicles_depreciation,SFP,-1,415,ASSETS,Non-current assets,Motor vehicles,Motor Vehicles - Accumulated Depreciation
-furniture_fittings_cost,SFP,1,420,ASSETS,Non-current assets,Furniture & Fittings,Furniture - Cost
-furniture_fittings_depreciation,SFP,-1,425,ASSETS,Non-current assets,Furniture & Fittings,Furniture - Accumulated Depreciation
-computer_software,SFP,1,430,ASSETS,Non-current assets,Intangibles,Computer Software
-investment_in_subsidiary,SFP,1,440,ASSETS,Non-current assets,Investments,Investment in Subsidiary
-investment_in_associate,SFP,1,445,ASSETS,Non-current assets,Investments,Investment in Associate
-trade_and_other_receivables,SFP,1,500,ASSETS,Current assets,Receivables,Trade and Other Receivables
-intercompany_receivable,SFP,1,510,ASSETS,Current assets,Receivables,Intercompany Receivable
-prepayments,SFP,1,520,ASSETS,Current assets,Receivables,Prepayments
-input_vat,SFP,1,530,ASSETS,Current assets,Receivables,Input VAT
-cash_and_cash_equivalents,SFP,1,600,ASSETS,Current assets,Cash,Cash and Cash Equivalents
-fee_income,SCI,-1,1000,INCOME,Revenue,Fee Income,Fee Income
-gross_premium,SCI,-1,1010,INCOME,Revenue,Premium Income,Gross Premium
-commission_earned,SCI,-1,1020,INCOME,Revenue,Commission,Commission Earned
-investment_income,SCI,-1,1030,INCOME,Other income,Investment,Investment Income
-interest_income,SCI,-1,1040,INCOME,Other income,Interest,Interest Income
-other_income,SCI,-1,1050,INCOME,Other income,Other,Other Income
-share_of_assoc_profit,SCI,-1,1100,INCOME,Share of profit,Equity-accounted,Share of Profit from Associate
-personnel_costs,SCI,1,2000,EXPENSES,Operating expenses,Personnel,Personnel Costs
-professional_fees,SCI,1,2010,EXPENSES,Operating expenses,Professional services,Professional Fees
-commission_expense,SCI,1,2020,EXPENSES,Operating expenses,Commission,Commission Expense
-operating_expenses,SCI,1,2030,EXPENSES,Operating expenses,General,Operating Expenses
-general_expenses,SCI,1,2040,EXPENSES,Operating expenses,General,General Expenses
-bad_debt_expense,SCI,1,2050,EXPENSES,Operating expenses,Provisions,Bad Debt Expense
-depreciation_amortisation,SCI,1,2060,EXPENSES,Operating expenses,Depreciation,Depreciation & Amortisation
-finance_costs,SCI,1,2100,EXPENSES,Finance costs,Finance,Finance Costs
-tax_expense,SCI,1,2200,EXPENSES,Tax,Tax,Tax Expense
-translation_reserve,SFP,-1,125,EQUITY AND LIABILITIES,Equity,Reserves,Translation Reserve
-non_controlling_interests,SFP,-1,130,EQUITY AND LIABILITIES,Equity,Non-controlling interests,Non-controlling Interests
-goodwill,SFP,1,435,ASSETS,Non-current assets,Intangibles,Goodwill
-deferred_tax,SFP,1,450,ASSETS,Non-current assets,Deferred tax,Deferred Tax
+actuarial_fees,SCI,-1,10,INCOME,Revenue,,Actuarial Fees
+pension_admin_fee,SCI,-1,20,INCOME,Revenue,,Pension Admin Fee
+umbrella_fund,SCI,-1,30,INCOME,Revenue,,Umbrella Fund
+insurance_commissions,SCI,-1,40,INCOME,Revenue,,Insurance Commissions
+saas_income,SCI,-1,50,INCOME,Revenue,,SAAS (Software as a Service)
+retail_income,SCI,-1,60,INCOME,Revenue,,Retail
+other_income,SCI,-1,70,INCOME,Other income,,Other Income
+personnel_costs,SCI,1,80,EXPENSES,Operating expenses,,Personnel Costs
+travelling,SCI,1,90,EXPENSES,Operating expenses,,Travelling
+entertainment,SCI,1,100,EXPENSES,Operating expenses,,Entertainment
+it_costs,SCI,1,110,EXPENSES,Operating expenses,,IT Costs
+communications,SCI,1,120,EXPENSES,Operating expenses,,Communications
+printing_stationery,SCI,1,130,EXPENSES,Operating expenses,,Printing & Stationery
+premises,SCI,1,140,EXPENSES,Operating expenses,,Premises
+advertising_pr,SCI,1,150,EXPENSES,Operating expenses,,Advertising & PR
+insurance,SCI,1,160,EXPENSES,Operating expenses,,Insurance
+professional_fees,SCI,1,170,EXPENSES,Operating expenses,,Professional Fees
+depreciation,SCI,1,180,EXPENSES,Operating expenses,,Depreciation
+motor_vehicle_expenses,SCI,1,190,EXPENSES,Operating expenses,,Motor Vehicle Expenses
+general_expenses,SCI,1,200,EXPENSES,Operating expenses,,General Expenses
+management_expense,SCI,1,210,EXPENSES,Operating expenses,,Management Expense
+finance_costs,SCI,1,220,EXPENSES,Finance costs,,Finance cost
+taxation,SCI,1,230,EXPENSES,Taxation,,Taxation
+ppe,SFP,1,240,ASSETS,Non-Current Assets,,"Property, Plant and Equipment"
+computer_software,SFP,1,250,ASSETS,Non-Current Assets,Intangible assets,Intangible - computer software
+goodwill,SFP,1,260,ASSETS,Non-Current Assets,Intangible assets,Intangible - goodwill
+investment_in_associate,SFP,1,270,ASSETS,Non-Current Assets,Investments,Investment in associate
+investment_unquoted_equity,SFP,1,280,ASSETS,Non-Current Assets,Investments,Investment in unquoted equity securities
+deposit_for_investment_in_subsidiary,SFP,1,290,ASSETS,Non-Current Assets,Investments,Deposit for investment in subsidiary
+investment_in_subsidiary,SFP,1,300,ASSETS,Non-Current Assets,Investments,Investment in subsidiary (entity-level; eliminates on consolidation)
+deferred_tax,SFP,1,310,ASSETS,Non-Current Assets,,Deferred tax
+trade_receivables,SFP,1,320,ASSETS,Current Assets,Receivables,Trade Receivables (Debtors)
+premium_receivables,SFP,1,330,ASSETS,Current Assets,Receivables,Premium Receivables
+other_receivables,SFP,1,340,ASSETS,Current Assets,Receivables,Other Receivables
+due_from_to_related_parties,SFP,1,350,ASSETS,Current Assets,Receivables,Due from/to related parties
+office_cash,SFP,1,360,ASSETS,Current Assets,Cash and cash equivalents,Cash - Office Cash
+client_cash,SFP,1,370,ASSETS,Current Assets,Cash and cash equivalents,Cash - Client Cash
+deposits,SFP,1,380,ASSETS,Current Assets,Cash and cash equivalents,Cash - Deposits
+placements,SFP,1,390,ASSETS,Current Assets,Cash and cash equivalents,Cash - Placements
+tax_recoverable,SFP,1,400,ASSETS,Current Assets,,Tax recoverable
+accrued_income,SFP,1,410,ASSETS,Current Assets,,Accrued Income
+share_capital,SFP,-1,420,EQUITY AND LIABILITIES,Equity,,Share capital
+translation_reserve,SFP,-1,430,EQUITY AND LIABILITIES,Equity,,Translation reserve
+proposed_dividend,SFP,-1,440,EQUITY AND LIABILITIES,Equity,,Proposed dividend
+retained_earnings,SFP,-1,450,EQUITY AND LIABILITIES,Equity,,Retained earnings
+net_profit,SFP,-1,460,EQUITY AND LIABILITIES,Equity,,Net Profit (derived)
+non_controlling_interests,SFP,-1,470,EQUITY AND LIABILITIES,Equity,,Non-controlling interests
+trade_and_other_payables,SFP,-1,480,EQUITY AND LIABILITIES,Current Liabilities,,Trade and other payables
+deferred_revenue,SFP,-1,490,EQUITY AND LIABILITIES,Current Liabilities,,Deferred Revenue
+premium_payable,SFP,-1,500,EQUITY AND LIABILITIES,Current Liabilities,,Premium payable
+borrowings,SFP,-1,510,EQUITY AND LIABILITIES,Current Liabilities,,Borrowings

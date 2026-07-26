@@ -24,3 +24,4 @@ bad_debt_provision,EXPENSE,-1,240,Bad Debts Provision
 zamre_expense,EXPENSE,-1,250,ZAMRE
 zarinet_expense,EXPENSE,-1,260,Zarinet
 mena_expense,EXPENSE,-1,270,MENA
+exceptional_items,EXCEPTIONAL,1,280,Exceptional Items

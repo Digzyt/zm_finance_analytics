@@ -12,8 +12,8 @@
 --
 -- Columns mirror the workbook:
 --   amount_actual_gross_kes  - Actual before bad-debt provision (= Actual today)
---   bad_debt_provision_kes   - separate Wave 3.2 computation (NULL until built)
---   amount_actual_net_kes    - Actual after provision (= gross until 3.2 lands)
+--   bad_debt_provision_kes   - from bad_debt_provision seed (Debtor Analysis); reduces revenue
+--   amount_actual_net_kes    - Actual gross less bad-debt provision (matches workbook Net)
 --   amount_budget_kes        - from the budget seed (2026-04 loaded; more later)
 --   variance_kes / _pct      - Actual(Net) vs Budget
 --   amount_prior_year_kes    - NULL until 2025 monthly TBs are loaded
@@ -36,6 +36,10 @@ bud as (
     select * from {{ ref('budget') }}
 ),
 
+prov as (
+    select * from {{ ref('int_bad_debt_provision') }}
+),
+
 periods as (
     select distinct period from actual
 )
@@ -48,13 +52,16 @@ select
     rl.line_label,
 
     coalesce(a.amount_actual_kes, 0)                       as amount_actual_gross_kes,
-    cast(null as {{ dbt.type_numeric() }})                 as bad_debt_provision_kes,
-    coalesce(a.amount_actual_kes, 0)                       as amount_actual_net_kes,
+    -- provision reduces revenue (stored negative); NULL on non-revenue lines
+    case when pr.provision_kes is not null
+         then -pr.provision_kes else cast(null as {{ dbt.type_numeric() }})
+    end                                                    as bad_debt_provision_kes,
+    coalesce(a.amount_actual_kes, 0) - coalesce(pr.provision_kes, 0) as amount_actual_net_kes,
 
     b.amount_budget_kes                                    as amount_budget_kes,
-    coalesce(a.amount_actual_kes, 0) - coalesce(b.amount_budget_kes, 0) as variance_kes,
+    (coalesce(a.amount_actual_kes,0) - coalesce(pr.provision_kes,0)) - coalesce(b.amount_budget_kes, 0) as variance_kes,
     {{ zamara_finance.safe_divide(
-         'coalesce(a.amount_actual_kes,0) - coalesce(b.amount_budget_kes,0)',
+         '(coalesce(a.amount_actual_kes,0) - coalesce(pr.provision_kes,0)) - coalesce(b.amount_budget_kes,0)',
          'b.amount_budget_kes') }}                         as variance_pct,
 
     cast(null as {{ dbt.type_numeric() }})                 as amount_prior_year_kes
@@ -67,4 +74,7 @@ left join actual a
 left join bud b
        on b.report_line_code = rl.report_line_code
       and b.period           = p.period
+left join prov pr
+       on pr.report_line_code = rl.report_line_code
+      and pr.period           = p.period
 order by p.period, rl.line_order

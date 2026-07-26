@@ -1,0 +1,10 @@
+period,company_name,account_no,description,statement_line_code,accrual_amount_kes,notes
+2026-04,ZAAC,B55135,Accrued Income,trade_and_other_payables,208209655.94,Manual TB accrual reclassification
+2026-04,ZAAC,B80110,Bonus(General provision),trade_and_other_payables,-24602509.19,Manual TB accrual reclassification
+2026-04,ZAAC,I10070,IPP - Vuna Retirement Plan,trade_and_other_payables,-9701066.67,Manual TB accrual reclassification
+2026-04,ZAAC,I10071,MC-ADMIN FEES,fee_income,-125068624.46,Manual TB accrual reclassification
+2026-04,ZAAC,I10073,AFRF Admin Fees,fee_income,-64947182,Manual TB accrual reclassification
+2026-04,ZAAC,I1007,Management Fees,,-8492782.81,Manual TB accrual reclassification
+2026-04,ZAAC,I25001,Emol.Pack-Salaries,personnel_costs,24602509.19,Manual TB accrual reclassification
+2026-04,C&P,B55135,Accrued Income,trade_and_other_payables,16660920.32,Manual TB accrual reclassification
+2026-04,C&P,I10067,AF Trust Fund,trade_and_other_payables,-16660920.32,Manual TB accrual reclassification

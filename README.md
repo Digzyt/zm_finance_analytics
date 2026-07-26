@@ -4,9 +4,25 @@
 
 ---
 
+## Update — July 2026 (client-mirrored statement lines + full reconciliation)
+
+Major changes since the initial build. Read this before working in the model.
+
+- **Data now covers Jan–Jun 2026** (June pack landed). Every mart carries periods `2026-01 … 2026-06`.
+- **Statement-line taxonomy replaced with the client's own SCI/SFP line structure** (51 lines, in `seeds/reference/statement_line.csv`, with `category_l1/l2/l3` mirroring the client's statement hierarchy — e.g. ASSETS → Non-Current/Current Assets). This replaces the earlier IFRS-condensed lines so our marts reconcile line-for-line with Finance's SCI Detailed / SFP Detailed. **`statement_line_code` VALUES changed** (e.g. `fee_income`→`actuarial_fees`, `operating_expenses` split into `travelling`/`entertainment`/`it_costs`/…). Mart **columns are unchanged**, so Power BI refreshes cleanly; only visuals hard-filtered on old line codes need relabeling.
+- **Mapping is derived from the client's own formula chain**, not guessed: `SCI/SFP Detailed → KES consolidated TB → TB Local Currency → source '<Entity> TB'`. To resolve any mapping question, read the client's formula for the line and follow it to the source account. This is how Finance maps (by description), and it is authoritative.
+- **Net Profit is modelled into equity** (`fct_trial_balance` `net_profit` CTE = `SUM(SCI income) − SUM(SCI expenses)`, after tax), posted as an SFP/Equity line so the SFP self-balances (Assets = Equity & Liabilities + Net Profit).
+- **MENA** is descriptive-only (no codes): a synthetic code `MENA-<md5(description)>` is generated in `stg_mena_descriptive_tb`, and its lines were resolved via the formula chain (incl. the NCI/share-capital split).
+- **ZARIB** was re-extracted from the client's consolidated column (its monthly packs had code↔amount misalignment) and then decomposed back into Jan–Jun monthly movements; its June cumulative equals the reconciled June position.
+- **Two source accounts had blank A/C codes** and were loaded with synthetic codes: `MW-FIRSTCAP` (Malawi First Capital Current A/c) and `NG-STONEBRIDGE` (Nigeria Investment in Subsidiary). See the monthly checklist.
+- **Reconciliation status (June YTD):** subsidiary SCI 153/155 lines tie; SFP 148/150, assets tie 11/11. Remaining diffs are non-mapping (a blank cell in the client's own C&P SCI Detail; small FX/rounding). Details in `Internal/Phase1_Subsidiary_SCI_Reconciliation.xlsx` and `..._SFP_...`.
+- **Monthly intake:** run the checklist in `Internal/Phase1_Data_Checks_and_Finance_ICT_Issues.md` on every new TB pack (TB foots, blank codes, new/unmapped accounts, code-vs-description consistency, reconcile to the client Detailed, SFP self-balances, FX).
+
+---
+
 ## What this project does today
 
-The 2026 monthly Trial Balance pack (Jan–May, *Finance Templates → 2026 TBs*) is landed as **monthly G/L movement seeds** and flows through a layered dbt pipeline. `period` is a first-class dimension: every reporting mart carries one row per period, so you get the full month-by-month history, not a single snapshot.
+The 2026 monthly Trial Balance pack (Jan–Jun, *Finance Templates → 2026 TBs*) is landed as **monthly G/L movement seeds** and flows through a layered dbt pipeline. `period` is a first-class dimension: every reporting mart carries one row per period, so you get the full month-by-month history, not a single snapshot.
 
 ```
 seeds/bronze/*.csv          monthly G/L MOVEMENTS per entity (each row = that month's delta)
