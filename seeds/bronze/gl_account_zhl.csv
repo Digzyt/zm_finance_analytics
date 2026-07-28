@@ -36,3 +36,4 @@ I25291,Entertainment-(IN TOWN),Posting,Income,Income Statement,Both,true,false,0
 I25360,Bank Charges,Posting,Income,Income Statement,Both,true,false,0,,
 I25367,Summary:Gen Exp Other,Posting,Income,Income Statement,Both,true,false,0,,
 B75120,Tax Provision-Other,Posting,,Balance Sheet,,true,false,0,,
+I25360.2,General expense,Posting,,,,true,false,0,,

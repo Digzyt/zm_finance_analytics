@@ -25,7 +25,22 @@ seeds:
         tests: [not_null]
 
   - name: fx_rate
-    description: "Closing and Average FX rates by currency-period."
+    description: "Closing and Average FX rates by currency-period. Closing is applied to the SFP and Average to the SCI, matching how the client uses their own Rates tab."
+
+  - name: tax_rate
+    description: >
+      Tax rate for the entity-periods where the client computes the charge as a
+      percentage of profit before tax because the trial balance carries no tax
+      account (ZATL, C&P, Rwanda, Nigeria, and ZAMRE/ZARIB in January). Consumed
+      by int_computed_tax. Rows exist ONLY for computed periods; anywhere else
+      the charge comes from a real account via account_map.
+    columns:
+      - name: company_name
+        tests: [not_null]
+      - name: period
+        tests: [not_null]
+      - name: tax_rate
+        tests: [not_null]
 
   - name: elimination_journal
     description: "Intercompany elimination journal. Empty today; populated as IC pairs are identified in Module A."

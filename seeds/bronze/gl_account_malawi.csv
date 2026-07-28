@@ -94,3 +94,5 @@ FXDIFF-PL,Forex difference (P&L at average vs closing),Posting,,Balance Sheet,,t
 I25145,Prof.Fees-Other,Posting,,Income Statement,,true,false,0,,
 I25423,Comp-Depreciation,Posting,,Income Statement,,true,false,0,,
 I25456,MV - Fuel Costs (non personnel),Posting,,Income Statement,,true,false,0,,
+B70400.2,SERVICE CHARGES PROVISION,Posting,,,,true,false,0,,
+MW-FIRSTCAP,FIRST CAPITAL CURRENT ACCOUNT,Posting,,,,true,false,0,,

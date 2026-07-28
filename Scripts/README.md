@@ -1,10 +1,183 @@
-# Scripts — adding a monthly TB to the seeds
+# Scripts — loading trial balances, and reconciling the output
 
-`load_tb.py` loads a monthly Trial Balance workbook into the dbt **bronze seeds**
-(`seeds/bronze/gl_entry_*.csv`), so a new month can be added without hand-editing CSVs.
+Four scripts, in the order a month runs through them:
+
+| Script | Use it when |
+|---|---|
+| `load_tb.py` | Adding **one new month** on top of seeds that already hold every earlier month. The normal monthly routine. |
+| `reseed_from_packs.py` | Rebuilding **all months from scratch** out of the `Consolidated Accounts` packs. Use after a source change or a restatement. |
+| `extract_client_statements.py` | Pulling the client's own `SCI Detailed` / `SFP Detailed`, per entity per month, into a spreadsheet. The benchmark. |
+| `compare_dbt_to_client.py` | Reconciling the dbt subsidiary SCI/SFP marts against that extract, line by line, and writing the recon workbook. |
+
+The monthly loop, end to end:
+
+```bash
+python Scripts/load_tb.py ".../July 2026 Consolidated Accounts.xlsx" --write
+dbt seed --full-refresh && dbt build
+python Scripts/extract_client_statements.py     # the client side
+python Scripts/compare_dbt_to_client.py         # the recon
+```
+
+`Scripts/mapping/` holds the tooling that derives `account_map` from the client's formula
+chain — reach for it when the recon shows classification differences.
+
+**`load_tb.py` cannot be used to rebuild every month.** It computes
+`movement = new YTD − prior cumulative in the seed`, treating every row outside the target
+period as "prior". Run it for January while February–June rows are still in the seed and
+January's movement comes out as `Jan YTD − (Feb..Jun movements)`. The final period still ties
+but every intermediate period is wrong. A full rebuild has to start from empty seeds and load
+the months in order — that is what `reseed_from_packs.py` does.
 
 This folder sits alongside `models/`, `seeds/`, `macros/` etc. It is **not** part of the
 dbt project (dbt ignores it), so it is safe to keep here.
+
+---
+
+## `extract_client_statements.py` — the client's own SCI and SFP
+
+```bash
+python Scripts/extract_client_statements.py                  # all months
+python Scripts/extract_client_statements.py --period 2026-07  # one month
+```
+
+Reads every `Consolidated Accounts` pack and flattens the `SCI Detailed` / `SFP Detailed`
+tabs — one row per line, one column per entity — into
+`Internal/Phase1_Client_SCI_SFP_Extract.xlsx`, plus two CSVs in `Scripts/out/`:
+`client_statements_long.csv` (every cell) and `client_by_line.csv` (aggregated to
+`statement_line_code`, which is the comparison grain).
+
+**Nothing of ours is in the output.** It is the client's statement as they state it, which is
+what makes it usable as the benchmark. Figures are extracted debit-positive, exactly as the
+packs show them; `amount_presentation` applies `statement_line.sign_multiplier` for
+comparison against the marts.
+
+New months need no code change — the period is read from the file name.
+
+Three things the reader has to get right, each of which corrupted an earlier attempt:
+
+1. **The entity columns move.** `SCI Detailed` starts at column C, `SFP Detailed` at column D,
+   and the order is not stable between packs. Rows 1–8 are scanned and the row with the most
+   recognised entity names wins. First-seen-wins instead picks up the sheet title in A1
+   ("Zamara Holdings Limited") and reads it as ZHL's data column.
+2. **The SCI expense section is group headers over account-level detail rows.** Column A
+   carries the client's marker (`P&L` / `Balance Sheet`) and is blank on headers and
+   subtotals, so a detail row like *Emol.Pack-Salaries* inherits its group, *Personnel Costs*.
+3. **`Net Profit` on the SFP is `=SUM(entire P&L range)`.** It carries the same marker as any
+   other line but must never be treated as a line that owns accounts — it is compared against
+   the `net_profit` our model derives in `fct_trial_balance`.
+
+Two self-tests ship with it, and both are in the workbook:
+
+- **Totals Check** — the client's own `Total Income` / `Total Expenses` / `Total Assets` /
+  `Total Equity and Liabilities` rows against the sum of the detail rows we read.
+  All 220 tie. Two layout facts are built in: their **`Total Expenses` excludes the Taxation
+  line** (which sits inside the expense list but outside the total; `Management Expense` is
+  inside it), and their **`Total Equity and Liabilities` includes the derived `Net Profit`**.
+- **Row Cross-Foot** — the eleven entity columns against the client's own TOTAL column. Three
+  exceptions, all theirs: February's depreciation subtotal formula is `=SUM(N91:N97)` and so
+  **omits row 98, ZAAC `Goodwill amortisation` KES 130,054**, while their per-entity subtotal
+  cells include it; the other two are group `Profit Before/After Tax` rows whose TOTAL is a
+  different aggregate. We read the entity columns, so none of this moves our figures — raise
+  it as a data-quality item.
+
+**January is group-only.** That pack has no per-entity Detailed tabs — its `SCI` / `SFP` hold
+the consolidated group statement in a single column. It is reported as group-only on the
+Coverage tab and contributes no rows, so January cannot be reconciled per entity.
+
+---
+
+## `compare_dbt_to_client.py` — the recon
+
+```bash
+python Scripts/compare_dbt_to_client.py                        # marts from Postgres
+python Scripts/compare_dbt_to_client.py --refresh              # re-extract the client side first
+python Scripts/compare_dbt_to_client.py --marts csv --marts-dir ../Outputs
+```
+
+Compares `subsidiary.rpt_subsidiary_sci` / `_sfp` to `client_by_line.csv` per entity, per
+line, per month, and writes `Internal/Phase1_SCI_SFP_Recon_dbt_vs_Client.xlsx` (Summary,
+Side by Side, Differences Only, By Statement Line, Entity × Month) plus
+`Scripts/out/recon_side_by_side.csv` and `recon_summary.csv`.
+
+The marts are read from **Postgres by default**, using `~/.dbt/profiles.yml` and
+`$PG_PASSWORD` — the repo's `profiles.yml` is only a template, so the real one is tried first.
+`--marts csv` reads `rpt_subsidiary_*.csv` exports instead, in UTF-8, UTF-16 or with the NUL
+bytes the export leaves behind, which is the route when the database is not reachable.
+
+Both sides are compared on the **statement-presentation basis** (income and equity positive),
+since that is what the marts hold. The client's own debit-positive figure travels alongside in
+`client_as_stated_kes` so any row can be tied back to their pack by eye.
+
+Every differing cell is bucketed, and the buckets are the point:
+
+| Bucket | Means |
+|---|---|
+| `rounding / FX` | under 0.5% and under KES 2m — translation noise |
+| `we show nothing` | they report a figure on this line and we report none — usually an unmapped or missing account |
+| `client shows nothing` | we report a figure they do not |
+| `classification` | both report, on different lines — a mapping decision |
+
+Where another line in the same entity-month is out by the mirror amount, the note reads
+**"offset by &lt;line&gt;"**. That distinction is what makes the list actionable: an offsetting
+pair needs one mapping decision, whereas a difference with no partner means something is
+genuinely absent from the seeds.
+
+Current state: **2,375 of 2,484 line cells tie exactly (95.6%)**, total absolute difference
+**KES 91.3m**, of which ZARIB is 82.1m — dominated by the KES 15m consolidation-level accrual
+that exists only in `KES consolidated TB`, so it needs an accrual intake rather than a mapping
+change.
+
+---
+
+## `reseed_from_packs.py` — full rebuild
+
+```bash
+python Scripts/reseed_from_packs.py                       # dry run + reports, nothing written
+python Scripts/reseed_from_packs.py --write               # rebuild the seeds
+dbt seed --full-refresh && dbt build
+```
+
+It reads all six `Consolidated Accounts` packs, loads the months in order, and writes
+`gl_entry_*`, new `gl_account_*` rows and `fx_rate.csv`. Two report files land next to the
+script: `reseed_audit.csv` (how every account's code was decided) and `reseed_recon.csv`
+(seed cumulative vs each pack's YTD, per entity per period — should be zero everywhere).
+
+**Two rule files carry every judgement call**, so nothing is decided implicitly:
+
+- **`code_overrides.csv`** — codes the client reuses for two different accounts, and pinned
+  codes for rows with a blank A/C No. ZARIB reuses 7–10 codes every month (`4000/000` is both
+  *VALUE ADDS* and *Leasehold-Depreciation*); ZATL, C&P, ZAAC, DRC and ZHL each reuse one.
+  Without a rule those balances silently merge.
+- **`code_bridge_nigeria.csv`** — Nigeria's description → BC code bridge. The final packs give
+  Nigeria no code column at all, and the `Nigeria BC Codes` companion sheet in the Raw TBs
+  packs is **not** usable (it assigns `B75110` to 16 different accounts and `I25205` to 23).
+  The bridge was instead built by matching YTD amounts against the Raw TBs Nigeria tab and
+  name-checking every hit; 61 of Nigeria's 88 accounts bridge, the rest get synthetic codes.
+
+Codes are resolved in this order, and the basis is recorded per account:
+
+1. `code_overrides.csv`
+2. `code_bridge_nigeria.csv` (Nigeria only)
+3. source code, where it carries only one description and matches the prior seed
+4. **re-alias by description** — the final packs code ZARIB / ZAMRE / ZHL / Malawi / Rwanda with
+   legacy local numbers (`7380/000`, `1020/000`, `6100`) while `account_map` is keyed on BC
+   codes, so the prior seed's code for the same description is used instead. Skipping this step
+   orphans 437 accounts and 12.1bn KES rather than 234 and 3.0bn.
+5. blank code → prior seed by description, else a readable synthetic `<ENT>-<SLUG>`
+
+A **collision guard** then refuses to let two different accounts share an assigned code, and
+suffixes the weaker-evidenced one. Same description arriving under two source codes is treated
+as one account the client re-coded mid-year, and stays merged.
+
+`--codebook-dir` points the prior-seed snapshot at a backup, for when the seeds have already
+been overwritten. The script never touches `account_map.csv` or `statement_line.csv`.
+
+**After any rebuild, `account_map` needs re-derivation** — see
+`Internal/Phase1_Reseed_From_Consolidated_Accounts.xlsx` for the current gap list.
+
+---
+
+## `load_tb.py` — one new month
 
 ---
 
@@ -65,6 +238,8 @@ months). Point the script at **one workbook** per run.
   SFP Detailed.
 - **Post-accrual columns are preferred** when a tab has both `Amount` and
   `Amount After Accruals` / `Net Amount`.
+- **Dr/Cr layouts are handled**: if a tab splits into separate `Dr` and `Cr` columns
+  (e.g. some months' `Zamre TB`), the amount is netted `Dr − Cr` (debit-positive).
 - **Descriptive tabs** (MENA; Nigeria when it arrives without codes) are keyed by
   **description**: new rows are bridged to the existing seed account by description, and
   anything unmatched gets a stable synthetic code (`X-<hash>` / handled as `MENA` today) —

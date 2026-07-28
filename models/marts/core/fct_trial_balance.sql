@@ -46,8 +46,49 @@ base as (
         line_label, line_order
 ),
 
+-- Entities with no taxation account in their TB: the client computes the charge
+-- as a percentage of profit before tax and posts Dr Taxation / Cr Tax
+-- recoverable. See int_computed_tax. Line metadata comes from statement_line so
+-- it stays in step with the catalogue rather than being repeated here.
+computed_tax_raw as (
+    select * from {{ ref('int_computed_tax') }}
+),
+
+statement_line as (
+    select * from {{ ref('statement_line') }}
+),
+
+computed_tax as (
+    select
+        t.company_name,
+        t.period,
+        sl.statement_line_code,
+        sl.statement_type,
+        sl.category_l1, sl.category_l2, sl.category_l3,
+        sl.line_label, sl.line_order,
+        cast(t.tax_adjustment_local * m.direction as numeric(20, 4))  as amount_local,
+        cast(t.tax_adjustment_kes   * m.direction as numeric(20, 4))  as amount_kes
+    from computed_tax_raw t
+    cross join (
+        -- the two sides of the client's journal
+        select cast('taxation'        as text) as code, cast( 1 as int) as direction
+        union all
+        select cast('tax_recoverable' as text) as code, cast(-1 as int) as direction
+    ) m
+    join statement_line sl
+      on sl.statement_line_code = m.code
+),
+
+-- base plus the computed charge, before net profit is struck
+pre_net_profit as (
+    select * from base
+    union all
+    select * from computed_tax
+),
+
 net_profit as (
-    -- current-year result carried to equity on the SFP (after tax)
+    -- current-year result carried to equity on the SFP (after tax, so this reads
+    -- pre_net_profit and not base)
     select
         company_name,
         period,
@@ -65,14 +106,28 @@ net_profit as (
         sum(case when statement_type = 'SCI' and category_l1 = 'INCOME'   then amount_kes
                  when statement_type = 'SCI' and category_l1 = 'EXPENSES' then -amount_kes
                  else 0 end)                     as amount_kes
-    from base
+    from pre_net_profit
     group by company_name, period
 ),
 
 combined as (
-    select * from base
-    union all
-    select * from net_profit
+    -- Re-aggregate: the computed tax lands on lines that may already carry a
+    -- mapped balance (tax_recoverable usually does), and the grain here is
+    -- company x line x period, so the two contributions must be summed rather
+    -- than emitted as duplicate rows.
+    select
+        company_name, period, statement_line_code, statement_type,
+        category_l1, category_l2, category_l3, line_label, line_order,
+        sum(amount_local)  as amount_local,
+        sum(amount_kes)    as amount_kes
+    from (
+        select * from pre_net_profit
+        union all
+        select * from net_profit
+    ) x
+    group by
+        company_name, period, statement_line_code, statement_type,
+        category_l1, category_l2, category_l3, line_label, line_order
 )
 
 select

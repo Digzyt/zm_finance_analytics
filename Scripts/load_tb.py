@@ -64,7 +64,8 @@ CODE_HDRS = {'a/c no','bc code','bc codes','account no','code'}
 DESC_HDRS = {'description','account name','account'}
 # local-amount header preference (post-accrual first), then plain; KES is separate
 AMT_POST  = {'amount after accruals','amount after accrual','net amount'}
-AMT_PLAIN = {'amount','dr','tzs','net debit /(credit)','net debit/(credit)','local'}
+AMT_PLAIN = {'amount','dr','tzs','net debit /(credit)','net debit/(credit)','local','debit'}
+CR_HDRS   = {'cr','credit'}          # some tabs split into Dr / Cr; net = Dr - Cr (debit-positive)
 KES_HDRS  = {'kes'}
 
 def norm(s):
@@ -104,6 +105,7 @@ def find_header(ws, maxscan=12):
             elif v in DESC_HDRS and 'desc' not in roles: roles['desc'] = c
             elif v in KES_HDRS and 'kes' not in roles: roles['kes'] = c
             elif v in AMT_POST and 'amt_post' not in roles: roles['amt_post'] = c
+            elif v in CR_HDRS and 'cr' not in roles: roles['cr'] = c
             elif v in AMT_PLAIN and 'amt_plain' not in roles: roles['amt_plain'] = c
         if 'desc' in roles and ('amt_post' in roles or 'amt_plain' in roles):
             return r, roles
@@ -119,6 +121,7 @@ def read_entity(ws, descriptive):
     if hr is None: return None
     ccode = roles.get('code'); cdesc = roles['desc']
     camt = roles.get('amt_post') or roles.get('amt_plain')   # local amount (post-accrual preferred)
+    ccr = roles.get('cr')                                     # separate credit column (Dr/Cr layout)
     ckes = roles.get('kes')
     out = {}   # key -> [description, local_amount, kes_amount]
     for r in range(hr + 1, ws.max_row + 1):
@@ -126,6 +129,8 @@ def read_entity(ws, descriptive):
         nd = norm(desc)
         if nd in SKIP_DESC or nd.startswith('total') or nd.startswith('period'): continue
         loc = num(ws.cell(r, camt).value)
+        if ccr is not None:                                  # net = Dr - Cr (debit-positive)
+            loc = (loc or 0.0) - (num(ws.cell(r, ccr).value) or 0.0)
         kes = num(ws.cell(r, ckes).value) if ckes else None
         if loc is None and kes is None: continue
         code = None

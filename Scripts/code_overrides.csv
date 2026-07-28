@@ -1,0 +1,49 @@
+entity,source_code,norm_description,assigned_code,basis,review_flag,note
+c_p,I25360,bank charges,I25360,EXISTING_SEED,,Keeps the bare code - already mapped in account_map
+c_p,I25360,summary:gen exp other,I25360.2,DUP_SPLIT,REVIEW,Client reuses I25360 for two accounts; needs its own account_map row
+drc,B70290,premiums payable,B70290,EXISTING_SEED,,
+drc,B70290,other payables,B70290.2,DUP_SPLIT,REVIEW,June only; client reuses B70290
+zaac,I10073,afrf admin fees,I10073,EXISTING_SEED,,Client formula chain ties Umbrella Fund to I10073 AFRF Admin Fees
+zaac,I10073,management fees,I10073.2,DUP_SPLIT,REVIEW,Previously collapsed into I10073 with AFRF Admin Fees; now separated
+zarib,3350/000,mv-depreciation,3350/000,EXISTING_SEED,,
+zarib,3350/000,commission leads,3350/000.2,DUP_SPLIT,REVIEW,Commission-lead expense - relates to the open gross-vs-net treatment question
+zarib,3380/000,prem-cleaning,3380/000,ALPHA_FIRST,REVIEW,Neither description was in the prior seed
+zarib,3380/000,trav. air fares,3380/000.2,DUP_SPLIT,REVIEW,
+zarib,3490/000,entertainment-(out of town),3490/000,EXISTING_SEED,,
+zarib,3490/000,prem-rates,3490/000.2,DUP_SPLIT,REVIEW,
+zarib,3520/000,prem-rental(external),3520/000,ALPHA_FIRST,REVIEW,
+zarib,3520/000,toner,3520/000.2,DUP_SPLIT,REVIEW,
+zarib,3540/000,comp-depreciation,3540/000,ALPHA_FIRST,REVIEW,
+zarib,3540/000,printing-general,3540/000.2,DUP_SPLIT,REVIEW,
+zarib,3570/000,s/ware depreciation,3570/000,ALPHA_FIRST,REVIEW,
+zarib,3570/000,stationery-general,3570/000.2,DUP_SPLIT,REVIEW,
+zarib,3610/000,prof.fees-audit fees,3610/000,ALPHA_FIRST,REVIEW,
+zarib,3610/000,software licence fees,3610/000.2,DUP_SPLIT,REVIEW,
+zarib,3870/000,software maintenance,3870/000,ALPHA_FIRST,REVIEW,
+zarib,3870/000,subscriptions general,3870/000.2,DUP_SPLIT,REVIEW,
+zarib,3990/000,furn-depreciation,3990/000,ALPHA_FIRST,REVIEW,
+zarib,3990/000,summary:gen exp other,3990/000.2,DUP_SPLIT,REVIEW,
+zarib,4000/000,value adds,4000/000,EXISTING_SEED,,
+zarib,4000/000,leasehold-depreciation,4000/000D,EXISTING_SEED,,Split agreed 18 July 2026; keeps the established 4000/000D code
+zarib,4040/000,equip-depreciation,4040/000,ALPHA_FIRST,REVIEW,
+zarib,4040/000,insurance-p.i.,4040/000.2,DUP_SPLIT,REVIEW,
+zatl,B55340,interest receivable,B55340,EXISTING_SEED,,
+zatl,B55340,accrued interest,B55340.2,DUP_SPLIT,REVIEW,
+zatl,B65290,withholding income tax - 5%,B65290,EXISTING_SEED,,
+zatl,B65290,withholding income tax,B65290.2,DUP_SPLIT,REVIEW,Previously collapsed with the 5% account
+zaac,B55130,accrued income,B55135,CLIENT_RECODE,REVIEW,"February codes Accrued Income as B55130; March-June code it B55135. Feb treated as a client typo and aligned to B55135. NOTE account_map currently has B55130=accrued_income and B55135=other_receivables - that is now backwards and puts 221.8m of Accrued Income on other_receivables"
+zaac,B55130,due from/to directors,B55130,SOURCE_CODE,,Keeps its own code across all six months
+zhl,4300/000,bank charges,I25360,EXISTING_SEED,,Prior seed collapsed Bank Charges and General expense under I25360
+zhl,4300/000,general expense,I25360.2,DUP_SPLIT,REVIEW,Separated from Bank Charges; needs its own account_map row
+drc,B60190,petty cash - kinshasa,B60190,EXISTING_SEED,,Prior seed collapsed both petty-cash accounts under B60190 (both mapped office_cash)
+drc,B60190,petty cash - office,B60190.2,DUP_SPLIT,REVIEW,Separated from Petty Cash - Kinshasa; needs its own account_map row (office_cash)
+drc,B60090,equity bank,B60090,EXISTING_SEED,,
+drc,B60090,equity bank - office,B60090.2,DUP_SPLIT,REVIEW,Separated from EQUITY BANK; needs its own account_map row
+malawi,,first capital current account,MW-FIRSTCAP,EXISTING_SEED,,Blank A/C No in source; code agreed 18 July 2026
+nigeria,,investment in subsidiary- stonebridge,B65270,RAW_TB_BRIDGE,,Replaces the synthetic NG-STONEBRIDGE with the client's real BC code
+zaac,,tax expense,ZAAC-TAXEXPENSE,BLANK_CODE_PINNED,REVIEW,Blank A/C No in source; material (56.1m by June) and relates to the open tax-mapping item
+c_p,,tax expense,CP-TAXEXPENSE,BLANK_CODE_PINNED,REVIEW,Blank A/C No in source
+c_p,,management fees,CP-MGMTFEES,BLANK_CODE_PINNED,REVIEW,Blank A/C No in source
+drc,,management fees,DRC-MGMTFEES,BLANK_CODE_PINNED,REVIEW,Blank A/C No in source
+zamre,,training internal,ZAMRE-TRAININGINT,BLANK_CODE_PINNED,REVIEW,Blank A/C No in source
+zatl,,withholding tax - 10%,ZATL-WHT10,BLANK_CODE_PINNED,REVIEW,Blank A/C No in source

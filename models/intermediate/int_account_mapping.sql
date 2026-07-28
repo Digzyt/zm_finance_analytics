@@ -59,6 +59,10 @@ account_map as (
     select * from {{ ref('account_map') }}
 ),
 
+periods as (
+    select * from {{ ref('stg_report_periods') }}
+),
+
 statement_line as (
     select * from {{ ref('statement_line') }}
 )
@@ -90,8 +94,19 @@ from all_lines l
 left join coa
        on coa."Company_Name"    = l."Company_Name"
       and coa."G_L_Account_No"  = l."G_L_Account_No"
+-- Date-aware mapping join. The client does re-classify accounts mid-year — C&P's
+-- Withholding IncomeTax sits under Other receivables to May and moves to Tax
+-- recoverable in June — so account_map can hold more than one row per account,
+-- each valid for a span of periods. Joining on company and account alone (as
+-- this model did) either picked an arbitrary row or fanned the fact out.
+-- effective_from / effective_to are inclusive and must not overlap for the same
+-- (company, account); assert_account_map_no_overlaps enforces that.
+left join periods rp
+       on rp.period            = l.period
 left join account_map am
        on am.company_name       = l."Company_Name"
       and am.local_account_no   = l."G_L_Account_No"
+      and rp.period_end        >= cast(am.effective_from as date)
+      and rp.period_end        <= cast(am.effective_to   as date)
 left join statement_line sl
        on sl.statement_line_code = am.statement_line_code
