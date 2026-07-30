@@ -47,3 +47,6 @@ c_p,,management fees,CP-MGMTFEES,BLANK_CODE_PINNED,REVIEW,Blank A/C No in source
 drc,,management fees,DRC-MGMTFEES,BLANK_CODE_PINNED,REVIEW,Blank A/C No in source
 zamre,,training internal,ZAMRE-TRAININGINT,BLANK_CODE_PINNED,REVIEW,Blank A/C No in source
 zatl,,withholding tax - 10%,ZATL-WHT10,BLANK_CODE_PINNED,REVIEW,Blank A/C No in source
+zarib,3380/000,trav. air fares,I25181,DUP_SPLIT,,Client reuses 3380/000 for Prem-Cleaning and Trav. Air Fares; account_map keys Travelling on I25181
+zarib,3380/000,prem-cleaning,3380/000,DUP_SPLIT,,The other half of the 3380/000 reuse; account_map keys Premises on the bare code
+zarib,,trav. air fares,I25181,BLANK_CODE_PINNED,,Blank A/C No from February; same account as 3380/000 Trav. Air Fares

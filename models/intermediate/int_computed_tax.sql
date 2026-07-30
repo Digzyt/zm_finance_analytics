@@ -41,7 +41,7 @@ with sci as (
         sum(case when category_l1 = 'INCOME'   then amount_kes
                  when category_l1 = 'EXPENSES' then -amount_kes
                  else 0 end)                                as pbt_kes
-    from {{ ref('int_fx_translation') }}
+    from {{ ref('int_tb_with_accruals') }}
     where statement_type = 'SCI'
       and statement_line_code <> 'taxation'
     group by company_name, period
@@ -60,7 +60,7 @@ already_taxed as (
         period,
         sum(amount_local_signed)  as mapped_tax_local,
         sum(amount_kes)           as mapped_tax_kes
-    from {{ ref('int_fx_translation') }}
+    from {{ ref('int_tb_with_accruals') }}
     where statement_line_code = 'taxation'
     group by company_name, period
 ),

@@ -12,12 +12,14 @@
 
 select
     t.company_name,
+    t.region,
     t.period,
     t.statement_line_code,
     sl.line_order,
     sl.category_l1,
     sl.category_l2,
     sl.category_l3,
+    sl.tb_category,
     sl.line_label,
     t.amount_local,
     t.amount_kes

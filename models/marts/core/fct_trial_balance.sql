@@ -20,10 +20,20 @@
 -- posted as an SFP / Equity line. This makes the SFP self-balance
 -- (Assets = Equity & Liabilities + Net Profit) for every fully-mapped entity;
 -- any residual then equals that entity's net unmapped amount.
+--
+-- Three things are unioned onto the mapped base, all of them the client's own
+-- constructions and all SFP-side, so none of them disturbs net_profit:
+--   * the accrual overlay        — already inside `base`, via int_tb_with_accruals
+--   * the computed tax charge    — int_computed_tax, for entities with no tax account
+--   * the translation difference — int_translation_reserve_plug, the SFP-at-closing
+--                                  vs SCI-at-average residual posted to translation
+--                                  reserve, which the client carries as an explicit
+--                                  row on their `KES consolidated TB`
 -- =============================================================================
 
 with translated as (
-    select * from {{ ref('int_fx_translation') }}
+    -- pre-accrual ledger + the client's accrual overlay; see int_tb_with_accruals
+    select * from {{ ref('int_tb_with_accruals') }}
 ),
 
 base as (
@@ -79,11 +89,26 @@ computed_tax as (
       on sl.statement_line_code = m.code
 ),
 
--- base plus the computed charge, before net profit is struck
+-- The IAS 21 translation difference: the SFP translates at closing and the SCI at
+-- average, so the translated TB no longer foots and the residual goes to
+-- translation reserve. The client carries it as an explicit row on their
+-- `KES consolidated TB`. See int_translation_reserve_plug.
+translation_plug as (
+    select
+        company_name, period, statement_line_code, statement_type,
+        category_l1, category_l2, category_l3, line_label, line_order,
+        amount_local, amount_kes
+    from {{ ref('int_translation_reserve_plug') }}
+),
+
+-- base (which already includes the accrual overlay) plus the computed charge and
+-- the translation plug. Both are SFP-side, so neither disturbs net_profit below.
 pre_net_profit as (
     select * from base
     union all
     select * from computed_tax
+    union all
+    select * from translation_plug
 ),
 
 net_profit as (
@@ -132,6 +157,7 @@ combined as (
 
 select
     company_name,
+    e.region,
     period,
     statement_line_code,
     statement_type,
@@ -144,3 +170,5 @@ select
        'company_name','period','statement_line_code'
     ]) }}                                as tb_row_key
 from combined
+left join {{ ref('entity') }} e
+       on e.entity_code = combined.company_name

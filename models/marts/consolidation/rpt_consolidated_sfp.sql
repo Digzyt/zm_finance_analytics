@@ -16,6 +16,7 @@ select
     sl.category_l1,
     sl.category_l2,
     sl.category_l3,
+    sl.tb_category,
     sl.line_label,
     c.subsidiary_sum_kes,
     c.elimination_kes,

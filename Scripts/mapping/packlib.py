@@ -44,14 +44,21 @@ ENTITIES = {
 CODE_HDRS = {'a/c no', 'bc code', 'bc codes', 'account no', 'code'}
 DESC_HDRS = {'description', 'account name', 'account'}
 AMT_POST  = {'amount after accruals', 'amount after accrual', 'amount after accural',
-             'net amount', 'amount after accruals '}
+             'net amount',
+             # ZARIB, March and April: the client renames both columns
+             'amount after deferred rev', 'amount after deffered rev',
+             'amount after deferred revenue', 'amount after def rev', 'amount after accruals '}
 AMT_PLAIN = {'amount', 'dr', 'tzs', 'net debit /(credit)', 'net debit/(credit)', 'local', 'debit'}
 CR_HDRS   = {'cr', 'credit'}
 KES_HDRS  = {'kes'}
 # See reseed_from_packs.ACCRUAL_HDRS: where the client's netted column has no
 # header we must net Amount + Accruals ourselves, or accrual-only rows (empty
 # Amount) are dropped.
-ACCRUAL_HDRS = {'accrual', 'accruals'}
+ACCRUAL_HDRS = {'accrual', 'accruals',
+                # ZARIB March/April; the misspelling is the client's
+                'deffered revenue & accruals', 'deferred revenue & accruals',
+                'deffered revenue and accruals', 'deferred revenue and accruals',
+                'deferred revenue & accrual'}
 
 SKIP_DESC = {'assets', 'non-current assets', 'current assets', 'fixed assets', 'liabilities',
     'equity', 'equity and liabilities', 'owners equity', 'current liabilities',

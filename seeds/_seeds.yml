@@ -15,6 +15,18 @@ seeds:
     columns:
       - name: statement_line_code
         tests: [not_null, unique]
+      - name: tb_category
+        description: >
+          The client's own grouping — column A of the `KES consolidated TB` tab,
+          the 24-category template. Our 51 statement lines collapse onto it
+          many-to-one, so it lives here rather than in a separate mapping table,
+          and it surfaces on dim_statement_line and every reporting mart so Power
+          BI can group the TB and the statements the way Finance's workbook does.
+          Derived by joining the client's `No.` column to account_map across all
+          six Consolidated Accounts packs. Two judgement calls are still open with
+          Finance: accrued_income -> 'Other receivables', and net_profit ->
+          'Retained earnings' (their TB has no separate Net Profit row).
+        tests: [not_null]
 
   - name: account_map
     description: "Per-entity local account -> statement line mapping. TODO: lift from Consolidated TB workbook formulas."
@@ -75,3 +87,20 @@ seeds:
   - name: gl_account_rwanda
   - name: gl_account_drc
   - name: gl_account_uganda_assoc
+
+  - name: tb_accrual
+    description: >
+      The client's `Accruals` column from the individual TB tabs, per account per
+      period, as monthly movements. ZAAC, ZARIB and C&P only — no other entity's tab
+      carries the column. Written by Scripts/extract_accruals.py; joined back in
+      stg_tb_accrual and rpt_subsidiary_tb so the five TB columns can be shown
+      separately WITHOUT putting a non-BC column on the bronze gl_entry seeds.
+      The bronze figure is already post-accrual, so `amount` is derived as
+      after − accruals; this seed cannot move a reported figure, only decompose it.
+    columns:
+      - name: company_name
+        tests: [not_null]
+      - name: period
+        tests: [not_null]
+      - name: accrual_local
+        tests: [not_null]

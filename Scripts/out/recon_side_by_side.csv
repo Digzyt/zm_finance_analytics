@@ -105,7 +105,7 @@ C&P,2026-04,SCI,EXPENSES,Operating expenses,printing_stationery,Printing & Stati
 C&P,2026-04,SCI,EXPENSES,Operating expenses,premises,Premises,140,0.0,0.0,0.0,,tie,,,0.0
 C&P,2026-04,SCI,EXPENSES,Operating expenses,advertising_pr,Advertising & PR,150,0.0,0.0,0.0,,tie,,,0.0
 C&P,2026-04,SCI,EXPENSES,Operating expenses,insurance,Insurance,160,1391180.32,1391180.32,0.0,0.0,tie,,,1391180.32
-C&P,2026-04,SCI,EXPENSES,Operating expenses,professional_fees,Professional Fees,170,1056733.32,1056733.32,0.0,0.0,tie,,,1056733.32
+C&P,2026-04,SCI,EXPENSES,Operating expenses,professional_fees,Professional Fees,170,1056733.32,1056733.32,-0.0,-0.0,tie,,,1056733.32
 C&P,2026-04,SCI,EXPENSES,Operating expenses,depreciation,Depreciation,180,0.0,0.0,0.0,,tie,,,0.0
 C&P,2026-04,SCI,EXPENSES,Operating expenses,motor_vehicle_expenses,Motor Vehicle Expenses,190,0.0,0.0,0.0,,tie,,,0.0
 C&P,2026-04,SCI,EXPENSES,Operating expenses,general_expenses,General Expenses,200,2319422.18,2319422.18,0.0,0.0,tie,,,2319422.18
@@ -129,7 +129,7 @@ C&P,2026-04,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,0.0,34779
 C&P,2026-04,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,-993355.98,-993355.97,-0.01,0.0,tie,,,-993355.97
 C&P,2026-04,SFP,ASSETS,Current Assets,accrued_income,Accrued Income,410,16660920.32,16660920.32,0.0,0.0,tie,,,16660920.32
 C&P,2026-04,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,25000000.0,25000000.0,0.0,0.0,tie,,,-25000000.0
-C&P,2026-04,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,0.0,0.0,0.0,,tie,,,0.0
+C&P,2026-04,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,1.0,0.0,1.0,,tie,,,0.0
 C&P,2026-04,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 C&P,2026-04,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,133494468.71,133494469.71,-1.0,-0.0,tie,,,-133494469.71
 C&P,2026-04,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,8403551.28,8403551.28,-0.0,-0.0,tie,,,-8403551.28
@@ -154,7 +154,7 @@ C&P,2026-05,SCI,EXPENSES,Operating expenses,insurance,Insurance,160,1738975.4,17
 C&P,2026-05,SCI,EXPENSES,Operating expenses,professional_fees,Professional Fees,170,753316.65,753316.65,0.0,0.0,tie,,,753316.65
 C&P,2026-05,SCI,EXPENSES,Operating expenses,depreciation,Depreciation,180,0.0,0.0,0.0,,tie,,,0.0
 C&P,2026-05,SCI,EXPENSES,Operating expenses,motor_vehicle_expenses,Motor Vehicle Expenses,190,0.0,0.0,0.0,,tie,,,0.0
-C&P,2026-05,SCI,EXPENSES,Operating expenses,general_expenses,General Expenses,200,2885655.85,2885655.85,-0.0,-0.0,tie,,,2885655.85
+C&P,2026-05,SCI,EXPENSES,Operating expenses,general_expenses,General Expenses,200,2885655.85,2885655.85,0.0,0.0,tie,,,2885655.85
 C&P,2026-05,SCI,EXPENSES,Operating expenses,management_expense,Management Expense,210,0.0,0.0,0.0,,tie,,,0.0
 C&P,2026-05,SCI,EXPENSES,Finance costs,finance_costs,Finance cost,220,0.0,0.0,0.0,,tie,,,0.0
 C&P,2026-05,SCI,EXPENSES,Taxation,taxation,Taxation,230,4780412.59,4780412.59,-0.0,-0.0,tie,,,4780412.59
@@ -197,7 +197,7 @@ C&P,2026-06,SCI,EXPENSES,Operating expenses,printing_stationery,Printing & Stati
 C&P,2026-06,SCI,EXPENSES,Operating expenses,premises,Premises,140,0.0,0.0,0.0,,tie,,,0.0
 C&P,2026-06,SCI,EXPENSES,Operating expenses,advertising_pr,Advertising & PR,150,0.0,0.0,0.0,,tie,,,0.0
 C&P,2026-06,SCI,EXPENSES,Operating expenses,insurance,Insurance,160,2086770.48,2086770.48,0.0,0.0,tie,,,2086770.48
-C&P,2026-06,SCI,EXPENSES,Operating expenses,professional_fees,Professional Fees,170,857199.98,857199.98,-0.0,-0.0,tie,,,857199.98
+C&P,2026-06,SCI,EXPENSES,Operating expenses,professional_fees,Professional Fees,170,857199.98,857199.98,0.0,0.0,tie,,,857199.98
 C&P,2026-06,SCI,EXPENSES,Operating expenses,depreciation,Depreciation,180,0.0,0.0,0.0,,tie,,,0.0
 C&P,2026-06,SCI,EXPENSES,Operating expenses,motor_vehicle_expenses,Motor Vehicle Expenses,190,0.0,0.0,0.0,,tie,,,0.0
 C&P,2026-06,SCI,EXPENSES,Operating expenses,general_expenses,General Expenses,200,75247.5,75247.5,0.0,0.0,tie,,,75247.5
@@ -213,7 +213,7 @@ C&P,2026-06,SFP,ASSETS,Non-Current Assets,deposit_for_investment_in_subsidiary,D
 C&P,2026-06,SFP,ASSETS,Non-Current Assets,deferred_tax,Deferred tax,310,4287361.0,4287361.0,0.0,0.0,tie,,,4287361.0
 C&P,2026-06,SFP,ASSETS,Current Assets,trade_receivables,Trade Receivables (Debtors),320,45629603.0,45629603.0,0.0,0.0,tie,,,45629603.0
 C&P,2026-06,SFP,ASSETS,Current Assets,premium_receivables,Premium Receivables,330,0.0,0.0,0.0,,tie,,,0.0
-C&P,2026-06,SFP,ASSETS,Current Assets,other_receivables,Other Receivables,340,7341367.2,7341367.2,-0.0,-0.0,tie,,,7341367.2
+C&P,2026-06,SFP,ASSETS,Current Assets,other_receivables,Other Receivables,340,7341367.2,7341367.2,0.0,0.0,tie,,,7341367.2
 C&P,2026-06,SFP,ASSETS,Current Assets,due_from_to_related_parties,Due from/to related parties,350,87712683.56,87712683.56,-0.0,-0.0,tie,,,87712683.56
 C&P,2026-06,SFP,ASSETS,Current Assets,office_cash,Cash - Office Cash,360,12646453.33,12646453.33,0.0,0.0,tie,,,12646453.33
 C&P,2026-06,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,22284303.0,22284303.0,0.0,0.0,tie,,,22284303.0
@@ -226,7 +226,7 @@ C&P,2026-06,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividen
 C&P,2026-06,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,133494468.71,133494469.71,-1.0,-0.0,tie,,,-133494469.71
 C&P,2026-06,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,11484024.73,11484024.73,-0.0,-0.0,tie,,,-11484024.73
 C&P,2026-06,SFP,EQUITY AND LIABILITIES,Equity,non_controlling_interests,Non-controlling interests,470,0.0,0.0,0.0,,tie,,,0.0
-C&P,2026-06,SFP,EQUITY AND LIABILITIES,Current Liabilities,trade_and_other_payables,Trade and other payables,480,14104509.77,14104509.77,-0.0,-0.0,tie,,,-14104509.77
+C&P,2026-06,SFP,EQUITY AND LIABILITIES,Current Liabilities,trade_and_other_payables,Trade and other payables,480,14104509.77,14104509.77,0.0,0.0,tie,,,-14104509.77
 C&P,2026-06,SFP,EQUITY AND LIABILITIES,Current Liabilities,deferred_revenue,Deferred Revenue,490,0.0,0.0,0.0,,tie,,,0.0
 C&P,2026-06,SFP,EQUITY AND LIABILITIES,Current Liabilities,premium_payable,Premium payable,500,0.0,0.0,0.0,,tie,,,0.0
 C&P,2026-06,SFP,EQUITY AND LIABILITIES,Current Liabilities,borrowings,Borrowings,510,0.0,0.0,0.0,,tie,,,0.0
@@ -266,7 +266,7 @@ DRC,2026-02,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,0.0,0.0,0.0,,
 DRC,2026-02,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,533691.23,533691.23,0.0,0.0,tie,,,533691.23
 DRC,2026-02,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,-142808.37,-142808.37,0.0,-0.0,tie,,,-142808.37
 DRC,2026-02,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,74207214.16,74207214.16,0.0,0.0,tie,,,-74207214.16
-DRC,2026-02,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,0.0,184.17,-184.17,-100.0,DIFFERENCE,we show nothing,,-184.17
+DRC,2026-02,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,236.72,184.17,52.55,28.53,DIFFERENCE,classification,,-184.17
 DRC,2026-02,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 DRC,2026-02,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,-51352540.4,-51352540.4,-0.0,0.0,tie,,,51352540.4
 DRC,2026-02,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,-6108455.09,-6108455.09,0.0,-0.0,tie,,,6108455.09
@@ -310,7 +310,7 @@ DRC,2026-03,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,0.0,0.0,0.0,,
 DRC,2026-03,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,537455.45,537455.45,-0.0,-0.0,tie,,,537455.45
 DRC,2026-03,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,-143815.62,-143815.62,0.0,-0.0,tie,,,-143815.62
 DRC,2026-03,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,74730610.26,74730610.26,0.0,0.0,tie,,,-74730610.26
-DRC,2026-03,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,0.0,-16200.85,16200.85,-100.0,DIFFERENCE,we show nothing,,16200.85
+DRC,2026-03,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,-16200.85,-16200.85,-0.0,0.0,tie,,,16200.85
 DRC,2026-03,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 DRC,2026-03,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,-51467741.67,-51467741.67,0.0,-0.0,tie,,,51467741.67
 DRC,2026-03,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,-3472710.69,-3472710.69,-0.0,0.0,tie,,,3472710.69
@@ -354,7 +354,7 @@ DRC,2026-04,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,0.0,0.0,0.0,,
 DRC,2026-04,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,534311.7,534311.7,0.01,0.0,tie,,,534311.7
 DRC,2026-04,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,12029.6,12029.6,0.0,0.0,tie,,,12029.6
 DRC,2026-04,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,74293488.24,74293488.24,0.0,0.0,tie,,,-74293488.24
-DRC,2026-04,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,0.0,5954.01,-5954.01,-100.0,DIFFERENCE,we show nothing,,-5954.01
+DRC,2026-04,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,5954.01,5954.01,0.0,0.0,tie,,,-5954.01
 DRC,2026-04,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 DRC,2026-04,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,-51166691.23,-51166691.23,0.0,-0.0,tie,,,51166691.23
 DRC,2026-04,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,-6551311.79,-6551311.79,-0.0,0.0,tie,,,6551311.79
@@ -398,9 +398,9 @@ DRC,2026-05,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,0.0,0.0,0.0,,
 DRC,2026-05,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,646788.74,646788.74,-0.0,-0.0,tie,,,646788.74
 DRC,2026-05,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,12064.99,12064.99,0.0,0.0,tie,,,12064.99
 DRC,2026-05,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,74512049.25,74512049.25,0.0,0.0,tie,,,-74512049.25
-DRC,2026-05,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,0.0,-16921.97,16921.97,-100.0,DIFFERENCE,we show nothing,,16921.97
+DRC,2026-05,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,-16921.97,-16921.97,-0.0,0.0,tie,,,16921.97
 DRC,2026-05,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
-DRC,2026-05,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,-51317216.45,-51317216.45,0.0,-0.0,tie,,,51317216.45
+DRC,2026-05,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,-51317216.45,-51317216.45,-0.0,0.0,tie,,,51317216.45
 DRC,2026-05,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,-10422324.55,-10422324.55,-0.0,0.0,tie,,,10422324.55
 DRC,2026-05,SFP,EQUITY AND LIABILITIES,Equity,non_controlling_interests,Non-controlling interests,470,0.0,0.0,0.0,,tie,,,0.0
 DRC,2026-05,SFP,EQUITY AND LIABILITIES,Current Liabilities,trade_and_other_payables,Trade and other payables,480,-1371782.93,-1371782.93,0.0,-0.0,tie,,,1371782.93
@@ -443,7 +443,7 @@ DRC,2026-06,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,0.0,0.0,0.0,,
 DRC,2026-06,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,646539.11,646539.11,0.0,0.0,tie,,,646539.11
 DRC,2026-06,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,12060.34,12060.33,0.01,0.0,tie,,,12060.33
 DRC,2026-06,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,74483291.23,74483291.23,-0.0,-0.0,tie,,,-74483291.23
-DRC,2026-06,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,0.0,20.16,-20.16,-100.0,DIFFERENCE,we show nothing,,-20.16
+DRC,2026-06,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,19.69,20.16,-0.47,-2.33,tie,,,-20.16
 DRC,2026-06,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 DRC,2026-06,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,-51297410.5,-51297410.5,0.0,-0.0,tie,,,51297410.5
 DRC,2026-06,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,19104.87,19104.87,-0.0,-0.0,tie,,,-19104.87
@@ -488,7 +488,7 @@ MALAWI,2026-02,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,42636623.9
 MALAWI,2026-02,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,0.0,0.0,0.0,,tie,,,0.0
 MALAWI,2026-02,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,2020081.93,2020081.93,0.0,0.0,tie,,,2020081.93
 MALAWI,2026-02,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,824892.23,824892.23,0.0,0.0,tie,,,-824892.23
-MALAWI,2026-02,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,29818285.83,29828826.65,-10540.82,-0.04,DIFFERENCE,rounding / FX,,-29828826.65
+MALAWI,2026-02,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,29828826.66,29828826.65,0.01,0.0,tie,,,-29828826.65
 MALAWI,2026-02,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 MALAWI,2026-02,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,99312718.38,99312718.35,0.03,0.0,tie,,,-99312718.35
 MALAWI,2026-02,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,13136221.53,13136221.52,0.01,0.0,tie,,,-13136221.52
@@ -533,7 +533,7 @@ MALAWI,2026-03,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,73386418.4
 MALAWI,2026-03,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,0.0,0.0,0.0,,tie,,,0.0
 MALAWI,2026-03,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,-727222.42,-727222.42,0.0,-0.0,tie,,,-727222.42
 MALAWI,2026-03,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,832094.26,832094.26,0.0,0.0,tie,,,-832094.26
-MALAWI,2026-03,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,30078625.51,30209327.33,-130701.82,-0.43,DIFFERENCE,rounding / FX,,-30209327.33
+MALAWI,2026-03,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,30209327.35,30209327.33,0.02,0.0,tie,,,-30209327.33
 MALAWI,2026-03,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 MALAWI,2026-03,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,110807030.89,110807030.82,0.07,0.0,tie,,,-110807030.82
 MALAWI,2026-03,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,20615298.67,20615298.66,0.01,0.0,tie,,,-20615298.66
@@ -578,7 +578,7 @@ MALAWI,2026-04,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,114953975.
 MALAWI,2026-04,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,0.0,0.0,0.0,,tie,,,0.0
 MALAWI,2026-04,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,2942094.55,2942094.55,0.0,0.0,tie,,,2942094.55
 MALAWI,2026-04,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,826256.18,826256.18,-0.0,-0.0,tie,,,-826256.18
-MALAWI,2026-04,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,29867589.88,29853079.12,14510.76,0.05,DIFFERENCE,rounding / FX,,-29853079.12
+MALAWI,2026-04,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,29853079.13,29853079.12,0.01,0.0,tie,,,-29853079.12
 MALAWI,2026-04,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 MALAWI,2026-04,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,110029594.03,110029593.99,0.04,0.0,tie,,,-110029593.99
 MALAWI,2026-04,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,26845486.77,26845486.75,0.02,0.0,tie,,,-26845486.75
@@ -623,7 +623,7 @@ MALAWI,2026-05,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,106132109.
 MALAWI,2026-05,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,0.0,0.0,0.0,,tie,,,0.0
 MALAWI,2026-05,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,810571.7,810571.7,-0.0,-0.0,tie,,,810571.7
 MALAWI,2026-05,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,827525.86,827525.86,0.0,0.0,tie,,,-827525.86
-MALAWI,2026-05,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,29507685.99,29535637.36,-27951.37,-0.09,DIFFERENCE,rounding / FX,,-29535637.36
+MALAWI,2026-05,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,29535637.4,29535637.36,0.04,0.0,tie,,,-29535637.36
 MALAWI,2026-05,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 MALAWI,2026-05,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,112067687.4,112067687.32,0.08,0.0,tie,,,-112067687.32
 MALAWI,2026-05,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,35110780.17,35110780.17,0.0,0.0,tie,,,-35110780.17
@@ -668,7 +668,7 @@ MALAWI,2026-06,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,84597623.5
 MALAWI,2026-06,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,0.0,0.0,0.0,,tie,,,0.0
 MALAWI,2026-06,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,-3801498.94,-3801498.94,-0.0,0.0,tie,,,-3801498.94
 MALAWI,2026-06,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,829673.45,829673.45,-0.0,-0.0,tie,,,-829673.45
-MALAWI,2026-06,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,29584263.97,29713581.68,-129317.71,-0.44,DIFFERENCE,rounding / FX,,-29713581.68
+MALAWI,2026-06,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,29713581.68,29713581.68,-0.0,-0.0,tie,,,-29713581.68
 MALAWI,2026-06,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 MALAWI,2026-06,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,112358524.05,112358524.05,-0.0,-0.0,tie,,,-112358524.05
 MALAWI,2026-06,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,45756914.42,45756914.42,0.0,0.0,tie,,,-45756914.42
@@ -708,7 +708,7 @@ MENA,2026-02,SFP,ASSETS,Current Assets,trade_receivables,Trade Receivables (Debt
 MENA,2026-02,SFP,ASSETS,Current Assets,premium_receivables,Premium Receivables,330,0.0,0.0,0.0,,tie,,,0.0
 MENA,2026-02,SFP,ASSETS,Current Assets,other_receivables,Other Receivables,340,7895466.79,7895466.8,-0.01,-0.0,tie,,,7895466.8
 MENA,2026-02,SFP,ASSETS,Current Assets,due_from_to_related_parties,Due from/to related parties,350,0.0,0.0,0.0,,tie,,,0.0
-MENA,2026-02,SFP,ASSETS,Current Assets,office_cash,Cash - Office Cash,360,8314946.05,8314946.05,0.0,0.0,tie,,,8314946.05
+MENA,2026-02,SFP,ASSETS,Current Assets,office_cash,Cash - Office Cash,360,8314946.05,8314946.05,-0.0,-0.0,tie,,,8314946.05
 MENA,2026-02,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,0.0,0.0,0.0,,tie,,,0.0
 MENA,2026-02,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,0.0,0.0,0.0,,tie,,,0.0
 MENA,2026-02,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,0.0,0.0,0.0,,tie,,,0.0
@@ -757,17 +757,17 @@ MENA,2026-03,SFP,ASSETS,Current Assets,office_cash,Cash - Office Cash,360,514622
 MENA,2026-03,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,0.0,0.0,0.0,,tie,,,0.0
 MENA,2026-03,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,0.0,0.0,0.0,,tie,,,0.0
 MENA,2026-03,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,0.0,0.0,0.0,,tie,,,0.0
-MENA,2026-03,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,26562170.92,26562170.92,0.0,0.0,tie,,,-26562170.92
-MENA,2026-03,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,0.0,-30359.52,30359.52,-100.0,DIFFERENCE,we show nothing,,30359.52
+MENA,2026-03,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,26562170.92,26562170.92,-0.0,-0.0,tie,,,-26562170.92
+MENA,2026-03,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,-30359.51,-30359.52,0.01,-0.0,tie,,,30359.52
 MENA,2026-03,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
-MENA,2026-03,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,7346803.15,7346803.15,0.0,0.0,tie,,,-7346803.15
+MENA,2026-03,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,7346803.15,7346803.15,-0.0,-0.0,tie,,,-7346803.15
 MENA,2026-03,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,-4371812.54,-4371812.54,0.0,-0.0,tie,,,4371812.54
 MENA,2026-03,SFP,EQUITY AND LIABILITIES,Equity,non_controlling_interests,Non-controlling interests,470,37445654.91,37445654.92,-0.01,-0.0,tie,,,-37445654.92
 MENA,2026-03,SFP,EQUITY AND LIABILITIES,Current Liabilities,trade_and_other_payables,Trade and other payables,480,8414693.13,8414693.13,-0.0,-0.0,tie,,,-8414693.13
 MENA,2026-03,SFP,EQUITY AND LIABILITIES,Current Liabilities,deferred_revenue,Deferred Revenue,490,3.55,0.0,3.55,,DIFFERENCE,client shows nothing,,0.0
 MENA,2026-03,SFP,EQUITY AND LIABILITIES,Current Liabilities,premium_payable,Premium payable,500,0.0,0.0,0.0,,tie,,,0.0
 MENA,2026-03,SFP,EQUITY AND LIABILITIES,Current Liabilities,borrowings,Borrowings,510,0.0,0.0,0.0,,tie,,,0.0
-MENA,2026-04,SCI,INCOME,Revenue,actuarial_fees,Actuarial Fees,10,25495883.85,25495883.85,-0.0,-0.0,tie,,,-25495883.85
+MENA,2026-04,SCI,INCOME,Revenue,actuarial_fees,Actuarial Fees,10,25495883.85,25495883.85,0.0,0.0,tie,,,-25495883.85
 MENA,2026-04,SCI,INCOME,Revenue,pension_admin_fee,Pension Admin Fee,20,0.0,0.0,0.0,,tie,,,0.0
 MENA,2026-04,SCI,INCOME,Revenue,insurance_commissions,Insurance Commissions,40,0.0,0.0,0.0,,tie,,,0.0
 MENA,2026-04,SCI,INCOME,Revenue,saas_income,SAAS (Software as a Service),50,0.0,0.0,0.0,,tie,,,0.0
@@ -779,7 +779,7 @@ MENA,2026-04,SCI,EXPENSES,Operating expenses,it_costs,IT Costs,110,704085.0,7040
 MENA,2026-04,SCI,EXPENSES,Operating expenses,communications,Communications,120,0.0,0.0,0.0,,tie,,,0.0
 MENA,2026-04,SCI,EXPENSES,Operating expenses,printing_stationery,Printing & Stationery,130,0.0,0.0,0.0,,tie,,,0.0
 MENA,2026-04,SCI,EXPENSES,Operating expenses,premises,Premises,140,2639685.08,2639685.07,0.01,0.0,tie,,,2639685.07
-MENA,2026-04,SCI,EXPENSES,Operating expenses,advertising_pr,Advertising & PR,150,-0.0,0.0,-0.0,,tie,,,0.0
+MENA,2026-04,SCI,EXPENSES,Operating expenses,advertising_pr,Advertising & PR,150,0.0,0.0,0.0,,tie,,,0.0
 MENA,2026-04,SCI,EXPENSES,Operating expenses,insurance,Insurance,160,0.0,0.0,0.0,,tie,,,0.0
 MENA,2026-04,SCI,EXPENSES,Operating expenses,professional_fees,Professional Fees,170,18387402.61,18387402.62,-0.01,-0.0,tie,,,18387402.62
 MENA,2026-04,SCI,EXPENSES,Operating expenses,depreciation,Depreciation,180,29559.95,0.0,29559.95,,DIFFERENCE,client shows nothing,,0.0
@@ -804,7 +804,7 @@ MENA,2026-04,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,0.0,0.0,0.0,
 MENA,2026-04,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,0.0,0.0,0.0,,tie,,,0.0
 MENA,2026-04,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,0.0,0.0,0.0,,tie,,,0.0
 MENA,2026-04,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,37758562.09,37758562.09,-0.0,-0.0,tie,,,-37758562.09
-MENA,2026-04,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,0.0,48804.0,-48804.0,-100.0,DIFFERENCE,we show nothing,,-48804.0
+MENA,2026-04,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,48804.01,48804.0,0.01,0.0,tie,,,-48804.0
 MENA,2026-04,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 MENA,2026-04,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,7272732.84,7272732.83,0.01,0.0,tie,,,-7272732.83
 MENA,2026-04,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,-20392976.78,-20392976.77,-0.01,0.0,tie,,,20392976.77
@@ -825,7 +825,7 @@ MENA,2026-05,SCI,EXPENSES,Operating expenses,it_costs,IT Costs,110,1011729.55,10
 MENA,2026-05,SCI,EXPENSES,Operating expenses,communications,Communications,120,0.0,0.0,0.0,,tie,,,0.0
 MENA,2026-05,SCI,EXPENSES,Operating expenses,printing_stationery,Printing & Stationery,130,0.0,0.0,0.0,,tie,,,0.0
 MENA,2026-05,SCI,EXPENSES,Operating expenses,premises,Premises,140,3458237.19,3458237.18,0.01,0.0,tie,,,3458237.18
-MENA,2026-05,SCI,EXPENSES,Operating expenses,advertising_pr,Advertising & PR,150,1674165.06,1674165.06,-0.0,-0.0,tie,,,1674165.06
+MENA,2026-05,SCI,EXPENSES,Operating expenses,advertising_pr,Advertising & PR,150,1674165.06,1674165.06,0.0,0.0,tie,,,1674165.06
 MENA,2026-05,SCI,EXPENSES,Operating expenses,insurance,Insurance,160,0.0,0.0,0.0,,tie,,,0.0
 MENA,2026-05,SCI,EXPENSES,Operating expenses,professional_fees,Professional Fees,170,18354406.72,18354406.74,-0.02,-0.0,tie,,,18354406.74
 MENA,2026-05,SCI,EXPENSES,Operating expenses,depreciation,Depreciation,180,0.0,0.0,0.0,,tie,,,0.0
@@ -849,11 +849,11 @@ MENA,2026-05,SFP,ASSETS,Current Assets,office_cash,Cash - Office Cash,360,130044
 MENA,2026-05,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,0.0,0.0,0.0,,tie,,,0.0
 MENA,2026-05,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,0.0,0.0,0.0,,tie,,,0.0
 MENA,2026-05,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,0.0,0.0,0.0,,tie,,,0.0
-MENA,2026-05,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,32906953.27,32906953.27,-0.0,-0.0,tie,,,-32906953.27
-MENA,2026-05,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,0.0,75695.84,-75695.84,-100.0,DIFFERENCE,we show nothing,,-75695.84
+MENA,2026-05,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,32906953.27,32906953.27,0.0,0.0,tie,,,-32906953.27
+MENA,2026-05,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,75692.34,75695.84,-3.5,-0.0,DIFFERENCE,rounding / FX,,-75695.84
 MENA,2026-05,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 MENA,2026-05,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,7252190.27,7252190.26,0.01,0.0,tie,,,-7252190.26
-MENA,2026-05,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,-18137033.24,-18137033.24,0.0,-0.0,tie,,,18137033.24
+MENA,2026-05,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,-18137033.24,-18137033.24,-0.0,0.0,tie,,,18137033.24
 MENA,2026-05,SFP,EQUITY AND LIABILITIES,Equity,non_controlling_interests,Non-controlling interests,470,41464061.61,41464061.61,0.0,0.0,tie,,,-41464061.61
 MENA,2026-05,SFP,EQUITY AND LIABILITIES,Current Liabilities,trade_and_other_payables,Trade and other payables,480,43788975.19,43788975.21,-0.02,-0.0,tie,,,-43788975.21
 MENA,2026-05,SFP,EQUITY AND LIABILITIES,Current Liabilities,deferred_revenue,Deferred Revenue,490,12257280.0,12257280.0,0.0,0.0,tie,,,-12257280.0
@@ -896,11 +896,11 @@ MENA,2026-06,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,0.0,0.0,0.0,
 MENA,2026-06,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,0.0,0.0,0.0,,tie,,,0.0
 MENA,2026-06,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,0.0,0.0,0.0,,tie,,,0.0
 MENA,2026-06,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,33009561.99,33009561.98,0.01,0.0,tie,,,-33009561.98
-MENA,2026-06,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,0.0,6134.2,-6134.2,-100.0,DIFFERENCE,we show nothing,,-6134.2
+MENA,2026-06,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,6134.22,6134.2,0.02,0.0,tie,,,-6134.2
 MENA,2026-06,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 MENA,2026-06,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,7274803.67,7274803.66,0.01,0.0,tie,,,-7274803.66
 MENA,2026-06,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,-6890943.58,-6890943.57,-0.01,0.0,tie,,,6890943.57
-MENA,2026-06,SFP,EQUITY AND LIABILITIES,Equity,non_controlling_interests,Non-controlling interests,470,64571289.14,64571289.14,0.0,0.0,tie,,,-64571289.14
+MENA,2026-06,SFP,EQUITY AND LIABILITIES,Equity,non_controlling_interests,Non-controlling interests,470,64571289.14,64571289.14,-0.0,-0.0,tie,,,-64571289.14
 MENA,2026-06,SFP,EQUITY AND LIABILITIES,Current Liabilities,trade_and_other_payables,Trade and other payables,480,15040312.98,15040312.99,-0.01,-0.0,tie,,,-15040312.99
 MENA,2026-06,SFP,EQUITY AND LIABILITIES,Current Liabilities,deferred_revenue,Deferred Revenue,490,3.51,3.51,0.0,0.0,tie,,,-3.51
 MENA,2026-06,SFP,EQUITY AND LIABILITIES,Current Liabilities,premium_payable,Premium payable,500,0.0,0.0,0.0,,tie,,,0.0
@@ -942,7 +942,7 @@ NIGERIA,2026-02,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,0.0,0.0,0
 NIGERIA,2026-02,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,0.0,0.0,0.0,,tie,,,0.0
 NIGERIA,2026-02,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,-36359.94,-36359.94,0.0,-0.0,tie,,,-36359.94
 NIGERIA,2026-02,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,6753600.0,6753600.0,0.0,0.0,tie,,,-6753600.0
-NIGERIA,2026-02,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,0.0,127350.79,-127350.79,-100.0,DIFFERENCE,we show nothing,,-127350.79
+NIGERIA,2026-02,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,108111.81,127350.79,-19238.98,-15.11,DIFFERENCE,classification,offset by Net Profit (derived),-127350.79
 NIGERIA,2026-02,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 NIGERIA,2026-02,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,19875571.86,19875571.86,-0.0,-0.0,tie,,,-19875571.86
 NIGERIA,2026-02,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,5638790.14,5619551.14,19239.0,0.34,DIFFERENCE,rounding / FX,,-5619551.14
@@ -987,7 +987,7 @@ NIGERIA,2026-03,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,0.0,0.0,0
 NIGERIA,2026-03,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,0.0,0.0,0.0,,tie,,,0.0
 NIGERIA,2026-03,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,-3507148.27,-3507148.27,0.0,-0.0,tie,,,-3507148.27
 NIGERIA,2026-03,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,6575795.44,6575795.44,-0.0,-0.0,tie,,,-6575795.44
-NIGERIA,2026-03,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,0.0,-59242.48,59242.48,-100.0,DIFFERENCE,we show nothing,,59242.48
+NIGERIA,2026-03,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,-59242.48,-59242.48,0.0,-0.0,tie,,,59242.48
 NIGERIA,2026-03,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 NIGERIA,2026-03,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,19352300.2,19352300.2,0.0,0.0,tie,,,-19352300.2
 NIGERIA,2026-03,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,8100739.77,8100739.77,0.0,0.0,tie,,,-8100739.77
@@ -1032,7 +1032,7 @@ NIGERIA,2026-04,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,0.0,0.0,0
 NIGERIA,2026-04,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,0.0,0.0,0.0,,tie,,,0.0
 NIGERIA,2026-04,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,-11163279.83,-11143429.88,-19849.95,0.18,DIFFERENCE,rounding / FX,,-11143429.88
 NIGERIA,2026-04,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,6570302.23,6570302.23,0.0,0.0,tie,,,-6570302.23
-NIGERIA,2026-04,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,0.0,-46316.65,46316.65,-100.0,DIFFERENCE,we show nothing,,46316.65
+NIGERIA,2026-04,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,-66166.6,-46316.65,-19849.95,42.86,DIFFERENCE,classification,,46316.65
 NIGERIA,2026-04,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 NIGERIA,2026-04,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,8027072.65,8027072.65,0.0,0.0,tie,,,-8027072.65
 NIGERIA,2026-04,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,10363023.06,10363023.06,0.0,0.0,tie,,,-10363023.06
@@ -1077,7 +1077,7 @@ NIGERIA,2026-05,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,0.0,0.0,0
 NIGERIA,2026-05,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,0.0,0.0,0.0,,tie,,,0.0
 NIGERIA,2026-05,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,-6758396.03,-6758396.03,0.0,-0.0,tie,,,-6758396.03
 NIGERIA,2026-05,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,6605892.45,6605892.46,-0.01,-0.0,tie,,,-6605892.46
-NIGERIA,2026-05,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,0.0,11365.21,-11365.21,-100.0,DIFFERENCE,we show nothing,,-11365.21
+NIGERIA,2026-05,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,11365.21,11365.21,-0.0,-0.0,tie,,,-11365.21
 NIGERIA,2026-05,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 NIGERIA,2026-05,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,8070553.99,8070553.99,-0.0,-0.0,tie,,,-8070553.99
 NIGERIA,2026-05,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,15390921.07,15390921.07,0.0,0.0,tie,,,-15390921.07
@@ -1122,7 +1122,7 @@ NIGERIA,2026-06,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,0.0,0.0,0
 NIGERIA,2026-06,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,0.0,0.0,0.0,,tie,,,0.0
 NIGERIA,2026-06,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,-1557722.87,-1557722.87,-0.0,0.0,tie,,,-1557722.87
 NIGERIA,2026-06,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,6568329.39,6568329.39,0.0,0.0,tie,,,-6568329.39
-NIGERIA,2026-06,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,0.0,-70493.74,70493.74,-100.0,DIFFERENCE,we show nothing,,70493.74
+NIGERIA,2026-06,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,-70493.74,-70493.74,0.0,-0.0,tie,,,70493.74
 NIGERIA,2026-06,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 NIGERIA,2026-06,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,8031183.15,8031183.15,-0.0,-0.0,tie,,,-8031183.15
 NIGERIA,2026-06,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,17068185.09,17068185.09,-0.0,-0.0,tie,,,-17068185.09
@@ -1167,7 +1167,7 @@ RWANDA,2026-02,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,13286093.8
 RWANDA,2026-02,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,0.0,0.0,0.0,,tie,,,0.0
 RWANDA,2026-02,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,-1004378.47,-1004378.47,-0.0,0.0,tie,,,-1004378.47
 RWANDA,2026-02,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,51307445.47,51307445.47,-0.0,-0.0,tie,,,-51307445.47
-RWANDA,2026-02,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,0.0,608.77,-608.77,-100.0,DIFFERENCE,we show nothing,,-608.77
+RWANDA,2026-02,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,608.77,608.77,0.0,0.0,tie,,,-608.77
 RWANDA,2026-02,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 RWANDA,2026-02,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,1801609.03,1801609.03,-0.0,-0.0,tie,,,-1801609.03
 RWANDA,2026-02,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,-343042.52,-343042.52,0.0,-0.0,tie,,,343042.52
@@ -1212,7 +1212,7 @@ RWANDA,2026-03,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,22261798.7
 RWANDA,2026-03,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,0.0,0.0,0.0,,tie,,,0.0
 RWANDA,2026-03,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,-27173.22,-27092.86,-80.36,0.3,DIFFERENCE,rounding / FX,,-27092.86
 RWANDA,2026-03,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,51581572.65,51581572.66,-0.01,-0.0,tie,,,-51581572.66
-RWANDA,2026-03,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,0.0,310.04,-310.04,-100.0,DIFFERENCE,we show nothing,,-310.04
+RWANDA,2026-03,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,229.98,310.04,-80.06,-25.82,DIFFERENCE,classification,,-310.04
 RWANDA,2026-03,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 RWANDA,2026-03,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,-503855.91,-503855.91,-0.0,0.0,tie,,,503855.91
 RWANDA,2026-03,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,69874.0,69874.0,-0.0,-0.0,tie,,,-69874.0
@@ -1257,7 +1257,7 @@ RWANDA,2026-04,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,22084805.6
 RWANDA,2026-04,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,0.0,0.0,0.0,,tie,,,0.0
 RWANDA,2026-04,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,-455475.97,-453560.4,-1915.57,0.42,DIFFERENCE,rounding / FX,,-453560.4
 RWANDA,2026-04,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,51171471.81,51171471.82,-0.01,-0.0,tie,,,-51171471.82
-RWANDA,2026-04,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,0.0,-4470.0,4470.0,-100.0,DIFFERENCE,we show nothing,,4470.0
+RWANDA,2026-04,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,-6385.28,-4470.0,-1915.28,42.85,DIFFERENCE,classification,,4470.0
 RWANDA,2026-04,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 RWANDA,2026-04,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,-499849.99,-499849.99,-0.0,0.0,tie,,,499849.99
 RWANDA,2026-04,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,1062777.27,1062777.27,0.0,0.0,tie,,,-1062777.27
@@ -1302,7 +1302,7 @@ RWANDA,2026-05,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,22143489.8
 RWANDA,2026-05,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,0.0,0.0,0.0,,tie,,,0.0
 RWANDA,2026-05,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,-808674.57,-807665.27,-1009.3,0.12,DIFFERENCE,rounding / FX,,-807665.27
 RWANDA,2026-05,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,51307445.64,51307445.62,0.02,0.0,tie,,,-51307445.62
-RWANDA,2026-05,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,0.0,-2354.95,2354.95,-100.0,DIFFERENCE,we show nothing,,2354.95
+RWANDA,2026-05,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,-3364.24,-2354.95,-1009.29,42.86,DIFFERENCE,classification,,2354.95
 RWANDA,2026-05,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 RWANDA,2026-05,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,-501178.2,-501178.2,-0.0,0.0,tie,,,501178.2
 RWANDA,2026-05,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,1886907.32,1886907.32,-0.0,-0.0,tie,,,-1886907.32
@@ -1347,7 +1347,7 @@ RWANDA,2026-06,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,22104332.4
 RWANDA,2026-06,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,0.0,0.0,0.0,,tie,,,0.0
 RWANDA,2026-06,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,-2493624.78,-2487358.02,-6266.76,0.25,DIFFERENCE,rounding / FX,,-2487358.02
 RWANDA,2026-06,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,51216716.27,51216716.27,0.0,0.0,tie,,,-51216716.27
-RWANDA,2026-06,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,0.0,-20889.23,20889.23,-100.0,DIFFERENCE,we show nothing,,20889.23
+RWANDA,2026-06,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,-20889.23,-20889.23,0.0,-0.0,tie,,,20889.23
 RWANDA,2026-06,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 RWANDA,2026-06,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,-500291.95,-500291.95,0.0,-0.0,tie,,,500291.95
 RWANDA,2026-06,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,5818457.83,5824724.6,-6266.77,-0.11,DIFFERENCE,rounding / FX,,-5824724.6
@@ -1372,13 +1372,13 @@ ZAAC,2026-02,SCI,EXPENSES,Operating expenses,premises,Premises,140,6690008.03,66
 ZAAC,2026-02,SCI,EXPENSES,Operating expenses,advertising_pr,Advertising & PR,150,2723347.14,2723347.14,0.0,0.0,tie,,,2723347.14
 ZAAC,2026-02,SCI,EXPENSES,Operating expenses,insurance,Insurance,160,2743236.43,2743356.43,-120.0,-0.0,DIFFERENCE,rounding / FX,,2743356.43
 ZAAC,2026-02,SCI,EXPENSES,Operating expenses,professional_fees,Professional Fees,170,5760450.79,5760450.79,0.0,0.0,tie,,,5760450.79
-ZAAC,2026-02,SCI,EXPENSES,Operating expenses,depreciation,Depreciation,180,6831361.25,6831361.25,0.0,0.0,tie,,,6831361.25
+ZAAC,2026-02,SCI,EXPENSES,Operating expenses,depreciation,Depreciation,180,6831361.25,6831361.25,-0.0,-0.0,tie,,,6831361.25
 ZAAC,2026-02,SCI,EXPENSES,Operating expenses,motor_vehicle_expenses,Motor Vehicle Expenses,190,1298409.4,1298409.4,0.0,0.0,tie,,,1298409.4
-ZAAC,2026-02,SCI,EXPENSES,Operating expenses,general_expenses,General Expenses,200,1850845.08,1850845.08,0.0,0.0,tie,,,1850845.08
+ZAAC,2026-02,SCI,EXPENSES,Operating expenses,general_expenses,General Expenses,200,1850845.08,1850845.08,-0.0,-0.0,tie,,,1850845.08
 ZAAC,2026-02,SCI,EXPENSES,Operating expenses,management_expense,Management Expense,210,0.0,0.0,0.0,,tie,,,0.0
 ZAAC,2026-02,SCI,EXPENSES,Finance costs,finance_costs,Finance cost,220,110409.93,110409.93,0.0,0.0,tie,,,110409.93
 ZAAC,2026-02,SCI,EXPENSES,Taxation,taxation,Taxation,230,21909338.32,21909338.32,0.0,0.0,tie,,,21909338.32
-ZAAC,2026-02,SFP,ASSETS,Non-Current Assets,ppe,"Property, Plant and Equipment",240,99214380.27,99214380.27,0.0,0.0,tie,,,99214380.27
+ZAAC,2026-02,SFP,ASSETS,Non-Current Assets,ppe,"Property, Plant and Equipment",240,99214380.27,99214380.27,-0.0,-0.0,tie,,,99214380.27
 ZAAC,2026-02,SFP,ASSETS,Non-Current Assets,computer_software,Intangible - computer software,250,22525357.28,22525357.28,0.0,0.0,tie,,,22525357.28
 ZAAC,2026-02,SFP,ASSETS,Non-Current Assets,goodwill,Intangible - goodwill,260,3771579.6,3771579.6,0.0,0.0,tie,,,3771579.6
 ZAAC,2026-02,SFP,ASSETS,Non-Current Assets,investment_in_associate,Investment in associate,270,0.0,0.0,0.0,,tie,,,0.0
@@ -1387,9 +1387,9 @@ ZAAC,2026-02,SFP,ASSETS,Non-Current Assets,deposit_for_investment_in_subsidiary,
 ZAAC,2026-02,SFP,ASSETS,Non-Current Assets,deferred_tax,Deferred tax,310,15764930.24,15764930.24,0.0,0.0,tie,,,15764930.24
 ZAAC,2026-02,SFP,ASSETS,Current Assets,trade_receivables,Trade Receivables (Debtors),320,540231295.44,540231295.44,-0.0,-0.0,tie,,,540231295.44
 ZAAC,2026-02,SFP,ASSETS,Current Assets,premium_receivables,Premium Receivables,330,0.0,0.0,0.0,,tie,,,0.0
-ZAAC,2026-02,SFP,ASSETS,Current Assets,other_receivables,Other Receivables,340,46314100.36,46314100.36,-0.0,-0.0,tie,,,46314100.36
+ZAAC,2026-02,SFP,ASSETS,Current Assets,other_receivables,Other Receivables,340,46314100.36,46314100.36,0.0,0.0,tie,,,46314100.36
 ZAAC,2026-02,SFP,ASSETS,Current Assets,due_from_to_related_parties,Due from/to related parties,350,160659933.4,160659933.4,0.0,0.0,tie,,,160659933.4
-ZAAC,2026-02,SFP,ASSETS,Current Assets,office_cash,Cash - Office Cash,360,76295631.5,76295631.5,0.0,0.0,tie,,,76295631.5
+ZAAC,2026-02,SFP,ASSETS,Current Assets,office_cash,Cash - Office Cash,360,76295631.5,76295631.5,-0.0,-0.0,tie,,,76295631.5
 ZAAC,2026-02,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,19911431.83,19911431.83,0.0,0.0,tie,,,19911431.83
 ZAAC,2026-02,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,-2492275.01,-2492275.01,0.0,-0.0,tie,,,-2492275.01
 ZAAC,2026-02,SFP,ASSETS,Current Assets,accrued_income,Accrued Income,410,171797159.43,171797159.43,0.0,0.0,tie,,,171797159.43
@@ -1409,14 +1409,14 @@ ZAAC,2026-03,SCI,INCOME,Revenue,insurance_commissions,Insurance Commissions,40,0
 ZAAC,2026-03,SCI,INCOME,Revenue,saas_income,SAAS (Software as a Service),50,8303347.0,8303347.0,0.0,0.0,tie,,,-8303347.0
 ZAAC,2026-03,SCI,INCOME,Revenue,retail_income,Retail,60,28707764.9,28707764.9,0.0,0.0,tie,,,-28707764.9
 ZAAC,2026-03,SCI,INCOME,Other income,other_income,Other Income,70,6767722.95,6767722.95,0.0,0.0,tie,,,-6767722.95
-ZAAC,2026-03,SCI,EXPENSES,Operating expenses,personnel_costs,Personnel Costs,80,186808207.24,186808207.24,0.0,0.0,tie,,,186808207.24
+ZAAC,2026-03,SCI,EXPENSES,Operating expenses,personnel_costs,Personnel Costs,80,186808207.24,186808207.24,-0.0,-0.0,tie,,,186808207.24
 ZAAC,2026-03,SCI,EXPENSES,Operating expenses,travelling,Travelling,90,6612235.49,6612235.49,0.0,0.0,tie,,,6612235.49
 ZAAC,2026-03,SCI,EXPENSES,Operating expenses,entertainment,Entertainment,100,3876206.27,3876206.27,0.0,0.0,tie,,,3876206.27
 ZAAC,2026-03,SCI,EXPENSES,Operating expenses,it_costs,IT Costs,110,10109333.51,10109333.51,0.0,0.0,tie,,,10109333.51
 ZAAC,2026-03,SCI,EXPENSES,Operating expenses,communications,Communications,120,1237752.71,1237752.71,0.0,0.0,tie,,,1237752.71
 ZAAC,2026-03,SCI,EXPENSES,Operating expenses,printing_stationery,Printing & Stationery,130,871242.42,871242.42,-0.0,-0.0,tie,,,871242.42
 ZAAC,2026-03,SCI,EXPENSES,Operating expenses,premises,Premises,140,10059696.24,10059696.24,0.0,0.0,tie,,,10059696.24
-ZAAC,2026-03,SCI,EXPENSES,Operating expenses,advertising_pr,Advertising & PR,150,6874742.08,6874742.08,-0.0,-0.0,tie,,,6874742.08
+ZAAC,2026-03,SCI,EXPENSES,Operating expenses,advertising_pr,Advertising & PR,150,6874742.08,6874742.08,0.0,0.0,tie,,,6874742.08
 ZAAC,2026-03,SCI,EXPENSES,Operating expenses,insurance,Insurance,160,3949239.75,3949359.75,-120.0,-0.0,DIFFERENCE,rounding / FX,,3949359.75
 ZAAC,2026-03,SCI,EXPENSES,Operating expenses,professional_fees,Professional Fees,170,10361899.8,10361899.8,0.0,0.0,tie,,,10361899.8
 ZAAC,2026-03,SCI,EXPENSES,Operating expenses,depreciation,Depreciation,180,10247044.62,10247044.62,0.0,0.0,tie,,,10247044.62
@@ -1436,7 +1436,7 @@ ZAAC,2026-03,SFP,ASSETS,Current Assets,trade_receivables,Trade Receivables (Debt
 ZAAC,2026-03,SFP,ASSETS,Current Assets,premium_receivables,Premium Receivables,330,0.0,0.0,0.0,,tie,,,0.0
 ZAAC,2026-03,SFP,ASSETS,Current Assets,other_receivables,Other Receivables,340,51106021.12,51106021.12,0.0,0.0,tie,,,51106021.12
 ZAAC,2026-03,SFP,ASSETS,Current Assets,due_from_to_related_parties,Due from/to related parties,350,172568810.07,172568810.07,0.0,0.0,tie,,,172568810.07
-ZAAC,2026-03,SFP,ASSETS,Current Assets,office_cash,Cash - Office Cash,360,81958363.02,81958363.02,0.0,0.0,tie,,,81958363.02
+ZAAC,2026-03,SFP,ASSETS,Current Assets,office_cash,Cash - Office Cash,360,81958363.02,81958363.02,-0.0,-0.0,tie,,,81958363.02
 ZAAC,2026-03,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,60000000.0,60000000.0,0.0,0.0,tie,,,60000000.0
 ZAAC,2026-03,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,20849321.49,20849321.49,0.0,0.0,tie,,,20849321.49
 ZAAC,2026-03,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,7909376.35,7909376.35,0.0,0.0,tie,,,7909376.35
@@ -1450,7 +1450,7 @@ ZAAC,2026-03,SFP,EQUITY AND LIABILITIES,Equity,non_controlling_interests,Non-con
 ZAAC,2026-03,SFP,EQUITY AND LIABILITIES,Current Liabilities,trade_and_other_payables,Trade and other payables,480,93050275.36,93050395.36,-120.0,-0.0,DIFFERENCE,rounding / FX,,-93050395.36
 ZAAC,2026-03,SFP,EQUITY AND LIABILITIES,Current Liabilities,premium_payable,Premium payable,500,0.0,0.0,0.0,,tie,,,0.0
 ZAAC,2026-03,SFP,EQUITY AND LIABILITIES,Current Liabilities,borrowings,Borrowings,510,-0.43,-0.43,0.0,,tie,,,0.43
-ZAAC,2026-04,SCI,INCOME,Revenue,actuarial_fees,Actuarial Fees,10,124054353.23,124054353.23,0.0,0.0,tie,,,-124054353.23
+ZAAC,2026-04,SCI,INCOME,Revenue,actuarial_fees,Actuarial Fees,10,124054353.23,124054353.23,-0.0,-0.0,tie,,,-124054353.23
 ZAAC,2026-04,SCI,INCOME,Revenue,pension_admin_fee,Pension Admin Fee,20,167454307.78,167454307.78,0.0,0.0,tie,,,-167454307.78
 ZAAC,2026-04,SCI,INCOME,Revenue,umbrella_fund,Umbrella Fund,30,96334212.31,96334212.31,0.0,0.0,tie,,,-96334212.31
 ZAAC,2026-04,SCI,INCOME,Revenue,insurance_commissions,Insurance Commissions,40,0.0,0.0,0.0,,tie,,,0.0
@@ -1459,20 +1459,20 @@ ZAAC,2026-04,SCI,INCOME,Revenue,retail_income,Retail,60,39729007.54,39729007.54,
 ZAAC,2026-04,SCI,INCOME,Other income,other_income,Other Income,70,9317489.74,9317489.74,0.0,0.0,tie,,,-9317489.74
 ZAAC,2026-04,SCI,EXPENSES,Operating expenses,personnel_costs,Personnel Costs,80,253105133.21,253105133.21,0.0,0.0,tie,,,253105133.21
 ZAAC,2026-04,SCI,EXPENSES,Operating expenses,travelling,Travelling,90,8860191.07,8860191.07,0.0,0.0,tie,,,8860191.07
-ZAAC,2026-04,SCI,EXPENSES,Operating expenses,entertainment,Entertainment,100,5154568.73,5154568.73,-0.0,-0.0,tie,,,5154568.73
+ZAAC,2026-04,SCI,EXPENSES,Operating expenses,entertainment,Entertainment,100,5154568.73,5154568.73,0.0,0.0,tie,,,5154568.73
 ZAAC,2026-04,SCI,EXPENSES,Operating expenses,it_costs,IT Costs,110,16672280.59,16672280.59,-0.0,-0.0,tie,,,16672280.59
-ZAAC,2026-04,SCI,EXPENSES,Operating expenses,communications,Communications,120,1675651.38,1675651.38,-0.0,-0.0,tie,,,1675651.38
+ZAAC,2026-04,SCI,EXPENSES,Operating expenses,communications,Communications,120,1675651.38,1675651.38,0.0,0.0,tie,,,1675651.38
 ZAAC,2026-04,SCI,EXPENSES,Operating expenses,printing_stationery,Printing & Stationery,130,1150215.96,1150215.96,0.0,0.0,tie,,,1150215.96
 ZAAC,2026-04,SCI,EXPENSES,Operating expenses,premises,Premises,140,13440278.6,13440278.6,0.0,0.0,tie,,,13440278.6
 ZAAC,2026-04,SCI,EXPENSES,Operating expenses,advertising_pr,Advertising & PR,150,7910712.4,7910712.4,0.0,0.0,tie,,,7910712.4
 ZAAC,2026-04,SCI,EXPENSES,Operating expenses,insurance,Insurance,160,5265653.0,5265653.0,0.0,0.0,tie,,,5265653.0
-ZAAC,2026-04,SCI,EXPENSES,Operating expenses,professional_fees,Professional Fees,170,14078622.25,14078622.25,0.0,0.0,tie,,,14078622.25
+ZAAC,2026-04,SCI,EXPENSES,Operating expenses,professional_fees,Professional Fees,170,14078622.25,14078622.25,-0.0,-0.0,tie,,,14078622.25
 ZAAC,2026-04,SCI,EXPENSES,Operating expenses,depreciation,Depreciation,180,13662725.26,13662725.26,0.0,0.0,tie,,,13662725.26
 ZAAC,2026-04,SCI,EXPENSES,Operating expenses,motor_vehicle_expenses,Motor Vehicle Expenses,190,5293167.0,5293167.0,0.0,0.0,tie,,,5293167.0
 ZAAC,2026-04,SCI,EXPENSES,Operating expenses,general_expenses,General Expenses,200,9417033.83,9417033.83,0.0,0.0,tie,,,9417033.83
 ZAAC,2026-04,SCI,EXPENSES,Operating expenses,management_expense,Management Expense,210,0.0,0.0,0.0,,tie,,,0.0
 ZAAC,2026-04,SCI,EXPENSES,Finance costs,finance_costs,Finance cost,220,640762.47,640762.47,0.0,0.0,tie,,,640762.47
-ZAAC,2026-04,SCI,EXPENSES,Taxation,taxation,Taxation,230,26889216.55,26889216.56,-0.01,-0.0,tie,,,26889216.56
+ZAAC,2026-04,SCI,EXPENSES,Taxation,taxation,Taxation,230,26889216.56,26889216.56,0.0,0.0,tie,,,26889216.56
 ZAAC,2026-04,SFP,ASSETS,Non-Current Assets,ppe,"Property, Plant and Equipment",240,95850900.55,95850900.55,-0.0,-0.0,tie,,,95850900.55
 ZAAC,2026-04,SFP,ASSETS,Non-Current Assets,computer_software,Intangible - computer software,250,20958755.78,20958755.78,0.0,0.0,tie,,,20958755.78
 ZAAC,2026-04,SFP,ASSETS,Non-Current Assets,goodwill,Intangible - goodwill,260,3641525.26,3641525.26,0.0,0.0,tie,,,3641525.26
@@ -1480,22 +1480,22 @@ ZAAC,2026-04,SFP,ASSETS,Non-Current Assets,investment_in_associate,Investment in
 ZAAC,2026-04,SFP,ASSETS,Non-Current Assets,investment_unquoted_equity,Investment in unquoted equity securities,280,0.0,0.0,0.0,,tie,,,0.0
 ZAAC,2026-04,SFP,ASSETS,Non-Current Assets,deposit_for_investment_in_subsidiary,Deposit for investment in subsidiary,290,36808446.31,36808446.31,0.0,0.0,tie,,,36808446.31
 ZAAC,2026-04,SFP,ASSETS,Non-Current Assets,deferred_tax,Deferred tax,310,15764930.24,15764930.24,0.0,0.0,tie,,,15764930.24
-ZAAC,2026-04,SFP,ASSETS,Current Assets,trade_receivables,Trade Receivables (Debtors),320,432806271.46,432806271.46,-0.0,-0.0,tie,,,432806271.46
+ZAAC,2026-04,SFP,ASSETS,Current Assets,trade_receivables,Trade Receivables (Debtors),320,432806271.46,432806271.46,0.0,0.0,tie,,,432806271.46
 ZAAC,2026-04,SFP,ASSETS,Current Assets,premium_receivables,Premium Receivables,330,0.0,0.0,0.0,,tie,,,0.0
-ZAAC,2026-04,SFP,ASSETS,Current Assets,other_receivables,Other Receivables,340,40402460.63,40402460.63,-0.0,-0.0,tie,,,40402460.63
+ZAAC,2026-04,SFP,ASSETS,Current Assets,other_receivables,Other Receivables,340,40402460.63,40402460.63,0.0,0.0,tie,,,40402460.63
 ZAAC,2026-04,SFP,ASSETS,Current Assets,due_from_to_related_parties,Due from/to related parties,350,194738827.92,194738827.92,0.0,0.0,tie,,,194738827.92
-ZAAC,2026-04,SFP,ASSETS,Current Assets,office_cash,Cash - Office Cash,360,37290488.71,37290488.71,0.0,0.0,tie,,,37290488.71
+ZAAC,2026-04,SFP,ASSETS,Current Assets,office_cash,Cash - Office Cash,360,37290488.71,37290488.71,-0.0,-0.0,tie,,,37290488.71
 ZAAC,2026-04,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,58000000.0,58000000.0,0.0,0.0,tie,,,58000000.0
 ZAAC,2026-04,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,20849321.49,20849321.49,0.0,0.0,tie,,,20849321.49
-ZAAC,2026-04,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,24791496.76,24791496.75,0.01,0.0,tie,,,24791496.75
+ZAAC,2026-04,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,24791496.75,24791496.75,0.0,0.0,tie,,,24791496.75
 ZAAC,2026-04,SFP,ASSETS,Current Assets,accrued_income,Accrued Income,410,208209655.94,208209655.94,0.0,0.0,tie,,,208209655.94
 ZAAC,2026-04,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,25000000.0,25000000.0,0.0,0.0,tie,,,-25000000.0
 ZAAC,2026-04,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,0.0,0.0,0.0,,tie,,,0.0
 ZAAC,2026-04,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 ZAAC,2026-04,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,1021890949.75,1021890949.75,0.0,0.0,tie,,,-1021890949.75
-ZAAC,2026-04,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,62741505.3,62741505.29,0.01,0.0,tie,,,-62741505.29
+ZAAC,2026-04,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,62741505.29,62741505.29,-0.0,-0.0,tie,,,-62741505.29
 ZAAC,2026-04,SFP,EQUITY AND LIABILITIES,Equity,non_controlling_interests,Non-controlling interests,470,0.0,0.0,0.0,,tie,,,0.0
-ZAAC,2026-04,SFP,EQUITY AND LIABILITIES,Current Liabilities,trade_and_other_payables,Trade and other payables,480,80480626.43,80480626.43,0.0,0.0,tie,,,-80480626.43
+ZAAC,2026-04,SFP,EQUITY AND LIABILITIES,Current Liabilities,trade_and_other_payables,Trade and other payables,480,80480626.43,80480626.43,-0.0,-0.0,tie,,,-80480626.43
 ZAAC,2026-04,SFP,EQUITY AND LIABILITIES,Current Liabilities,premium_payable,Premium payable,500,0.0,0.0,0.0,,tie,,,0.0
 ZAAC,2026-04,SFP,EQUITY AND LIABILITIES,Current Liabilities,borrowings,Borrowings,510,-0.43,-0.43,0.0,,tie,,,0.43
 ZAAC,2026-05,SCI,INCOME,Revenue,actuarial_fees,Actuarial Fees,10,176649945.08,176649945.08,0.0,0.0,tie,,,-176649945.08
@@ -1504,15 +1504,15 @@ ZAAC,2026-05,SCI,INCOME,Revenue,umbrella_fund,Umbrella Fund,30,124791535.96,1247
 ZAAC,2026-05,SCI,INCOME,Revenue,insurance_commissions,Insurance Commissions,40,0.0,0.0,0.0,,tie,,,0.0
 ZAAC,2026-05,SCI,INCOME,Revenue,saas_income,SAAS (Software as a Service),50,15228347.0,15228347.0,0.0,0.0,tie,,,-15228347.0
 ZAAC,2026-05,SCI,INCOME,Revenue,retail_income,Retail,60,50504469.83,50504469.83,0.0,0.0,tie,,,-50504469.83
-ZAAC,2026-05,SCI,INCOME,Other income,other_income,Other Income,70,12049338.37,12049338.37,0.0,0.0,tie,,,-12049338.37
+ZAAC,2026-05,SCI,INCOME,Other income,other_income,Other Income,70,12049338.37,12049338.37,-0.0,-0.0,tie,,,-12049338.37
 ZAAC,2026-05,SCI,EXPENSES,Operating expenses,personnel_costs,Personnel Costs,80,316713002.36,316713002.36,0.0,0.0,tie,,,316713002.36
 ZAAC,2026-05,SCI,EXPENSES,Operating expenses,travelling,Travelling,90,12257607.75,12257607.75,0.0,0.0,tie,,,12257607.75
 ZAAC,2026-05,SCI,EXPENSES,Operating expenses,entertainment,Entertainment,100,13074837.21,13074837.21,-0.0,-0.0,tie,,,13074837.21
 ZAAC,2026-05,SCI,EXPENSES,Operating expenses,it_costs,IT Costs,110,23059040.17,23059040.17,-0.0,-0.0,tie,,,23059040.17
 ZAAC,2026-05,SCI,EXPENSES,Operating expenses,communications,Communications,120,2114494.53,2114494.53,0.0,0.0,tie,,,2114494.53
 ZAAC,2026-05,SCI,EXPENSES,Operating expenses,printing_stationery,Printing & Stationery,130,1592078.71,1592078.71,0.0,0.0,tie,,,1592078.71
-ZAAC,2026-05,SCI,EXPENSES,Operating expenses,premises,Premises,140,16678416.13,16678416.13,0.0,0.0,tie,,,16678416.13
-ZAAC,2026-05,SCI,EXPENSES,Operating expenses,advertising_pr,Advertising & PR,150,10909331.26,10909331.26,0.0,0.0,tie,,,10909331.26
+ZAAC,2026-05,SCI,EXPENSES,Operating expenses,premises,Premises,140,16678416.13,16678416.13,-0.0,-0.0,tie,,,16678416.13
+ZAAC,2026-05,SCI,EXPENSES,Operating expenses,advertising_pr,Advertising & PR,150,10909331.26,10909331.26,-0.0,-0.0,tie,,,10909331.26
 ZAAC,2026-05,SCI,EXPENSES,Operating expenses,insurance,Insurance,160,6582066.25,6582066.25,0.0,0.0,tie,,,6582066.25
 ZAAC,2026-05,SCI,EXPENSES,Operating expenses,professional_fees,Professional Fees,170,16796702.25,16796702.25,0.0,0.0,tie,,,16796702.25
 ZAAC,2026-05,SCI,EXPENSES,Operating expenses,depreciation,Depreciation,180,17078408.94,17078408.94,0.0,0.0,tie,,,17078408.94
@@ -1520,7 +1520,7 @@ ZAAC,2026-05,SCI,EXPENSES,Operating expenses,motor_vehicle_expenses,Motor Vehicl
 ZAAC,2026-05,SCI,EXPENSES,Operating expenses,general_expenses,General Expenses,200,10689907.88,10689907.88,-0.0,-0.0,tie,,,10689907.88
 ZAAC,2026-05,SCI,EXPENSES,Operating expenses,management_expense,Management Expense,210,0.0,0.0,0.0,,tie,,,0.0
 ZAAC,2026-05,SCI,EXPENSES,Finance costs,finance_costs,Finance cost,220,782377.31,782377.31,-0.0,-0.0,tie,,,782377.31
-ZAAC,2026-05,SCI,EXPENSES,Taxation,taxation,Taxation,230,43537933.96,43537933.96,0.0,0.0,tie,,,43537933.96
+ZAAC,2026-05,SCI,EXPENSES,Taxation,taxation,Taxation,230,43537933.97,43537933.96,0.01,0.0,tie,,,43537933.96
 ZAAC,2026-05,SFP,ASSETS,Non-Current Assets,ppe,"Property, Plant and Equipment",240,94235544.84,94235544.84,-0.0,-0.0,tie,,,94235544.84
 ZAAC,2026-05,SFP,ASSETS,Non-Current Assets,computer_software,Intangible - computer software,250,20175454.98,20175454.98,0.0,0.0,tie,,,20175454.98
 ZAAC,2026-05,SFP,ASSETS,Non-Current Assets,goodwill,Intangible - goodwill,260,3576498.09,3576498.09,0.0,0.0,tie,,,3576498.09
@@ -1535,13 +1535,13 @@ ZAAC,2026-05,SFP,ASSETS,Current Assets,due_from_to_related_parties,Due from/to r
 ZAAC,2026-05,SFP,ASSETS,Current Assets,office_cash,Cash - Office Cash,360,58490540.96,58490540.96,0.0,0.0,tie,,,58490540.96
 ZAAC,2026-05,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,63000000.0,63000000.0,0.0,0.0,tie,,,63000000.0
 ZAAC,2026-05,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,20849321.49,20849321.49,0.0,0.0,tie,,,20849321.49
-ZAAC,2026-05,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,8468751.35,8468751.35,0.0,0.0,tie,,,8468751.35
+ZAAC,2026-05,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,8468751.34,8468751.35,-0.01,-0.0,tie,,,8468751.35
 ZAAC,2026-05,SFP,ASSETS,Current Assets,accrued_income,Accrued Income,410,168779107.81,168779107.81,0.0,0.0,tie,,,168779107.81
 ZAAC,2026-05,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,25000000.0,25000000.0,0.0,0.0,tie,,,-25000000.0
-ZAAC,2026-05,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,0.0,0.0,0.0,,tie,,,0.0
+ZAAC,2026-05,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,0.01,0.0,0.01,,tie,,,0.0
 ZAAC,2026-05,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 ZAAC,2026-05,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,1019809655.75,1019809655.75,0.0,0.0,tie,,,-1019809655.75
-ZAAC,2026-05,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,101588512.58,101588512.58,-0.0,-0.0,tie,,,-101588512.58
+ZAAC,2026-05,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,101588512.57,101588512.58,-0.01,-0.0,tie,,,-101588512.58
 ZAAC,2026-05,SFP,EQUITY AND LIABILITIES,Equity,non_controlling_interests,Non-controlling interests,470,0.0,0.0,0.0,,tie,,,0.0
 ZAAC,2026-05,SFP,EQUITY AND LIABILITIES,Current Liabilities,trade_and_other_payables,Trade and other payables,480,89297798.99,89297798.99,-0.0,-0.0,tie,,,-89297798.99
 ZAAC,2026-05,SFP,EQUITY AND LIABILITIES,Current Liabilities,premium_payable,Premium payable,500,0.0,0.0,0.0,,tie,,,0.0
@@ -1556,19 +1556,19 @@ ZAAC,2026-06,SCI,INCOME,Other income,other_income,Other Income,70,50639624.35,50
 ZAAC,2026-06,SCI,EXPENSES,Operating expenses,personnel_costs,Personnel Costs,80,389272172.28,389272172.28,0.0,0.0,tie,,,389272172.28
 ZAAC,2026-06,SCI,EXPENSES,Operating expenses,travelling,Travelling,90,17238512.33,17238512.33,0.0,0.0,tie,,,17238512.33
 ZAAC,2026-06,SCI,EXPENSES,Operating expenses,entertainment,Entertainment,100,31869476.02,31869476.02,0.0,0.0,tie,,,31869476.02
-ZAAC,2026-06,SCI,EXPENSES,Operating expenses,it_costs,IT Costs,110,27831078.88,27831078.88,-0.0,-0.0,tie,,,27831078.88
+ZAAC,2026-06,SCI,EXPENSES,Operating expenses,it_costs,IT Costs,110,27831078.88,27831078.88,0.0,0.0,tie,,,27831078.88
 ZAAC,2026-06,SCI,EXPENSES,Operating expenses,communications,Communications,120,2628681.71,2628681.71,0.0,0.0,tie,,,2628681.71
 ZAAC,2026-06,SCI,EXPENSES,Operating expenses,printing_stationery,Printing & Stationery,130,2062990.2,2062990.2,0.0,0.0,tie,,,2062990.2
-ZAAC,2026-06,SCI,EXPENSES,Operating expenses,premises,Premises,140,20021655.9,20021655.9,0.0,0.0,tie,,,20021655.9
+ZAAC,2026-06,SCI,EXPENSES,Operating expenses,premises,Premises,140,20021655.9,20021655.9,-0.0,-0.0,tie,,,20021655.9
 ZAAC,2026-06,SCI,EXPENSES,Operating expenses,advertising_pr,Advertising & PR,150,12455483.05,12455483.05,-0.0,-0.0,tie,,,12455483.05
 ZAAC,2026-06,SCI,EXPENSES,Operating expenses,insurance,Insurance,160,7898479.5,7898479.5,0.0,0.0,tie,,,7898479.5
 ZAAC,2026-06,SCI,EXPENSES,Operating expenses,professional_fees,Professional Fees,170,21806690.28,21806690.28,0.0,0.0,tie,,,21806690.28
 ZAAC,2026-06,SCI,EXPENSES,Operating expenses,depreciation,Depreciation,180,20494089.53,20494089.53,0.0,0.0,tie,,,20494089.53
-ZAAC,2026-06,SCI,EXPENSES,Operating expenses,motor_vehicle_expenses,Motor Vehicle Expenses,190,8306556.2,8306556.2,-0.0,-0.0,tie,,,8306556.2
+ZAAC,2026-06,SCI,EXPENSES,Operating expenses,motor_vehicle_expenses,Motor Vehicle Expenses,190,8306556.2,8306556.2,0.0,0.0,tie,,,8306556.2
 ZAAC,2026-06,SCI,EXPENSES,Operating expenses,general_expenses,General Expenses,200,12549265.86,12549265.86,0.0,0.0,tie,,,12549265.86
 ZAAC,2026-06,SCI,EXPENSES,Operating expenses,management_expense,Management Expense,210,0.0,0.0,0.0,,tie,,,0.0
-ZAAC,2026-06,SCI,EXPENSES,Finance costs,finance_costs,Finance cost,220,949517.0,949517.0,0.0,0.0,tie,,,949517.0
-ZAAC,2026-06,SCI,EXPENSES,Taxation,taxation,Taxation,230,56119232.7,56119232.7,0.0,0.0,tie,,,56119232.7
+ZAAC,2026-06,SCI,EXPENSES,Finance costs,finance_costs,Finance cost,220,949517.0,949517.0,-0.0,-0.0,tie,,,949517.0
+ZAAC,2026-06,SCI,EXPENSES,Taxation,taxation,Taxation,230,56119232.71,56119232.7,0.01,0.0,tie,,,56119232.7
 ZAAC,2026-06,SFP,ASSETS,Non-Current Assets,ppe,"Property, Plant and Equipment",240,92300692.1,92300692.1,0.0,0.0,tie,,,92300692.1
 ZAAC,2026-06,SFP,ASSETS,Non-Current Assets,computer_software,Intangible - computer software,250,19392154.3,19392154.3,0.0,0.0,tie,,,19392154.3
 ZAAC,2026-06,SFP,ASSETS,Non-Current Assets,goodwill,Intangible - goodwill,260,3511470.92,3511470.92,0.0,0.0,tie,,,3511470.92
@@ -1580,18 +1580,18 @@ ZAAC,2026-06,SFP,ASSETS,Current Assets,trade_receivables,Trade Receivables (Debt
 ZAAC,2026-06,SFP,ASSETS,Current Assets,premium_receivables,Premium Receivables,330,0.0,0.0,0.0,,tie,,,0.0
 ZAAC,2026-06,SFP,ASSETS,Current Assets,other_receivables,Other Receivables,340,15558082.19,15558082.19,0.0,0.0,tie,,,15558082.19
 ZAAC,2026-06,SFP,ASSETS,Current Assets,due_from_to_related_parties,Due from/to related parties,350,206613571.85,206613571.85,0.0,0.0,tie,,,206613571.85
-ZAAC,2026-06,SFP,ASSETS,Current Assets,office_cash,Cash - Office Cash,360,30336299.11,30336299.11,-0.0,-0.0,tie,,,30336299.11
+ZAAC,2026-06,SFP,ASSETS,Current Assets,office_cash,Cash - Office Cash,360,30336299.11,30336299.11,0.0,0.0,tie,,,30336299.11
 ZAAC,2026-06,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,56000000.0,56000000.0,0.0,0.0,tie,,,56000000.0
 ZAAC,2026-06,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,20849321.49,20849321.49,0.0,0.0,tie,,,20849321.49
-ZAAC,2026-06,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,49762269.09,49762269.09,-0.0,-0.0,tie,,,49762269.09
+ZAAC,2026-06,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,49762269.08,49762269.09,-0.01,-0.0,tie,,,49762269.09
 ZAAC,2026-06,SFP,ASSETS,Current Assets,accrued_income,Accrued Income,410,221845930.98,221845930.99,-0.01,-0.0,tie,,,221845930.99
 ZAAC,2026-06,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,25000000.0,25000000.0,0.0,0.0,tie,,,-25000000.0
-ZAAC,2026-06,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,0.0,0.0,0.0,,tie,,,0.0
+ZAAC,2026-06,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,0.01,0.0,0.01,,tie,,,0.0
 ZAAC,2026-06,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 ZAAC,2026-06,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,1019809655.75,1019809655.75,0.0,0.0,tie,,,-1019809655.75
-ZAAC,2026-06,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,101517753.26,101517753.28,-0.02,-0.0,tie,,,-101517753.28
+ZAAC,2026-06,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,101517753.25,101517753.28,-0.03,-0.0,tie,,,-101517753.28
 ZAAC,2026-06,SFP,EQUITY AND LIABILITIES,Equity,non_controlling_interests,Non-controlling interests,470,0.0,0.0,0.0,,tie,,,0.0
-ZAAC,2026-06,SFP,EQUITY AND LIABILITIES,Current Liabilities,trade_and_other_payables,Trade and other payables,480,96941464.33,96941464.33,0.0,0.0,tie,,,-96941464.33
+ZAAC,2026-06,SFP,EQUITY AND LIABILITIES,Current Liabilities,trade_and_other_payables,Trade and other payables,480,96941464.33,96941464.33,-0.0,-0.0,tie,,,-96941464.33
 ZAAC,2026-06,SFP,EQUITY AND LIABILITIES,Current Liabilities,premium_payable,Premium payable,500,0.0,0.0,0.0,,tie,,,0.0
 ZAAC,2026-06,SFP,EQUITY AND LIABILITIES,Current Liabilities,borrowings,Borrowings,510,-0.43,-0.43,0.0,,tie,,,0.43
 ZAMRE,2026-02,SCI,INCOME,Revenue,actuarial_fees,Actuarial Fees,10,0.0,0.0,0.0,,tie,,,0.0
@@ -1605,7 +1605,7 @@ ZAMRE,2026-02,SCI,EXPENSES,Operating expenses,it_costs,IT Costs,110,0.0,0.0,0.0,
 ZAMRE,2026-02,SCI,EXPENSES,Operating expenses,communications,Communications,120,3137.0,3137.0,0.0,0.0,tie,,,3137.0
 ZAMRE,2026-02,SCI,EXPENSES,Operating expenses,printing_stationery,Printing & Stationery,130,11127.06,11127.06,-0.0,-0.0,tie,,,11127.06
 ZAMRE,2026-02,SCI,EXPENSES,Operating expenses,premises,Premises,140,20591.73,20591.73,0.0,0.0,tie,,,20591.73
-ZAMRE,2026-02,SCI,EXPENSES,Operating expenses,advertising_pr,Advertising & PR,150,44239.87,44239.87,-0.0,-0.0,tie,,,44239.87
+ZAMRE,2026-02,SCI,EXPENSES,Operating expenses,advertising_pr,Advertising & PR,150,44239.87,44239.87,0.0,0.0,tie,,,44239.87
 ZAMRE,2026-02,SCI,EXPENSES,Operating expenses,insurance,Insurance,160,0.0,0.0,0.0,,tie,,,0.0
 ZAMRE,2026-02,SCI,EXPENSES,Operating expenses,professional_fees,Professional Fees,170,0.0,0.0,0.0,,tie,,,0.0
 ZAMRE,2026-02,SCI,EXPENSES,Operating expenses,depreciation,Depreciation,180,0.0,0.0,0.0,,tie,,,0.0
@@ -1625,7 +1625,7 @@ ZAMRE,2026-02,SFP,ASSETS,Current Assets,trade_receivables,Trade Receivables (Deb
 ZAMRE,2026-02,SFP,ASSETS,Current Assets,premium_receivables,Premium Receivables,330,125392104.85,125392104.85,0.0,0.0,tie,,,125392104.85
 ZAMRE,2026-02,SFP,ASSETS,Current Assets,other_receivables,Other Receivables,340,54010.35,54010.35,0.0,0.0,tie,,,54010.35
 ZAMRE,2026-02,SFP,ASSETS,Current Assets,due_from_to_related_parties,Due from/to related parties,350,-47133768.53,-47133768.53,0.0,-0.0,tie,,,-47133768.53
-ZAMRE,2026-02,SFP,ASSETS,Current Assets,office_cash,Cash - Office Cash,360,2626690.54,2626690.54,-0.0,-0.0,tie,,,2626690.54
+ZAMRE,2026-02,SFP,ASSETS,Current Assets,office_cash,Cash - Office Cash,360,2626690.54,2626690.54,0.0,0.0,tie,,,2626690.54
 ZAMRE,2026-02,SFP,ASSETS,Current Assets,client_cash,Cash - Client Cash,370,45182117.01,45182117.01,0.0,0.0,tie,,,45182117.01
 ZAMRE,2026-02,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,38160000.0,38160000.0,0.0,0.0,tie,,,38160000.0
 ZAMRE,2026-02,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,-4626708.61,-4626708.61,0.0,-0.0,tie,,,-4626708.61
@@ -1642,12 +1642,12 @@ ZAMRE,2026-03,SCI,INCOME,Revenue,actuarial_fees,Actuarial Fees,10,0.0,0.0,0.0,,t
 ZAMRE,2026-03,SCI,INCOME,Revenue,insurance_commissions,Insurance Commissions,40,26320003.93,26320003.93,0.0,0.0,tie,,,-26320003.93
 ZAMRE,2026-03,SCI,INCOME,Revenue,saas_income,SAAS (Software as a Service),50,0.0,0.0,0.0,,tie,,,0.0
 ZAMRE,2026-03,SCI,INCOME,Other income,other_income,Other Income,70,371731.51,371731.51,0.0,0.0,tie,,,-371731.51
-ZAMRE,2026-03,SCI,EXPENSES,Operating expenses,personnel_costs,Personnel Costs,80,8558578.01,8558578.01,-0.0,-0.0,tie,,,8558578.01
+ZAMRE,2026-03,SCI,EXPENSES,Operating expenses,personnel_costs,Personnel Costs,80,8558578.01,8558578.01,0.0,0.0,tie,,,8558578.01
 ZAMRE,2026-03,SCI,EXPENSES,Operating expenses,travelling,Travelling,90,227568.0,227568.0,0.0,0.0,tie,,,227568.0
 ZAMRE,2026-03,SCI,EXPENSES,Operating expenses,entertainment,Entertainment,100,140541.8,140541.8,0.0,0.0,tie,,,140541.8
 ZAMRE,2026-03,SCI,EXPENSES,Operating expenses,it_costs,IT Costs,110,263895.82,263895.82,0.0,0.0,tie,,,263895.82
 ZAMRE,2026-03,SCI,EXPENSES,Operating expenses,communications,Communications,120,26048.74,26048.74,0.0,0.0,tie,,,26048.74
-ZAMRE,2026-03,SCI,EXPENSES,Operating expenses,printing_stationery,Printing & Stationery,130,0.0,0.0,0.0,,tie,,,0.0
+ZAMRE,2026-03,SCI,EXPENSES,Operating expenses,printing_stationery,Printing & Stationery,130,-0.0,0.0,-0.0,,tie,,,0.0
 ZAMRE,2026-03,SCI,EXPENSES,Operating expenses,premises,Premises,140,53373.23,53373.23,0.0,0.0,tie,,,53373.23
 ZAMRE,2026-03,SCI,EXPENSES,Operating expenses,advertising_pr,Advertising & PR,150,154410.59,154410.59,0.0,0.0,tie,,,154410.59
 ZAMRE,2026-03,SCI,EXPENSES,Operating expenses,insurance,Insurance,160,86192.55,86192.55,0.0,0.0,tie,,,86192.55
@@ -1730,7 +1730,7 @@ ZAMRE,2026-05,SCI,INCOME,Revenue,actuarial_fees,Actuarial Fees,10,0.0,0.0,0.0,,t
 ZAMRE,2026-05,SCI,INCOME,Revenue,insurance_commissions,Insurance Commissions,40,35969538.0,35969538.0,0.0,0.0,tie,,,-35969538.0
 ZAMRE,2026-05,SCI,INCOME,Revenue,saas_income,SAAS (Software as a Service),50,0.0,0.0,0.0,,tie,,,0.0
 ZAMRE,2026-05,SCI,INCOME,Other income,other_income,Other Income,70,694246.82,694246.82,0.0,0.0,tie,,,-694246.82
-ZAMRE,2026-05,SCI,EXPENSES,Operating expenses,personnel_costs,Personnel Costs,80,12861384.0,12861384.0,-0.0,-0.0,tie,,,12861384.0
+ZAMRE,2026-05,SCI,EXPENSES,Operating expenses,personnel_costs,Personnel Costs,80,12861384.0,12861384.0,0.0,0.0,tie,,,12861384.0
 ZAMRE,2026-05,SCI,EXPENSES,Operating expenses,travelling,Travelling,90,790678.0,790678.0,0.0,0.0,tie,,,790678.0
 ZAMRE,2026-05,SCI,EXPENSES,Operating expenses,entertainment,Entertainment,100,342993.8,342993.8,0.0,0.0,tie,,,342993.8
 ZAMRE,2026-05,SCI,EXPENSES,Operating expenses,it_costs,IT Costs,110,592462.86,592462.86,0.0,0.0,tie,,,592462.86
@@ -1785,10 +1785,10 @@ ZAMRE,2026-06,SCI,EXPENSES,Operating expenses,advertising_pr,Advertising & PR,15
 ZAMRE,2026-06,SCI,EXPENSES,Operating expenses,insurance,Insurance,160,86192.55,86192.55,0.0,0.0,tie,,,86192.55
 ZAMRE,2026-06,SCI,EXPENSES,Operating expenses,professional_fees,Professional Fees,170,501582.8,501582.8,0.0,0.0,tie,,,501582.8
 ZAMRE,2026-06,SCI,EXPENSES,Operating expenses,depreciation,Depreciation,180,0.0,0.0,0.0,,tie,,,0.0
-ZAMRE,2026-06,SCI,EXPENSES,Operating expenses,motor_vehicle_expenses,Motor Vehicle Expenses,190,128743.82,128743.82,0.0,0.0,tie,,,128743.82
+ZAMRE,2026-06,SCI,EXPENSES,Operating expenses,motor_vehicle_expenses,Motor Vehicle Expenses,190,128743.82,128743.82,-0.0,-0.0,tie,,,128743.82
 ZAMRE,2026-06,SCI,EXPENSES,Operating expenses,general_expenses,General Expenses,200,147387.7,147387.7,0.0,0.0,tie,,,147387.7
 ZAMRE,2026-06,SCI,EXPENSES,Operating expenses,management_expense,Management Expense,210,0.0,0.0,0.0,,tie,,,0.0
-ZAMRE,2026-06,SCI,EXPENSES,Finance costs,finance_costs,Finance cost,220,7980.6,7980.6,0.0,0.0,tie,,,7980.6
+ZAMRE,2026-06,SCI,EXPENSES,Finance costs,finance_costs,Finance cost,220,7980.6,7980.6,-0.0,-0.0,tie,,,7980.6
 ZAMRE,2026-06,SCI,EXPENSES,Taxation,taxation,Taxation,230,8163555.7,8163555.71,-0.01,-0.0,tie,,,8163555.71
 ZAMRE,2026-06,SFP,ASSETS,Non-Current Assets,ppe,"Property, Plant and Equipment",240,0.0,0.0,0.0,,tie,,,0.0
 ZAMRE,2026-06,SFP,ASSETS,Non-Current Assets,computer_software,Intangible - computer software,250,6878000.0,6878000.0,0.0,0.0,tie,,,6878000.0
@@ -1800,7 +1800,7 @@ ZAMRE,2026-06,SFP,ASSETS,Non-Current Assets,deferred_tax,Deferred tax,310,0.0,0.
 ZAMRE,2026-06,SFP,ASSETS,Current Assets,trade_receivables,Trade Receivables (Debtors),320,38672835.39,38672835.4,-0.01,-0.0,tie,,,38672835.4
 ZAMRE,2026-06,SFP,ASSETS,Current Assets,premium_receivables,Premium Receivables,330,184229673.89,184229673.89,0.0,0.0,tie,,,184229673.89
 ZAMRE,2026-06,SFP,ASSETS,Current Assets,other_receivables,Other Receivables,340,118401.23,118401.23,-0.0,-0.0,tie,,,118401.23
-ZAMRE,2026-06,SFP,ASSETS,Current Assets,due_from_to_related_parties,Due from/to related parties,350,-67509436.66,-67509436.66,-0.0,0.0,tie,,,-67509436.66
+ZAMRE,2026-06,SFP,ASSETS,Current Assets,due_from_to_related_parties,Due from/to related parties,350,-67509436.66,-67509436.66,0.0,-0.0,tie,,,-67509436.66
 ZAMRE,2026-06,SFP,ASSETS,Current Assets,office_cash,Cash - Office Cash,360,17943811.82,17943811.83,-0.01,-0.0,tie,,,17943811.83
 ZAMRE,2026-06,SFP,ASSETS,Current Assets,client_cash,Cash - Client Cash,370,69724302.66,69724302.66,0.0,0.0,tie,,,69724302.66
 ZAMRE,2026-06,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,33160000.0,33160000.0,0.0,0.0,tie,,,33160000.0
@@ -1824,7 +1824,7 @@ ZARIB,2026-02,SCI,EXPENSES,Operating expenses,entertainment,Entertainment,100,30
 ZARIB,2026-02,SCI,EXPENSES,Operating expenses,it_costs,IT Costs,110,1514010.69,1514010.69,0.0,0.0,tie,,,1514010.69
 ZARIB,2026-02,SCI,EXPENSES,Operating expenses,communications,Communications,120,704751.74,704751.74,0.0,0.0,tie,,,704751.74
 ZARIB,2026-02,SCI,EXPENSES,Operating expenses,printing_stationery,Printing & Stationery,130,379811.15,379811.15,0.0,0.0,tie,,,379811.15
-ZARIB,2026-02,SCI,EXPENSES,Operating expenses,premises,Premises,140,7890452.16,7890452.16,0.0,0.0,tie,,,7890452.16
+ZARIB,2026-02,SCI,EXPENSES,Operating expenses,premises,Premises,140,7890452.16,7890452.16,-0.0,-0.0,tie,,,7890452.16
 ZARIB,2026-02,SCI,EXPENSES,Operating expenses,advertising_pr,Advertising & PR,150,580740.69,580740.69,0.0,0.0,tie,,,580740.69
 ZARIB,2026-02,SCI,EXPENSES,Operating expenses,insurance,Insurance,160,2275226.66,2275226.66,0.0,0.0,tie,,,2275226.66
 ZARIB,2026-02,SCI,EXPENSES,Operating expenses,professional_fees,Professional Fees,170,1619308.36,1619308.36,-0.0,-0.0,tie,,,1619308.36
@@ -1845,7 +1845,7 @@ ZARIB,2026-02,SFP,ASSETS,Current Assets,trade_receivables,Trade Receivables (Deb
 ZARIB,2026-02,SFP,ASSETS,Current Assets,premium_receivables,Premium Receivables,330,1504822858.5,1504822858.5,0.0,0.0,tie,,,1504822858.5
 ZARIB,2026-02,SFP,ASSETS,Current Assets,other_receivables,Other Receivables,340,-34348729.68,-34348729.68,0.0,-0.0,tie,,,-34348729.68
 ZARIB,2026-02,SFP,ASSETS,Current Assets,due_from_to_related_parties,Due from/to related parties,350,329405302.38,329405302.38,0.0,0.0,tie,,,329405302.38
-ZARIB,2026-02,SFP,ASSETS,Current Assets,office_cash,Cash - Office Cash,360,99829060.32,99829060.32,0.0,0.0,tie,,,99829060.32
+ZARIB,2026-02,SFP,ASSETS,Current Assets,office_cash,Cash - Office Cash,360,99829060.32,99829060.32,-0.0,-0.0,tie,,,99829060.32
 ZARIB,2026-02,SFP,ASSETS,Current Assets,client_cash,Cash - Client Cash,370,347351768.66,347351768.66,-0.0,-0.0,tie,,,347351768.66
 ZARIB,2026-02,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,421793557.23,421793557.23,0.0,0.0,tie,,,421793557.23
 ZARIB,2026-02,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,129512975.91,129512975.91,0.0,0.0,tie,,,129512975.91
@@ -1856,20 +1856,20 @@ ZARIB,2026-02,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed divid
 ZARIB,2026-02,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,1155073703.75,1155073703.75,0.0,0.0,tie,,,-1155073703.75
 ZARIB,2026-02,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,306529488.9,306529489.28,-0.38,-0.0,tie,,,-306529489.28
 ZARIB,2026-02,SFP,EQUITY AND LIABILITIES,Equity,non_controlling_interests,Non-controlling interests,470,0.0,0.0,0.0,,tie,,,0.0
-ZARIB,2026-02,SFP,EQUITY AND LIABILITIES,Current Liabilities,trade_and_other_payables,Trade and other payables,480,59684097.34,59684097.34,0.0,0.0,tie,,,-59684097.34
+ZARIB,2026-02,SFP,EQUITY AND LIABILITIES,Current Liabilities,trade_and_other_payables,Trade and other payables,480,59684097.34,59684097.34,-0.0,-0.0,tie,,,-59684097.34
 ZARIB,2026-02,SFP,EQUITY AND LIABILITIES,Current Liabilities,premium_payable,Premium payable,500,1651388968.87,1651388968.87,0.0,0.0,tie,,,-1651388968.87
 ZARIB,2026-02,SFP,EQUITY AND LIABILITIES,Current Liabilities,borrowings,Borrowings,510,0.0,0.0,0.0,,tie,,,0.0
 ZARIB,2026-03,SCI,INCOME,Revenue,actuarial_fees,Actuarial Fees,10,0.0,0.0,0.0,,tie,,,0.0
-ZARIB,2026-03,SCI,INCOME,Revenue,insurance_commissions,Insurance Commissions,40,651315695.6,651315695.6,-0.0,-0.0,tie,,,-651315695.6
+ZARIB,2026-03,SCI,INCOME,Revenue,insurance_commissions,Insurance Commissions,40,651315695.6,651315695.6,0.0,0.0,tie,,,-651315695.6
 ZARIB,2026-03,SCI,INCOME,Revenue,saas_income,SAAS (Software as a Service),50,0.0,0.0,0.0,,tie,,,0.0
 ZARIB,2026-03,SCI,INCOME,Other income,other_income,Other Income,70,13001555.86,13001555.86,0.0,0.0,tie,,,-13001555.86
-ZARIB,2026-03,SCI,EXPENSES,Operating expenses,personnel_costs,Personnel Costs,80,118448005.67,129698005.67,-11250000.0,-8.67,DIFFERENCE,classification,,129698005.67
+ZARIB,2026-03,SCI,EXPENSES,Operating expenses,personnel_costs,Personnel Costs,80,129698005.67,129698005.67,0.0,0.0,tie,,,129698005.67
 ZARIB,2026-03,SCI,EXPENSES,Operating expenses,travelling,Travelling,90,1757792.02,1757792.02,0.0,0.0,tie,,,1757792.02
 ZARIB,2026-03,SCI,EXPENSES,Operating expenses,entertainment,Entertainment,100,3646986.83,3646986.83,0.0,0.0,tie,,,3646986.83
 ZARIB,2026-03,SCI,EXPENSES,Operating expenses,it_costs,IT Costs,110,4926364.69,4926364.69,0.0,0.0,tie,,,4926364.69
 ZARIB,2026-03,SCI,EXPENSES,Operating expenses,communications,Communications,120,1576681.02,1576681.02,0.0,0.0,tie,,,1576681.02
 ZARIB,2026-03,SCI,EXPENSES,Operating expenses,printing_stationery,Printing & Stationery,130,707531.96,707531.96,0.0,0.0,tie,,,707531.96
-ZARIB,2026-03,SCI,EXPENSES,Operating expenses,premises,Premises,140,10419778.92,10419778.92,0.0,0.0,tie,,,10419778.92
+ZARIB,2026-03,SCI,EXPENSES,Operating expenses,premises,Premises,140,10419778.92,10419778.92,-0.0,-0.0,tie,,,10419778.92
 ZARIB,2026-03,SCI,EXPENSES,Operating expenses,advertising_pr,Advertising & PR,150,1514461.91,1514461.91,0.0,0.0,tie,,,1514461.91
 ZARIB,2026-03,SCI,EXPENSES,Operating expenses,insurance,Insurance,160,3405306.24,3405306.24,0.0,0.0,tie,,,3405306.24
 ZARIB,2026-03,SCI,EXPENSES,Operating expenses,professional_fees,Professional Fees,170,2980337.36,2980337.36,0.0,0.0,tie,,,2980337.36
@@ -1878,7 +1878,7 @@ ZARIB,2026-03,SCI,EXPENSES,Operating expenses,motor_vehicle_expenses,Motor Vehic
 ZARIB,2026-03,SCI,EXPENSES,Operating expenses,general_expenses,General Expenses,200,6003870.4,6003870.4,0.0,0.0,tie,,,6003870.4
 ZARIB,2026-03,SCI,EXPENSES,Operating expenses,management_expense,Management Expense,210,0.0,0.0,0.0,,tie,,,0.0
 ZARIB,2026-03,SCI,EXPENSES,Finance costs,finance_costs,Finance cost,220,721017.58,721017.58,0.0,0.0,tie,,,721017.58
-ZARIB,2026-03,SCI,EXPENSES,Taxation,taxation,Taxation,230,149813937.37,146438937.37,3375000.0,2.3,DIFFERENCE,classification,,146438937.37
+ZARIB,2026-03,SCI,EXPENSES,Taxation,taxation,Taxation,230,146438937.37,146438937.37,0.0,0.0,tie,,,146438937.37
 ZARIB,2026-03,SFP,ASSETS,Non-Current Assets,ppe,"Property, Plant and Equipment",240,65592150.29,65592150.29,0.0,0.0,tie,,,65592150.29
 ZARIB,2026-03,SFP,ASSETS,Non-Current Assets,computer_software,Intangible - computer software,250,16465498.75,16465498.75,0.0,0.0,tie,,,16465498.75
 ZARIB,2026-03,SFP,ASSETS,Non-Current Assets,goodwill,Intangible - goodwill,260,0.0,0.0,0.0,,tie,,,0.0
@@ -1894,25 +1894,25 @@ ZARIB,2026-03,SFP,ASSETS,Current Assets,office_cash,Cash - Office Cash,360,13068
 ZARIB,2026-03,SFP,ASSETS,Current Assets,client_cash,Cash - Client Cash,370,113660264.94,113660264.94,-0.0,-0.0,tie,,,113660264.94
 ZARIB,2026-03,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,371830978.47,371830978.47,0.0,0.0,tie,,,371830978.47
 ZARIB,2026-03,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,179936116.0,179936116.0,0.0,0.0,tie,,,179936116.0
-ZARIB,2026-03,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,-121121682.59,-117746682.59,-3375000.0,2.87,DIFFERENCE,classification,,-117746682.59
+ZARIB,2026-03,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,-117746682.59,-117746682.59,0.0,-0.0,tie,,,-117746682.59
 ZARIB,2026-03,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,33360000.0,33360000.0,0.0,0.0,tie,,,-33360000.0
-ZARIB,2026-03,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,758850.95,758850.95,0.0,0.0,tie,,,-758850.95
+ZARIB,2026-03,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,758850.96,758850.95,0.01,0.0,tie,,,-758850.95
 ZARIB,2026-03,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 ZARIB,2026-03,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,1201525218.75,1201525218.75,0.0,0.0,tie,,,-1201525218.75
-ZARIB,2026-03,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,349565853.85,341690854.24,7874999.61,2.3,DIFFERENCE,classification,,-341690854.24
+ZARIB,2026-03,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,341690853.85,341690854.24,-0.39,-0.0,tie,,,-341690854.24
 ZARIB,2026-03,SFP,EQUITY AND LIABILITIES,Equity,non_controlling_interests,Non-controlling interests,470,0.0,0.0,0.0,,tie,,,0.0
-ZARIB,2026-03,SFP,EQUITY AND LIABILITIES,Current Liabilities,trade_and_other_payables,Trade and other payables,480,56873605.2,68123605.2,-11250000.0,-16.51,DIFFERENCE,classification,,-68123605.2
+ZARIB,2026-03,SFP,EQUITY AND LIABILITIES,Current Liabilities,trade_and_other_payables,Trade and other payables,480,68123605.2,68123605.2,0.0,0.0,tie,,,-68123605.2
 ZARIB,2026-03,SFP,EQUITY AND LIABILITIES,Current Liabilities,deferred_revenue,Deferred Revenue,490,0.0,0.0,0.0,,tie,,,0.0
 ZARIB,2026-03,SFP,EQUITY AND LIABILITIES,Current Liabilities,premium_payable,Premium payable,500,2072461566.19,2072461566.19,0.0,0.0,tie,,,-2072461566.19
 ZARIB,2026-03,SFP,EQUITY AND LIABILITIES,Current Liabilities,borrowings,Borrowings,510,0.0,0.0,0.0,,tie,,,0.0
 ZARIB,2026-04,SCI,INCOME,Revenue,actuarial_fees,Actuarial Fees,10,0.0,0.0,0.0,,tie,,,0.0
 ZARIB,2026-04,SCI,INCOME,Revenue,insurance_commissions,Insurance Commissions,40,833228807.49,833228807.49,-0.0,-0.0,tie,,,-833228807.49
 ZARIB,2026-04,SCI,INCOME,Revenue,saas_income,SAAS (Software as a Service),50,0.0,0.0,0.0,,tie,,,0.0
-ZARIB,2026-04,SCI,INCOME,Other income,other_income,Other Income,70,20659389.39,20659389.39,-0.0,-0.0,tie,,,-20659389.39
-ZARIB,2026-04,SCI,EXPENSES,Operating expenses,personnel_costs,Personnel Costs,80,169785371.85,184785371.85,-15000000.0,-8.12,DIFFERENCE,classification,,184785371.85
+ZARIB,2026-04,SCI,INCOME,Other income,other_income,Other Income,70,20659389.39,20659389.39,0.0,0.0,tie,,,-20659389.39
+ZARIB,2026-04,SCI,EXPENSES,Operating expenses,personnel_costs,Personnel Costs,80,184785371.85,184785371.85,0.0,0.0,tie,,,184785371.85
 ZARIB,2026-04,SCI,EXPENSES,Operating expenses,travelling,Travelling,90,3721656.22,3721656.22,-0.0,-0.0,tie,,,3721656.22
 ZARIB,2026-04,SCI,EXPENSES,Operating expenses,entertainment,Entertainment,100,6690346.62,6690346.62,0.0,0.0,tie,,,6690346.62
-ZARIB,2026-04,SCI,EXPENSES,Operating expenses,it_costs,IT Costs,110,6489897.19,6489897.19,0.0,0.0,tie,,,6489897.19
+ZARIB,2026-04,SCI,EXPENSES,Operating expenses,it_costs,IT Costs,110,6489897.19,6489897.19,-0.0,-0.0,tie,,,6489897.19
 ZARIB,2026-04,SCI,EXPENSES,Operating expenses,communications,Communications,120,2011700.72,2011700.72,0.0,0.0,tie,,,2011700.72
 ZARIB,2026-04,SCI,EXPENSES,Operating expenses,printing_stationery,Printing & Stationery,130,942610.72,942610.72,0.0,0.0,tie,,,942610.72
 ZARIB,2026-04,SCI,EXPENSES,Operating expenses,premises,Premises,140,13913610.98,13913610.98,-0.0,-0.0,tie,,,13913610.98
@@ -1942,31 +1942,31 @@ ZARIB,2026-04,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,896271492.1
 ZARIB,2026-04,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,142446879.6,142446879.6,0.0,0.0,tie,,,142446879.6
 ZARIB,2026-04,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,-106417101.89,-106417101.89,0.0,-0.0,tie,,,-106417101.89
 ZARIB,2026-04,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,33360000.0,33360000.0,0.0,0.0,tie,,,-33360000.0
-ZARIB,2026-04,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,758850.95,758850.95,0.0,0.0,tie,,,-758850.95
+ZARIB,2026-04,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,758850.98,758850.95,0.03,0.0,tie,,,-758850.95
 ZARIB,2026-04,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 ZARIB,2026-04,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,1189689872.0,1189689872.0,0.0,0.0,tie,,,-1189689872.0
-ZARIB,2026-04,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,435898260.16,420898260.55,14999999.61,3.56,DIFFERENCE,classification,offset by Trade and other payables,-420898260.55
+ZARIB,2026-04,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,420898260.16,420898260.55,-0.39,-0.0,tie,,,-420898260.55
 ZARIB,2026-04,SFP,EQUITY AND LIABILITIES,Equity,non_controlling_interests,Non-controlling interests,470,0.0,0.0,0.0,,tie,,,0.0
-ZARIB,2026-04,SFP,EQUITY AND LIABILITIES,Current Liabilities,trade_and_other_payables,Trade and other payables,480,56225598.39,71225598.39,-15000000.0,-21.06,DIFFERENCE,classification,offset by Net Profit (derived),-71225598.39
+ZARIB,2026-04,SFP,EQUITY AND LIABILITIES,Current Liabilities,trade_and_other_payables,Trade and other payables,480,71225598.39,71225598.39,-0.0,-0.0,tie,,,-71225598.39
 ZARIB,2026-04,SFP,EQUITY AND LIABILITIES,Current Liabilities,deferred_revenue,Deferred Revenue,490,0.0,0.0,0.0,,tie,,,0.0
 ZARIB,2026-04,SFP,EQUITY AND LIABILITIES,Current Liabilities,premium_payable,Premium payable,500,2482020635.29,2482020635.29,0.0,0.0,tie,,,-2482020635.29
 ZARIB,2026-04,SFP,EQUITY AND LIABILITIES,Current Liabilities,borrowings,Borrowings,510,0.0,0.0,0.0,,tie,,,0.0
 ZARIB,2026-05,SCI,INCOME,Revenue,actuarial_fees,Actuarial Fees,10,0.0,0.0,0.0,,tie,,,0.0
 ZARIB,2026-05,SCI,INCOME,Revenue,insurance_commissions,Insurance Commissions,40,884741909.86,884741909.86,0.0,0.0,tie,,,-884741909.86
 ZARIB,2026-05,SCI,INCOME,Revenue,saas_income,SAAS (Software as a Service),50,0.0,0.0,0.0,,tie,,,0.0
-ZARIB,2026-05,SCI,INCOME,Other income,other_income,Other Income,70,22847779.89,22847779.89,0.0,0.0,tie,,,-22847779.89
-ZARIB,2026-05,SCI,EXPENSES,Operating expenses,personnel_costs,Personnel Costs,80,233812206.14,233812206.14,0.0,0.0,tie,,,233812206.14
+ZARIB,2026-05,SCI,INCOME,Other income,other_income,Other Income,70,22847779.89,22847779.89,-0.0,-0.0,tie,,,-22847779.89
+ZARIB,2026-05,SCI,EXPENSES,Operating expenses,personnel_costs,Personnel Costs,80,233812206.14,233812206.14,-0.0,-0.0,tie,,,233812206.14
 ZARIB,2026-05,SCI,EXPENSES,Operating expenses,travelling,Travelling,90,4561386.24,4561386.24,0.0,0.0,tie,,,4561386.24
 ZARIB,2026-05,SCI,EXPENSES,Operating expenses,entertainment,Entertainment,100,8107212.4,8107212.4,0.0,0.0,tie,,,8107212.4
-ZARIB,2026-05,SCI,EXPENSES,Operating expenses,it_costs,IT Costs,110,15926326.67,15926326.67,-0.0,-0.0,tie,,,15926326.67
+ZARIB,2026-05,SCI,EXPENSES,Operating expenses,it_costs,IT Costs,110,15926326.67,15926326.67,0.0,0.0,tie,,,15926326.67
 ZARIB,2026-05,SCI,EXPENSES,Operating expenses,communications,Communications,120,2452569.33,2452569.33,0.0,0.0,tie,,,2452569.33
 ZARIB,2026-05,SCI,EXPENSES,Operating expenses,printing_stationery,Printing & Stationery,130,1239674.36,1239674.36,-0.0,-0.0,tie,,,1239674.36
-ZARIB,2026-05,SCI,EXPENSES,Operating expenses,premises,Premises,140,16986895.76,16986895.76,0.0,0.0,tie,,,16986895.76
+ZARIB,2026-05,SCI,EXPENSES,Operating expenses,premises,Premises,140,16986895.76,16986895.76,-0.0,-0.0,tie,,,16986895.76
 ZARIB,2026-05,SCI,EXPENSES,Operating expenses,advertising_pr,Advertising & PR,150,2658243.29,2658243.29,0.0,0.0,tie,,,2658243.29
 ZARIB,2026-05,SCI,EXPENSES,Operating expenses,insurance,Insurance,160,8192037.48,8192037.48,0.0,0.0,tie,,,8192037.48
 ZARIB,2026-05,SCI,EXPENSES,Operating expenses,professional_fees,Professional Fees,170,8182214.32,8182214.32,0.0,0.0,tie,,,8182214.32
-ZARIB,2026-05,SCI,EXPENSES,Operating expenses,depreciation,Depreciation,180,10501111.22,10501111.22,0.0,0.0,tie,,,10501111.22
-ZARIB,2026-05,SCI,EXPENSES,Operating expenses,motor_vehicle_expenses,Motor Vehicle Expenses,190,4464613.7,4464613.7,0.0,0.0,tie,,,4464613.7
+ZARIB,2026-05,SCI,EXPENSES,Operating expenses,depreciation,Depreciation,180,10501111.22,10501111.22,-0.0,-0.0,tie,,,10501111.22
+ZARIB,2026-05,SCI,EXPENSES,Operating expenses,motor_vehicle_expenses,Motor Vehicle Expenses,190,4464613.7,4464613.7,-0.0,-0.0,tie,,,4464613.7
 ZARIB,2026-05,SCI,EXPENSES,Operating expenses,general_expenses,General Expenses,200,9913003.14,9913002.76,0.38,0.0,tie,,,9913002.76
 ZARIB,2026-05,SCI,EXPENSES,Operating expenses,management_expense,Management Expense,210,0.0,0.0,0.0,,tie,,,0.0
 ZARIB,2026-05,SCI,EXPENSES,Finance costs,finance_costs,Finance cost,220,1906002.96,1906002.96,0.0,0.0,tie,,,1906002.96
@@ -1982,13 +1982,13 @@ ZARIB,2026-05,SFP,ASSETS,Current Assets,trade_receivables,Trade Receivables (Deb
 ZARIB,2026-05,SFP,ASSETS,Current Assets,premium_receivables,Premium Receivables,330,1358845229.32,1358845229.31,0.01,0.0,tie,,,1358845229.31
 ZARIB,2026-05,SFP,ASSETS,Current Assets,other_receivables,Other Receivables,340,-42181347.46,-42181347.46,0.0,-0.0,tie,,,-42181347.46
 ZARIB,2026-05,SFP,ASSETS,Current Assets,due_from_to_related_parties,Due from/to related parties,350,359224522.25,359224522.25,0.0,0.0,tie,,,359224522.25
-ZARIB,2026-05,SFP,ASSETS,Current Assets,office_cash,Cash - Office Cash,360,110643981.5,110643981.5,-0.0,-0.0,tie,,,110643981.5
-ZARIB,2026-05,SFP,ASSETS,Current Assets,client_cash,Cash - Client Cash,370,403087836.44,403087836.44,-0.0,-0.0,tie,,,403087836.44
+ZARIB,2026-05,SFP,ASSETS,Current Assets,office_cash,Cash - Office Cash,360,110643981.5,110643981.5,0.0,0.0,tie,,,110643981.5
+ZARIB,2026-05,SFP,ASSETS,Current Assets,client_cash,Cash - Client Cash,370,403087836.44,403087836.44,0.0,0.0,tie,,,403087836.44
 ZARIB,2026-05,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,484415098.32,484415098.32,0.0,0.0,tie,,,484415098.32
 ZARIB,2026-05,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,222446879.6,222446879.6,0.0,0.0,tie,,,222446879.6
 ZARIB,2026-05,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,-86104107.05,-86104107.05,0.0,-0.0,tie,,,-86104107.05
 ZARIB,2026-05,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,33360000.0,33360000.0,0.0,0.0,tie,,,-33360000.0
-ZARIB,2026-05,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,758850.95,758850.95,0.0,0.0,tie,,,-758850.95
+ZARIB,2026-05,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,758850.97,758850.95,0.02,0.0,tie,,,-758850.95
 ZARIB,2026-05,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 ZARIB,2026-05,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,1189689872.0,1189689872.0,0.0,0.0,tie,,,-1189689872.0
 ZARIB,2026-05,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,405080334.91,405080335.31,-0.4,-0.0,tie,,,-405080335.31
@@ -2000,15 +2000,15 @@ ZARIB,2026-05,SFP,EQUITY AND LIABILITIES,Current Liabilities,borrowings,Borrowin
 ZARIB,2026-06,SCI,INCOME,Revenue,actuarial_fees,Actuarial Fees,10,0.0,0.0,0.0,,tie,,,0.0
 ZARIB,2026-06,SCI,INCOME,Revenue,insurance_commissions,Insurance Commissions,40,952898664.32,952898664.32,0.0,0.0,tie,,,-952898664.32
 ZARIB,2026-06,SCI,INCOME,Revenue,saas_income,SAAS (Software as a Service),50,0.0,0.0,0.0,,tie,,,0.0
-ZARIB,2026-06,SCI,INCOME,Other income,other_income,Other Income,70,25919547.54,25919547.54,-0.0,-0.0,tie,,,-25919547.54
+ZARIB,2026-06,SCI,INCOME,Other income,other_income,Other Income,70,25919547.54,25919547.54,0.0,0.0,tie,,,-25919547.54
 ZARIB,2026-06,SCI,EXPENSES,Operating expenses,personnel_costs,Personnel Costs,80,285912620.75,285912620.75,0.0,0.0,tie,,,285912620.75
 ZARIB,2026-06,SCI,EXPENSES,Operating expenses,travelling,Travelling,90,7154514.23,7154514.23,0.0,0.0,tie,,,7154514.23
 ZARIB,2026-06,SCI,EXPENSES,Operating expenses,entertainment,Entertainment,100,9919669.39,9919669.39,0.0,0.0,tie,,,9919669.39
 ZARIB,2026-06,SCI,EXPENSES,Operating expenses,it_costs,IT Costs,110,23452894.92,23452894.92,0.0,0.0,tie,,,23452894.92
-ZARIB,2026-06,SCI,EXPENSES,Operating expenses,communications,Communications,120,2723424.85,2723424.85,0.0,0.0,tie,,,2723424.85
-ZARIB,2026-06,SCI,EXPENSES,Operating expenses,printing_stationery,Printing & Stationery,130,1635826.16,1635826.16,0.0,0.0,tie,,,1635826.16
+ZARIB,2026-06,SCI,EXPENSES,Operating expenses,communications,Communications,120,2723424.85,2723424.85,-0.0,-0.0,tie,,,2723424.85
+ZARIB,2026-06,SCI,EXPENSES,Operating expenses,printing_stationery,Printing & Stationery,130,1635826.16,1635826.16,-0.0,-0.0,tie,,,1635826.16
 ZARIB,2026-06,SCI,EXPENSES,Operating expenses,premises,Premises,140,20380340.53,20380340.53,-0.0,-0.0,tie,,,20380340.53
-ZARIB,2026-06,SCI,EXPENSES,Operating expenses,advertising_pr,Advertising & PR,150,3372640.28,3372640.28,-0.0,-0.0,tie,,,3372640.28
+ZARIB,2026-06,SCI,EXPENSES,Operating expenses,advertising_pr,Advertising & PR,150,3372640.28,3372640.28,0.0,0.0,tie,,,3372640.28
 ZARIB,2026-06,SCI,EXPENSES,Operating expenses,insurance,Insurance,160,9322117.06,9322117.06,0.0,0.0,tie,,,9322117.06
 ZARIB,2026-06,SCI,EXPENSES,Operating expenses,professional_fees,Professional Fees,170,8665140.72,8665140.72,0.0,0.0,tie,,,8665140.72
 ZARIB,2026-06,SCI,EXPENSES,Operating expenses,depreciation,Depreciation,180,12598771.8,12598771.79,0.01,0.0,tie,,,12598771.79
@@ -2018,7 +2018,7 @@ ZARIB,2026-06,SCI,EXPENSES,Operating expenses,management_expense,Management Expe
 ZARIB,2026-06,SCI,EXPENSES,Finance costs,finance_costs,Finance cost,220,1982510.64,1982510.64,0.0,0.0,tie,,,1982510.64
 ZARIB,2026-06,SCI,EXPENSES,Taxation,taxation,Taxation,230,177398957.9,177398957.89,0.01,0.0,tie,,,177398957.89
 ZARIB,2026-06,SFP,ASSETS,Non-Current Assets,ppe,"Property, Plant and Equipment",240,63000806.82,63000806.82,0.0,0.0,tie,,,63000806.82
-ZARIB,2026-06,SFP,ASSETS,Non-Current Assets,computer_software,Intangible - computer software,250,21719407.96,21719407.96,-0.0,-0.0,tie,,,21719407.96
+ZARIB,2026-06,SFP,ASSETS,Non-Current Assets,computer_software,Intangible - computer software,250,21719407.96,21719407.96,0.0,0.0,tie,,,21719407.96
 ZARIB,2026-06,SFP,ASSETS,Non-Current Assets,goodwill,Intangible - goodwill,260,0.0,0.0,0.0,,tie,,,0.0
 ZARIB,2026-06,SFP,ASSETS,Non-Current Assets,investment_in_associate,Investment in associate,270,0.0,0.0,0.0,,tie,,,0.0
 ZARIB,2026-06,SFP,ASSETS,Non-Current Assets,investment_unquoted_equity,Investment in unquoted equity securities,280,0.0,0.0,0.0,,tie,,,0.0
@@ -2026,15 +2026,15 @@ ZARIB,2026-06,SFP,ASSETS,Non-Current Assets,deposit_for_investment_in_subsidiary
 ZARIB,2026-06,SFP,ASSETS,Non-Current Assets,deferred_tax,Deferred tax,310,33970530.5,33970530.5,0.0,0.0,tie,,,33970530.5
 ZARIB,2026-06,SFP,ASSETS,Current Assets,trade_receivables,Trade Receivables (Debtors),320,395626418.05,395626418.06,-0.01,-0.0,tie,,,395626418.06
 ZARIB,2026-06,SFP,ASSETS,Current Assets,premium_receivables,Premium Receivables,330,1278748697.53,1278748697.52,0.01,0.0,tie,,,1278748697.52
-ZARIB,2026-06,SFP,ASSETS,Current Assets,other_receivables,Other Receivables,340,-4029445.34,-4029445.34,-0.0,0.0,tie,,,-4029445.34
-ZARIB,2026-06,SFP,ASSETS,Current Assets,due_from_to_related_parties,Due from/to related parties,350,384776366.61,384776366.61,0.0,0.0,tie,,,384776366.61
+ZARIB,2026-06,SFP,ASSETS,Current Assets,other_receivables,Other Receivables,340,-4029445.34,-4029445.34,0.0,-0.0,tie,,,-4029445.34
+ZARIB,2026-06,SFP,ASSETS,Current Assets,due_from_to_related_parties,Due from/to related parties,350,384776366.61,384776366.61,-0.0,-0.0,tie,,,384776366.61
 ZARIB,2026-06,SFP,ASSETS,Current Assets,office_cash,Cash - Office Cash,360,8375746.25,8375746.24,0.01,0.0,tie,,,8375746.24
-ZARIB,2026-06,SFP,ASSETS,Current Assets,client_cash,Cash - Client Cash,370,247110290.47,247110290.47,0.0,0.0,tie,,,247110290.47
+ZARIB,2026-06,SFP,ASSETS,Current Assets,client_cash,Cash - Client Cash,370,247110290.47,247110290.47,-0.0,-0.0,tie,,,247110290.47
 ZARIB,2026-06,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,571246225.04,571246225.04,0.0,0.0,tie,,,571246225.04
 ZARIB,2026-06,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,122824131.6,122824131.6,0.0,0.0,tie,,,122824131.6
 ZARIB,2026-06,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,24057293.0,24057293.0,0.0,0.0,tie,,,24057293.0
 ZARIB,2026-06,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,33360000.0,33360000.0,0.0,0.0,tie,,,-33360000.0
-ZARIB,2026-06,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,758850.95,758850.95,0.0,0.0,tie,,,-758850.95
+ZARIB,2026-06,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,758850.98,758850.95,0.03,0.0,tie,,,-758850.95
 ZARIB,2026-06,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 ZARIB,2026-06,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,1189689872.0,1189689872.0,0.0,0.0,tie,,,-1189689872.0
 ZARIB,2026-06,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,397223162.09,397223162.11,-0.02,-0.0,tie,,,-397223162.11
@@ -2079,7 +2079,7 @@ ZATL,2026-02,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,505050.51,50
 ZATL,2026-02,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,0.0,0.0,0.0,,tie,,,0.0
 ZATL,2026-02,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,1340434.93,1340434.93,-0.0,-0.0,tie,,,1340434.93
 ZATL,2026-02,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,5070419.24,5070419.24,0.0,0.0,tie,,,-5070419.24
-ZATL,2026-02,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,10081096.06,10080649.45,446.61,0.0,DIFFERENCE,rounding / FX,,-10080649.45
+ZATL,2026-02,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,10080649.45,10080649.45,0.0,0.0,tie,,,-10080649.45
 ZATL,2026-02,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 ZATL,2026-02,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,-7609520.82,-7609520.82,0.0,-0.0,tie,,,7609520.82
 ZATL,2026-02,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,220623.99,220623.99,0.0,0.0,tie,,,-220623.99
@@ -2123,7 +2123,7 @@ ZATL,2026-03,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,502765.21,50
 ZATL,2026-03,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,0.0,0.0,0.0,,tie,,,0.0
 ZATL,2026-03,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,1980098.56,1980098.56,-0.0,-0.0,tie,,,1980098.56
 ZATL,2026-03,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,5047476.12,5047476.12,0.0,0.0,tie,,,-5047476.12
-ZATL,2026-03,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,10035480.15,10025714.62,9765.53,0.1,DIFFERENCE,rounding / FX,,-10025714.62
+ZATL,2026-03,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,10025714.63,10025714.62,0.01,0.0,tie,,,-10025714.62
 ZATL,2026-03,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 ZATL,2026-03,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,-4420719.22,-4420719.22,-0.0,0.0,tie,,,4420719.22
 ZATL,2026-03,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,1564434.76,1564434.76,-0.0,-0.0,tie,,,-1564434.76
@@ -2167,7 +2167,7 @@ ZATL,2026-04,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,495884.16,50
 ZATL,2026-04,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,0.0,0.0,0.0,,tie,,,0.0
 ZATL,2026-04,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,493158.24,514336.93,-21178.69,-4.12,DIFFERENCE,classification,,514336.93
 ZATL,2026-04,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,4978394.32,5047476.12,-69081.8,-1.37,DIFFERENCE,classification,,-5047476.12
-ZATL,2026-04,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,9898130.51,10035928.14,-137797.63,-1.37,DIFFERENCE,classification,,-10035928.14
+ZATL,2026-04,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,9851441.48,10035928.14,-184486.66,-1.84,DIFFERENCE,classification,,-10035928.14
 ZATL,2026-04,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 ZATL,2026-04,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,-7556425.31,-7661280.69,104855.38,-1.37,DIFFERENCE,classification,,7661280.69
 ZATL,2026-04,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,2410540.14,2410540.14,0.0,0.0,tie,,,-2410540.14
@@ -2211,7 +2211,7 @@ ZATL,2026-05,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,495540.14,49
 ZATL,2026-05,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,0.0,0.0,0.0,,tie,,,0.0
 ZATL,2026-05,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,1729449.08,1736428.24,-6979.16,-0.4,DIFFERENCE,rounding / FX,,1736428.24
 ZATL,2026-05,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,4974940.54,4974940.54,-0.0,-0.0,tie,,,-4974940.54
-ZATL,2026-05,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,9891263.63,9891263.63,0.0,0.0,tie,,,-9891263.63
+ZATL,2026-05,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,9867999.76,9891263.63,-23263.87,-0.24,DIFFERENCE,rounding / FX,,-9891263.63
 ZATL,2026-05,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 ZATL,2026-05,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,-7551183.01,-7551183.0,-0.01,0.0,tie,,,7551183.0
 ZATL,2026-05,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,1425168.85,1408884.14,16284.71,1.16,DIFFERENCE,classification,,-1408884.14
@@ -2255,7 +2255,7 @@ ZATL,2026-06,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,493096.65,49
 ZATL,2026-06,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,0.0,0.0,0.0,,tie,,,0.0
 ZATL,2026-06,SFP,ASSETS,Current Assets,tax_recoverable,Tax recoverable,400,2161867.03,2161867.03,0.0,0.0,tie,,,2161867.03
 ZATL,2026-06,SFP,EQUITY AND LIABILITIES,Equity,share_capital,Share capital,420,4950409.27,4950409.27,0.0,0.0,tie,,,-4950409.27
-ZATL,2026-06,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,9842490.14,9830215.47,12274.67,0.12,DIFFERENCE,rounding / FX,,-9830215.47
+ZATL,2026-06,SFP,EQUITY AND LIABILITIES,Equity,translation_reserve,Translation reserve,430,9830215.47,9830215.47,-0.0,-0.0,tie,,,-9830215.47
 ZATL,2026-06,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividend,440,0.0,0.0,0.0,,tie,,,0.0
 ZATL,2026-06,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,-7513948.37,-7513948.37,-0.0,0.0,tie,,,7513948.37
 ZATL,2026-06,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,630797.17,630797.17,0.0,0.0,tie,,,-630797.17
@@ -2304,7 +2304,7 @@ ZHL,2026-02,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividen
 ZHL,2026-02,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,30127713.66,30127713.66,0.0,0.0,tie,,,-30127713.66
 ZHL,2026-02,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,-256309.74,-256309.74,-0.0,0.0,tie,,,256309.74
 ZHL,2026-02,SFP,EQUITY AND LIABILITIES,Equity,non_controlling_interests,Non-controlling interests,470,0.0,0.0,0.0,,tie,,,0.0
-ZHL,2026-02,SFP,EQUITY AND LIABILITIES,Current Liabilities,trade_and_other_payables,Trade and other payables,480,1016176612.08,1016176612.08,0.0,0.0,tie,,,-1016176612.08
+ZHL,2026-02,SFP,EQUITY AND LIABILITIES,Current Liabilities,trade_and_other_payables,Trade and other payables,480,1016176612.08,1016176612.08,-0.0,-0.0,tie,,,-1016176612.08
 ZHL,2026-02,SFP,EQUITY AND LIABILITIES,Current Liabilities,premium_payable,Premium payable,500,0.0,0.0,0.0,,tie,,,0.0
 ZHL,2026-02,SFP,EQUITY AND LIABILITIES,Current Liabilities,borrowings,Borrowings,510,0.0,0.0,0.0,,tie,,,0.0
 ZHL,2026-03,SCI,INCOME,Revenue,actuarial_fees,Actuarial Fees,10,0.0,0.0,0.0,,tie,,,0.0
@@ -2337,7 +2337,7 @@ ZHL,2026-03,SFP,ASSETS,Non-Current Assets,deferred_tax,Deferred tax,310,0.0,0.0,
 ZHL,2026-03,SFP,ASSETS,Current Assets,trade_receivables,Trade Receivables (Debtors),320,1.0,1.0,0.0,,tie,,,1.0
 ZHL,2026-03,SFP,ASSETS,Current Assets,premium_receivables,Premium Receivables,330,0.0,0.0,0.0,,tie,,,0.0
 ZHL,2026-03,SFP,ASSETS,Current Assets,other_receivables,Other Receivables,340,350685.52,350685.52,-0.0,-0.0,tie,,,350685.52
-ZHL,2026-03,SFP,ASSETS,Current Assets,due_from_to_related_parties,Due from/to related parties,350,-266605482.4,-266605482.4,-0.0,0.0,tie,,,-266605482.4
+ZHL,2026-03,SFP,ASSETS,Current Assets,due_from_to_related_parties,Due from/to related parties,350,-266605482.4,-266605482.4,0.0,-0.0,tie,,,-266605482.4
 ZHL,2026-03,SFP,ASSETS,Current Assets,office_cash,Cash - Office Cash,360,972232.1,972232.1,0.0,0.0,tie,,,972232.1
 ZHL,2026-03,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,4500000.0,4500000.0,0.0,0.0,tie,,,4500000.0
 ZHL,2026-03,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,0.0,0.0,0.0,,tie,,,0.0
@@ -2348,7 +2348,7 @@ ZHL,2026-03,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividen
 ZHL,2026-03,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,30127713.66,30127713.66,0.0,0.0,tie,,,-30127713.66
 ZHL,2026-03,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,-16247303.73,-16247303.73,0.0,-0.0,tie,,,16247303.73
 ZHL,2026-03,SFP,EQUITY AND LIABILITIES,Equity,non_controlling_interests,Non-controlling interests,470,0.0,0.0,0.0,,tie,,,0.0
-ZHL,2026-03,SFP,EQUITY AND LIABILITIES,Current Liabilities,trade_and_other_payables,Trade and other payables,480,1009946538.47,1009946538.47,0.0,0.0,tie,,,-1009946538.47
+ZHL,2026-03,SFP,EQUITY AND LIABILITIES,Current Liabilities,trade_and_other_payables,Trade and other payables,480,1009946538.47,1009946538.47,-0.0,-0.0,tie,,,-1009946538.47
 ZHL,2026-03,SFP,EQUITY AND LIABILITIES,Current Liabilities,premium_payable,Premium payable,500,0.0,0.0,0.0,,tie,,,0.0
 ZHL,2026-03,SFP,EQUITY AND LIABILITIES,Current Liabilities,borrowings,Borrowings,510,0.0,0.0,0.0,,tie,,,0.0
 ZHL,2026-04,SCI,INCOME,Revenue,actuarial_fees,Actuarial Fees,10,0.0,0.0,0.0,,tie,,,0.0
@@ -2376,12 +2376,12 @@ ZHL,2026-04,SFP,ASSETS,Non-Current Assets,computer_software,Intangible - compute
 ZHL,2026-04,SFP,ASSETS,Non-Current Assets,goodwill,Intangible - goodwill,260,0.0,0.0,0.0,,tie,,,0.0
 ZHL,2026-04,SFP,ASSETS,Non-Current Assets,investment_in_associate,Investment in associate,270,15969831.66,15969831.66,0.0,0.0,tie,,,15969831.66
 ZHL,2026-04,SFP,ASSETS,Non-Current Assets,investment_unquoted_equity,Investment in unquoted equity securities,280,0.0,0.0,0.0,,tie,,,0.0
-ZHL,2026-04,SFP,ASSETS,Non-Current Assets,deposit_for_investment_in_subsidiary,Deposit for investment in subsidiary,290,1278387321.58,1278387321.58,-0.0,-0.0,tie,,,1278387321.58
+ZHL,2026-04,SFP,ASSETS,Non-Current Assets,deposit_for_investment_in_subsidiary,Deposit for investment in subsidiary,290,1278387321.58,1278387321.58,0.0,0.0,tie,,,1278387321.58
 ZHL,2026-04,SFP,ASSETS,Non-Current Assets,deferred_tax,Deferred tax,310,0.0,0.0,0.0,,tie,,,0.0
 ZHL,2026-04,SFP,ASSETS,Current Assets,trade_receivables,Trade Receivables (Debtors),320,1.0,1.0,0.0,,tie,,,1.0
 ZHL,2026-04,SFP,ASSETS,Current Assets,premium_receivables,Premium Receivables,330,0.0,0.0,0.0,,tie,,,0.0
-ZHL,2026-04,SFP,ASSETS,Current Assets,other_receivables,Other Receivables,340,405961.55,405961.55,-0.0,-0.0,tie,,,405961.55
-ZHL,2026-04,SFP,ASSETS,Current Assets,due_from_to_related_parties,Due from/to related parties,350,-269728888.64,-269728888.64,-0.0,0.0,tie,,,-269728888.64
+ZHL,2026-04,SFP,ASSETS,Current Assets,other_receivables,Other Receivables,340,405961.55,405961.55,0.0,0.0,tie,,,405961.55
+ZHL,2026-04,SFP,ASSETS,Current Assets,due_from_to_related_parties,Due from/to related parties,350,-269728888.64,-269728888.64,0.0,-0.0,tie,,,-269728888.64
 ZHL,2026-04,SFP,ASSETS,Current Assets,office_cash,Cash - Office Cash,360,188696.25,188696.25,0.0,0.0,tie,,,188696.25
 ZHL,2026-04,SFP,ASSETS,Current Assets,deposits,Cash - Deposits,380,4500000.0,4500000.0,0.0,0.0,tie,,,4500000.0
 ZHL,2026-04,SFP,ASSETS,Current Assets,placements,Cash - Placements,390,0.0,0.0,0.0,,tie,,,0.0
@@ -2392,13 +2392,13 @@ ZHL,2026-04,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividen
 ZHL,2026-04,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,30127713.66,30127713.66,0.0,0.0,tie,,,-30127713.66
 ZHL,2026-04,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,-19754747.93,-19754747.93,-0.0,0.0,tie,,,19754747.93
 ZHL,2026-04,SFP,EQUITY AND LIABILITIES,Equity,non_controlling_interests,Non-controlling interests,470,0.0,0.0,0.0,,tie,,,0.0
-ZHL,2026-04,SFP,EQUITY AND LIABILITIES,Current Liabilities,trade_and_other_payables,Trade and other payables,480,1009602316.61,1009602316.61,0.0,0.0,tie,,,-1009602316.61
+ZHL,2026-04,SFP,EQUITY AND LIABILITIES,Current Liabilities,trade_and_other_payables,Trade and other payables,480,1009602316.61,1009602316.61,-0.0,-0.0,tie,,,-1009602316.61
 ZHL,2026-04,SFP,EQUITY AND LIABILITIES,Current Liabilities,premium_payable,Premium payable,500,0.0,0.0,0.0,,tie,,,0.0
 ZHL,2026-04,SFP,EQUITY AND LIABILITIES,Current Liabilities,borrowings,Borrowings,510,0.0,0.0,0.0,,tie,,,0.0
 ZHL,2026-05,SCI,INCOME,Revenue,actuarial_fees,Actuarial Fees,10,0.0,0.0,0.0,,tie,,,0.0
 ZHL,2026-05,SCI,INCOME,Revenue,insurance_commissions,Insurance Commissions,40,0.0,0.0,0.0,,tie,,,0.0
 ZHL,2026-05,SCI,INCOME,Revenue,saas_income,SAAS (Software as a Service),50,0.0,0.0,0.0,,tie,,,0.0
-ZHL,2026-05,SCI,INCOME,Other income,other_income,Other Income,70,136830.73,136830.73,-0.0,-0.0,tie,,,-136830.73
+ZHL,2026-05,SCI,INCOME,Other income,other_income,Other Income,70,136830.73,136830.73,0.0,0.0,tie,,,-136830.73
 ZHL,2026-05,SCI,EXPENSES,Operating expenses,personnel_costs,Personnel Costs,80,0.0,0.0,0.0,,tie,,,0.0
 ZHL,2026-05,SCI,EXPENSES,Operating expenses,travelling,Travelling,90,0.0,0.0,0.0,,tie,,,0.0
 ZHL,2026-05,SCI,EXPENSES,Operating expenses,entertainment,Entertainment,100,11699.99,11699.99,0.0,0.0,tie,,,11699.99
@@ -2480,6 +2480,6 @@ ZHL,2026-06,SFP,EQUITY AND LIABILITIES,Equity,proposed_dividend,Proposed dividen
 ZHL,2026-06,SFP,EQUITY AND LIABILITIES,Equity,retained_earnings,Retained earnings,450,30127713.66,30127713.66,0.0,0.0,tie,,,-30127713.66
 ZHL,2026-06,SFP,EQUITY AND LIABILITIES,Equity,net_profit,Net Profit (derived),460,-21096181.75,-21096181.75,0.0,-0.0,tie,,,21096181.75
 ZHL,2026-06,SFP,EQUITY AND LIABILITIES,Equity,non_controlling_interests,Non-controlling interests,470,0.0,0.0,0.0,,tie,,,0.0
-ZHL,2026-06,SFP,EQUITY AND LIABILITIES,Current Liabilities,trade_and_other_payables,Trade and other payables,480,1009518170.12,1009518170.12,0.0,0.0,tie,,,-1009518170.12
+ZHL,2026-06,SFP,EQUITY AND LIABILITIES,Current Liabilities,trade_and_other_payables,Trade and other payables,480,1009518170.12,1009518170.12,-0.0,-0.0,tie,,,-1009518170.12
 ZHL,2026-06,SFP,EQUITY AND LIABILITIES,Current Liabilities,premium_payable,Premium payable,500,0.0,0.0,0.0,,tie,,,0.0
 ZHL,2026-06,SFP,EQUITY AND LIABILITIES,Current Liabilities,borrowings,Borrowings,510,0.0,0.0,0.0,,tie,,,0.0

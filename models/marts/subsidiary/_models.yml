@@ -11,3 +11,22 @@ models:
     description: >
       Subsidiary-grain Statement of Financial Position. Power BI consumers
       filter by company_name.
+
+  - name: rpt_subsidiary_tb
+    description: >
+      The trial balance at ACCOUNT grain — the table Power BI imports to show the
+      individual TB. Reproduces the client's five columns (A/C No, Description,
+      Amount, Accruals, Amount After Accruals) for every entity and period, in local
+      currency and KES, plus the statement line each account maps to so the TB
+      cross-filters against the SCI/SFP visuals. Debit-positive, so it foots to zero.
+    columns:
+      - name: company_name
+        tests: [not_null]
+      - name: period
+        tests: [not_null]
+      - name: amount_after_accruals_local
+        tests: [not_null]
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: [company_name, period, local_account_no]
+          quote_columns: true

@@ -6,6 +6,7 @@ Four scripts, in the order a month runs through them:
 |---|---|
 | `load_tb.py` | Adding **one new month** on top of seeds that already hold every earlier month. The normal monthly routine. |
 | `reseed_from_packs.py` | Rebuilding **all months from scratch** out of the `Consolidated Accounts` packs. Use after a source change or a restatement. |
+| `extract_accruals.py` | Pulling the client's `Accruals` column out of the entity TB tabs into its own seed, so Power BI can show Amount / Accruals / Amount After Accruals separately. |
 | `extract_client_statements.py` | Pulling the client's own `SCI Detailed` / `SFP Detailed`, per entity per month, into a spreadsheet. The benchmark. |
 | `compare_dbt_to_client.py` | Reconciling the dbt subsidiary SCI/SFP marts against that extract, line by line, and writing the recon workbook. |
 
@@ -13,6 +14,8 @@ The monthly loop, end to end:
 
 ```bash
 python Scripts/load_tb.py ".../July 2026 Consolidated Accounts.xlsx" --write
+dbt seed --full-refresh && dbt build
+python Scripts/extract_accruals.py --write      # the accrual column -> tb_accrual seed
 dbt seed --full-refresh && dbt build
 python Scripts/extract_client_statements.py     # the client side
 python Scripts/compare_dbt_to_client.py         # the recon
@@ -30,6 +33,53 @@ the months in order — that is what `reseed_from_packs.py` does.
 
 This folder sits alongside `models/`, `seeds/`, `macros/` etc. It is **not** part of the
 dbt project (dbt ignores it), so it is safe to keep here.
+
+---
+
+## `extract_accruals.py` — the Accruals column
+
+```bash
+python Scripts/extract_accruals.py            # dry run
+python Scripts/extract_accruals.py --write    # writes seeds/reference/tb_accrual.csv
+```
+
+The client's individual TB tabs carry five columns — `A/C No`, `Description`, `Amount`,
+`Accruals`, `Amount After Accruals` — and Finance wants all five in Power BI. The bronze
+`gl_entry_*` seeds mirror BC's own table, so the accrual has no place in them. It travels as
+its own reference seed and is joined back in `stg_tb_accrual` -> `rpt_subsidiary_tb`, leaving
+every BC-shaped table and every existing model untouched.
+
+**The bronze figure is already post-accrual**, so the decomposition is
+`amount = amount_after_accruals − accruals`. Deriving the pre-accrual figure rather than
+storing it means this seed cannot move a reported number, only split one.
+
+Like `gl_entry` it holds monthly **movements**, so the period cross-join accumulates it the
+same way. Two things it has to get right:
+
+- **Releases.** An account that carried an accrual last month and carries none this month has
+  been released — the client simply stops listing it. Without an explicit reversal its YTD
+  would stay frozen. This happens whenever they re-code the counter-account (ZAAC's
+  `Accrued Income` moves `B55130` -> `B55135` in March; ZARIB's counter-entry moves off
+  `Other Staff Costs` in June).
+- **Codes.** The accrual rows carry the pack's own codes, which are not the codes the seeds
+  use. The script resolves them through `reseed_audit.csv`, so **run `reseed_from_packs.py`
+  first**. Without this the ZARIB and C&P accruals silently fail to join.
+
+Self-test: the client's accruals are reclassifications, not new value, so the YTD nets to zero
+within an entity in every month — **14 of 14 entity-months do**.
+
+Only ZAAC, ZARIB and C&P have the column. Everything else reads zero, so the five columns
+render uniformly for all eleven entities.
+
+### The ZARIB header trap this uncovered
+
+ZARIB labels its accrual column **`Deffered Revenue & Accruals`** and its netted column
+**`Amount After Deferred Rev`** in March and April (their spelling). Neither name was in the
+header vocabulary, so the reseed read those two months from the plain `Amount` column —
+pre-accrual — while every other entity-month was post-accrual. That was the KES 15,000,000
+(April) and 11,250,000 (March) ZARIB gap, previously diagnosed as a consolidation-level
+accrual visible only in `KES consolidated TB`. **It was on the ZARIB tab all along.** Both
+names are now in `AMT_POST` / `ACCRUAL_HDRS` in `reseed_from_packs.py` and `mapping/packlib.py`.
 
 ---
 
@@ -122,10 +172,9 @@ Where another line in the same entity-month is out by the mirror amount, the not
 pair needs one mapping decision, whereas a difference with no partner means something is
 genuinely absent from the seeds.
 
-Current state: **2,375 of 2,484 line cells tie exactly (95.6%)**, total absolute difference
-**KES 91.3m**, of which ZARIB is 82.1m — dominated by the KES 15m consolidation-level accrual
-that exists only in `KES consolidated TB`, so it needs an accrual intake rather than a mapping
-change.
+Current state: **2,383 of 2,484 line cells tie exactly (95.9%)**, total absolute difference
+**KES 9.19m**. **ZARIB now ties on every line in every month** (2 shillings of rounding) after
+the accrual-header fix above. The largest remaining is C&P at 7.1m.
 
 ---
 

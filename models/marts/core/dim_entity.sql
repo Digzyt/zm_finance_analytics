@@ -13,6 +13,7 @@ select
     entity_code,
     entity_name,
     functional_ccy,
+    region,                           -- 'Kenya' | 'MENA' | 'Africa'
     consolidation_method,             -- 'Full' | 'Equity' | 'Sub-consolidated'
     parent_entity_code,
     is_active,

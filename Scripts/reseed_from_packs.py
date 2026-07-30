@@ -106,7 +106,11 @@ COA_HEADER = ['G_L_Account_No', 'Name', 'Account_Type', 'Account_Category', 'Inc
 # Header-word detection. Mirrors load_tb.py; keep the two in step.
 CODE_HDRS = {'a/c no', 'bc code', 'bc codes', 'account no', 'code'}
 DESC_HDRS = {'description', 'account name', 'account'}
-AMT_POST  = {'amount after accruals', 'amount after accrual', 'amount after accural', 'net amount'}
+AMT_POST  = {'amount after accruals', 'amount after accrual', 'amount after accural',
+             'net amount',
+             # ZARIB, March and April: the client renames both columns
+             'amount after deferred rev', 'amount after deffered rev',
+             'amount after deferred revenue', 'amount after def rev'}
 AMT_PLAIN = {'amount', 'dr', 'tzs', 'net debit /(credit)', 'net debit/(credit)', 'local', 'debit'}
 CR_HDRS   = {'cr', 'credit'}
 KES_HDRS  = {'kes'}
@@ -119,7 +123,11 @@ CAT_HDRS  = {'category', 'categories'}
 # be dropped: C&P's blank-coded 'Accrued Income' row is 11,077,486 of pure
 # accrual, and losing it left both SFP Accrued Income and SCI Pension Admin Fee
 # short by exactly that figure.
-ACCRUAL_HDRS = {'accrual', 'accruals'}
+ACCRUAL_HDRS = {'accrual', 'accruals',
+                # ZARIB March/April; the misspelling is the client's
+                'deffered revenue & accruals', 'deferred revenue & accruals',
+                'deffered revenue and accruals', 'deferred revenue and accruals',
+                'deferred revenue & accrual'}
 
 SKIP_DESC = {'assets', 'non-current assets', 'current assets', 'fixed assets', 'liabilities',
     'equity', 'equity and liabilities', 'owners equity', 'current liabilities',
@@ -200,19 +208,33 @@ def read_entity(rows):
     """-> (roles, [(source_code|None, description, local_amt, kes_amt|None, category|None)])
 
     Amounts are summed per (code, description) so a tab that lists the same
-    account twice is added, not overwritten. 'Amount after Accrual' wins over
-    'Amount' where the client supplies both, because the accrual column is what
-    the client's own SCI/SFP is built from.
+    account twice is added, not overwritten.
+
+    The PRE-accrual `Amount` column is loaded, never the netted one. Bronze mirrors
+    what BC itself would hold, and the accrual is a workbook overlay the client
+    applies on top of the ledger — it is carried separately in
+    seeds/reference/tb_accrual.csv (Scripts/extract_accruals.py) and added back in
+    int_tb_accrual_mapped, so the reported SCI/SFP figures are unchanged. Taking the
+    netted column here instead would bake an adjustment that is not in the ledger
+    into the ledger, and there would be no way to show the client's five TB columns
+    separately.
     """
     hi, roles = find_header(rows)
     if hi is None:
         return None, None
     ccode = roles.get('code'); cdesc = roles['desc']
-    camt = roles['amt_post'] if 'amt_post' in roles else roles.get('amt_plain')
+    # Pre-accrual: the plain Amount column. Some rows leave it blank and carry the
+    # figure only in the netted column (ZAAC's Tax expense, C&P's Accrued Income).
+    # Those are wholly overlay, so bronze is zero and extract_accruals carries the
+    # figure — see the fallback below.
+    camt = roles.get('amt_plain')
+    cpost = roles.get('amt_post')
+    caccr = roles.get('accrual')
+    if camt is None:
+        camt, cpost = cpost, None
     ccr = roles.get('cr'); ckes = roles.get('kes'); ccat = roles.get('cat')
-    # Net the accrual in ourselves only when the client has not already given us a
-    # netted column; otherwise we would double-count it.
-    cacc = roles.get('accrual') if 'amt_post' not in roles else None
+    # The accrual is never added in here — it travels in tb_accrual.csv instead.
+    cacc = None
     agg = collections.OrderedDict()
     for row in rows[hi + 1:]:
         def cell(c):
@@ -222,6 +244,22 @@ def read_entity(rows):
         if nd in SKIP_DESC or nd.startswith('total') or nd.startswith('period'):
             continue
         loc = num(cell(camt))
+        if loc is None and cpost is not None and num(cell(cpost)) is not None:
+            # Blank Amount, figure only in the netted column. The whole of that
+            # figure is a workbook adjustment with no ledger balance behind it, so
+            # the pre-accrual basis is ZERO and extract_accruals carries it as the
+            # residual `netted - Amount`. This used to read `netted - accrual`,
+            # which double-counted once the overlay became the residual rather
+            # than the accrual column: ZAAC's March `Tax expense` (21,010,702.96,
+            # posted netted-only with a blank accrual column) landed in bronze AND
+            # in the overlay. Keep the row rather than dropping it, so the account
+            # still appears in rpt_subsidiary_tb's five columns.
+            #
+            # Only safe where the tab HAS an accrual column, because that is what
+            # makes extract_accruals process the tab at all. Without one there is
+            # no overlay to carry the figure, and the netted column is the only
+            # place it exists — so take it as the ledger balance.
+            loc = 0.0 if caccr is not None else num(cell(cpost))
         acc = num(cell(cacc)) if cacc is not None else None
         if acc is not None:
             loc = (loc or 0.0) + acc

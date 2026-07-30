@@ -1,0 +1,82 @@
+company_name,period,local_account_no,description,accrual_local,client_column,source_tab
+ZAAC,2026-02,B55135,Accrued Income,171797159.43,Accruals,ZAAC TB
+ZAAC,2026-02,B80110,Bonus(General provision),-5387066.67,Accruals,ZAAC TB
+ZAAC,2026-02,I10060,Actuarial - Once-off,-36350678.11,Accruals,ZAAC TB
+ZAAC,2026-02,I10070,IPP - Vuna Retirement Plan,-10035066.15,Accruals,ZAAC TB
+ZAAC,2026-02,I10071,MC-ADMIN FEES,-77041761.17,Accruals,ZAAC TB
+ZAAC,2026-02,I10073,AFRF Admin Fees,-43860042.0,Accruals,ZAAC TB
+ZAAC,2026-02,I10123,Other Incomes - one off,-4509612.0,Accruals,ZAAC TB
+ZAAC,2026-02,I25029,Other Staff Costs,5387066.67,Accruals,ZAAC TB
+ZARIB,2026-02,B80110,Bonus(General provision),-3875292.79,Accruals,ZARIB TB
+ZARIB,2026-02,I25029,Other Staff Costs,3875292.79,Accruals,ZARIB TB
+C&P,2026-02,B55135,Accrued Income,8122126.83,Accruals,C & P
+C&P,2026-02,I10067,AF Trust Fund,-8122126.83,Accruals,C & P
+ZAAC,2026-03,B55135,Accrued Income,13118136.83,Accruals,ZAAC TB
+ZAAC,2026-03,B75120,Tax Provision-Other,-21010702.96,derived: after - amount (Accruals),ZAAC TB
+ZAAC,2026-03,B80110,Bonus(General provision),-10862933.33,Accruals,ZAAC TB
+ZAAC,2026-03,I10070,IPP - Vuna Retirement Plan,-471868.4,Accruals,ZAAC TB
+ZAAC,2026-03,I10071,MC-ADMIN FEES,-48510523.24,Accruals,ZAAC TB
+ZAAC,2026-03,I10073,AFRF Admin Fees,1424486.39,Accruals,ZAAC TB
+ZAAC,2026-03,I10073.2,Management Fees,-6420521.69,Accruals,ZAAC TB
+ZAAC,2026-03,I25029,Other Staff Costs,10862933.33,Accruals,ZAAC TB
+ZAAC,2026-03,ZAAC-TAXEXPENSE,Tax expense,21010702.96,derived: after - amount (Accruals),ZAAC TB
+ZARIB,2026-03,B80110,Bonus(General provision),-7374707.21,Deffered Revenue & Accruals,ZARIB TB
+ZARIB,2026-03,B75120,Tax Provision-Other,3375000.0,derived: after - amount (Deffered Revenue & Accruals),ZARIB TB
+ZARIB,2026-03,I25029,Other Staff Costs,7374707.21,Deffered Revenue & Accruals,ZARIB TB
+ZARIB,2026-03,4650/200,Tax Expense,-3375000.0,derived: after - amount (Deffered Revenue & Accruals),ZARIB TB
+C&P,2026-03,B55135,Accrued Income,4061063.41,Accruals,C & P
+C&P,2026-03,I10067,AF Trust Fund,-4061063.41,Accruals,C & P
+ZAAC,2026-03,I10060,actuarial - once-off,36350678.11,released (no longer listed),
+ZAAC,2026-03,I10123,other incomes - one off,4509612.0,released (no longer listed),
+ZAAC,2026-04,B55135,Accrued Income,23294359.68,Accruals,ZAAC TB
+ZAAC,2026-04,B80110,Bonus(General provision),-8352509.19,Accruals,ZAAC TB
+ZAAC,2026-04,I10070,IPP - Vuna Retirement Plan,805867.88,Accruals,ZAAC TB
+ZAAC,2026-04,I10071,MC-ADMIN FEES,483659.95,Accruals,ZAAC TB
+ZAAC,2026-04,I10073,AFRF Admin Fees,-22511626.39,Accruals,ZAAC TB
+ZAAC,2026-04,I1007,Management Fees,-8492782.81,Accruals,ZAAC TB
+ZAAC,2026-04,I25001,Emol.Pack-Salaries,24602509.19,Accruals,ZAAC TB
+ZARIB,2026-04,B80110,Bonus(General provision),-3750000.0,Deffered Revenue & Accruals,ZARIB TB
+ZARIB,2026-04,I25029,Other Staff Costs,3750000.0,Deffered Revenue & Accruals,ZARIB TB
+C&P,2026-04,B55135,Accrued Income,4477730.08,Accruals,C & P
+C&P,2026-04,I10067,AF Trust Fund,-4477730.08,Accruals,C & P
+ZAAC,2026-04,I25029,other staff costs,-16250000.0,released (no longer listed),
+ZAAC,2026-04,B75120,tax provision-other,21010702.96,released (no longer listed),
+ZAAC,2026-04,I10073.2,management fees,6420521.69,released (no longer listed),
+ZAAC,2026-04,ZAAC-TAXEXPENSE,tax expense,-21010702.96,released (no longer listed),
+ZARIB,2026-04,B75120,tax provision-other,-3375000.0,released (no longer listed),
+ZARIB,2026-04,4650/200,tax expense,3375000.0,released (no longer listed),
+ZAAC,2026-05,B55135,Accrued Income,-39430548.13,Accruals,ZAAC TB
+ZAAC,2026-05,B55420,Due to/from Malawi,7095089.65,Accruals,ZAAC TB
+ZAAC,2026-05,B55520,DUE TO/FROM UGANDA,355114.0,Accruals,ZAAC TB
+ZAAC,2026-05,B65120,Due to/from Nigeria,2129923.27,Accruals,ZAAC TB
+ZAAC,2026-05,B65260,DUE FROM TANZANIA,560080.67,Accruals,ZAAC TB
+ZAAC,2026-05,B70160,DUE TO /From DRC,792317.44,Accruals,ZAAC TB
+ZAAC,2026-05,B80110,Bonus(General provision),-2480824.14,Accruals,ZAAC TB
+ZAAC,2026-05,I10070,IPP - Vuna Retirement Plan,-10974356.51,Accruals,ZAAC TB
+ZAAC,2026-05,I10071,MC-ADMIN FEES,20171032.04,Accruals,ZAAC TB
+ZAAC,2026-05,I10073,AFRF Admin Fees,21741089.79,Accruals,ZAAC TB
+ZAAC,2026-05,I1007,Management Fees,-2439742.21,Accruals,ZAAC TB
+ZAAC,2026-05,I25001,Emol.Pack-Salaries,2480824.14,Accruals,ZAAC TB
+C&P,2026-05,B55135,Accrued Income,-5583433.99,Accruals,C & P
+C&P,2026-05,I10067,AF Trust Fund,5583433.99,Accruals,C & P
+ZARIB,2026-05,B80110,bonus(general provision),15000000.0,released (no longer listed),
+ZARIB,2026-05,I25029,other staff costs,-15000000.0,released (no longer listed),
+ZAAC,2026-06,B55135,Accrued Income,53066823.17,Accruals,ZAAC TB
+ZAAC,2026-06,B80110,Bonus(General provision),-5416666.67,Accruals,ZAAC TB
+ZAAC,2026-06,I10067,AF Trust Fund,-819367.57,Accruals,ZAAC TB
+ZAAC,2026-06,I10068,Retirement plans - Income Draw Down,-2873732.0,Accruals,ZAAC TB
+ZAAC,2026-06,I10070,IPP - Vuna Retirement Plan,12715498.99,Accruals,ZAAC TB
+ZAAC,2026-06,I10071,MC-ADMIN FEES,-31692246.42,Accruals,ZAAC TB
+ZAAC,2026-06,I10073,AFRF Admin Fees,-17246824.28,Accruals,ZAAC TB
+ZAAC,2026-06,I1007,Management Fees,-2217626.86,Accruals,ZAAC TB
+ZAAC,2026-06,I25001,Emol.Pack-Salaries,5416666.67,Accruals,ZAAC TB
+ZARIB,2026-06,B80110,Bonus(General provision),-22500000.0,Accrual,ZARIB TB
+ZARIB,2026-06,ZARIB-BONUSES13THCHEQUE,Bonuses & 13th cheque,22500000.0,Accrual,ZARIB TB
+C&P,2026-06,B80120,Fees Suspense A/c,13014144.3,Accruals,C & P
+C&P,2026-06,I10067,AF Trust Fund,-1936657.97,Accruals,C & P
+C&P,2026-06,B55135,accrued income,-11077486.33,released (no longer listed),
+ZAAC,2026-06,B55420,due to/from malawi,-7095089.65,released (no longer listed),
+ZAAC,2026-06,B55520,due to/from uganda,-355114.0,released (no longer listed),
+ZAAC,2026-06,B65120,due to/from nigeria,-2129923.27,released (no longer listed),
+ZAAC,2026-06,B65260,due from tanzania,-560080.67,released (no longer listed),
+ZAAC,2026-06,B70160,due to /from drc,-792317.44,released (no longer listed),

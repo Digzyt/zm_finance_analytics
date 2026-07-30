@@ -63,3 +63,9 @@ models:
     description: >
       Uganda Associate. Equity-accounted; NOT unioned with stg_gl_entry.
       Carries only the SCI share-of-profit and SFP investment carrying-value lines.
+
+  - name: stg_tb_accrual
+    description: >
+      The client's Accruals column, cross-joined onto the period spine like
+      stg_gl_entry so it accumulates the same way. Zero for the eight entities whose
+      tabs have no accrual column.
