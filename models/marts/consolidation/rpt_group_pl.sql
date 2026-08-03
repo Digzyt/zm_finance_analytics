@@ -14,9 +14,9 @@
 --   amount_actual_gross_kes  - Actual before bad-debt provision (= Actual today)
 --   bad_debt_provision_kes   - from bad_debt_provision seed (Debtor Analysis); reduces revenue
 --   amount_actual_net_kes    - Actual gross less bad-debt provision (matches workbook Net)
---   amount_budget_kes        - from the budget seed (2026-04 loaded; more later)
+--   amount_budget_kes        - from the budget seed (Jan-Jun 2026 all loaded)
 --   variance_kes / _pct      - Actual(Net) vs Budget
---   amount_prior_year_kes    - NULL until 2025 monthly TBs are loaded
+--   amount_prior_year_kes    - NULL; see the note at the bottom of this model
 --
 -- Reconciliation status (as at 2026-04, see handover): Kenyan expense-by-nature
 -- and ZAMRE tie to the workbook; ZARIB/ZAAC revenue (gross-vs-net definition),
@@ -64,6 +64,20 @@ select
          '(coalesce(a.amount_actual_kes,0) - coalesce(pr.provision_kes,0)) - coalesce(b.amount_budget_kes,0)',
          'b.amount_budget_kes') }}                         as variance_pct,
 
+    -- Prior year is deliberately NULL, and the column is kept so the mart's shape
+    -- does not move under Power BI when it is populated.
+    --
+    -- The client's Budget and LYTD Comparison workbook does carry an LYMTD ('last
+    -- year, same month') actual column, and it would populate this cheaply. It is
+    -- not used, on purpose. Once a full year of our own actuals exists, prior year
+    -- should be DERIVED from fct_trial_balance at period minus twelve months, so
+    -- this column equals the actual we published a year earlier. Taking the
+    -- client's comparative instead would give a prior year that disagrees with our
+    -- own published figures — the recon has already found defects in their
+    -- statements (C&P's group-TB code shifts, ZATL's rate references) — and would
+    -- have to be unwound. It also needs the fiscal-year gap closed first: the
+    -- period cross-join has no lower bound, so the SCI does not reset at a year
+    -- boundary. See README.md and Project_Handover.md pt.16.
     cast(null as {{ dbt.type_numeric() }})                 as amount_prior_year_kes
 
 from periods p

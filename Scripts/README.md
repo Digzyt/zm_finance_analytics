@@ -1,12 +1,13 @@
 # Scripts — loading trial balances, and reconciling the output
 
-Four scripts, in the order a month runs through them:
+Six scripts, in the order a month runs through them:
 
 | Script | Use it when |
 |---|---|
 | `load_tb.py` | Adding **one new month** on top of seeds that already hold every earlier month. The normal monthly routine. |
 | `reseed_from_packs.py` | Rebuilding **all months from scratch** out of the `Consolidated Accounts` packs. Use after a source change or a restatement. |
-| `extract_accruals.py` | Pulling the client's `Accruals` column out of the entity TB tabs into its own seed, so Power BI can show Amount / Accruals / Amount After Accruals separately. |
+| `extract_accruals.py` | Deriving the client's accrual overlay from the entity TB tabs into its own seed, so Power BI can show Amount / Accruals / Amount After Accruals separately. **Run after the reseed** — it resolves account codes through `reseed_audit.csv`. |
+| `extract_budget.py` | Rebuilding `budget.csv` from the *Budget and LYTD Comparison* workbook. Run whenever Finance revises the budget. |
 | `extract_client_statements.py` | Pulling the client's own `SCI Detailed` / `SFP Detailed`, per entity per month, into a spreadsheet. The benchmark. |
 | `compare_dbt_to_client.py` | Reconciling the dbt subsidiary SCI/SFP marts against that extract, line by line, and writing the recon workbook. |
 
@@ -14,12 +15,13 @@ The monthly loop, end to end:
 
 ```bash
 python Scripts/load_tb.py ".../July 2026 Consolidated Accounts.xlsx" --write
-dbt seed --full-refresh && dbt build
-python Scripts/extract_accruals.py --write      # the accrual column -> tb_accrual seed
+python Scripts/extract_accruals.py --write      # the overlay -> tb_accrual seed
 dbt seed --full-refresh && dbt build
 python Scripts/extract_client_statements.py     # the client side
 python Scripts/compare_dbt_to_client.py         # the recon
 ```
+
+`extract_budget.py` is not part of that loop — run it only when the budget workbook changes.
 
 `Scripts/mapping/` holds the tooling that derives `account_map` from the client's formula
 chain — reach for it when the recon shows classification differences.
@@ -80,6 +82,45 @@ pre-accrual — while every other entity-month was post-accrual. That was the KE
 (April) and 11,250,000 (March) ZARIB gap, previously diagnosed as a consolidation-level
 accrual visible only in `KES consolidated TB`. **It was on the ZARIB tab all along.** Both
 names are now in `AMT_POST` / `ACCRUAL_HDRS` in `reseed_from_packs.py` and `mapping/packlib.py`.
+
+---
+
+## `extract_budget.py` — the Group P&L budget
+
+```bash
+python Scripts/extract_budget.py              # dry run: prints the seed + self-tests
+python Scripts/extract_budget.py --write      # writes seeds/reference/budget.csv
+```
+
+Reads `Finance Templates/June Budget and LYTD Comparison - Revised (1).xlsx` — one sheet per
+month, three columns per entity (`MTD Actual | MTD Budget | LYMTD Actual`) with the entity
+name merged across them on row 1 — and writes 25 report lines × 6 periods.
+
+**The budget columns are MTD, not YTD.** Every mart here is cumulative, so each period is the
+sum of the month budgets up to it. Take the sheet figures at face value and June's budget comes
+out roughly a sixth of what it should be.
+
+**Jan and Feb use different line wording:** `Travel` (later `Travelling`), `Management Fees`
+(`Management Expense`), `Pension Administration` (`Pension Admin Fee`). Aliased in
+`LABEL_ALIASES`. Missing the first alone costs KES 3.9m on travelling — the same class of trap
+as ZARIB's `Deffered Revenue & Accruals` header. **Entity column order also changes** (Jan has
+NIGERIA before RWANDA), so blocks are read from row 1 rather than assumed.
+
+Mapping mirrors `report_line_map.csv`: income is each entity's own `Total Income`; expenses are
+by nature summed across ZAAC + ZARIB + C&P + ZHL; ZAMRE, MENA and Zarinet (MALAWI + RWANDA +
+NIGERIA + DRC + ZATL) take a single `Total Expenses`. Taking `Total Income` rather than summing
+the income sub-lines means a new income line in a later pack cannot be silently dropped.
+
+It **refuses to write if any self-test fails**: Kenya's by-nature lines must account for the
+whole of its `Total Expenses` (they tie to the cent in all six periods), every non-subtotal
+label must be consumed by the mapping, and each period's YTD must equal the prior period plus
+that month. `Management Expense` deliberately has no `report_line_code` — only the African
+entities budget for it and they roll up as a total — and the test fails if a Kenyan entity
+starts using it.
+
+**Prior year:** `--prior-year <path>` writes the LYMTD actuals on the same parser. That is what
+`rpt_group_pl.amount_prior_year_kes` needs and it would close that open item without loading
+the 2025 TBs — but it is **not wired** into any model yet.
 
 ---
 

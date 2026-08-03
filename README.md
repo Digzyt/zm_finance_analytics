@@ -172,7 +172,8 @@ datamodel/
 │   └── reference/                  # entity, statement_line, account_map, fx_rate, tax_rate,
 │                                   #   tb_accrual, elimination_journal, bad_debt_provision,
 │                                   #   manual_accruals, manual_pl_adjustments,
-│                                   #   report_line, report_line_map, budget
+│                                   #   report_line, report_line_map, budget,
+│                                   #   budget_subsidiary
 │
 ├── macros/
 │   ├── generate_schema_name.sql
@@ -184,6 +185,7 @@ datamodel/
 │   ├── README.md                   # what each script does and the order to run them
 │   ├── reseed_from_packs.py        # packs  -> bronze seeds  (run FIRST)
 │   ├── extract_accruals.py         # packs  -> tb_accrual.csv (needs reseed_audit.csv)
+│   ├── extract_budget.py           # budget workbook -> budget.csv (MTD -> YTD)
 │   ├── extract_client_statements.py # packs -> the client-side benchmark
 │   ├── compare_dbt_to_client.py    # marts vs benchmark -> the recon workbook
 │   ├── code_overrides.csv          # pinned codes for duplicate / blank-code rows
@@ -254,6 +256,7 @@ Every reporting table has a `period` column (`'2026-01'` … `'2026-06'`). Each 
 | Group Statement of Comprehensive Income (IFRS) | `consolidation.rpt_consolidated_sci` | |
 | Group Statement of Financial Position (IFRS) | `consolidation.rpt_consolidated_sfp` | |
 | Subsidiary P&L (per entity) | `subsidiary.rpt_subsidiary_sci` | Slice by `company_name` + `period` |
+| **Budget vs actual, per subsidiary** | **`subsidiary.rpt_subsidiary_sci`** | **Carries `amount_budget_kes`, `variance_kes`, `variance_pct`. Check the sign note below.** |
 | Subsidiary Balance Sheet (per entity) | `subsidiary.rpt_subsidiary_sfp` | Slice by `company_name` + `period` |
 | **Individual Trial Balance (per entity)** | **`subsidiary.rpt_subsidiary_tb`** | **Account grain. See below.** |
 | **KES Consolidated TB** | **`subsidiary.rpt_subsidiary_tb`** | A matrix: `company_name` on columns, `amount_after_accruals_kes` as the value. No new model needed. |
@@ -261,6 +264,37 @@ Every reporting table has a `period` column (`'2026-01'` … `'2026-06'`). Each 
 | Statement-line hierarchy (rows) | `core.dim_statement_line` | `category_l1 → l2 → l3 → line_label`, plus `tb_category` |
 | Date / period dimension | `core.dim_calendar` | |
 | Custom views / drill-through | `core.fct_trial_balance` | company × period × statement_line spine |
+
+### Budget on the subsidiary P&L
+
+`rpt_subsidiary_sci` carries budget and variance alongside the actual, from the
+`budget_subsidiary` seed at the same `(company_name, statement_line_code, period)` grain — a
+straight join, no allocation.
+
+| Column | Meaning |
+|---|---|
+| `amount_kes` | actual, cumulative YTD |
+| `amount_budget_kes` | budget, cumulative YTD |
+| `variance_kes` / `variance_pct` | `actual − budget` |
+
+**No prior year** — on either this mart or `rpt_group_pl`. See Open items for why.
+
+**Mind the sign.** Everything in this mart is on the presentation basis — `sign_multiplier` has
+been applied, so income *and* expenses are both **positive**, and the budget is stored the same
+way so the two columns are comparable. So on an **expense** line a *positive* variance means
+**overspend**. This is the opposite of `rpt_group_pl`, where expenses are stored negative.
+**Do not copy a variance measure between the two models without re-checking the direction.**
+
+Why this is not available from `rpt_group_pl`: its taxonomy pools ZAAC + ZARIB + C&P + ZHL into
+by-nature expense lines and the five African entities into a single Zarinet total, so ZAAC's
+personnel budget is not separable there. Use `rpt_group_pl` for the CEO pack and
+`rpt_subsidiary_sci` for anything per entity. The two reconcile — the subsidiary seed is
+self-tested to roll up to the group seed exactly, and `assert_budget_subsidiary_ties_to_group`
+asserts it on every build.
+
+`taxation` has no budget (the client's workbook stops at profit before tax) and Uganda is absent
+(equity-accounted, not in the budget pack). Both arrive as NULL rather than zero, so a visual can
+tell *"no budget set"* from *"budgeted at nil"* — use `COALESCE` in measures accordingly.
 
 ### `rpt_subsidiary_tb` — the individual trial balance
 
@@ -304,9 +338,9 @@ Columns:
 | `amount_actual_gross_kes` | Actual before bad-debt provision |
 | `bad_debt_provision_kes` | NULL today — separate Wave 3.2 computation |
 | `amount_actual_net_kes` | Actual after provision (= gross until Wave 3.2 lands) |
-| `amount_budget_kes` | Budget (2026-04 loaded today; other months as the budget seed is extended) |
+| `amount_budget_kes` | Budget, **all six periods loaded** (Jan–Jun 2026), cumulative YTD |
 | `variance_kes` / `variance_pct` | Actual(Net) vs Budget |
-| `amount_prior_year_kes` | NULL today — needs 2025 monthly TBs |
+| `amount_prior_year_kes` | NULL today — see the prior-year note in Open items |
 
 Suggested visual — a **matrix**:
 - Rows: `report_line.section` then `report_line.line_label`, sorted by `line_order`.
@@ -360,7 +394,13 @@ Schema: `(company_name, local_account_no, statement_line_code, effective_from, e
 
 - `report_line.csv` — the management P&L taxonomy: `report_line_code, section, presentation_sign, line_order, line_label`.
 - `report_line_map.csv` — `(company_name, local_account_no, report_line_code)`, 363 rows (regenerated from the current `account_map`, incl. Nigeria on BC codes). Revenue at entity grain; expenses classified to nature by description; P&L restricted to `I`-codes. Add the ZARIB/ZAAC revenue-stream split here once Finance provides the department allocation (see `Phase1_Revenue_Stream_Mapping_Plan.docx`).
-- `budget.csv` — `(report_line_code, period, amount_budget_kes)`. 2026-04 loaded from the workbook Group sheet; extend with monthly budgets from the `2026_Income_Budget` / `2026_Expense_Budget` tabs.
+- `budget.csv` — `(report_line_code, period, amount_budget_kes)`. **150 rows: 25 report lines × Jan–Jun 2026**, generated by `Scripts/extract_budget.py` from `Finance Templates/June Budget and LYTD Comparison - Revised (1).xlsx`. Do not hand-edit — re-run the script when Finance revises the budget.
+
+  Two things that script gets right and a manual load would not. **The workbook's budget columns are MTD, not YTD**, so each period is the cumulative sum of the month budgets up to it — the marts are all cumulative. And **Jan and Feb use different line wording**: `Travel` (later `Travelling`), `Management Fees` (`Management Expense`), `Pension Administration` (`Pension Admin Fee`); missing the first of those alone costs KES 3.9m on travelling. Entity column order also differs between packs (Jan has NIGERIA before RWANDA), so blocks are located from row 1 rather than assumed.
+
+  It self-tests before writing and refuses to write if any check fails: Kenya's by-nature expense lines must account for the whole of its `Total Expenses` (they tie to the cent in all six periods), every non-subtotal label must be consumed by the mapping, and each period's YTD must equal the prior period plus that month. As a further check, **15 of the 25 lines reproduce the previously-loaded 2026-04 figures exactly**; the 10 that moved are the revision itself (ZARIB +40.8m, ZAAC +27.2m, C&P +17.8m — C&P had no budget at all before — Zarinet revenue −15.3m and expense +12.2m, and five smaller expense lines).
+
+  **Prior year is deliberately not loaded**, though the same workbook carries LYMTD actuals in the third column of each entity block. See Open items.
 
 **3. `seeds/reference/fx_rate.csv`** — `(currency, period, rate_type, rate_to_kes, rate_source)`, 2026-01…06, one `CLOSING` and one `AVERAGE` row per currency-period.
 
@@ -393,6 +433,7 @@ April is loaded (16 journals, 52 lines) from the consolidation workbook and canc
 | `assert_account_map_no_overlaps` | PASS | No effective-dated span intersects another for the same account |
 | `assert_elimination_journals_balance` | PASS | All 16 April journals balance Dr = Cr |
 | `assert_translation_plug_not_masking_unmapped` | PASS | No unmapped balance is being absorbed into translation reserve |
+| `assert_budget_subsidiary_ties_to_group` | PASS | The subsidiary budget rolls up to the group budget (income lines) |
 | `assert_tb_balances_per_entity` | WARN | Per (entity, period): some entities don't net to zero — a Finance discussion |
 | `assert_no_unmapped_accounts` | WARN | 13 accounts awaiting Finance classification (see Exceptions Register) |
 
@@ -413,7 +454,9 @@ The two warnings are diagnostic by design and don't block downstream models.
 - **The group tax journal's own translation difference** — the client debits an SCI line at average and credits an SFP line at closing, which generates a small residual neither they nor we recognise. Flagged for Finance rather than silently modelled.
 - **Group P&L revenue-stream split** (Actuarial / Multicarrier / Grouplife / Medical / Special Projects …) — needs BC department dimensions or a Finance allocation; revenue is at entity grain until then.
 - **Bad-debt provision** in `rpt_group_pl` — NULL today; Wave 3.2 (Bad Debt Provisioning) computation.
-- **Prior-Year columns** — need the 2025 monthly TBs loaded as movement seeds.
+- **NO FISCAL-YEAR CONCEPT — read before loading 2025 comparatives or 2027 data.** The period cross-join in `stg_gl_entry` is `Posting_Date <= period_end` with no lower bound, so accumulation is **inception-to-date, not year-to-date**. Correct for the SFP, wrong for the SCI across a year boundary: at `2027-01` the SCI would sum thirteen months. `net_profit` is derived from those SCI rows and posted to SFP equity, so the prior year's profit would be counted twice and **the SFP would stop balancing**. Separately, `load_tb.py` and `extract_accruals.py` compute `movement = new YTD − prior cumulative`, and the client's YTD resets for P&L accounts at their year end, so the first month of a new year yields a large negative artefact. **Loading the 2025 TBs — the next prior-year step below — triggers both.** Fix needs EXC-18 (fiscal year start) confirmed first. See `Project_Handover.md` pt.16.
+- **Prior year is NOT loaded, by decision.** `rpt_group_pl.amount_prior_year_kes` is `cast(null)` and the column is kept only so the mart's shape does not move under Power BI later; `rpt_subsidiary_sci` has no such column. The budget workbook's LYMTD column would populate it cheaply and was deliberately left out: once a full year of our own actuals exists, prior year should be **derived** from `fct_trial_balance` at period − 12 months so the comparative equals the actual we published a year earlier. Taking the client's comparative instead would disagree with our own published figures — the recon has already found defects in their statements — and would have to be unwound. **Do the fiscal-year fix above first**; a prior-year comparative is exactly the thing that breaks without it.
+- Note for whenever a second year does arrive: `extract_budget.py` hardcodes 2026 periods against sheet names `Jan`…`June`, and a 2027 workbook will have **identical** sheet names, so re-running would silently drop the 2026 rows. It needs a year parameter and merge rather than replace semantics.
 - **Eliminations** — April loaded; Finance to supply subsequent months via the template. Once BC carries `IC_Partner_Code`, the intercompany journals can be generated automatically.
 - `dimension_set_entry_*` / `dimension_value_*` seeds (when real BC data lands).
 - The other Phase 1 reports beyond the P&L / balance sheet (Debtor Analysis, Commission Sharing, Cash Position) — separate marts when AR sub-ledger / bank statement data are wired in.
