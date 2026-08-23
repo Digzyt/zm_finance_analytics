@@ -103,3 +103,4 @@ NG-TAXATIONEDUCATIONT,Taxation - Education Tax,Posting,Current Liabilities,Balan
 NG-WHTASSETSCREDITNOT,WHT Assets -Credit Notes,Posting,Current Liabilities,Balance Sheet,,true,false,0,,
 NG-WHTPAYABLES,WHT Payables,Posting,Current Liabilities,Balance Sheet,,true,false,0,,
 NG-ZAMARACONSULTINACT,Zamara Consultin Actuaries Nig Ltd,Posting,Current Assets,Balance Sheet,,true,false,0,,
+NG-TRAVELACCOMMODATIO,Travel & Accommodation,Posting,Expenses,Income Statement,,true,false,0,,

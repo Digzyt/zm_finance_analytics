@@ -988,6 +988,187 @@ ZAAC,2026-06,I25429,Software Licence Fees,I25429,SOURCE_CODE_CONFIRMED,,Source c
 ZAAC,2026-06,I25432,Software as a service Expenses,I25432,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,2428547.0
 ZAAC,2026-06,I25455,MV - Leasing Costs (non personnel),I25455,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,8306556.2
 ZAAC,2026-06,,Tax expense,ZAAC-TAXEXPENSE,BLANK_CODE_PINNED,REVIEW,Blank A/C No in source; material (56.1m by June) and relates to the open tax-mapping item,56119232.7
+ZAAC,2026-07,B10120,Ord.Share Capital,B10120,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-25000000.0
+ZAAC,2026-07,B15110,Distr.Reser-Retained Inc,B15110,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-1015248075.0
+ZAAC,2026-07,B30110,Head Office Receivable Account,B30110,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-0.05
+ZAAC,2026-07,B35130,Equipments-TZ Branch,B35130,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1693186.0
+ZAAC,2026-07,B35140,MV-Cost Opening Balance,B35140,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,619922.5
+ZAAC,2026-07,B35160,MV Accum-Depr Open Balance,B35160,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-619922.5
+ZAAC,2026-07,B35170,Furn-Cost Open Balance,B35170,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,65783946.27
+ZAAC,2026-07,B35200,Furn Accum-Depreciation,B35200,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-47625021.78
+ZAAC,2026-07,B35210,Equip-Cost Open Balance,B35210,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,88485928.28
+ZAAC,2026-07,B35240,Equip Accum-Depr,B35240,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-73714567.78
+ZAAC,2026-07,B35250,Comp Equip-Cost Open Balance,B35250,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,74942525.02
+ZAAC,2026-07,B35290,Comp Equip- Accum Depreciation,B35290,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-53038068.32
+ZAAC,2026-07,B35310,Comp SW-Cost Open Balance,B35310,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,122389634.21
+ZAAC,2026-07,B35330,Goodwill-Accum. Amortisation,B35330,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-2796168.23
+ZAAC,2026-07,B35340,Comp S/Ware Acc -Write Off,B35340,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-103780780.72
+ZAAC,2026-07,B35350,Leased Prem-Improvements,B35350,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,55790362.29
+ZAAC,2026-07,B35370,Lease Improv - Accum Ammortization,B35370,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-22045853.58
+ZAAC,2026-07,B35420,Deferred Tax,B35420,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-13683636.24
+ZAAC,2026-07,B40110,Investment in subsidiary - RWANDA,B40110,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,36808446.81
+ZAAC,2026-07,B45110,Goodwill-at Cost,B45110,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,6242611.98
+ZAAC,2026-07,B55110,Other Receivable,B55110,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,39256.58
+ZAAC,2026-07,B55130,Due from/to Directors,B55130,SOURCE_CODE,,Keeps its own code across all six months,0.0
+ZAAC,2026-07,B55135,Accrued Income,B55135,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZAAC,2026-07,B55140,Other Debtor - Claims Receivab,B55140,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-16068.99
+ZAAC,2026-07,B55150,Drs-Gen.Bad Debt Prov.,B55150,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-11242818.29
+ZAAC,2026-07,B55210,Investment in Malawi,B55210,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-0.5
+ZAAC,2026-07,B55250,Conferences - Control  A/c,B55250,SOURCE_CODE_NEW,REVIEW,Code not present in the prior seed; needs an account_map row,0.0
+ZAAC,2026-07,B55410,Drs Prepaid - Other,B55410,SOURCE_CODE_NEW,REVIEW,Code not present in the prior seed; needs an account_map row,0.0
+ZAAC,2026-07,B55360,Deposits,B55360,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,11794200.0
+ZAAC,2026-07,B55420,Due to/from Malawi,B55420,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,43934614.16
+ZAAC,2026-07,B55430,Interest Receivable,B55430,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,919357.72
+ZAAC,2026-07,B55480,Drs-Income Control,B55480,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,496143092.77
+ZAAC,2026-07,B55481,Staff Advance and Imprest,B55481,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZAAC,2026-07,B55490,DUE TO/FROM ZAMARA HOLDING CO.,B55490,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,323106923.98
+ZAAC,2026-07,B55520,DUE TO/FROM UGANDA,B55520,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,24987459.05
+ZAAC,2026-07,B60090,EQUITY BANK,B60090,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,304643.5
+ZAAC,2026-07,B60110,KENYA COMMERCIAL BANK,B60110,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,6586607.86
+ZAAC,2026-07,B60160,NCBA Bank-US$ OFFICE,B60160,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,9880218.79
+ZAAC,2026-07,B60180,NCBA Office Bank Account,B60180,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,38827910.74
+ZAAC,2026-07,B60190,PETTY CASH - OFFICE,B60190,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,199688.0
+ZAAC,2026-07,B60210,SBM Bank Account-Office Account,B60210,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,125436.38
+ZAAC,2026-07,B60260,UBA Office Account,B60260,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,23030.82
+ZAAC,2026-07,B60270,NATIONAL BANK OF KENYA,B60270,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,28206.97
+ZAAC,2026-07,B60310,SUNDEEP RAICHURA PREPAID CARD,B60310,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,99375.0
+ZAAC,2026-07,B60320,ROBERT NJOROGE PREPAID CARD,B60320,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,18000.0
+ZAAC,2026-07,B60330,JAY KOSGEI PREPAID CARD,B60330,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,571.8
+ZAAC,2026-07,B60340,NIKHIL DODHIA PREPARD CARD,B60340,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,37160.0
+ZAAC,2026-07,B60350,ADIL SULEMAN PREPAID CARD,B60350,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1794.0
+ZAAC,2026-07,B60360,ANTONY KILAVI PREPAID CARD,B60360,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,22694.29
+ZAAC,2026-07,B60370,PAUL KAMOCHE PREPAID CARD,B60370,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,66030.0
+ZAAC,2026-07,B60380,MICHAEL VAATI PRPAID CARD,B60380,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,100.0
+ZAAC,2026-07,B60390,RAYMOND MUTHAMA PREPAID CARD,B60390,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,9063.33
+ZAAC,2026-07,B60400,KHALID OBULINJI PREPAID CARD,B60400,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,711875.0
+ZAAC,2026-07,B60401,CBA CARD CENTRE,B60401,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1029596.07
+ZAAC,2026-07,B60410,JAMBO JET- AIRTICKETS,B60410,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-1263512.21
+ZAAC,2026-07,B60420,Premium Finance A/C,B60420,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-61410935.4
+ZAAC,2026-07,B65110,Other Receivables - Disbursements,B65110,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,4453605.03
+ZAAC,2026-07,B65120,Due to/from Nigeria,B65120,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,10596178.64
+ZAAC,2026-07,B65130,Due from/to AFRIB Transactional,B65130,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-145591202.75
+ZAAC,2026-07,B65140,Dues to/from Rwanda,B65140,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1887782.58
+ZAAC,2026-07,B65150,Fixed Deposit Account,B65150,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,18000000.0
+ZAAC,2026-07,B65160,Placements,B65160,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,19249321.49
+ZAAC,2026-07,B65170,Zamara Money Market Fund (KES),B65170,SOURCE_CODE_NEW,REVIEW,Code not present in the prior seed; needs an account_map row,38000000.0
+ZAAC,2026-07,B65180,Debtors Prepaid other,B65180,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,77290185.21
+ZAAC,2026-07,B65200,Provision for Bad Debts,B65200,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZAAC,2026-07,B65230,Tax Recoverable,B65230,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-645459.95
+ZAAC,2026-07,B65240,VAT Receivable Debtor,B65240,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,113380004.77
+ZAAC,2026-07,B65260,DUE FROM TANZANIA,B65260,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,12599430.12
+ZAAC,2026-07,B65290,Withholding IncomeTax,B65290,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,28811777.36
+ZAAC,2026-07,B65350,INVENTORY ACCOUNT,B65350,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1943136.0
+ZAAC,2026-07,B70130,Due to/from Dubai,B70130,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,11170606.1
+ZAAC,2026-07,B70140,Zamara pension Scheme,B70140,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-5244684.55
+ZAAC,2026-07,B70141,Post retirement medical fund,B70141,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-1665030.0
+ZAAC,2026-07,B70142,ABSA LIFE CHECK OFF,B70142,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-23493.0
+ZAAC,2026-07,B70150,Management fees-Subsidiary,B70150,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZAAC,2026-07,B70160,DUE TO /From DRC,B70160,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,7788530.68
+ZAAC,2026-07,B70180,Due to/from C & P/AFFS,B70180,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-86989635.14
+ZAAC,2026-07,B70190,Withholding tax 5 %,B70190,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-345703.58
+ZAAC,2026-07,B70195,Withholding VAT 2%-Creditors,B70195,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,26179.74
+ZAAC,2026-07,B70200,C&P Coop Sacco,B70200,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-2355511.08
+ZAAC,2026-07,B70205,WithHolding Tax Other -20% International Creditors,B70205,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZAAC,2026-07,B70210,Social Health Insurance Fund,B70210,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-1492342.0
+ZAAC,2026-07,B70220,National Social Security Fund,B70220,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-314932.0
+ZAAC,2026-07,B70230,Paymaster General (PAYE,B70230,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-13721621.0
+ZAAC,2026-07,B70235,Salaries and Wages,B70235,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZAAC,2026-07,B70240,STANBIC CHECK OFF,B70240,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-110881.0
+ZAAC,2026-07,B70250,Bonus Provision : New Business,B70250,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.27
+ZAAC,2026-07,B70242,NITA - Employer,B70242,SOURCE_CODE_NEW,REVIEW,Code not present in the prior seed; needs an account_map row,0.0
+ZAAC,2026-07,B70260,Stanchart Check off,B70260,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-356443.0
+ZAAC,2026-07,B70270,Vuna Pension Plan,B70270,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-140000.0
+ZAAC,2026-07,B70280,Prov-Sundries,B70280,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-10376391.1
+ZAAC,2026-07,B70310,Higher education loan Board,B70310,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-128053.7
+ZAAC,2026-07,B70330,Commissions Payable,B70330,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,11500.5
+ZAAC,2026-07,B70340,CRS-Trade (Operating),B70340,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-27062298.64
+ZAAC,2026-07,B70360,Welfare Fund Contributons,B70360,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-154859.12
+ZAAC,2026-07,B70390,Equity Check off,B70390,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-147939.0
+ZAAC,2026-07,B70400,Other Payables-Refunds,B70400,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZAAC,2026-07,B70410,Housing Levy,B70410,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-1656486.0
+ZAAC,2026-07,B70420,Absa Check off,B70420,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-481269.0
+ZAAC,2026-07,B70470,SIDIAN BANK CHECK OFF,B70470,SOURCE_CODE_NEW,REVIEW,Code not present in the prior seed; needs an account_map row,-479395.0
+ZAAC,2026-07,B75120,Tax Provision-Other,B75120,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,50347911.9
+ZAAC,2026-07,B80110,Bonus(General provision),B80110,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,2792506.17
+ZAAC,2026-07,B80140,Current Tax,B80140,SOURCE_CODE_NEW,REVIEW,Code not present in the prior seed; needs an account_map row,0.0
+ZAAC,2026-07,B80120,Fees Suspense A/c,B80120,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZAAC,2026-07,B80170,VAT Control Account,B80170,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-72211133.32
+ZAAC,2026-07,B80190,Supplier Accounts - Take-On Suspense Acc,B80190,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-1.05
+ZAAC,2026-07,I10015,Management Fee - Corporate & pension trust services Ltd,I10015,SOURCE_CODE_NEW,REVIEW,Code not present in the prior seed; needs an account_map row,0.0
+ZAAC,2026-07,I10047,IAC Fees,I10047,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-21045347.0
+ZAAC,2026-07,I10060,Actuarial - Once-off,I10060,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-217354332.67
+ZAAC,2026-07,I10067,AF Trust Fund,I10067,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-4019960.33
+ZAAC,2026-07,I10068,Retirement plans - Income Draw Down,I10068,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-6897557.0
+ZAAC,2026-07,I10070,IPP - Vuna Retirement Plan,I10070,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-38487305.08
+ZAAC,2026-07,I10071,MC-ADMIN FEES,I10071,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-221903877.82
+ZAAC,2026-07,I10073,AFRF Admin Fees,I10073,EXISTING_SEED,,Client formula chain ties Umbrella Fund to I10073 AFRF Admin Fees,-100671209.36
+ZAAC,2026-07,I10121,Interest Income,I10121,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-1825340.22
+ZAAC,2026-07,I1007,Management Fees,I1007,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-3949075.69
+ZAAC,2026-07,I10122,Trustee Training/Workshops,I10122,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-11883641.92
+ZAAC,2026-07,,Zamara Money Market Management fee,ZAAC-ZAMARAMONEYMARKETM,SYNTHETIC,REVIEW,Blank A/C No in source and no prior seed match; needs an account_map row,0.0
+ZAAC,2026-07,I10123,Other Incomes - one off,I10123,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-9000.0
+ZAAC,2026-07,I10124,Conference Fees,I10124,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-25432603.23
+ZAAC,2026-07,I25001,Emol.Pack-Salaries,I25001,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,398852682.57
+ZAAC,2026-07,I25002,Emol.Pack-Housing Subsid,I25002,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,6305522.01
+ZAAC,2026-07,I25003,Emol.Pack-Med.Contribut.,I25003,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,24468557.12
+ZAAC,2026-07,I25004,Emol.Pack-Pens.Contribut.,I25004,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,33924019.27
+ZAAC,2026-07,I25005,Emol.Pack-Other,I25005,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1058000.0
+ZAAC,2026-07,I25009,Co.Contrib-Life Assurance,I25009,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,6531512.36
+ZAAC,2026-07,I25020,Temporary Staff-General,I25020,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,564003.41
+ZAAC,2026-07,I25024,Welfare-General,I25024,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,431793.93
+ZAAC,2026-07,I25026,Training EXTERNAL,I25026,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,7192525.62
+ZAAC,2026-07,I25027,Training INTERNAL,I25027,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,357820.0
+ZAAC,2026-07,I25029,Other Staff Costs,I25029,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-66741940.44
+ZAAC,2026-07,I25032,Commissions - Lead,I25032,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1640162.79
+ZAAC,2026-07,I25043,NITA Contribution Employer,I25043,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,77100.0
+ZAAC,2026-07,I25044,Emol-Pack PRMF,I25044,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,13990.0
+ZAAC,2026-07,I25071,Prem-Cleaning,I25071,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1485000.0
+ZAAC,2026-07,I25072,Prem-Electricity,I25072,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,707687.56
+ZAAC,2026-07,I25073,Prem-Security,I25073,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,493376.35
+ZAAC,2026-07,I25074,Prem-Rates,I25074,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,3168188.06
+ZAAC,2026-07,I25079,Prem-Rental(EXTERNAL),I25079,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,14830102.42
+ZAAC,2026-07,I25080,Prem-Parking(EXTERNAL),I25080,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,2424360.0
+ZAAC,2026-07,I25111,Printing-General,I25111,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1565644.25
+ZAAC,2026-07,I25114,Stationery-General,I25114,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,825788.2
+ZAAC,2026-07,I25141,Prof.Fees-Audit Fees,I25141,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1347500.0
+ZAAC,2026-07,I25144,Prof.Fees-Legal,I25144,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,375517.24
+ZAAC,2026-07,I25145,Prof.Fees-Other,I25145,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,22306882.04
+ZAAC,2026-07,I25181,Trav. Air Fares,I25181,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,8214042.1
+ZAAC,2026-07,I25182,Trav. Accom.,I25182,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,16503071.45
+ZAAC,2026-07,I25187,Conference Costs,I25187,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,28940318.12
+ZAAC,2026-07,I25191,Travel Hotel Entert.:Travel Susp Acc,I25191,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZAAC,2026-07,I25193,Conference Attended by Us,I25193,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,3851767.73
+ZAAC,2026-07,I25192,Conference Given By Us,I25192,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,640000.0
+ZAAC,2026-07,I25203,Bus.Advert-General,I25203,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,15036451.08
+ZAAC,2026-07,I25205,Sponsorships-General,I25205,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,813208.13
+ZAAC,2026-07,I25232,Telephone-Variable,I25232,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,2989196.23
+ZAAC,2026-07,I25236,Courier Services Cost,I25236,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,292941.9
+ZAAC,2026-07,I25262,S/ware Depreciation,I25262,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,5483105.31
+ZAAC,2026-07,I25263,Bldg.Imp.(L/Hold)-Deprec,I25263,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,5428611.89
+ZAAC,2026-07,I25264,Furn-Depreciation,I25264,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1900806.79
+ZAAC,2026-07,I25265,Equip-Depreciation,I25265,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,5937362.06
+ZAAC,2026-07,I25268,Goodwill amortisation,I25268,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,455190.19
+ZAAC,2026-07,I25291,Entertainment-(IN TOWN),I25291,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,9713309.97
+ZAAC,2026-07,I25293,Entertainment-(OUT OF TOWN),I25293,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,30000.0
+ZAAC,2026-07,I25294,Christmas Party,I25294,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,14000.0
+ZAAC,2026-07,I25326,Int.Paid-Other,I25326,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1295050.51
+ZAAC,2026-07,I25329,Unrealised Currency gain/loss,I25329,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,242949.91
+ZAAC,2026-07,I25354,Equip-Maintenance,I25354,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,254975.0
+ZAAC,2026-07,I25358,Subscriptions General,I25358,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,6046044.0
+ZAAC,2026-07,I25360,Bank Charges,I25360,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,775942.92
+ZAAC,2026-07,I25361,Books & Periodicals,I25361,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,568111.21
+ZAAC,2026-07,I25362,STAFF WELFARE,I25362,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,309000.0
+ZAAC,2026-07,I25363,CLIENT GIFTS AND REWARDS,I25363,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,70000.0
+ZAAC,2026-07,I25365,Donations-Charitable,I25365,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,2760000.0
+ZAAC,2026-07,I25367,Summary:Gen Exp Other,I25367,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,4035301.56
+ZAAC,2026-07,I25401,Insurance-P.I.,I25401,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,9808466.24
+ZAAC,2026-07,I25422,PC Supplies,I25422,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,367190.01
+ZAAC,2026-07,I25423,Comp-Depreciation,I25423,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,4704697.02
+ZAAC,2026-07,I25427,Software Implementation,I25427,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,2347510.28
+ZAAC,2026-07,I25428,Software Maintenance,I25428,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,4446684.35
+ZAAC,2026-07,I25429,Software Licence Fees,I25429,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,27099602.24
+ZAAC,2026-07,I25432,Software as a service Expenses,I25432,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,2428547.0
+ZAAC,2026-07,I25455,MV - Leasing Costs (non personnel),I25455,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,8648068.2
 ZARIB,2026-01,0001/000,EQUITY BANK,0001/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,418160.46
 ZARIB,2026-01,0068/000,KCB CLIENT,0068/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,78352829.5
 ZARIB,2026-01,6030/000,MV-Cost Opening Balance,B35140,ALIAS_BY_DESCRIPTION,,Pack codes this account 6030/000; prior seed and account_map key it B35140,814140.84
@@ -2006,6 +2187,187 @@ ZARIB,2026-06,,Corporate Gifts And Donations,ZARIB-CORPORATEGIFTSANDD,CODEBOOK_B
 ZARIB,2026-06,,Insurance- Other,ZARIB-INSURANCEOTHER,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,0.0
 ZARIB,2026-06,,Software Implemantation,I25427,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,2723111.92
 ZARIB,2026-06,4650/200,Tax Expense,4650/200,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,177398957.89
+ZARIB,2026-07,0001/000,EQUITY BANK,0001/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,418160.46
+ZARIB,2026-07,0068/000,KCB CLIENT,0068/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1601148.86
+ZARIB,2026-07,6030/000,MV-Cost Opening Balance,B35140,ALIAS_BY_DESCRIPTION,,Pack codes this account 6030/000; prior seed and account_map key it B35140,814140.84
+ZARIB,2026-07,6050/000,MV Accum-Depr Open Balance,B35160,ALIAS_BY_DESCRIPTION,,Pack codes this account 6050/000; prior seed and account_map key it B35160,-786032.72
+ZARIB,2026-07,6060/000,Furn-Cost Open Balance,B35170,ALIAS_BY_DESCRIPTION,,Pack codes this account 6060/000; prior seed and account_map key it B35170,11874288.33
+ZARIB,2026-07,6070/000,Furn&Fitt- Additions this year,6070/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZARIB,2026-07,6090/000,Furn Accum-Depreciation,B35200,ALIAS_BY_DESCRIPTION,,Pack codes this account 6090/000; prior seed and account_map key it B35200,-3735929.97
+ZARIB,2026-07,6100/000,Equip-Cost Open Balance,B35210,ALIAS_BY_DESCRIPTION,,Pack codes this account 6100/000; prior seed and account_map key it B35210,44250561.48
+ZARIB,2026-07,6110/000,Equip-Additions This Year,B35220,ALIAS_BY_DESCRIPTION,,Pack codes this account 6110/000; prior seed and account_map key it B35220,441280.0
+ZARIB,2026-07,6130/000,Equip Accum-Depr,B35240,ALIAS_BY_DESCRIPTION,,Pack codes this account 6130/000; prior seed and account_map key it B35240,-35068076.94
+ZARIB,2026-07,6140/000,Comp Equip-Cost Open Balance,B35250,ALIAS_BY_DESCRIPTION,,Pack codes this account 6140/000; prior seed and account_map key it B35250,44844807.63
+ZARIB,2026-07,6150/000,Comp Equip-Add This Year,6150/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,6485908.0
+ZARIB,2026-07,6180/000,Comp Equip Accum-Depr,6180/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-34902817.59
+ZARIB,2026-07,6200/000,Comp SW-Cost Open Balance,B35310,ALIAS_BY_DESCRIPTION,,Pack codes this account 6200/000; prior seed and account_map key it B35310,81843876.7
+ZARIB,2026-07,6210/000,Computer Software,B35320,ALIAS_BY_DESCRIPTION,,Pack codes this account 6210/000; prior seed and account_map key it B35320,9023500.0
+ZARIB,2026-07,6240/000,Leased Prem-Improvements,B35350,ALIAS_BY_DESCRIPTION,,Pack codes this account 6240/000; prior seed and account_map key it B35350,45170168.0
+ZARIB,2026-07,6250/000,Leased Prem-Improv this year,6250/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZARIB,2026-07,6265/000,Lease Improv - Accum Ammortization,B35370,ALIAS_BY_DESCRIPTION,,Pack codes this account 6265/000; prior seed and account_map key it B35370,-17812948.61
+ZARIB,2026-07,6270/000,SoftWare Amortisation,6270/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-69571165.67
+ZARIB,2026-07,6341/000,Deferred Tax,B35420,ALIAS_BY_DESCRIPTION,,Pack codes this account 6341/000; prior seed and account_map key it B35420,33970530.5
+ZARIB,2026-07,B55570,Due to/from ZAAC,B55570,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,145591202.75
+ZARIB,2026-07,6352/000,Due from/to AFFSEA - Transactional,6352/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZARIB,2026-07,6354/000,Fixed Deposit Account,B65150,ALIAS_BY_DESCRIPTION,,Pack codes this account 6354/000; prior seed and account_map key it B65150,571246225.0
+ZARIB,2026-07,6355/000,PlacementS,B65160,ALIAS_BY_DESCRIPTION,,Pack codes this account 6355/000; prior seed and account_map key it B65160,98938454.0
+ZARIB,2026-07,6357/000,Debtors Prepaid Other,B65180,ALIAS_BY_DESCRIPTION,,Pack codes this account 6357/000; prior seed and account_map key it B65180,44279823.85
+ZARIB,2026-07,6359/000,Provision for Bad Debts,6359/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-56940432.65
+ZARIB,2026-07,6361/000,Due to/from Zamara Reinsurance,6361/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,73509436.66
+ZARIB,2026-07,6366/000,Investment In Subsidiaries,6366/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1060688.0
+ZARIB,2026-07,6368/000,Withholding IncomeTax,B65290,ALIAS_BY_DESCRIPTION,,Pack codes this account 6368/000; prior seed and account_map key it B65290,56664261.0
+ZARIB,2026-07,6370/000,AFFS(EA) Rental Control,6370/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZARIB,2026-07,6470/000,Debtors Control - FPC,6470/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZARIB,2026-07,B70141,Post retirement medical fund,B70141,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZARIB,2026-07,6500/000,Sundry Debtors - Clearing a/c,6500/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZARIB,2026-07,6630/000,Other Receivables,6630/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZARIB,2026-07,6680/000,Interest Receivable,6680/080,ALIAS_BY_DESCRIPTION,,Pack codes this account 6680/000; prior seed and account_map key it 6680/080,14124816.67
+ZARIB,2026-07,6700/000,Due from Shareholders,6700/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZARIB,2026-07,6720/000,Disposals-Clearing,6720/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZARIB,2026-07,6730/000,Drs-Income Control,B55480,ALIAS_BY_DESCRIPTION,,Pack codes this account 6730/000; prior seed and account_map key it B55480,383915206.11
+ZARIB,2026-07,6760/000,Due from Zamara Actuaries and Co Nigeria,6760/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1251167.0
+ZARIB,2026-07,6790/000,Bonus(General provision),B80110,ALIAS_BY_DESCRIPTION,,Pack codes this account 6790/000; prior seed and account_map key it B80110,0.0
+ZARIB,2026-07,6800/000,Deposits-Sundry,6800/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,7730220.0
+ZARIB,2026-07,6801/000,KCB USD CLIENT,6801/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,25323846.56
+ZARIB,2026-07,6804/000,KCB USD OFFICE,6804/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,111192.13
+ZARIB,2026-07,6820/000,MPESA ACCOUNT,6820/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,10592865.0
+ZARIB,2026-07,6821/000,NCBA Office Bank Account,6821/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,54758918.22
+ZARIB,2026-07,6822/000,SBM USD $,6822/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,288463.66
+ZARIB,2026-07,6823/000,PETTY CASH - OFFICE,6823/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,56045.0
+ZARIB,2026-07,6824/000,NCBA Client Bank Account,6824/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,4947308.36
+ZARIB,2026-07,6825/000,CFCSTANBIC-OFFICE A/C,6825/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZARIB,2026-07,6826/000,CFCSTANBIC-CLIENT A/C,6826/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1884266.41
+ZARIB,2026-07,6827/000,SBM Bank Account-Client Account,6827/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,79386.9
+ZARIB,2026-07,6828/000,NCBA Bank-US$ OFFICE,6828/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,167654.52
+ZARIB,2026-07,6829/000,NCBA Bank-US$ CLIENT,6829/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,5373994.94
+ZARIB,2026-07,6830/000,UBA Client Account,6830/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,160.03
+ZARIB,2026-07,6832/000,SBM BANK FIXED DEPOSIT ACCOUNT,6832/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,217832.69
+ZARIB,2026-07,6833/000,CFC STANBIC(US$) -0000230847(CLIENT),6833/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,11506.25
+ZARIB,2026-07,6839/000,SBM BANK BID BONDS,6839/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,446146.45
+ZARIB,2026-07,6840/000,Premium Finance A/C,6840/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-21063774.02
+ZARIB,2026-07,6843/000,MAYFAIR CIB BANK KES CLIENT,6843/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,8595539.06
+ZARIB,2026-07,6850/000,FAULU MICROFINANCE BANK,6850/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,708.02
+ZARIB,2026-07,6860/000,Absa Bank Kenya-Office Account,6860/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,5211219.25
+ZARIB,2026-07,6880/000,KCB BANK,6880/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,518381.95
+ZARIB,2026-07,6890/000,MAYFAIR CIB BANK USD CLIENT,6890/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,386.91
+ZARIB,2026-07,6900/000,SIDIAN BANK,6900/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,383822.0
+ZARIB,2026-07,6920/000,GULF AFRICAN BANK,6920/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,2765386.63
+ZARIB,2026-07,6930/000,GUARANTY TRUST BANK,6930/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,67684.29
+ZARIB,2026-07,6940/000,FREDRICK MUCHINA,6940/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,53104.97
+ZARIB,2026-07,6950/000,LIZA NYAGA,6950/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,53230.0
+ZARIB,2026-07,6960/000,ALEEM AKBARALI,6960/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,25290.0
+ZARIB,2026-07,6990/000,MWIHAKI KABURA,6990/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,400.0
+ZARIB,2026-07,7030/000,JAMES OLUBAYI,7030/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,686608.12
+ZARIB,2026-07,7030/001,JAMES OLUBAYI,7030/001,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZARIB,2026-07,7230/000,Premium Received Suspense A/C,7230/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZARIB,2026-07,7380/000,Premiums payable,7380/080,ALIAS_BY_DESCRIPTION,,Pack codes this account 7380/000; prior seed and account_map key it 7380/080,-1399789647.82
+ZARIB,2026-07,7381/000,Premiums Receivable(GP),7381/080,ALIAS_BY_DESCRIPTION,,Pack codes this account 7381/000; prior seed and account_map key it 7381/080,1279717353.71
+ZARIB,2026-07,,Fund Receivable,ZARIB-FUNDRECEIVABLE,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,0.0
+ZARIB,2026-07,,Deffered Revenue,ZARIB-DEFFEREDREVENUE,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,0.0
+ZARIB,2026-07,7400/000,Commissions Payable,7400/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-3838272.37
+ZARIB,2026-07,7410/000,CRS-Trade (Operating),7410/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZARIB,2026-07,,BCF KENYA,ZARIB-BCFKENYA,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,-16483.0
+ZARIB,2026-07,,Zamara pension Scheme,B70140,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,-3450494.0
+ZARIB,2026-07,,C&P Coop Sacco,B70200,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,-1206601.34
+ZARIB,2026-07,,National Hospital Insurance Fund,ZARIB-NATIONALHOSPITALIN,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,-769357.0
+ZARIB,2026-07,,National Social Security Fund,B70220,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,-611867.0
+ZARIB,2026-07,,Paymaster General (PAYE,B70230,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,-10870761.0
+ZARIB,2026-07,,ABSA Life Check-Off,ZARIB-ABSALIFECHECKOFF,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,-35069.0
+ZARIB,2026-07,,SBM Check-Off,ZARIB-SBMCHECKOFF,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,-199511.0
+ZARIB,2026-07,,Stanbic Check-Off,ZARIB-STANBICCHECKOFF,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,-181405.0
+ZARIB,2026-07,,Stanchart Check off,B70260,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,-907961.0
+ZARIB,2026-07,,Vuna Pension Plan,B70270,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,-15000.0
+ZARIB,2026-07,,Higher education Board,ZARIB-HIGHEREDUCATIONBOA,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,-96574.0
+ZARIB,2026-07,,Welfare Fund Contributons,B70360,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,-170331.48
+ZARIB,2026-07,,Equity Check off,B70390,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,-180297.0
+ZARIB,2026-07,,Housing Levy,B70410,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,-1212066.0
+ZARIB,2026-07,,Absa Check off,B70420,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,-562184.0
+ZARIB,2026-07,7414/000,Dividend Proposed,7414/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZARIB,2026-07,7450/000,VAT Control Account,B80170,ALIAS_BY_DESCRIPTION,,Pack codes this account 7450/000; prior seed and account_map key it B80170,10223607.84
+ZARIB,2026-07,7460/000,VAT - Reverse VAT,7460/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-237405.58
+ZARIB,2026-07,7480/000,Prov-Sundries,B70280,ALIAS_BY_DESCRIPTION,,Pack codes this account 7480/000; prior seed and account_map key it B70280,-522648.0
+ZARIB,2026-07,7500/000,Leave Pay Provision,7500/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-3564113.23
+ZARIB,2026-07,7525/000,DUE TO/FROM ZAMARA HOLDING CO.,B55490,ALIAS_BY_DESCRIPTION,,Pack codes this account 7525/000; prior seed and account_map key it B55490,186970993.55
+ZARIB,2026-07,7530/000,A F AFRINET INVESTMENTS LOAN ACCOUNT,7530/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZARIB,2026-07,7550/000,Tax Provision-Other,B75120,ALIAS_BY_DESCRIPTION,,Pack codes this account 7550/000; prior seed and account_map key it B75120,48960151.45
+ZARIB,2026-07,7600/000,Ord.Share Capital,B10120,ALIAS_BY_DESCRIPTION,,Pack codes this account 7600/000; prior seed and account_map key it B10120,-33360000.0
+ZARIB,2026-07,7620/000,Revaluation Reserve,7620/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-758850.95
+ZARIB,2026-07,7640/000,Distr.Reser-Retained Inc,7640/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-1189689872.0
+ZARIB,2026-07,1020/000,Insurance Commission - All,1020/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-1054524165.7
+ZARIB,2026-07,1040/000,Interest Income,1040/080,ALIAS_BY_DESCRIPTION,,Pack codes this account 1040/000; prior seed and account_map key it 1040/080,-16492901.71
+ZARIB,2026-07,1080/000,Other Income,1080/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-16419207.83
+ZARIB,2026-07,1100/000,Insurance Commission - General,1100/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZARIB,2026-07,1570/000,Insurance Commission - Medical,1570/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZARIB,2026-07,1580/000,Insurance Commission - Retail Solutions,1580/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZARIB,2026-07,1600/000,Insurance Commission - Annuities,1600/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-18343749.69
+ZARIB,2026-07,3000/000,Emol.Pack-Salaries,I25001,ALIAS_BY_DESCRIPTION,,Pack codes this account 3000/000; prior seed and account_map key it I25001,192436523.56
+ZARIB,2026-07,3010/000,Emol.Pack-Other,I25005,ALIAS_BY_DESCRIPTION,,Pack codes this account 3010/000; prior seed and account_map key it I25005,4248582.0
+ZARIB,2026-07,3020/000,Emol.Pack-Med.Contribut.,I25003,ALIAS_BY_DESCRIPTION,,Pack codes this account 3020/000; prior seed and account_map key it I25003,16030535.42
+ZARIB,2026-07,3030/000,Emol.Pack-Pens.Contribut.,I25004,ALIAS_BY_DESCRIPTION,,Pack codes this account 3030/000; prior seed and account_map key it I25004,14964614.03
+ZARIB,2026-07,,Emol.Park-Other-PRMF,ZARIB-EMOLPARKOTHERPRMF,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,52250.0
+ZARIB,2026-07,3080/000,Co.Contrib-Life Assurance,I25009,ALIAS_BY_DESCRIPTION,,Pack codes this account 3080/000; prior seed and account_map key it I25009,2752157.2
+ZARIB,2026-07,,Bonuses & 13th cheque,ZARIB-BONUSES13THCHEQUE,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,0.0
+ZARIB,2026-07,3200/000,Temporary Staff-General,I25020,ALIAS_BY_DESCRIPTION,,Pack codes this account 3200/000; prior seed and account_map key it I25020,71850.0
+ZARIB,2026-07,3240/000,Welfare-General,I25024,ALIAS_BY_DESCRIPTION,,Pack codes this account 3240/000; prior seed and account_map key it I25024,383757.12
+ZARIB,2026-07,3260/000,Training EXTERNAL,I25026,ALIAS_BY_DESCRIPTION,,Pack codes this account 3260/000; prior seed and account_map key it I25026,1686459.47
+ZARIB,2026-07,,Training INTERNAL,I25027,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,398816.8
+ZARIB,2026-07,3290/000,Other Staff Costs,I25029,ALIAS_BY_DESCRIPTION,,Pack codes this account 3290/000; prior seed and account_map key it I25029,47042233.28
+ZARIB,2026-07,,Commissions - Lead Others,ZARIB-COMMISSIONSLEADOTH,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,17684808.72
+ZARIB,2026-07,3350/000,Commission Leads,3350/000.2,DUP_SPLIT,REVIEW,Commission-lead expense - relates to the open gross-vs-net treatment question,33294498.5
+ZARIB,2026-07,3350/000,MV-Depreciation,3350/000,EXISTING_SEED,,,39348.61
+ZARIB,2026-07,3380/000,Prem-Cleaning,3380/000,DUP_SPLIT,,The other half of the 3380/000 reuse; account_map keys Premises on the bare code,1728460.0
+ZARIB,2026-07,3390/000,Prem-Electricity,I25072,ALIAS_BY_DESCRIPTION,,Pack codes this account 3390/000; prior seed and account_map key it I25072,2218575.42
+ZARIB,2026-07,3450/000,Prem-Security,I25073,ALIAS_BY_DESCRIPTION,,Pack codes this account 3450/000; prior seed and account_map key it I25073,530082.65
+ZARIB,2026-07,3490/000,Prem-Rates,3490/000.2,DUP_SPLIT,REVIEW,,2462556.2
+ZARIB,2026-07,4050/000,Prem-General,4050/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1456839.12
+ZARIB,2026-07,3520/000,Prem-Rental(EXTERNAL),3520/000,ALPHA_FIRST,REVIEW,,928791.62
+ZARIB,2026-07,3530/000,Prem-Parking(EXTERNAL),I25080,ALIAS_BY_DESCRIPTION,,Pack codes this account 3530/000; prior seed and account_map key it I25080,2284049.52
+ZARIB,2026-07,,Prem-Rental(INTERNAL),3890/080,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,12508617.53
+ZARIB,2026-07,3540/000,Printing-General,3540/000.2,DUP_SPLIT,REVIEW,,1585921.73
+ZARIB,2026-07,3540/000,Comp-Depreciation,3540/000,ALPHA_FIRST,REVIEW,,2783039.95
+ZARIB,2026-07,3570/000,Stationery-General,3570/000.2,DUP_SPLIT,REVIEW,,475018.1
+ZARIB,2026-07,3570/000,S/ware Depreciation,3570/000,ALPHA_FIRST,REVIEW,,2962378.51
+ZARIB,2026-07,3610/000,Prof.Fees-Audit Fees,3610/000,ALPHA_FIRST,REVIEW,,1731208.12
+ZARIB,2026-07,3650/000,Prof.Fees-Other,I25145,ALIAS_BY_DESCRIPTION,,Pack codes this account 3650/000; prior seed and account_map key it I25145,8986896.51
+ZARIB,2026-07,,Trav. Air Fares,I25181,BLANK_CODE_PINNED,,Blank A/C No from February; same account as 3380/000 Trav. Air Fares,1841128.0
+ZARIB,2026-07,3690/000,Trav. Accom.,I25182,ALIAS_BY_DESCRIPTION,,Pack codes this account 3690/000; prior seed and account_map key it I25182,6697416.23
+ZARIB,2026-07,3720/000,Bus.Advert-General,I25203,ALIAS_BY_DESCRIPTION,,Pack codes this account 3720/000; prior seed and account_map key it I25203,3181031.61
+ZARIB,2026-07,3760/000,Sponsorships-General,I25205,ALIAS_BY_DESCRIPTION,,Pack codes this account 3760/000; prior seed and account_map key it I25205,1535822.0
+ZARIB,2026-07,3790/000,Telephone-Variable,I25232,ALIAS_BY_DESCRIPTION,,Pack codes this account 3790/000; prior seed and account_map key it I25232,4040392.44
+ZARIB,2026-07,3800/000,Courier Services Cost,I25236,ALIAS_BY_DESCRIPTION,,Pack codes this account 3800/000; prior seed and account_map key it I25236,262972.46
+ZARIB,2026-07,3810/000,Entertainment-(IN TOWN),I25291,ALIAS_BY_DESCRIPTION,,Pack codes this account 3810/000; prior seed and account_map key it I25291,8170676.48
+ZARIB,2026-07,3820/000,Fin Charges Paid,I25327,ALIAS_BY_DESCRIPTION,,Pack codes this account 3820/000; prior seed and account_map key it I25327,2221610.98
+ZARIB,2026-07,3870/000,Subscriptions General,3870/000.2,DUP_SPLIT,REVIEW,,3281018.42
+ZARIB,2026-07,3880/000,Bank Charges,I25360,ALIAS_BY_DESCRIPTION,,Pack codes this account 3880/000; prior seed and account_map key it I25360,1450996.4
+ZARIB,2026-07,3930/000,Books & Periodicals,I25361,ALIAS_BY_DESCRIPTION,,Pack codes this account 3930/000; prior seed and account_map key it I25361,527888.32
+ZARIB,2026-07,3950/000,CLIENT GIFTS AND REWARDS,I25363,ALIAS_BY_DESCRIPTION,,Pack codes this account 3950/000; prior seed and account_map key it I25363,3466583.91
+ZARIB,2026-07,3980/000,Donations-Charitable,I25365,ALIAS_BY_DESCRIPTION,,Pack codes this account 3980/000; prior seed and account_map key it I25365,0.0
+ZARIB,2026-07,3990/000,Summary:Gen Exp Other,3990/000.2,DUP_SPLIT,REVIEW,,4156880.74
+ZARIB,2026-07,3990/000,Furn-Depreciation,3990/000,ALPHA_FIRST,REVIEW,,898771.3
+ZARIB,2026-07,4000/000,VALUE ADDS,4000/000,EXISTING_SEED,,,7129488.97
+ZARIB,2026-07,4000/000,Leasehold-Depreciation,4000/000D,EXISTING_SEED,,Split agreed 18 July 2026; keeps the established 4000/000D code,4391544.08
+ZARIB,2026-07,4040/000,Insurance-P.I.,4040/000.2,DUP_SPLIT,REVIEW,,0.0
+ZARIB,2026-07,4040/000,Equip-Depreciation,4040/000,ALPHA_FIRST,REVIEW,,3623484.64
+ZARIB,2026-07,4080/000,PC Supplies,I25422,ALIAS_BY_DESCRIPTION,,Pack codes this account 4080/000; prior seed and account_map key it I25422,526534.0
+ZARIB,2026-07,4120/000,MV - Leasing Costs (non personnel),I25455,ALIAS_BY_DESCRIPTION,,Pack codes this account 4120/000; prior seed and account_map key it I25455,5975170.42
+ZARIB,2026-07,4190/000,MV - Fuel Costs (non personnel),I25456,ALIAS_BY_DESCRIPTION,,Pack codes this account 4190/000; prior seed and account_map key it I25456,580493.78
+ZARIB,2026-07,3610/000,Software Licence Fees,3610/000.2,DUP_SPLIT,REVIEW,,21998822.49
+ZARIB,2026-07,3340/000,MV-Leasing Costs,3340/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZARIB,2026-07,3360/000,MV-Fuel Costs,3360/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZARIB,2026-07,3490/000,Entertainment-(OUT OF TOWN),3490/000,EXISTING_SEED,,,1379313.71
+ZARIB,2026-07,3520/000,Toner,3520/000.2,DUP_SPLIT,REVIEW,,214890.0
+ZARIB,2026-07,4190/001,Commissions - Lead,I25032,ALIAS_BY_DESCRIPTION,,Pack codes this account 4190/001; prior seed and account_map key it I25032,0.0
+ZARIB,2026-07,4320/000,STAFF WELFARE,4320/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZARIB,2026-07,3870/000,Software Maintenance,3870/000,ALPHA_FIRST,REVIEW,,0.0
+ZARIB,2026-07,4020/000,Equip maintenance,4020/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,79337.74
+ZARIB,2026-07,,Prem-General,4050/000,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,0.0
+ZARIB,2026-07,4070/000,ENTERTAINMENT LUNCH,4070/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZARIB,2026-07,4090/000,Christmas Party,4090/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZARIB,2026-07,4110/000,Conference Attended by Us,I25193,ALIAS_BY_DESCRIPTION,,Pack codes this account 4110/000; prior seed and account_map key it I25193,601409.0
+ZARIB,2026-07,,Corporate Gifts And Donations,ZARIB-CORPORATEGIFTSANDD,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,500000.0
+ZARIB,2026-07,,Insurance- Other,ZARIB-INSURANCEOTHER,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,10962744.44
+ZARIB,2026-07,,Software Implemantation,I25427,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,2723111.92
+ZARIB,2026-07,4650/200,Tax Expense,4650/200,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,194216244.0
 ZAMRE,2026-01,7600/080,Ord.Share Capital,B10120,ALIAS_BY_DESCRIPTION,,Pack codes this account 7600/080; prior seed and account_map key it B10120,-5000000.0
 ZAMRE,2026-01,7640/000,Distr.Reser-Retained Inc,B15110,ALIAS_BY_DESCRIPTION,,Pack codes this account 7640/000; prior seed and account_map key it B15110,-7463663.71
 ZAMRE,2026-01,0068/000,KCB CLIENT(KES),B60120,ALIAS_BY_DESCRIPTION,,Pack codes this account 0068/000; prior seed and account_map key it B60120,32624461.7
@@ -2313,8 +2675,65 @@ ZAMRE,2026-06,4260/080,MV - Leasing Costs (non personnel),I25455,ALIAS_BY_DESCRI
 ZAMRE,2026-06,4360/080,Summary:Gen Exp Other,I25367,ALIAS_BY_DESCRIPTION,,Pack codes this account 4360/080; prior seed and account_map key it I25367,86041.2
 ZAMRE,2026-06,4530/080,Fin Charges Paid,I25327,ALIAS_BY_DESCRIPTION,,Pack codes this account 4530/080; prior seed and account_map key it I25327,7980.6
 ZAMRE,2026-06,4650/200,Tax Expense,4650/200,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,8163555.71
+ZAMRE,2026-07,7600/080,Ord.Share Capital,B10120,ALIAS_BY_DESCRIPTION,,Pack codes this account 7600/080; prior seed and account_map key it B10120,-5000000.0
+ZAMRE,2026-07,7640/000,Distr.Reser-Retained Inc,B15110,ALIAS_BY_DESCRIPTION,,Pack codes this account 7640/000; prior seed and account_map key it B15110,-4833892.0
+ZAMRE,2026-07,6210/000,Computer Software,B35320,ALIAS_BY_DESCRIPTION,,Pack codes this account 6210/000; prior seed and account_map key it B35320,6878000.0
+ZAMRE,2026-07,0068/000,KCB CLIENT(KES),B60120,ALIAS_BY_DESCRIPTION,,Pack codes this account 0068/000; prior seed and account_map key it B60120,19623019.3
+ZAMRE,2026-07,0068/001,KCB CLIENT(USD),B60130,ALIAS_BY_DESCRIPTION,,Pack codes this account 0068/001; prior seed and account_map key it B60130,11254735.81
+ZAMRE,2026-07,0068/002,KCB OFFICE(KES),B60110,ALIAS_BY_DESCRIPTION,,Pack codes this account 0068/002; prior seed and account_map key it B60110,2248407.9
+ZAMRE,2026-07,0068/003,KCB OFFICE(USD),B60131,ALIAS_BY_DESCRIPTION,,Pack codes this account 0068/003; prior seed and account_map key it B60131,353691.61
+ZAMRE,2026-07,0068/004,KCB -FIXED DEPOSIT,0068/004,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZAMRE,2026-07,7380/080,Premiums payable,B70290,ALIAS_BY_DESCRIPTION,,Pack codes this account 7380/080; prior seed and account_map key it B70290,-231163874.67
+ZAMRE,2026-07,6352/080,Due from/to ZARIB- Transactional,B55575,ALIAS_BY_DESCRIPTION,,Pack codes this account 6352/080; prior seed and account_map key it B55575,-73509436.66
+ZAMRE,2026-07,6680/000,Interest Receivable,B55340,ALIAS_BY_DESCRIPTION,,Pack codes this account 6680/000; prior seed and account_map key it B55340,204862.87
+ZAMRE,2026-07,7381/080,Premiums Receivable(GP),B55580,ALIAS_BY_DESCRIPTION,,Pack codes this account 7381/080; prior seed and account_map key it B55580,208097220.89
+ZAMRE,2026-07,6730/080,Drs-Income Control,B55480,ALIAS_BY_DESCRIPTION,,Pack codes this account 6730/080; prior seed and account_map key it B55480,0.0
+ZAMRE,2026-07,7550/000,Tax Provision-Other,B75120,ALIAS_BY_DESCRIPTION,,Pack codes this account 7550/000; prior seed and account_map key it B75120,-9840041.81
+ZAMRE,2026-07,B55510,Drs - Control Commission,B55110,ALIAS_BY_DESCRIPTION,,Pack codes this account B55510; prior seed and account_map key it B55110,49277856.0
+ZAMRE,2026-07,B65150,Call Deposit Account,B65150,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,52218000.0
+ZAMRE,2026-07,I10003,Reinsurance  Commission - All,I10003,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-60422580.0
+ZAMRE,2026-07,1020/080,Commission,1020/080,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZAMRE,2026-07,1040/080,Interest Income,I10121,ALIAS_BY_DESCRIPTION,,Pack codes this account 1040/080; prior seed and account_map key it I10121,-991321.0
+ZAMRE,2026-07,3000/080,Emol.Pack-Salaries,I25001,ALIAS_BY_DESCRIPTION,,Pack codes this account 3000/080; prior seed and account_map key it I25001,0.0
+ZAMRE,2026-07,3010/080,Emol.Pack-Other,I25002,ALIAS_BY_DESCRIPTION,,Pack codes this account 3010/080; prior seed and account_map key it I25002,0.0
+ZAMRE,2026-07,3020/080,Emol.Pack-Med.Contribut.,I25003,ALIAS_BY_DESCRIPTION,,Pack codes this account 3020/080; prior seed and account_map key it I25003,0.0
+ZAMRE,2026-07,3030/080,Emol.Pack-Pens.Contribut.,I25004,ALIAS_BY_DESCRIPTION,,Pack codes this account 3030/080; prior seed and account_map key it I25004,0.0
+ZAMRE,2026-07,3080/080,Co.Contrib-Life Assurance,I25009,ALIAS_BY_DESCRIPTION,,Pack codes this account 3080/080; prior seed and account_map key it I25009,0.0
+ZAMRE,2026-07,3240/020,Welfare-General,I25024,ALIAS_BY_DESCRIPTION,,Pack codes this account 3240/020; prior seed and account_map key it I25024,0.0
+ZAMRE,2026-07,3260/080,Training EXTERNAL,I25026,ALIAS_BY_DESCRIPTION,,Pack codes this account 3260/080; prior seed and account_map key it I25026,140017.47
+ZAMRE,2026-07,,Training INTERNAL,ZAMRE-TRAININGINT,BLANK_CODE_PINNED,REVIEW,Blank A/C No in source,2227.2
+ZAMRE,2026-07,3290/080,Other Staff Cost,I25029,ALIAS_BY_DESCRIPTION,,Pack codes this account 3290/080; prior seed and account_map key it I25029,18376865.0
+ZAMRE,2026-07,'3380/080,Trav. Air Fares,I25181,ALIAS_BY_DESCRIPTION,,Pack codes this account '3380/080; prior seed and account_map key it I25181,1555748.0
+ZAMRE,2026-07,3390/080,Trav. Accom.,I25182,ALIAS_BY_DESCRIPTION,,Pack codes this account 3390/080; prior seed and account_map key it I25182,374376.5
+ZAMRE,2026-07,I25298,Conference Attended by Us,I25193,ALIAS_BY_DESCRIPTION,,Pack codes this account I25298; prior seed and account_map key it I25193,206258.0
+ZAMRE,2026-07,3450/080,Entertainment-(IN TOWN),I25291,ALIAS_BY_DESCRIPTION,,Pack codes this account 3450/080; prior seed and account_map key it I25291,967980.2
+ZAMRE,2026-07,3490/000,Entertainment-(OUT OF TOWN),I25293,ALIAS_BY_DESCRIPTION,,Pack codes this account 3490/000; prior seed and account_map key it I25293,71336.8
+ZAMRE,2026-07,3610/080,Software Licence Fees,I25429,ALIAS_BY_DESCRIPTION,,Pack codes this account 3610/080; prior seed and account_map key it I25429,641466.98
+ZAMRE,2026-07,3650/080,Telephone-Variable,I25232,ALIAS_BY_DESCRIPTION,,Pack codes this account 3650/080; prior seed and account_map key it I25232,44675.38
+ZAMRE,2026-07,3690/080,Courier Services Cost,I25236,ALIAS_BY_DESCRIPTION,,Pack codes this account 3690/080; prior seed and account_map key it I25236,2647.24
+ZAMRE,2026-07,3720/080,Printing-General,I25111,ALIAS_BY_DESCRIPTION,,Pack codes this account 3720/080; prior seed and account_map key it I25111,35205.77
+ZAMRE,2026-07,3760/080,Stationery-General,I25114,ALIAS_BY_DESCRIPTION,,Pack codes this account 3760/080; prior seed and account_map key it I25114,5305.19
+ZAMRE,2026-07,3790/080,Prem-Cleaning,I25071,ALIAS_BY_DESCRIPTION,,Pack codes this account 3790/080; prior seed and account_map key it I25071,55440.0
+ZAMRE,2026-07,3800/080,Prem-Electricity,I25072,ALIAS_BY_DESCRIPTION,,Pack codes this account 3800/080; prior seed and account_map key it I25072,51438.66
+ZAMRE,2026-07,3810/080,Prem-Security,I25073,ALIAS_BY_DESCRIPTION,,Pack codes this account 3810/080; prior seed and account_map key it I25073,14910.13
+ZAMRE,2026-07,3820/080,Prem-Rates,I25074,ALIAS_BY_DESCRIPTION,,Pack codes this account 3820/080; prior seed and account_map key it I25074,0.0
+ZAMRE,2026-07,3880/080,Prem-Parking(EXTERNAL),I25080,ALIAS_BY_DESCRIPTION,,Pack codes this account 3880/080; prior seed and account_map key it I25080,0.0
+ZAMRE,2026-07,3890/080,Prem-Rental(INTERNAL),I25082,ALIAS_BY_DESCRIPTION,,Pack codes this account 3890/080; prior seed and account_map key it I25082,0.0
+ZAMRE,2026-07,3930/080,Bus.Advert-General,I25203,ALIAS_BY_DESCRIPTION,,Pack codes this account 3930/080; prior seed and account_map key it I25203,503201.46
+ZAMRE,2026-07,3950/080,Sponsorship-General,I25205,ALIAS_BY_DESCRIPTION,,Pack codes this account 3950/080; prior seed and account_map key it I25205,6856.0
+ZAMRE,2026-07,3980/080,Insurance- Other,I25403,ALIAS_BY_DESCRIPTION,,Pack codes this account 3980/080; prior seed and account_map key it I25403,86192.55
+ZAMRE,2026-07,4080/080,Prof.Fees-Audit fees,I25141,ALIAS_BY_DESCRIPTION,,Pack codes this account 4080/080; prior seed and account_map key it I25141,394190.0
+ZAMRE,2026-07,4120/080,Prof.Fees-Other,I25145,ALIAS_BY_DESCRIPTION,,Pack codes this account 4120/080; prior seed and account_map key it I25145,107392.8
+ZAMRE,2026-07,4190/080,Commissions - Lead Others,I25032,ALIAS_BY_DESCRIPTION,,Pack codes this account 4190/080; prior seed and account_map key it I25032,0.0
+ZAMRE,2026-07,4230/080,Subscriptions General,I25358,ALIAS_BY_DESCRIPTION,,Pack codes this account 4230/080; prior seed and account_map key it I25358,64346.5
+ZAMRE,2026-07,4260/080,MV - Leasing Costs (non personnel),I25455,ALIAS_BY_DESCRIPTION,,Pack codes this account 4260/080; prior seed and account_map key it I25455,635297.78
+ZAMRE,2026-07,4300/080,Bank Charges,I25360,ALIAS_BY_DESCRIPTION,,Pack codes this account 4300/080; prior seed and account_map key it I25360,0.0
+ZAMRE,2026-07,4310/080,Books & Periodicals,I25361,ALIAS_BY_DESCRIPTION,,Pack codes this account 4310/080; prior seed and account_map key it I25361,4663.68
+ZAMRE,2026-07,4360/080,Summary:Gen Exp Other,I25367,ALIAS_BY_DESCRIPTION,,Pack codes this account 4360/080; prior seed and account_map key it I25367,193786.61
+ZAMRE,2026-07,4530/080,Fin Charges Paid,I25327,ALIAS_BY_DESCRIPTION,,Pack codes this account 4530/080; prior seed and account_map key it I25327,2719.06
+ZAMRE,2026-07,4650/200,Tax Expense,4650/200,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,11060806.81
 ZHL,2026-01,1250/000,Interest Income,I10121,ALIAS_BY_DESCRIPTION,,Pack codes this account 1250/000; prior seed and account_map key it I10121,-28091.0
-ZHL,2026-01,4080/000,Prof.Fees,I25182,ALIAS_BY_DESCRIPTION,,Pack codes this account 4080/000; prior seed and account_map key it I25182,154166.67
+ZHL,2026-01,4080/000,Prof.Fees,I25182,CODEBOOK_DUP,REVIEW,4080/000 reused by the client; prior seed keyed this account as I25182,154166.67
 ZHL,2026-01,4300/000,Bank Charges,I25360,EXISTING_SEED,,Prior seed collapsed Bank Charges and General expense under I25360,720.0
 ZHL,2026-01,6285/000,Investment in ZAAC Kenya,B55111,ALIAS_BY_DESCRIPTION,,Pack codes this account 6285/000; prior seed and account_map key it B55111,658920570.0
 ZHL,2026-01,6290/000,Investment in ZAAC Nigeria,B55113,ALIAS_BY_DESCRIPTION,,Pack codes this account 6290/000; prior seed and account_map key it B55113,66350142.31
@@ -2346,7 +2765,7 @@ ZHL,2026-01,7490/000,Share Capital,B10120,ALIAS_BY_DESCRIPTION,,Pack codes this 
 ZHL,2026-01,7500/000,Due to ZAAC Shareholders,B70111,ALIAS_BY_DESCRIPTION,,Pack codes this account 7500/000; prior seed and account_map key it B70111,-647839209.0
 ZHL,2026-01,7640/000,Distr.Reser-Retained Inc,B15110,ALIAS_BY_DESCRIPTION,,Pack codes this account 7640/000; prior seed and account_map key it B15110,-30127713.66
 ZHL,2026-02,1250/000,Interest Income,I10121,ALIAS_BY_DESCRIPTION,,Pack codes this account 1250/000; prior seed and account_map key it I10121,-53463.6
-ZHL,2026-02,4080/000,Prof.Fees,I25182,ALIAS_BY_DESCRIPTION,,Pack codes this account 4080/000; prior seed and account_map key it I25182,308333.34
+ZHL,2026-02,4080/000,Prof.Fees,I25182,CODEBOOK_DUP,REVIEW,4080/000 reused by the client; prior seed keyed this account as I25182,308333.34
 ZHL,2026-02,4300/000,Bank Charges,I25360,EXISTING_SEED,,Prior seed collapsed Bank Charges and General expense under I25360,1440.0
 ZHL,2026-02,6285/000,Investment in ZAAC Kenya,B55111,ALIAS_BY_DESCRIPTION,,Pack codes this account 6285/000; prior seed and account_map key it B55111,658920570.0
 ZHL,2026-02,6290/000,Investment in ZAAC Nigeria,B55113,ALIAS_BY_DESCRIPTION,,Pack codes this account 6290/000; prior seed and account_map key it B55113,66350142.31
@@ -2378,7 +2797,7 @@ ZHL,2026-02,7490/000,Share Capital,B10120,ALIAS_BY_DESCRIPTION,,Pack codes this 
 ZHL,2026-02,7500/000,Due to ZAAC Shareholders,B70111,ALIAS_BY_DESCRIPTION,,Pack codes this account 7500/000; prior seed and account_map key it B70111,-647839209.0
 ZHL,2026-02,7640/000,Distr.Reser-Retained Inc,B15110,ALIAS_BY_DESCRIPTION,,Pack codes this account 7640/000; prior seed and account_map key it B15110,-30127713.66
 ZHL,2026-03,1250/000,Interest Income,I10121,ALIAS_BY_DESCRIPTION,,Pack codes this account 1250/000; prior seed and account_map key it I10121,-53463.6
-ZHL,2026-03,4080/000,Prof.Fees,I25182,ALIAS_BY_DESCRIPTION,,Pack codes this account 4080/000; prior seed and account_map key it I25182,16114463.48
+ZHL,2026-03,4080/000,Prof.Fees,I25182,CODEBOOK_DUP,REVIEW,4080/000 reused by the client; prior seed keyed this account as I25182,16114463.48
 ZHL,2026-03,4300/000,General expense,I25360.2,DUP_SPLIT,REVIEW,Separated from Bank Charges; needs its own account_map row,6820.0
 ZHL,2026-03,4600/000,Summary:Gen Exp Other,I25367,ALIAS_BY_DESCRIPTION,,Pack codes this account 4600/000; prior seed and account_map key it I25367,179483.85
 ZHL,2026-03,6285/000,Investment in ZAAC Kenya,B55111,ALIAS_BY_DESCRIPTION,,Pack codes this account 6285/000; prior seed and account_map key it B55111,658920570.0
@@ -2411,7 +2830,7 @@ ZHL,2026-03,7490/000,Share Capital,B10120,ALIAS_BY_DESCRIPTION,,Pack codes this 
 ZHL,2026-03,7500/000,Due to ZAAC Shareholders,B70111,ALIAS_BY_DESCRIPTION,,Pack codes this account 7500/000; prior seed and account_map key it B70111,-647839209.0
 ZHL,2026-03,7640/000,Distr.Reser-Retained Inc,B15110,ALIAS_BY_DESCRIPTION,,Pack codes this account 7640/000; prior seed and account_map key it B15110,-30127713.66
 ZHL,2026-04,1250/000,Interest Income,I10121,ALIAS_BY_DESCRIPTION,,Pack codes this account 1250/000; prior seed and account_map key it I10121,-108739.63
-ZHL,2026-04,4080/000,Prof.Fees,I25182,ALIAS_BY_DESCRIPTION,,Pack codes this account 4080/000; prior seed and account_map key it I25182,19664217.47
+ZHL,2026-04,4080/000,Prof.Fees,I25182,CODEBOOK_DUP,REVIEW,4080/000 reused by the client; prior seed keyed this account as I25182,19664217.47
 ZHL,2026-04,4300/000,General expense,I25360.2,DUP_SPLIT,REVIEW,Separated from Bank Charges; needs its own account_map row,8086.25
 ZHL,2026-04,4500/000,Entertainment-(IN TOWN),I25291,ALIAS_BY_DESCRIPTION,,Pack codes this account 4500/000; prior seed and account_map key it I25291,11699.99
 ZHL,2026-04,4600/000,Summary:Gen Exp Other,I25367,ALIAS_BY_DESCRIPTION,,Pack codes this account 4600/000; prior seed and account_map key it I25367,179483.85
@@ -2445,7 +2864,7 @@ ZHL,2026-04,7490/000,Share Capital,B10120,ALIAS_BY_DESCRIPTION,,Pack codes this 
 ZHL,2026-04,7500/000,Due to ZAAC Shareholders,B70111,ALIAS_BY_DESCRIPTION,,Pack codes this account 7500/000; prior seed and account_map key it B70111,-647839209.0
 ZHL,2026-04,7640/000,Distr.Reser-Retained Inc,B15110,ALIAS_BY_DESCRIPTION,,Pack codes this account 7640/000; prior seed and account_map key it B15110,-30127713.66
 ZHL,2026-05,1250/000,Interest Income,I10121,ALIAS_BY_DESCRIPTION,,Pack codes this account 1250/000; prior seed and account_map key it I10121,-136830.73
-ZHL,2026-05,4080/000,Prof.Fees,I25182,ALIAS_BY_DESCRIPTION,,Pack codes this account 4080/000; prior seed and account_map key it I25182,20550412.1
+ZHL,2026-05,4080/000,Prof.Fees,I25182,CODEBOOK_DUP,REVIEW,4080/000 reused by the client; prior seed keyed this account as I25182,20550412.1
 ZHL,2026-05,4300/000,General expense,I25360.2,DUP_SPLIT,REVIEW,Separated from Bank Charges; needs its own account_map row,188635.1
 ZHL,2026-05,4500/000,Entertainment-(IN TOWN),I25291,ALIAS_BY_DESCRIPTION,,Pack codes this account 4500/000; prior seed and account_map key it I25291,11699.99
 ZHL,2026-05,6285/000,Investment in ZAAC Kenya,B55111,ALIAS_BY_DESCRIPTION,,Pack codes this account 6285/000; prior seed and account_map key it B55111,658920570.0
@@ -2478,7 +2897,7 @@ ZHL,2026-05,7490/000,Share Capital,B10120,ALIAS_BY_DESCRIPTION,,Pack codes this 
 ZHL,2026-05,7500/000,Due to ZAAC Shareholders,B70111,ALIAS_BY_DESCRIPTION,,Pack codes this account 7500/000; prior seed and account_map key it B70111,-647839209.0
 ZHL,2026-05,7640/000,Distr.Reser-Retained Inc,B15110,ALIAS_BY_DESCRIPTION,,Pack codes this account 7640/000; prior seed and account_map key it B15110,-30127713.66
 ZHL,2026-06,1250/000,Interest Income,I10121,ALIAS_BY_DESCRIPTION,,Pack codes this account 1250/000; prior seed and account_map key it I10121,-164015.66
-ZHL,2026-06,4080/000,Prof.Fees,I25182,ALIAS_BY_DESCRIPTION,,Pack codes this account 4080/000; prior seed and account_map key it I25182,21059142.32
+ZHL,2026-06,4080/000,Prof.Fees,I25182,CODEBOOK_DUP,REVIEW,4080/000 reused by the client; prior seed keyed this account as I25182,21059142.32
 ZHL,2026-06,4300/000,General expense,I25360.2,DUP_SPLIT,REVIEW,Separated from Bank Charges; needs its own account_map row,189355.1
 ZHL,2026-06,4500/000,Entertainment-(IN TOWN),I25291,ALIAS_BY_DESCRIPTION,,Pack codes this account 4500/000; prior seed and account_map key it I25291,11699.99
 ZHL,2026-06,6285/000,Investment in ZAAC Kenya,B55111,ALIAS_BY_DESCRIPTION,,Pack codes this account 6285/000; prior seed and account_map key it B55111,658920570.0
@@ -2510,6 +2929,40 @@ ZHL,2026-06,7450/000,VAT Control Account,B80170,ALIAS_BY_DESCRIPTION,,Pack codes
 ZHL,2026-06,7490/000,Share Capital,B10120,ALIAS_BY_DESCRIPTION,,Pack codes this account 7490/000; prior seed and account_map key it B10120,-10000000.0
 ZHL,2026-06,7500/000,Due to ZAAC Shareholders,B70111,ALIAS_BY_DESCRIPTION,,Pack codes this account 7500/000; prior seed and account_map key it B70111,-647839209.0
 ZHL,2026-06,7640/000,Distr.Reser-Retained Inc,B15110,ALIAS_BY_DESCRIPTION,,Pack codes this account 7640/000; prior seed and account_map key it B15110,-30127713.66
+ZHL,2026-07,1250/000,Interest Income,I10121,ALIAS_BY_DESCRIPTION,,Pack codes this account 1250/000; prior seed and account_map key it I10121,-192106.76
+ZHL,2026-07,4080/000,Prof.Fees - Other,4080/000.2,DUP_SUFFIX,REVIEW,4080/000 carries more than one description in the packs and no rule exists,32633694.3
+ZHL,2026-07,4080/001,Prof.Fees-Audit Fees,4080/001,SOURCE_CODE_NEW,REVIEW,Code not present in the prior seed; needs an account_map row,1079166.69
+ZHL,2026-07,4300/000,General expense,I25360.2,DUP_SPLIT,REVIEW,Separated from Bank Charges; needs its own account_map row,201592.64
+ZHL,2026-07,4500/000,Entertainment-(IN TOWN),I25291,ALIAS_BY_DESCRIPTION,,Pack codes this account 4500/000; prior seed and account_map key it I25291,11699.99
+ZHL,2026-07,6285/000,Investment in ZAAC Kenya,B55111,ALIAS_BY_DESCRIPTION,,Pack codes this account 6285/000; prior seed and account_map key it B55111,658920570.0
+ZHL,2026-07,6290/000,Investment in ZAAC Nigeria,B55113,ALIAS_BY_DESCRIPTION,,Pack codes this account 6290/000; prior seed and account_map key it B55113,66350142.31
+ZHL,2026-07,6330/000,INVESTMENT IN DRC,B55114,ALIAS_BY_DESCRIPTION,,Pack codes this account 6330/000; prior seed and account_map key it B55114,80407117.66
+ZHL,2026-07,6341/000,INVESTMENT IN MENA,B55115,ALIAS_BY_DESCRIPTION,,Pack codes this account 6341/000; prior seed and account_map key it B55115,45569980.36
+ZHL,2026-07,6352/000,Due from/to AFRIB Transactional,B65130,ALIAS_BY_DESCRIPTION,,Pack codes this account 6352/000; prior seed and account_map key it B65130,-107586853.46
+ZHL,2026-07,6354/000,Fixed Deposit Account,B65150,ALIAS_BY_DESCRIPTION,,Pack codes this account 6354/000; prior seed and account_map key it B65150,4500000.0
+ZHL,2026-07,6366/000,Investment in ZARIB Kenya,B55112,ALIAS_BY_DESCRIPTION,,Pack codes this account 6366/000; prior seed and account_map key it B55112,311079606.0
+ZHL,2026-07,6368/000,Withholding IncomeTax,B65290,ALIAS_BY_DESCRIPTION,,Pack codes this account 6368/000; prior seed and account_map key it B65290,260628.94
+ZHL,2026-07,6368/001,Tax liability,B75100,ALIAS_BY_DESCRIPTION,,Pack codes this account 6368/001; prior seed and account_map key it B75100,178175.0
+ZHL,2026-07,B70340,CRS-Trade (Operating),B70340,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZHL,2026-07,6450/000,DUE TO/FRO ZAMARA MENA,B55117,ALIAS_BY_DESCRIPTION,,Pack codes this account 6450/000; prior seed and account_map key it B55117,1985714.83
+ZHL,2026-07,6460/000,Investment in Malawi,B55210,ALIAS_BY_DESCRIPTION,,Pack codes this account 6460/000; prior seed and account_map key it B55210,109514478.0
+ZHL,2026-07,B40110,Investment in subsidiary - RWANDA,B40110,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,12460227.25
+ZHL,2026-07,6590/000,Interest Receivable,B55340,ALIAS_BY_DESCRIPTION,,Pack codes this account 6590/000; prior seed and account_map key it B55340,489328.68
+ZHL,2026-07,6730/000,Drs-Income Control,B55480,ALIAS_BY_DESCRIPTION,,Pack codes this account 6730/000; prior seed and account_map key it B55480,1.0
+ZHL,2026-07,6780/000,Investment in associate-Uganda,B55118,ALIAS_BY_DESCRIPTION,,Pack codes this account 6780/000; prior seed and account_map key it B55118,15969831.66
+ZHL,2026-07,6800/000,Due from/(to) ESOP,B55540,ALIAS_BY_DESCRIPTION,,Pack codes this account 6800/000; prior seed and account_map key it B55540,-4153444.82
+ZHL,2026-07,6824/000,Equity Bank,B60090,ALIAS_BY_DESCRIPTION,,Pack codes this account 6824/000; prior seed and account_map key it B60090,1500.58
+ZHL,2026-07,6828/000,KCB BANK,B60110,ALIAS_BY_DESCRIPTION,,Pack codes this account 6828/000; prior seed and account_map key it B60110,45290.61
+ZHL,2026-07,4016,Bank account NCBA,B60180,ALIAS_BY_DESCRIPTION,,Pack codes this account 4016; prior seed and account_map key it B60180,98830577.81
+ZHL,2026-07,7240/000,DUE TO /From DRC,B70160,ALIAS_BY_DESCRIPTION,,Pack codes this account 7240/000; prior seed and account_map key it B70160,1784040.02
+ZHL,2026-07,7260/000,Due to/from ZAAC,B55570,ALIAS_BY_DESCRIPTION,,Pack codes this account 7260/000; prior seed and account_map key it B55570,-280711608.2
+ZHL,2026-07,7310/000,Due to ZARIB Shareholders,B70112,ALIAS_BY_DESCRIPTION,,Pack codes this account 7310/000; prior seed and account_map key it B70112,-327810347.0
+ZHL,2026-07,7340/000,Due to ZAMARA NIGERIA Shareholders,B70113,ALIAS_BY_DESCRIPTION,,Pack codes this account 7340/000; prior seed and account_map key it B70113,-33333333.0
+ZHL,2026-07,7370/000,Prov-Sundries,B70280,ALIAS_BY_DESCRIPTION,,Pack codes this account 7370/000; prior seed and account_map key it B70280,-756799.63
+ZHL,2026-07,7450/000,VAT Control Account,B80170,ALIAS_BY_DESCRIPTION,,Pack codes this account 7450/000; prior seed and account_map key it B80170,238051.2
+ZHL,2026-07,7490/000,Share Capital,B10120,ALIAS_BY_DESCRIPTION,,Pack codes this account 7490/000; prior seed and account_map key it B10120,-10000000.0
+ZHL,2026-07,7500/000,Due to ZAAC Shareholders,B70111,ALIAS_BY_DESCRIPTION,,Pack codes this account 7500/000; prior seed and account_map key it B70111,-647839209.0
+ZHL,2026-07,7640/000,Distr.Reser-Retained Inc,B15110,ALIAS_BY_DESCRIPTION,,Pack codes this account 7640/000; prior seed and account_map key it B15110,-30127713.66
 C&P,2026-01,B10120,Ord.Share Capital,B10120,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-25000000.0
 C&P,2026-01,B15110,Distr.Reser-Retained Inc,B15110,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-141222085.71
 C&P,2026-01,B35420,Deferred Tax,B35420,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,4287361.0
@@ -2690,6 +3143,45 @@ C&P,2026-06,I25360,Bank Charges,I25360,EXISTING_SEED,,Keeps the bare code - alre
 C&P,2026-06,I25358,Subscriptions General,I25358,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,51000.0
 C&P,2026-06,,Management Fees,CP-MGMTFEES,BLANK_CODE_PINNED,REVIEW,Blank A/C No in source,3384922.02
 C&P,2026-06,,Tax expense,CP-TAXEXPENSE,BLANK_CODE_PINNED,REVIEW,Blank A/C No in source,0.0
+C&P,2026-07,B10120,Ord.Share Capital,B10120,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-25000000.0
+C&P,2026-07,B15110,Distr.Reser-Retained Inc,B15110,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-133494468.71
+C&P,2026-07,B35420,Deferred Tax,B35420,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,4287361.0
+C&P,2026-07,B55430,Interest Receivable,B55430,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+C&P,2026-07,,Accrued Income,B55135,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,0.0
+C&P,2026-07,B55480,Drs-Income Control,B55480,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,41590663.45
+C&P,2026-07,B55530,Directors Drawings - Current year,B55530,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-1.0
+C&P,2026-07,B55550,Deposits-Sundry,B55550,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,7230000.0
+C&P,2026-07,B55570,Due to/from ZAAC,B55570,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,86989635.14
+C&P,2026-07,B60180,NCBA Office Bank Account,B60180,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,11246767.73
+C&P,2026-07,B60110,KENYA COMMERCIAL BANK,B60110,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,307649.2
+C&P,2026-07,B70190,Withholding tax 5 %,B70190,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-11105.25
+C&P,2026-07,B60210,SBM Bank Account-Office Account,B60210,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,839012.0
+C&P,2026-07,B65110,Other Receivables,B65110,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+C&P,2026-07,B65150,Fixed Deposit Account,B65150,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,15054303.0
+C&P,2026-07,B65180,Debtors Prepaid other,B65180,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,4137450.78
+C&P,2026-07,B65200,Provision for Bad Debts,B65200,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-13093776.0
+C&P,2026-07,B65240,VAT Receivable Debtor,B65240,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,3373004.0
+C&P,2026-07,B65290,Withholding IncomeTax,B65290,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,4771792.0
+C&P,2026-07,B70280,Prov-Sundries,B70280,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-184083.27
+C&P,2026-07,B70340,CRS-Trade (Operating),B70340,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-8075152.0
+C&P,2026-07,B75120,Tax Provision-Other,B75120,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,958162.0
+C&P,2026-07,B80120,Fees Suspense A/c,B80120,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,21218.42
+C&P,2026-07,B80170,VAT Control Account,B80170,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-6808507.21
+C&P,2026-07,I10067,AF Trust Fund,I10067,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-4152283.19
+C&P,2026-07,I10121,Interest Income,I10121,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-295856.7
+C&P,2026-07,I25029,Other Staff Costs,I25029,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+C&P,2026-07,I25079,Prem-Rental(EXTERNAL),I25079,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+C&P,2026-07,I25141,Prof.Fees-Audit Fees,I25141,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,189583.31
+C&P,2026-07,I25143,Prof.Fees-Legal Tax Deduct,I25143,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+C&P,2026-07,I25145,Prof.Fees-Other,I25145,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,969200.0
+C&P,2026-07,I25193,Conference Attended by Us,I25193,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,2626573.05
+C&P,2026-07,I25360,Summary:Gen Exp Other,I25360.2,DUP_SPLIT,REVIEW,Client reuses I25360 for two accounts; needs its own account_map row,10000.0
+C&P,2026-07,I25401,Insurance-P.I.,I25401,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,2494520.06
+C&P,2026-07,I25428,Software Maintenance,I25428,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+C&P,2026-07,I25360,Bank Charges,I25360,EXISTING_SEED,,Keeps the bare code - already mapped in account_map,18262.5
+C&P,2026-07,I25358,Subscriptions General,I25358,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,51000.0
+C&P,2026-07,,Management Fees,CP-MGMTFEES,BLANK_CODE_PINNED,REVIEW,Blank A/C No in source,3949075.69
+C&P,2026-07,,Tax expense,CP-TAXEXPENSE,BLANK_CODE_PINNED,REVIEW,Blank A/C No in source,0.0
 RWANDA,2026-01,1000,Brokerage Commission,1000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-44756870.0
 RWANDA,2026-01,1010,Interest income,I10021,ALIAS_BY_DESCRIPTION,,Pack codes this account 1010; prior seed and account_map key it I10021,-949588.0
 RWANDA,2026-01,1025,Actuarial Services Revenue,1025,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-4866102.0
@@ -2728,9 +3220,9 @@ RWANDA,2026-01,3025,System Software,3025,SOURCE_CODE_CONFIRMED,,Source code and 
 RWANDA,2026-01,3030,System software-Acc Depreciation,3030,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-22347588.15
 RWANDA,2026-01,4010,Petty Cash,4010,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,278.0
 RWANDA,2026-01,4015,Bank account- ZAAIB,B60440,ALIAS_BY_DESCRIPTION,,Pack codes this account 4015; prior seed and account_map key it B60440,83486062.5
-RWANDA,2026-01,4016,Deposits,B55360,ALIAS_BY_DESCRIPTION,,Pack codes this account 4016; prior seed and account_map key it B55360,12636442.0
+RWANDA,2026-01,4016,Deposits,B55360,CODEBOOK_DUP,REVIEW,4016 reused by the client; prior seed keyed this account as B55360,12636442.0
 RWANDA,2026-01,4017,Bank Account (ZAMARA AAIB LTD),4017,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,119634965.0
-RWANDA,2026-01,4018,Investments,4018,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,7402500.0
+RWANDA,2026-01,4018,Investments,4018,CODEBOOK_DUP,REVIEW,4018 reused by the client; prior seed keyed this account as 4018,7402500.0
 RWANDA,2026-01,4019,NCBA Account USD,4019,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,391623.0
 RWANDA,2026-01,4021,Bank account-Equity Bank,4021,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,25452.0
 RWANDA,2026-01,4022,Staff debtors,4022,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,500000.0
@@ -2808,9 +3300,9 @@ RWANDA,2026-02,3025,System Software,3025,SOURCE_CODE_CONFIRMED,,Source code and 
 RWANDA,2026-02,3030,System software-Acc Depreciation,3030,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-22725273.0
 RWANDA,2026-02,4010,Petty Cash,4010,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,538928.0
 RWANDA,2026-02,4015,Bank account- ZAAIB,B60440,ALIAS_BY_DESCRIPTION,,Pack codes this account 4015; prior seed and account_map key it B60440,132110598.0
-RWANDA,2026-02,4016,Deposits,B55360,ALIAS_BY_DESCRIPTION,,Pack codes this account 4016; prior seed and account_map key it B55360,9616442.0
+RWANDA,2026-02,4016,Deposits,B55360,CODEBOOK_DUP,REVIEW,4016 reused by the client; prior seed keyed this account as B55360,9616442.0
 RWANDA,2026-02,4017,Bank Account (ZAMARA AAIB LTD),4017,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,127467406.0
-RWANDA,2026-02,4018,Investments,4018,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,384500.0
+RWANDA,2026-02,4018,Investments,4018,CODEBOOK_DUP,REVIEW,4018 reused by the client; prior seed keyed this account as 4018,384500.0
 RWANDA,2026-02,4019,NCBA Account USD,4019,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,5514288.0
 RWANDA,2026-02,4021,Bank account-Equity Bank,4021,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,25452.0
 RWANDA,2026-02,4022,Staff debtors,4022,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,500000.0
@@ -2892,9 +3384,9 @@ RWANDA,2026-03,3025,System Software,3025,SOURCE_CODE_CONFIRMED,,Source code and 
 RWANDA,2026-03,3030,System software-Acc Depreciation,3030,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-23102958.15
 RWANDA,2026-03,4010,Petty Cash,4010,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,180328.0
 RWANDA,2026-03,4015,Bank account- ZAAIB,B60440,ALIAS_BY_DESCRIPTION,,Pack codes this account 4015; prior seed and account_map key it B60440,96569350.5
-RWANDA,2026-03,4016,Deposits,B55360,ALIAS_BY_DESCRIPTION,,Pack codes this account 4016; prior seed and account_map key it B55360,9616442.0
+RWANDA,2026-03,4016,Deposits,B55360,CODEBOOK_DUP,REVIEW,4016 reused by the client; prior seed keyed this account as B55360,9616442.0
 RWANDA,2026-03,4017,Bank Account (ZAMARA AAIB LTD),4017,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,27395516.0
-RWANDA,2026-03,4018,Investments,4018,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,383500.0
+RWANDA,2026-03,4018,Investments,4018,CODEBOOK_DUP,REVIEW,4018 reused by the client; prior seed keyed this account as 4018,383500.0
 RWANDA,2026-03,4019,NCBA Account USD,4019,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,2701202.0
 RWANDA,2026-03,4021,Bank account-Equity Bank,4021,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,25452.0
 RWANDA,2026-03,4022,Staff debtors,4022,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,500000.0
@@ -2977,9 +3469,9 @@ RWANDA,2026-04,3025,System Software,3025,SOURCE_CODE_CONFIRMED,,Source code and 
 RWANDA,2026-04,3030,System software-Acc Depreciation,3030,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-23480643.15
 RWANDA,2026-04,4010,Petty Cash,4010,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1010028.0
 RWANDA,2026-04,4015,Bank account- ZAAIB,B60440,ALIAS_BY_DESCRIPTION,,Pack codes this account 4015; prior seed and account_map key it B60440,100839542.5
-RWANDA,2026-04,4016,Deposits,B55360,ALIAS_BY_DESCRIPTION,,Pack codes this account 4016; prior seed and account_map key it B55360,4647605.0
+RWANDA,2026-04,4016,Deposits,B55360,CODEBOOK_DUP,REVIEW,4016 reused by the client; prior seed keyed this account as B55360,4647605.0
 RWANDA,2026-04,4017,Bank Account (ZAMARA AAIB LTD),4017,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,48630363.0
-RWANDA,2026-04,4018,Investments,4018,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,382500.0
+RWANDA,2026-04,4018,Investments,4018,CODEBOOK_DUP,REVIEW,4018 reused by the client; prior seed keyed this account as 4018,382500.0
 RWANDA,2026-04,4019,NCBA Account USD,4019,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,16733226.0
 RWANDA,2026-04,4021,Bank account-Equity Bank,4021,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,25452.0
 RWANDA,2026-04,4022,Staff debtors,4022,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,500000.0
@@ -3062,9 +3554,9 @@ RWANDA,2026-05,3025,System Software,3025,SOURCE_CODE_CONFIRMED,,Source code and 
 RWANDA,2026-05,3030,System software-Acc Depreciation,3030,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-23858328.15
 RWANDA,2026-05,4010,Petty Cash,4010,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,703228.0
 RWANDA,2026-05,4015,Bank account- ZAAIB,B60440,ALIAS_BY_DESCRIPTION,,Pack codes this account 4015; prior seed and account_map key it B60440,114852443.5
-RWANDA,2026-05,4016,Deposits,B55360,ALIAS_BY_DESCRIPTION,,Pack codes this account 4016; prior seed and account_map key it B55360,0.0
+RWANDA,2026-05,4016,Deposits,B55360,CODEBOOK_DUP,REVIEW,4016 reused by the client; prior seed keyed this account as B55360,0.0
 RWANDA,2026-05,4017,Bank Account (ZAMARA AAIB LTD),4017,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,67189182.0
-RWANDA,2026-05,4018,Investments,4018,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+RWANDA,2026-05,4018,Investments,4018,CODEBOOK_DUP,REVIEW,4018 reused by the client; prior seed keyed this account as 4018,0.0
 RWANDA,2026-05,4019,NCBA Account USD,4019,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,21379658.0
 RWANDA,2026-05,4021,Bank account-Equity Bank,4021,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,25452.0
 RWANDA,2026-05,4022,Staff debtors,4022,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,500000.0
@@ -3147,9 +3639,9 @@ RWANDA,2026-06,3025,System Software,3025,SOURCE_CODE_CONFIRMED,,Source code and 
 RWANDA,2026-06,3030,System software-Acc Depreciation,3030,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-24236013.15
 RWANDA,2026-06,4010,Petty Cash,4010,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,236118.0
 RWANDA,2026-06,4015,Bank account- ZAAIB,B60440,ALIAS_BY_DESCRIPTION,,Pack codes this account 4015; prior seed and account_map key it B60440,109626626.5
-RWANDA,2026-06,4016,Deposits,B55360,ALIAS_BY_DESCRIPTION,,Pack codes this account 4016; prior seed and account_map key it B55360,0.0
+RWANDA,2026-06,4016,Deposits,B55360,CODEBOOK_DUP,REVIEW,4016 reused by the client; prior seed keyed this account as B55360,0.0
 RWANDA,2026-06,4017,Bank Account (ZAMARA AAIB LTD),4017,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,71362090.0
-RWANDA,2026-06,4018,Investments,4018,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+RWANDA,2026-06,4018,Investments,4018,CODEBOOK_DUP,REVIEW,4018 reused by the client; prior seed keyed this account as 4018,0.0
 RWANDA,2026-06,4019,NCBA Account USD,4019,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,17102378.0
 RWANDA,2026-06,4021,Bank account-Equity Bank,4021,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,25452.0
 RWANDA,2026-06,4022,Staff debtors,4022,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,500000.0
@@ -3181,6 +3673,97 @@ RWANDA,2026-06,7001,Accrued Income,7001,SOURCE_CODE_CONFIRMED,,Source code and d
 RWANDA,2026-06,7010,Tekana Scheme Employer contribution,7010,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1570309.0
 RWANDA,2026-06,7015,Tekana scheme Payable,B70141,ALIAS_BY_DESCRIPTION,,Pack codes this account 7015; prior seed and account_map key it B70141,3.4
 RWANDA,2026-06,7040,Provision for Expected credit Loss(Allowance),7040,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-1733972.0
+RWANDA,2026-07,1000,Brokerage Commission,1000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-356798882.0
+RWANDA,2026-07,1010,Interest income,I10021,ALIAS_BY_DESCRIPTION,,Pack codes this account 1010; prior seed and account_map key it I10021,-9012694.0
+RWANDA,2026-07,1025,Actuarial Services Revenue,1025,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-81359679.0
+RWANDA,2026-07,1030,Sundry Income,I10035,ALIAS_BY_DESCRIPTION,,Pack codes this account 1030; prior seed and account_map key it I10035,-2228209.0
+RWANDA,2026-07,7025,Pension Administration(Tekana),7025,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-5456627.0
+RWANDA,2026-07,2000,Training Expense,2000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,4826880.0
+RWANDA,2026-07,2010,Rent,2010,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,17156125.0
+RWANDA,2026-07,2025,Marketing expenses,2025,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,6274601.0
+RWANDA,2026-07,2030,Travelling & Accommodation,2030,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,25484277.0
+RWANDA,2026-07,2040,Salaries And Wages,B70235,ALIAS_BY_DESCRIPTION,,Pack codes this account 2040; prior seed and account_map key it B70235,211454682.0
+RWANDA,2026-07,2046,Group Life Assurance Scheme,2046,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,2716255.0
+RWANDA,2026-07,2050,Office Expenses,2050,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,358560.0
+RWANDA,2026-07,2070,Postage And Courier,2070,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,4000.0
+RWANDA,2026-07,2080,Licences,2080,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1600000.0
+RWANDA,2026-07,2090,Printing And Stationery,2090,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1970255.0
+RWANDA,2026-07,2100,Motor Vehicle Expenses,2100,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,267200.0
+RWANDA,2026-07,2115,Motor vehicle maintainance & services,2115,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,131853.0
+RWANDA,2026-07,2120,Insurance expenses,2120,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,2760705.0
+RWANDA,2026-07,2125,MEDICAL INSURANCE STAFF,2125,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,15921298.0
+RWANDA,2026-07,2140,Bank Charges,I25360,ALIAS_BY_DESCRIPTION,,Pack codes this account 2140; prior seed and account_map key it I25360,748075.0
+RWANDA,2026-07,2145,Board Expenses,I25380,ALIAS_BY_DESCRIPTION,,Pack codes this account 2145; prior seed and account_map key it I25380,9265353.0
+RWANDA,2026-07,2160,Consultancy Fees,2160,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,8203110.0
+RWANDA,2026-07,2170,Depreciation -All,2170,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,7063978.0
+RWANDA,2026-07,2180,Depreciation-Motor Vehicles,2180,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,10952081.0
+RWANDA,2026-07,2190,Depreciation- Furniture & Fittings,2190,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,2872019.0
+RWANDA,2026-07,2195,Depreciation- Software,2195,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,2643795.0
+RWANDA,2026-07,2300,Tenders,I25381,ALIAS_BY_DESCRIPTION,,Pack codes this account 2300; prior seed and account_map key it I25381,142800.0
+RWANDA,2026-07,2380,staff entertainment & reception,2380,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,3598890.0
+RWANDA,2026-07,2400,RSSB -Employer Contributions,2400,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,16916374.56
+RWANDA,2026-07,2405,RSSB STAFF.MATERNITY,2405,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,634363.94
+RWANDA,2026-07,2430,Internet Services,2430,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,3669155.0
+RWANDA,2026-07,2450,Staff Cost,2450,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,765000.0
+RWANDA,2026-07,2500,Parking Fee,2500,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,474579.0
+RWANDA,2026-07,2520,Cleaning & Sanitation Expenses,2520,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1606661.0
+RWANDA,2026-07,2550,Motor Vehicle Fuel Expense,2550,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,4807357.0
+RWANDA,2026-07,2640,Other Expense,2640,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,834485.0
+RWANDA,2026-07,2645,Repairs and Maintenance,2645,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,3748589.0
+RWANDA,2026-07,2655,Legal & Professional fees,2655,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1200000.0
+RWANDA,2026-07,2690,IT Materials,2690,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,234492.0
+RWANDA,2026-07,2740,Communication allowances,2740,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,4097221.0
+RWANDA,2026-07,7050,Referral Commission Expense,7050,SOURCE_CODE_NEW,REVIEW,Code not present in the prior seed; needs an account_map row,851090.0
+RWANDA,2026-07,7055,Foreign Exchange Loss,7055,SOURCE_CODE_NEW,REVIEW,Code not present in the prior seed; needs an account_map row,55700.0
+RWANDA,2026-07,7010,Tekana Scheme Employer contribution,7010,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1846861.0
+RWANDA,2026-07,2150,Audit fees,2150,SOURCE_CODE_NEW,REVIEW,Code not present in the prior seed; needs an account_map row,847458.0
+RWANDA,2026-07,3000,Motor Vehicles,3000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,82574995.0
+RWANDA,2026-07,3110,Investments,3110,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,100000000.0
+RWANDA,2026-07,3002,Accumulated Depreciation-Motor vehicles,3002,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-39054434.0
+RWANDA,2026-07,3010,Computer Equipment,3010,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,96638442.0
+RWANDA,2026-07,3012,Accumulated Depreciation-Computer Equipment,3012,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-76283935.5
+RWANDA,2026-07,3015,Furniture And Fittings,3015,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,50546043.0
+RWANDA,2026-07,3017,Accumulated Depreciation-Furniture And Fittings,3017,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-24573737.0
+RWANDA,2026-07,3025,System Software,3025,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,62759883.0
+RWANDA,2026-07,3030,System software-Acc Depreciation,3030,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-24613698.15
+RWANDA,2026-07,4010,Petty Cash,4010,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,562273.0
+RWANDA,2026-07,4015,Bank account- ZAAIB,B60440,ALIAS_BY_DESCRIPTION,,Pack codes this account 4015; prior seed and account_map key it B60440,77680441.5
+RWANDA,2026-07,4016,Deposits,B55360,CODEBOOK_DUP,REVIEW,4016 reused by the client; prior seed keyed this account as B55360,0.0
+RWANDA,2026-07,4017,Bank Account (ZAMARA AAIB LTD),4017,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,72304064.0
+RWANDA,2026-07,4018,Investments,4018,CODEBOOK_DUP,REVIEW,4018 reused by the client; prior seed keyed this account as 4018,0.0
+RWANDA,2026-07,4016,Bank account NCBA,4016.2,DUP_SUFFIX,REVIEW,4016 carries more than one description in the packs and no rule exists,21496237.0
+RWANDA,2026-07,4018,AMIFA Account,B60460,CODEBOOK_DUP,REVIEW,4018 reused by the client; prior seed keyed this account as B60460,379500.0
+RWANDA,2026-07,4019,NCBA Account USD,4019,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,7174174.0
+RWANDA,2026-07,4021,Bank account-Equity Bank,4021,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,25452.0
+RWANDA,2026-07,4022,Staff debtors,4022,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,500000.0
+RWANDA,2026-07,4025,Rent Deposit,4025,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,2450875.0
+RWANDA,2026-07,4030,Sundry Debtors-SONARWA,B55270,ALIAS_BY_DESCRIPTION,,Pack codes this account 4030; prior seed and account_map key it B55270,0.0
+RWANDA,2026-07,4050,Prepayments,B65190,ALIAS_BY_DESCRIPTION,,Pack codes this account 4050; prior seed and account_map key it B65190,47113239.0
+RWANDA,2026-07,4065,Term deposit,4065,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,150000000.0
+RWANDA,2026-07,5010,Trade Debtors,5010,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,93183162.1
+RWANDA,2026-07,5011,Income Tax Payable,5011,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-22754973.75
+RWANDA,2026-07,5040,Vat Payable,5040,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-12542918.0
+RWANDA,2026-07,5045,Witholding tax payable,5045,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-1064232.5
+RWANDA,2026-07,5046,Withholding tax recovarable,5046,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1386281.4
+RWANDA,2026-07,5055,Accrual audit fees,B80201,ALIAS_BY_DESCRIPTION,,Pack codes this account 5055; prior seed and account_map key it B80201,0.0
+RWANDA,2026-07,5080,Other Payables,5080,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-4365707.09
+RWANDA,2026-07,5085,RSSB .STAFF MATERNITY PAYBLE,5085,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-187220.88
+RWANDA,2026-07,5087,RSSB(0.5%),5087,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-101697.0
+RWANDA,2026-07,5120,Deduction-Provident fund payable,B70461,ALIAS_BY_DESCRIPTION,,Pack codes this account 5120; prior seed and account_map key it B70461,-0.1
+RWANDA,2026-07,5130,PAYE Payable,5130,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-8661244.65
+RWANDA,2026-07,5155,Deduction govement loan,5155,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-2.0
+RWANDA,2026-07,5160,Deduction-Credit Caisse d'entreaide Payable,5160,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-166666.4
+RWANDA,2026-07,5185,Deduction- Loan CE,5185,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,166666.0
+RWANDA,2026-07,5190,Net Salaries Payable,5190,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,86.49
+RWANDA,2026-07,6000,ZAMARA GROUP Payables,6000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-15393191.0
+RWANDA,2026-07,6005,Defereed tax payble,6005,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-7522448.0
+RWANDA,2026-07,6100,Share Capital,6100,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-579261061.0
+RWANDA,2026-07,6110,Retained Earnings,6110,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,5658301.9
+RWANDA,2026-07,7000,GENERAL ACCOUNT PAYABLES,7000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-13036048.04
+RWANDA,2026-07,7001,Accrued Income,7001,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,11812005.78
+RWANDA,2026-07,7015,Tekana scheme Payable,B70141,ALIAS_BY_DESCRIPTION,,Pack codes this account 7015; prior seed and account_map key it B70141,3.4
+RWANDA,2026-07,7040,Provision for Expected credit Loss(Allowance),7040,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-1733972.0
+RWANDA,2026-07,,Tax expense,RW-TAXEXPENSE,SYNTHETIC,REVIEW,Blank A/C No in source and no prior seed match; needs an account_map row,22754973.75
 NIGERIA,2026-01,,M/C-Admin Fees,NG-MCADMINFEES,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,-34675000.0
 NIGERIA,2026-01,,Other Income,I10123,AMOUNT_MATCH+NAME,,,-3423497.3
 NIGERIA,2026-01,,Bank Charges,I25360,AMOUNT_MATCH+NAME,,,36138.3
@@ -3673,6 +4256,94 @@ NIGERIA,2026-06,,WHT Assets (Credit Notes),B70190,AMOUNT_MATCH+NAME,,,0.0
 NIGERIA,2026-06,,WHT Assets -Credit Notes,NG-WHTASSETSCREDITNOT,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,-4497478.74
 NIGERIA,2026-06,,WHT Payables,NG-WHTPAYABLES,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,0.0
 NIGERIA,2026-06,,Zamara Consultin Actuaries Nig Ltd,NG-ZAMARACONSULTINACT,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,135396474.98
+NIGERIA,2026-07,,Accum Dep. Motor vehicle,B35160,AMOUNT_MATCH+NAME,,,-18868753.63
+NIGERIA,2026-07,,Accum Depreciation - Equipment,B35240,AMOUNT_MATCH+NAME,,,-8100492.0
+NIGERIA,2026-07,,Accum Depreciation - F&F,B35200,AMOUNT_MATCH+NAME,,,-5861758.0
+NIGERIA,2026-07,,Accum Depreciation - Leasehold Improv,B35370,AMOUNT_MATCH+NAME,,,-3690042.0
+NIGERIA,2026-07,,Advertising & PR - General,I25203,AMOUNT_MATCH+NAME,,,500000.0
+NIGERIA,2026-07,,Advertising & PR - Sponsorship,NG-ADVERTISINGPRSPONS,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,7500000.0
+NIGERIA,2026-07,,Bank Charges,I25360,AMOUNT_MATCH+NAME,,,867607.5
+NIGERIA,2026-07,,Cash,B60190,AMOUNT_MATCH+NAME,,,5330687.93
+NIGERIA,2026-07,,Communication- Courier Service Cost,I25236,AMOUNT_MATCH+NAME,,,332000.0
+NIGERIA,2026-07,,Communication- Internet Cost,NG-COMMUNICATIONINTER,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,3637300.0
+NIGERIA,2026-07,,CRS-Trade (Operating),NG-CRSTRADEOPERATING,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,0.0
+NIGERIA,2026-07,,Deferred tax asset,B35420,AMOUNT_MATCH+NAME,,,6077000.0
+NIGERIA,2026-07,,Deferred tax liabilities,NG-DEFERREDTAXLIABILI,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,0.0
+NIGERIA,2026-07,,Depreciation,I25265,AMOUNT_MATCH,REVIEW,Generic 'Depreciation' matched to Equip-Depreciation,2061124.0
+NIGERIA,2026-07,,Depreciation - F&F,I25264,AMOUNT_MATCH+NAME,,,407645.0
+NIGERIA,2026-07,,Depreciation - MV,I25261,AMOUNT_MATCH+NAME,,,4320833.0
+NIGERIA,2026-07,,Emolument Pack - Group Life,I25009,AMOUNT_MATCH+NAME,,,1803832.74
+NIGERIA,2026-07,,Emolument Pack - ITF Contribution,NG-EMOLUMENTPACKITFCO,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,784713.0
+NIGERIA,2026-07,,Emolument Pack - Medical Contr,I25003,AMOUNT_MATCH+NAME,,,4884758.28
+NIGERIA,2026-07,,Emolument Pack - NSITF Contribution,NG-EMOLUMENTPACKNSITF,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,528266.0
+NIGERIA,2026-07,,Emolument Pack - Others,NG-EMOLUMENTPACKOTHER,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,0.0
+NIGERIA,2026-07,,Emolument Pack - Pension Contr Employee,NG-EMOLUMENTPACKPENSI,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,2957966.37
+NIGERIA,2026-07,,Emolument Pack - Pension Contr Employer,NG-EMOLUMENTPACKPENSI2,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,3698003.7
+NIGERIA,2026-07,,Emolument Pack - Salaries,NG-EMOLUMENTPACKSALAR,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,72736883.47
+NIGERIA,2026-07,,Emolument Pack - Temporary Staff Gen,NG-EMOLUMENTPACKTEMPO,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,62480000.0
+NIGERIA,2026-07,,Emolument Pack - Training External/Internal,I25026,AMOUNT_MATCH+NAME,,,4391332.75
+NIGERIA,2026-07,,Emoluments - Bonus & 13th Month,I25019,AMOUNT_MATCH+NAME,,,14837100.0
+NIGERIA,2026-07,,Entertainment: Conference Given by Us,I25192,AMOUNT_MATCH+NAME,,,964320.0
+NIGERIA,2026-07,,Entertainment: End of the Year Party,I25296,AMOUNT_MATCH+NAME,,,663240.0
+NIGERIA,2026-07,,Fee Income,I10060,AMOUNT_MATCH,REVIEW,Raw TB has a single revenue account; the final pack splits Fee Income and M/C-Admin Fees. Fee Income keeps I10060,-526041070.0
+NIGERIA,2026-07,,Fixed Assets - Equipment,B35210,AMOUNT_MATCH+NAME,,,28284222.08
+NIGERIA,2026-07,,Fixed Assets - Furniture & Fittings,B35170,AMOUNT_MATCH+NAME,,,11536800.0
+NIGERIA,2026-07,,Fixed Assets - Leasehold Improvement,B35350,AMOUNT_MATCH+NAME,,,3690042.0
+NIGERIA,2026-07,,Fixed Assets - Motor Vehicles,B35140,AMOUNT_MATCH+NAME,,,29200000.0
+NIGERIA,2026-07,,General Expenses,I25367,AMOUNT_MATCH+NAME,,,2501250.0
+NIGERIA,2026-07,,Income Tax Payable,B75120,AMOUNT_MATCH+NAME,,,0.0
+NIGERIA,2026-07,,Insurance - Directors & Officers,I25402,AMOUNT_MATCH+NAME,,,166668.0
+NIGERIA,2026-07,,Insurance - MV,NG-INSURANCEMV,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,1522500.0
+NIGERIA,2026-07,,Insurance - Others,NG-INSURANCEOTHERS,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,635379.36
+NIGERIA,2026-07,,Insurance - P.I.,I25401,AMOUNT_MATCH+NAME,,,635558.0
+NIGERIA,2026-07,,Inter Company Expenses,I25034,AMOUNT_MATCH+NAME,,,30982708.32
+NIGERIA,2026-07,,Intercompany,B55570,AMOUNT_MATCH+NAME,,,-142362692.54
+NIGERIA,2026-07,,Interest Received,NG-INTERESTRECEIVED,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,0.0
+NIGERIA,2026-07,,Investment in Subsidiary- Stonebridge,B65270,RAW_TB_BRIDGE,,Replaces the synthetic NG-STONEBRIDGE with the client's real BC code,10000000.0
+NIGERIA,2026-07,,IT - Cost Hardware Maintenace,I25425,AMOUNT_MATCH+NAME,,,2895335.0
+NIGERIA,2026-07,,IT Cost - Toner,I25421,AMOUNT_MATCH+NAME,,,848200.0
+NIGERIA,2026-07,,Management fees,NG-MANAGEMENTFEES,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,0.0
+NIGERIA,2026-07,,Motor Vehicle Expenses,I25454,AMOUNT_MATCH+NAME,,,5212253.57
+NIGERIA,2026-07,,Other Income,I10123,AMOUNT_MATCH+NAME,,,-3423497.3
+NIGERIA,2026-07,,Other Liabilities,NG-OTHERLIABILITIES,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,0.0
+NIGERIA,2026-07,,Other Receivables,NG-OTHERRECEIVABLES,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,0.0
+NIGERIA,2026-07,,Other Staff Costs,I25029,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,0.0
+NIGERIA,2026-07,,PAYE - Payable,B70230,AMOUNT_MATCH+NAME,,,-1105829.75
+NIGERIA,2026-07,,Pension - Payable ( Employer/EE),B70140,AMOUNT_MATCH+NAME,,,-1378802.67
+NIGERIA,2026-07,,Premises - Electricity,I25072,AMOUNT_MATCH+NAME,,,3024111.74
+NIGERIA,2026-07,,Premises - Rent & Service Charge,NG-PREMISESRENTSERVIC,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,14767497.32
+NIGERIA,2026-07,,Premises - Repairs & Maintenance,NG-PREMISESREPAIRSMAI,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,1372800.0
+NIGERIA,2026-07,,Prepayment - Insurance,B55400,AMOUNT_MATCH+NAME,,,6393635.68
+NIGERIA,2026-07,,Prepayment - Others,NG-PREPAYMENTOTHERS,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,33031369.1
+NIGERIA,2026-07,,Prepayment - Rent,B55410,AMOUNT_MATCH,REVIEW,Rent prepayment matched to 'Drs Prepaid - Other'; the pack also has a separate 'Prepayment - Others',14485418.03
+NIGERIA,2026-07,,Printing & Stationery,I25111,AMOUNT_MATCH+NAME,,,985550.0
+NIGERIA,2026-07,,Prof. Fees - Audit Fees,I25141,AMOUNT_MATCH+NAME,,,1750000.0
+NIGERIA,2026-07,,Prof. Fees - Legal,I25144,AMOUNT_MATCH+NAME,,,3187844.0
+NIGERIA,2026-07,,Prof. Fees - Others,I25145,AMOUNT_MATCH+NAME,,,7437215.74
+NIGERIA,2026-07,,Prof. Fees - TAX,I25143,AMOUNT_MATCH+NAME,,,4268750.0
+NIGERIA,2026-07,,Provisions - Others,B70281,AMOUNT_MATCH+NAME,,,-11570447.64
+NIGERIA,2026-07,,Provisons - Bonus/13th Month,B80110,AMOUNT_MATCH+NAME,,,-13830914.16
+NIGERIA,2026-07,,Receipts,B55110,AMOUNT_MATCH,REVIEW,'Receipts' matched to 'Other Receivable' on amount only,2366819.48
+NIGERIA,2026-07,,Retained Income,B15110,AMOUNT_MATCH+NAME,,,-85589925.07
+NIGERIA,2026-07,,Revaluation Surplus Account,NG-REVALUATIONSURPLUS,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,0.0
+NIGERIA,2026-07,,S/ware Depreciation,NG-SWAREDEPRECIATION,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,0.0
+NIGERIA,2026-07,,Share Capital,B10120,AMOUNT_MATCH+NAME,,,-70000000.0
+NIGERIA,2026-07,,Subscriptions General,I25358,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,0.0
+NIGERIA,2026-07,,Taxation - Education Tax,NG-TAXATIONEDUCATIONT,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,0.0
+NIGERIA,2026-07,,Taxation expense,I30001,AMOUNT_MATCH+NAME,,,30986671.62
+NIGERIA,2026-07,,Telephone-Variable,I25232,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,0.0
+NIGERIA,2026-07,,Trade Receivables,B55480,AMOUNT_MATCH+NAME,,,347717467.9
+NIGERIA,2026-07,,Travel & Accommodation,NG-TRAVELACCOMMODATIO,SYNTHETIC,REVIEW,Blank A/C No in source and no prior seed match; needs an account_map row,5690332.0
+NIGERIA,2026-07,,Travel Airfare Fares Local,I25182,AMOUNT_MATCH,REVIEW,Local airfare matched to 'Trav. Accom.' on amount only,12785138.0
+NIGERIA,2026-07,,Travel Airfare Fares Overseas,I25185,AMOUNT_MATCH+NAME,,,0.0
+NIGERIA,2026-07,,Travel Exps : Car Hire Sundry,I25183,AMOUNT_MATCH+NAME,,,10987879.0
+NIGERIA,2026-07,,UBA Current Account,B60250,AMOUNT_MATCH+NAME,,,0.0
+NIGERIA,2026-07,,UBA Dom Account,B60260,AMOUNT_MATCH+NAME,,,0.0
+NIGERIA,2026-07,,VAT Payable,B80170,AMOUNT_MATCH+NAME,,,-54861408.65
+NIGERIA,2026-07,,WHT Assets (Credit Notes),B70190,AMOUNT_MATCH+NAME,,,0.0
+NIGERIA,2026-07,,WHT Assets -Credit Notes,NG-WHTASSETSCREDITNOT,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,-4497478.74
+NIGERIA,2026-07,,WHT Payables,NG-WHTPAYABLES,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,0.0
+NIGERIA,2026-07,,Zamara Consultin Actuaries Nig Ltd,NG-ZAMARACONSULTINACT,CODEBOOK_BLANK,,Blank A/C No in source; matched to the prior seed by description,120069082.47
 MALAWI,2026-01,6030/000,MV-Cost Opening Balance,B35140,ALIAS_BY_DESCRIPTION,,Pack codes this account 6030/000; prior seed and account_map key it B35140,245245040.02
 MALAWI,2026-01,6040/000,MV-Depr.Prov.,B35150,ALIAS_BY_DESCRIPTION,,Pack codes this account 6040/000; prior seed and account_map key it B35150,-98170091.92
 MALAWI,2026-01,6060/000,Furn-Cost Open Balance,B35170,ALIAS_BY_DESCRIPTION,,Pack codes this account 6060/000; prior seed and account_map key it B35170,5630104.08
@@ -4166,6 +4837,98 @@ MALAWI,2026-06,4230/200,Subscriptions General,I25358,ALIAS_BY_DESCRIPTION,,Pack 
 MALAWI,2026-06,4290/200,MV - Running Costs (non personnel),I25457,ALIAS_BY_DESCRIPTION,,Pack codes this account 4290/200; prior seed and account_map key it I25457,8356664.22
 MALAWI,2026-06,4300/200,Bank Charges,I25360,ALIAS_BY_DESCRIPTION,,Pack codes this account 4300/200; prior seed and account_map key it I25360,2642635.95
 MALAWI,2026-06,4650/200,Taxation expense,I30002,ALIAS_BY_DESCRIPTION,,Pack codes this account 4650/200; prior seed and account_map key it I30002,285213603.78
+MALAWI,2026-07,6030/000,MV-Cost Opening Balance,B35140,ALIAS_BY_DESCRIPTION,,Pack codes this account 6030/000; prior seed and account_map key it B35140,245245040.02
+MALAWI,2026-07,6040/000,MV-Depr.Prov.,B35150,ALIAS_BY_DESCRIPTION,,Pack codes this account 6040/000; prior seed and account_map key it B35150,-123305573.94
+MALAWI,2026-07,6060/000,Furn-Cost Open Balance,B35170,ALIAS_BY_DESCRIPTION,,Pack codes this account 6060/000; prior seed and account_map key it B35170,5630104.08
+MALAWI,2026-07,6070/000,Furn-Additions this year,B35180,ALIAS_BY_DESCRIPTION,,Pack codes this account 6070/000; prior seed and account_map key it B35180,25096110.28
+MALAWI,2026-07,6080/000,Furn-Depr Prov.,B35190,ALIAS_BY_DESCRIPTION,,Pack codes this account 6080/000; prior seed and account_map key it B35190,-26259796.5
+MALAWI,2026-07,6090/000,Furn Accum-Depreciation,B35200,ALIAS_BY_DESCRIPTION,,Pack codes this account 6090/000; prior seed and account_map key it B35200,-311514.53
+MALAWI,2026-07,6110/000,Equip-Additions This Year,B35220,ALIAS_BY_DESCRIPTION,,Pack codes this account 6110/000; prior seed and account_map key it B35220,46755039.9
+MALAWI,2026-07,6130/000,Equip Accum-Depr,B35240,ALIAS_BY_DESCRIPTION,,Pack codes this account 6130/000; prior seed and account_map key it B35240,-29486067.17
+MALAWI,2026-07,6140/000,Comp Equip-Cost Open Balance,B35250,ALIAS_BY_DESCRIPTION,,Pack codes this account 6140/000; prior seed and account_map key it B35250,8467841.34
+MALAWI,2026-07,6150/000,Comp Equip-Add This Year,B35260,ALIAS_BY_DESCRIPTION,,Pack codes this account 6150/000; prior seed and account_map key it B35260,40466267.21
+MALAWI,2026-07,6170/000,Comp Equip-Depr.Prov.,B35290,ALIAS_BY_DESCRIPTION,,Pack codes this account 6170/000; prior seed and account_map key it B35290,-30257429.63
+MALAWI,2026-07,6210/000,Computer Software,B35320,ALIAS_BY_DESCRIPTION,,Pack codes this account 6210/000; prior seed and account_map key it B35320,114733635.33
+MALAWI,2026-07,6220/000,Comp SW-Depr.Prov.,B35340,ALIAS_BY_DESCRIPTION,,Pack codes this account 6220/000; prior seed and account_map key it B35340,-19122272.56
+MALAWI,2026-07,6300/000,Work In Progress,B45130,ALIAS_BY_DESCRIPTION,,Pack codes this account 6300/000; prior seed and account_map key it B45130,21743868.0
+MALAWI,2026-07,6341/000,Deferred Tax,B35420,ALIAS_BY_DESCRIPTION,,Pack codes this account 6341/000; prior seed and account_map key it B35420,145466460.23
+MALAWI,2026-07,6354/000,Fixed Deposit Account,B65150,ALIAS_BY_DESCRIPTION,,Pack codes this account 6354/000; prior seed and account_map key it B65150,853389323.8
+MALAWI,2026-07,6357/000,Debtors Prepaid Other,B55410,ALIAS_BY_DESCRIPTION,,Pack codes this account 6357/000; prior seed and account_map key it B55410,38034230.24
+MALAWI,2026-07,6366/000,Due to/from ZAAC,B55570,ALIAS_BY_DESCRIPTION,,Pack codes this account 6366/000; prior seed and account_map key it B55570,-718110272.54
+MALAWI,2026-07,6367/000,Other Receivables - General,B65110,ALIAS_BY_DESCRIPTION,,Pack codes this account 6367/000; prior seed and account_map key it B65110,81880408.6
+MALAWI,2026-07,6368/000,Withholding Income Tax,B65290,ALIAS_BY_DESCRIPTION,,Pack codes this account 6368/000; prior seed and account_map key it B65290,72013656.2
+MALAWI,2026-07,6390/000,Other Debtor - Claims Receivab,B55140,ALIAS_BY_DESCRIPTION,,Pack codes this account 6390/000; prior seed and account_map key it B55140,2.25
+MALAWI,2026-07,6510/000,Drs-Other Debtors - Provisions,B65210,ALIAS_BY_DESCRIPTION,,Pack codes this account 6510/000; prior seed and account_map key it B65210,4362758.09
+MALAWI,2026-07,6730/000,Drs-Income Control,B55480,ALIAS_BY_DESCRIPTION,,Pack codes this account 6730/000; prior seed and account_map key it B55480,1917106514.46
+MALAWI,2026-07,6821/000,ECOBANK -KWACHA A/C,B60440,ALIAS_BY_DESCRIPTION,,Pack codes this account 6821/000; prior seed and account_map key it B60440,65369012.85
+MALAWI,2026-07,6822/000,ECOBANK FCD-US$,B60450,ALIAS_BY_DESCRIPTION,,Pack codes this account 6822/000; prior seed and account_map key it B60450,10082783.18
+MALAWI,2026-07,6823/000,Summary: Cash at bank & on hand,B60190,ALIAS_BY_DESCRIPTION,,Pack codes this account 6823/000; prior seed and account_map key it B60190,6305.0
+MALAWI,2026-07,6826/000,FDH BANK CURRENT ACCOUNT,6826/000,SOURCE_CODE_NEW,REVIEW,Code not present in the prior seed; needs an account_map row,83290409.68
+MALAWI,2026-07,6827/005,FIRST CAPITAL CURRENT ACCOUNT,MW-FIRSTCAP,ALIAS_BY_DESCRIPTION,,Pack codes this account 6827/005; prior seed and account_map key it MW-FIRSTCAP,199839495.0
+MALAWI,2026-07,7230/000,OTHER PAYABLES-GENERAL,B70400,ALIAS_BY_DESCRIPTION,,Pack codes this account 7230/000; prior seed and account_map key it B70400,-11342487.39
+MALAWI,2026-07,7320/000,Prov-Leave Pay,B70450,ALIAS_BY_DESCRIPTION,,Pack codes this account 7320/000; prior seed and account_map key it B70450,-38940772.51
+MALAWI,2026-07,7340/000,Bonus Provision : New Business,B70250,ALIAS_BY_DESCRIPTION,,Pack codes this account 7340/000; prior seed and account_map key it B70250,-46304129.12
+MALAWI,2026-07,7370/000,Prov-Sundries,B70280,ALIAS_BY_DESCRIPTION,,Pack codes this account 7370/000; prior seed and account_map key it B70280,-278741802.94
+MALAWI,2026-07,7400/000,Withholding Tax Payable,B70190,ALIAS_BY_DESCRIPTION,,Pack codes this account 7400/000; prior seed and account_map key it B70190,-4913491.13
+MALAWI,2026-07,7410/000,CRS-Trade (Operating),B70340,ALIAS_BY_DESCRIPTION,,Pack codes this account 7410/000; prior seed and account_map key it B70340,-1027203.09
+MALAWI,2026-07,7420/000,Revaluation Surplus Account,B20130,ALIAS_BY_DESCRIPTION,,Pack codes this account 7420/000; prior seed and account_map key it B20130,-12250000.0
+MALAWI,2026-07,7450/000,VAT Control Account,B80170,ALIAS_BY_DESCRIPTION,,Pack codes this account 7450/000; prior seed and account_map key it B80170,117891495.58
+MALAWI,2026-07,7471/000,FBT PROVISION ACCOUNT,B70140,ALIAS_BY_DESCRIPTION,,Pack codes this account 7471/000; prior seed and account_map key it B70140,0.0
+MALAWI,2026-07,7481/000,DIRECTORS FEES PROVISION ACCOUNT,B70240,ALIAS_BY_DESCRIPTION,,Pack codes this account 7481/000; prior seed and account_map key it B70240,-29817972.32
+MALAWI,2026-07,7501/000,AUDIT FEES PROVISION ACCOUNT,B70440,ALIAS_BY_DESCRIPTION,,Pack codes this account 7501/000; prior seed and account_map key it B70440,-2434436.18
+MALAWI,2026-07,7510/000,PF Salary Clearance,B70235,ALIAS_BY_DESCRIPTION,,Pack codes this account 7510/000; prior seed and account_map key it B70235,-18864964.64
+MALAWI,2026-07,7521/000,SERVICE CHARGES PROVISION,B70400.2,ALIAS_BY_DESCRIPTION,,Pack codes this account 7521/000; prior seed and account_map key it B70400.2,-491081.43
+MALAWI,2026-07,7550/000,Tax Provision-Other,B75120,ALIAS_BY_DESCRIPTION,,Pack codes this account 7550/000; prior seed and account_map key it B75120,-67190815.09
+MALAWI,2026-07,7600/000,Ord.Share Capital,B10120,ALIAS_BY_DESCRIPTION,,Pack codes this account 7600/000; prior seed and account_map key it B10120,-11093480.68
+MALAWI,2026-07,7610/000,Funds Awaiting Capitalisation,B10150,ALIAS_BY_DESCRIPTION,,Pack codes this account 7610/000; prior seed and account_map key it B10150,-32685000.0
+MALAWI,2026-07,7630/000,Share Premium,B10160,ALIAS_BY_DESCRIPTION,,Pack codes this account 7630/000; prior seed and account_map key it B10160,-350633235.07
+MALAWI,2026-07,7640/000,Distr.Reser-Retained Inc,B15110,ALIAS_BY_DESCRIPTION,,Pack codes this account 7640/000; prior seed and account_map key it B15110,-1502334589.2
+MALAWI,2026-07,1750/500,M/C-Admin Fees,I10071,ALIAS_BY_DESCRIPTION,,Pack codes this account 1750/500; prior seed and account_map key it I10071,-1793721679.63
+MALAWI,2026-07,1390/500,Sundry Income,1390/500,SOURCE_CODE_NEW,REVIEW,Code not present in the prior seed; needs an account_map row,-5133332.38
+MALAWI,2026-07,1940/500,Investment Income on Reserves,I10090,ALIAS_BY_DESCRIPTION,,Pack codes this account 1940/500; prior seed and account_map key it I10090,-98574092.64
+MALAWI,2026-07,3000/200,Emol.Pack-Salaries,I25329,ALIAS_BY_DESCRIPTION,,Pack codes this account 3000/200; prior seed and account_map key it I25329,274522037.64
+MALAWI,2026-07,3010/200,Emol.Pack-Other,I25005,ALIAS_BY_DESCRIPTION,,Pack codes this account 3010/200; prior seed and account_map key it I25005,10286056.98
+MALAWI,2026-07,3020/200,Emol.Pack-Med.Contribut.,I25003,ALIAS_BY_DESCRIPTION,,Pack codes this account 3020/200; prior seed and account_map key it I25003,11745000.0
+MALAWI,2026-07,3030/200,Emol.Pack-Pens.Contribut.,I25004,ALIAS_BY_DESCRIPTION,,Pack codes this account 3030/200; prior seed and account_map key it I25004,27452203.76
+MALAWI,2026-07,3080/200,Co.Contrib-Life Assurance,I25009,ALIAS_BY_DESCRIPTION,,Pack codes this account 3080/200; prior seed and account_map key it I25009,5490440.75
+MALAWI,2026-07,3200/200,Fringe Benefit Tax (FBT),I25043,ALIAS_BY_DESCRIPTION,,Pack codes this account 3200/200; prior seed and account_map key it I25043,6148597.2
+MALAWI,2026-07,3240/200,Welfare-General,I25024,ALIAS_BY_DESCRIPTION,,Pack codes this account 3240/200; prior seed and account_map key it I25024,9230024.0
+MALAWI,2026-07,3270/200,Training INTERNAL,3270/200,SOURCE_CODE_NEW,REVIEW,Code not present in the prior seed; needs an account_map row,1765660.55
+MALAWI,2026-07,3290/200,Other Staff Costs,I25029,ALIAS_BY_DESCRIPTION,,Pack codes this account 3290/200; prior seed and account_map key it I25029,3292630.6
+MALAWI,2026-07,3310/200,Consultants Commissions,3310/200,SOURCE_CODE_NEW,REVIEW,Code not present in the prior seed; needs an account_map row,4797727.27
+MALAWI,2026-07,3350/200,MV-Depreciation,I25261,ALIAS_BY_DESCRIPTION,,Pack codes this account 3350/200; prior seed and account_map key it I25261,28286921.32
+MALAWI,2026-07,3360/200,MV-Fuel Costs,I25453,ALIAS_BY_DESCRIPTION,,Pack codes this account 3360/200; prior seed and account_map key it I25453,18013537.0
+MALAWI,2026-07,3380/200,Trav. Air Fares,I25181,ALIAS_BY_DESCRIPTION,,Pack codes this account 3380/200; prior seed and account_map key it I25181,10843603.0
+MALAWI,2026-07,3410/200,Trav. Car Hire,I25455,ALIAS_BY_DESCRIPTION,,Pack codes this account 3410/200; prior seed and account_map key it I25455,755000.0
+MALAWI,2026-07,3390/200,Trav. Accom.,I25182,ALIAS_BY_DESCRIPTION,,Pack codes this account 3390/200; prior seed and account_map key it I25182,11113785.21
+MALAWI,2026-07,3400/200,Trav. Sundry exp.,I25183,ALIAS_BY_DESCRIPTION,,Pack codes this account 3400/200; prior seed and account_map key it I25183,15778640.58
+MALAWI,2026-07,3490/200,Conference Attended by Us,I25193,ALIAS_BY_DESCRIPTION,,Pack codes this account 3490/200; prior seed and account_map key it I25193,4160400.03
+MALAWI,2026-07,3500/200,Conference Given By Us,3500/200,SOURCE_CODE_NEW,REVIEW,Code not present in the prior seed; needs an account_map row,9800000.0
+MALAWI,2026-07,3510/200,Management expenses,I25159,ALIAS_BY_DESCRIPTION,,Pack codes this account 3510/200; prior seed and account_map key it I25159,133270361.0
+MALAWI,2026-07,3570/200,S/ware Depreciation,I25262,ALIAS_BY_DESCRIPTION,,Pack codes this account 3570/200; prior seed and account_map key it I25262,16731988.49
+MALAWI,2026-07,3630/200,Summary:IT Recoveries,I25431,ALIAS_BY_DESCRIPTION,,Pack codes this account 3630/200; prior seed and account_map key it I25431,56882208.87
+MALAWI,2026-07,3650/200,Telephone-Variable,I25232,ALIAS_BY_DESCRIPTION,,Pack codes this account 3650/200; prior seed and account_map key it I25232,7232000.0
+MALAWI,2026-07,3720/200,Printing-General,I25111,ALIAS_BY_DESCRIPTION,,Pack codes this account 3720/200; prior seed and account_map key it I25111,8276933.75
+MALAWI,2026-07,3790/200,Prem-Cleaning,I25071,ALIAS_BY_DESCRIPTION,,Pack codes this account 3790/200; prior seed and account_map key it I25071,4819982.94
+MALAWI,2026-07,3800/200,Prem-Electricity,I25072,ALIAS_BY_DESCRIPTION,,Pack codes this account 3800/200; prior seed and account_map key it I25072,2242000.0
+MALAWI,2026-07,3840/200,Prem-General,I25076,ALIAS_BY_DESCRIPTION,,Pack codes this account 3840/200; prior seed and account_map key it I25076,11388233.33
+MALAWI,2026-07,3860/200,Prem-Maint.Offices,I25078,ALIAS_BY_DESCRIPTION,,Pack codes this account 3860/200; prior seed and account_map key it I25078,820000.0
+MALAWI,2026-07,3870/200,Prem-Rental(EXTERNAL),I25079,ALIAS_BY_DESCRIPTION,,Pack codes this account 3870/200; prior seed and account_map key it I25079,26268297.47
+MALAWI,2026-07,3880/200,Prem-Parking(EXTERNAL),I25080,ALIAS_BY_DESCRIPTION,,Pack codes this account 3880/200; prior seed and account_map key it I25080,2360000.0
+MALAWI,2026-07,3930/200,Bus.Advert-General,I25203,ALIAS_BY_DESCRIPTION,,Pack codes this account 3930/200; prior seed and account_map key it I25203,27695339.02
+MALAWI,2026-07,3980/200,Insurance-Other,I25403,ALIAS_BY_DESCRIPTION,,Pack codes this account 3980/200; prior seed and account_map key it I25403,26117292.86
+MALAWI,2026-07,3990/200,Furn-Depreciation,I25264,ALIAS_BY_DESCRIPTION,,Pack codes this account 3990/200; prior seed and account_map key it I25264,3211028.67
+MALAWI,2026-07,4020/200,Equip-Maintenance,I25354,ALIAS_BY_DESCRIPTION,,Pack codes this account 4020/200; prior seed and account_map key it I25354,2867450.0
+MALAWI,2026-07,4040/200,Equip-Depreciation,I25265,ALIAS_BY_DESCRIPTION,,Pack codes this account 4040/200; prior seed and account_map key it I25265,9614407.42
+MALAWI,2026-07,4090/200,Prof.Fees-Directors Fees,I25142,ALIAS_BY_DESCRIPTION,,Pack codes this account 4090/200; prior seed and account_map key it I25142,15722166.67
+MALAWI,2026-07,4080/200,Prof.Fees-Audit Fees,I25141,ALIAS_BY_DESCRIPTION,,Pack codes this account 4080/200; prior seed and account_map key it I25141,6562500.0
+MALAWI,2026-07,4110/200,Prof.Fees-Legal Non Tax Deduct,I25158,ALIAS_BY_DESCRIPTION,,Pack codes this account 4110/200; prior seed and account_map key it I25158,9441280.0
+MALAWI,2026-07,4220/200,Institute Subscriptions,I25357,ALIAS_BY_DESCRIPTION,,Pack codes this account 4220/200; prior seed and account_map key it I25357,6205415.59
+MALAWI,2026-07,4230/200,Subscriptions General,I25358,ALIAS_BY_DESCRIPTION,,Pack codes this account 4230/200; prior seed and account_map key it I25358,1007976.06
+MALAWI,2026-07,4290/200,MV - Running Costs (non personnel),I25457,ALIAS_BY_DESCRIPTION,,Pack codes this account 4290/200; prior seed and account_map key it I25457,8761664.22
+MALAWI,2026-07,4300/200,Bank Charges,I25360,ALIAS_BY_DESCRIPTION,,Pack codes this account 4300/200; prior seed and account_map key it I25360,2858065.55
+MALAWI,2026-07,4650/200,Taxation expense,I30002,ALIAS_BY_DESCRIPTION,,Pack codes this account 4650/200; prior seed and account_map key it I30002,312637873.19
+MALAWI,2026-07,,Profit,MW-PROFIT,SYNTHETIC,REVIEW,Blank A/C No in source and no prior seed match; needs an account_map row,-740952373.66
 DRC,2026-01,B35140,MV-Cost Opening Balance,B35140,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,85650.0
 DRC,2026-01,B35160,MV Accum-Depr Open Balance,B35160,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-33534.41
 DRC,2026-01,B35210,Equip-Cost Open Balance,B35210,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,18981.2
@@ -4614,6 +5377,94 @@ DRC,2026-06,I25457,MV - Running Costs (non personnel),I25457,SOURCE_CODE_CONFIRM
 DRC,2026-06,I25159,Management Fees,I25159,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,7351.02
 DRC,2026-06,I25147,Consultants Fees,I25147,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
 DRC,2026-06,4000/000,Leasehold-Depreciation,4000/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+DRC,2026-07,B35140,MV-Cost Opening Balance,B35140,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,85650.0
+DRC,2026-07,B35160,MV Accum-Depr Open Balance,B35160,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-45020.59
+DRC,2026-07,B35210,Equip-Cost Open Balance,B35210,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,30480.2
+DRC,2026-07,B35220,Equip-Additions This Year,B35220,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+DRC,2026-07,B35240,Equip Accum-Depr,B35240,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-10663.14
+DRC,2026-07,B35170,Furn-Cost Open Balance,B35170,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,22046.53
+DRC,2026-07,B35180,Furn-Additions this year,B35180,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,4670.0
+DRC,2026-07,B35200,Furn Accum-Depreciation,B35200,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-4509.23
+DRC,2026-07,B35280,Comp Equip-Additions,B35280,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1390.0
+DRC,2026-07,B35290,Comp Equip- Accum Depreciation,B35290,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-1060.15
+DRC,2026-07,B35350,Leased Prem-Improvements,B35350,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+DRC,2026-07,B35370,Lease Improv - Accum Ammortization,B35370,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-284.41
+DRC,2026-07,B55570,Due to/from ZAAC,B55570,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-14702.0
+DRC,2026-07,B55480,Drs-Income Control,B55480,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,289077.79
+DRC,2026-07,B55580,Other Receivable,B55110,ALIAS_BY_DESCRIPTION,,Pack codes this account B55580; prior seed and account_map key it B55110,-105367.92
+DRC,2026-07,B70280,Prov-Sundries,B70280,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-11492.89
+DRC,2026-07,B55360,Deposits,B55360,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,83875.0
+DRC,2026-07,B60090,EQUITY BANK - OFFICE,B60090.2,DUP_SPLIT,REVIEW,Separated from EQUITY BANK; needs its own account_map row,4517.07
+DRC,2026-07,B60110,EQUITY BANK CLIENT,B60110,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,19085.09
+DRC,2026-07,B60430,RAW BANK,B60430,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,11598.81
+DRC,2026-07,B60190,Petty Cash - Kinshasa,B60190,EXISTING_SEED,,Prior seed collapsed both petty-cash accounts under B60190 (both mapped office_cash),8108.66
+DRC,2026-07,B60191,Petty Cash - Lubumbashi,B60191,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,2911.38
+DRC,2026-07,B60192,Petty Cash - Goma,B60192,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.6
+DRC,2026-07,B60193,Petty Cash - Bukavu,B60193,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,301.0
+DRC,2026-07,B70400,Other Payables-Refunds,B70400,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+DRC,2026-07,B75120,Tax Provision-Other,B75120,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,7825.06
+DRC,2026-07,B80170,VAT Control Account,B80170,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,41437.84
+DRC,2026-07,B10120,Ord.Share Capital,B10120,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-595160.55
+DRC,2026-07,B15110,Distr.Reser-RetainedInc,B15110,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,366050.08
+DRC,2026-07,B65130,Due from/to AFRIB Transactional,B65130,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+DRC,2026-07,B65160,Placements,B65160,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,856.08
+DRC,2026-07,B70290,Premiums payable,B70290,EXISTING_SEED,,,-17176.58
+DRC,2026-07,B70235,Salaries and Wages,B70235,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,8860.54
+DRC,2026-07,B70290,Other payables,B70290.2,DUP_SPLIT,REVIEW,June only; client reuses B70290,-204797.5
+DRC,2026-07,1020/080,Commission,1020/080,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-347889.91
+DRC,2026-07,I25001,Emol.Pack-Salaries,I25001,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,55523.96
+DRC,2026-07,I25003,Emol.Pack-Med.Contribut.,I25003,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+DRC,2026-07,I25005,Emol.Pack-Other,I25005,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+DRC,2026-07,I25019,Bonuses & 13th cheque,I25019,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+DRC,2026-07,I25020,Temporary Staff-General,I25020,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,6468.63
+DRC,2026-07,I25026,Training EXTERNAL,I25026,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,2656.64
+DRC,2026-07,I25029,Other Staff Costs,I25029,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,34104.54
+DRC,2026-07,I25032,Commissions - Lead,I25032,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+DRC,2026-07,I25072,Prem-Electricity,I25072,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1869.37
+DRC,2026-07,I25075,Prem-Water,I25075,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,804.08
+DRC,2026-07,I25080,Prem-Parking(EXTERNAL),I25080,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+DRC,2026-07,I25079,Prem-Rental(EXTERNAL),I25079,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,36200.0
+DRC,2026-07,I25082,Prem-Rental(INTERNAL),I25082,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,15950.0
+DRC,2026-07,I25111,Printing-General,I25111,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,3332.72
+DRC,2026-07,I25114,Stationery-General,I25114,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,703.04
+DRC,2026-07,I25141,Prof.Fees-Audit Fees,I25141,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,4916.69
+DRC,2026-07,I25144,Prof.Fees-Legal,I25144,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,14000.0
+DRC,2026-07,I25145,Prof.Fees-Other,I25145,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,51156.9
+DRC,2026-07,I25181,Trav. Air Fares,I25181,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,7290.0
+DRC,2026-07,I25182,Trav. Accom.,I25182,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,20804.0
+DRC,2026-07,I25193,Conference Attended by us,I25193,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,300.0
+DRC,2026-07,I25203,Bus.Advert-General,I25203,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,19954.0
+DRC,2026-07,I25205,Sponsorships-General,I25205,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,250.0
+DRC,2026-07,I25206,Printing-Brochures,I25206,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,15.0
+DRC,2026-07,I25232,Telephone-Variable,I25232,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,7740.0
+DRC,2026-07,I25236,Courier Services Cost,I25236,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+DRC,2026-07,I25261,MV-Depreciation,I25261,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,12490.59
+DRC,2026-07,I25263,Bldg.Imp.(L/Hold)-Deprec,I25263,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,284.41
+DRC,2026-07,I25264,Furn-Depreciation,I25264,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1304.73
+DRC,2026-07,I25265,Equip-Depreciation,I25265,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,3927.7
+DRC,2026-07,I25291,Entertainment-(IN TOWN),I25291,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,2389.52
+DRC,2026-07,I25293,Entertainment-(OUT OF TOWN),I25293,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,50.0
+DRC,2026-07,I25294,Christmas Party,I25294,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+DRC,2026-07,I25358,Subscriptions General,I25358,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,6070.0
+DRC,2026-07,I25360,Bank Charges,I25360,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,9188.24
+DRC,2026-07,I25365,Donations-Charitable,I25365,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,300.0
+DRC,2026-07,I25367,Summary:Gen Exp Other,I25367,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,23405.55
+DRC,2026-07,I25373,Other/Miscellaneous Suspense Acc,I25373,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,85.0
+DRC,2026-07,I25378,LOSS/GAIN ON DISPOSAL,I25378,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+DRC,2026-07,I25401,Insurance-P.I.,I25401,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+DRC,2026-07,I25421,Toner,I25421,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,690.0
+DRC,2026-07,I25422,PC Supplies,I25422,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1000.0
+DRC,2026-07,I25423,Comp-Depreciation,I25423,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1060.15
+DRC,2026-07,I25429,Software Licence Fees,I25429,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1287.55
+DRC,2026-07,I25452,MV-Leasing Costs,I25452,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,293.39
+DRC,2026-07,I25453,MV-Fuel Costs,I25453,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1731.95
+DRC,2026-07,I25454,MV-Running Costs,I25454,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,3065.38
+DRC,2026-07,I25455,MV - Leasing Costs (non personnel),I25455,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1595.68
+DRC,2026-07,I25456,MV - Fuel Costs (non personnel),I25456,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,2823.18
+DRC,2026-07,I25457,MV - Running Costs (non personnel),I25457,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,3724.36
+DRC,2026-07,I25159,Management Fees,I25159,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,8576.19
+DRC,2026-07,I25147,Consultants Fees,I25147,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+DRC,2026-07,4000/000,Leasehold-Depreciation,4000/000,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
 ZATL,2026-01,B10115,Funds Awaiting Capitalisation,B10115,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-199605700.0
 ZATL,2026-01,B10120,Ord.Share Capital,B10120,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-100394300.0
 ZATL,2026-01,B15110,Distr.Reser-Retained Inc,B15110,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,150668510.67
@@ -5042,3 +5893,79 @@ ZATL,2026-06,I25429,Software Licence Fees,I25429,SOURCE_CODE_CONFIRMED,,Source c
 ZATL,2026-06,I25455,MV - Leasing Costs (non personnel),I25455,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,3525200.0
 ZATL,2026-06,I25352,Penalties,I25352,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,205450.0
 ZATL,2026-06,I25358,Subscriptions General,I25358,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1441666.68
+ZATL,2026-07,B10115,Funds Awaiting Capitalisation,B10115,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-199605700.0
+ZATL,2026-07,B10120,Ord.Share Capital,B10120,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-100394300.0
+ZATL,2026-07,B15110,Distr.Reser-Retained Inc,B15110,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,152382873.0
+ZATL,2026-07,B35170,Furn-Cost Open Balance,B35170,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,33846422.0
+ZATL,2026-07,B35200,Furn Accum-Depreciation,B35200,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-33035478.26
+ZATL,2026-07,B35210,Equip-Cost Open Balance,B35210,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,14095033.0
+ZATL,2026-07,B35240,Equip Accum-Depr,B35240,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-7906672.5
+ZATL,2026-07,B35420,Deferred Tax,B35420,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,28096678.41
+ZATL,2026-07,B35421,Due from/to directors,B35421,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-4760000.0
+ZATL,2026-07,B55422,Due to/from ZAAC TZ,B55422,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,198103174.82
+ZATL,2026-07,B55427,Due from/to ZAAC Zanzibar,B55427,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-31774612.0
+ZATL,2026-07,B55450,Due from Shareholders,B55450,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,100394300.0
+ZATL,2026-07,B55480,Drs-Income Control,B55480,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,8937505.68
+ZATL,2026-07,B55570,Due to/from ZAAC,B55570,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-250728328.05
+ZATL,2026-07,B60190,PETTY CASH - OFFICE,B60190,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,7945283.66
+ZATL,2026-07,B60260,UBA Office Account,B60260,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,37965202.31
+ZATL,2026-07,B65150,Fixed Deposit Account,B65150,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,10000000.0
+ZATL,2026-07,B65170,Instalment Tax Prepaid,B65170,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZATL,2026-07,B65180,Debtors Prepaid other,B65180,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,314982.99
+ZATL,2026-07,B65200,Provision for Bad Debts,B65200,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-35186385.0
+ZATL,2026-07,B65290,Withholding Income Tax,B65290.2,DUP_SPLIT,REVIEW,Previously collapsed with the 5% account,0.0
+ZATL,2026-07,B70280,Prov-Sundries,B70280,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-4527388.25
+ZATL,2026-07,B75120,Tax Provision-Other,B75120,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,3745306.86
+ZATL,2026-07,B55340,Accrued interest,B55340.2,DUP_SPLIT,REVIEW,,0.0
+ZATL,2026-07,B80170,VAT Control Account,B80170,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-1140252.33
+ZATL,2026-07,B55110,Other Receivable,B55110,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,180000.0
+ZATL,2026-07,B55150,Drs-Gen.Bad Debt Prov.,B55150,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZATL,2026-07,B55425,Due from/to ZATL,B55425,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-166328669.52
+ZATL,2026-07,B55340,Interest Receivable,B55340,EXISTING_SEED,,,253928.58
+ZATL,2026-07,B55400,Drs Prepaid - Insurance Other,B55400,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,4842024.8
+ZATL,2026-07,B55490,DUE TO/FROM ZAMARA HOLDING CO.,B55490,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,199605700.0
+ZATL,2026-07,B65290,Withholding Income Tax - 5%,B65290,EXISTING_SEED,,,45768868.13
+ZATL,2026-07,,Withholding tax - 10%,ZATL-WHT10,BLANK_CODE_PINNED,REVIEW,Blank A/C No in source,-297675.0
+ZATL,2026-07,B70193,Withholding tax - 15%,B70193,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,281250.0
+ZATL,2026-07,B70220,National Social Security Fund,B70220,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-0.16
+ZATL,2026-07,B70230,Paymaster General (PAYE,B70230,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-1524941.32
+ZATL,2026-07,B70235,Salaries and Wages,B70235,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-0.1
+ZATL,2026-07,B70340,CRS-Trade (Operating),B70340,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-364036.97
+ZATL,2026-07,B80140,Current Tax,B80140,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,150000.0
+ZATL,2026-07,I10060,Actuarial - Once-off,I10060,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-168829017.1
+ZATL,2026-07,I10121,Interest Income,I10121,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,-341456.08
+ZATL,2026-07,I10094,Other Incomes,I10094,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZATL,2026-07,I25001,Emol.Pack-Salaries,I25001,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,45191265.01
+ZATL,2026-07,I25002,Emol.Pack-Other,I25002,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,660000.0
+ZATL,2026-07,I25024,Welfare-General,I25024,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1000000.0
+ZATL,2026-07,I25004,Emol.Pack-Pens.Contribut.,I25004,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,4498126.52
+ZATL,2026-07,I25012,WCA,I25012,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,228742.76
+ZATL,2026-07,I25026,Training EXTERNAL,I25026,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZATL,2026-07,I25071,Prem-Cleaning,I25071,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1050000.0
+ZATL,2026-07,I25072,Prem-Electricity,I25072,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1263000.0
+ZATL,2026-07,I25074,Prem-Rates,I25074,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1764000.0
+ZATL,2026-07,I25079,Prem-Rental(EXTERNAL),I25079,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,7056000.0
+ZATL,2026-07,I25080,Prem-Parking(EXTERNAL),I25080,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,600000.0
+ZATL,2026-07,I25114,Stationery-General,I25114,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,4444000.0
+ZATL,2026-07,I25141,Prof.Fees-Audit Fees,I25141,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,4375000.0
+ZATL,2026-07,I25142,Prof.Fees-Directors Fees,I25142,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,11250000.0
+ZATL,2026-07,I25145,Prof.Fees-Other,I25145,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1341666.68
+ZATL,2026-07,I25158,Prof.Fees-Legal Non Tax Deduct,I25158,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1243500.0
+ZATL,2026-07,I25264,Furn-Depreciation,I25264,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,87332.28
+ZATL,2026-07,I25265,Equip-Depreciation,I25265,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1469604.5
+ZATL,2026-07,I25193,Conference Attended by Us,I25193,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,500000.0
+ZATL,2026-07,I25181,Trav. Air Fares,I25181,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,3125000.0
+ZATL,2026-07,I25182,Trav. Accom.,I25182,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,18986618.0
+ZATL,2026-07,I25232,Telephone-Variable,I25232,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,2415000.0
+ZATL,2026-07,I25291,Entertainment-(IN TOWN),I25291,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1755203.4
+ZATL,2026-07,I25360,Bank Charges,I25360,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1821256.86
+ZATL,2026-07,I25203,Bus.Advert-General,I25203,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,200000.0
+ZATL,2026-07,I25367,Summary:Gen Exp Other,I25367,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,16950833.0
+ZATL,2026-07,I25381,Management Fees,I25381,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,15769052.85
+ZATL,2026-07,I25401,Insurance-P.I.,I25401,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,4888359.86
+ZATL,2026-07,I25428,Software Maintenance,I25428,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,95900.0
+ZATL,2026-07,I25429,Software Licence Fees,I25429,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,0.0
+ZATL,2026-07,I25455,MV - Leasing Costs (non personnel),I25455,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,4159800.0
+ZATL,2026-07,I25352,Penalties,I25352,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,205450.0
+ZATL,2026-07,I25358,Subscriptions General,I25358,SOURCE_CODE_CONFIRMED,,Source code and description both match the prior seed,1441666.68
+ZATL,2026-07,,Profit,ZATL-PROFIT,SYNTHETIC,REVIEW,Blank A/C No in source and no prior seed match; needs an account_map row,-9334094.78

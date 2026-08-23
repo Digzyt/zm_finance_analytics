@@ -76,6 +76,7 @@ MONTH_FILES = [
     ('2026-04', '2026-04-30', 'April 2026 Consolidated Accounts.xlsx'),
     ('2026-05', '2026-05-31', 'May 2026 Consolidated Accounts.xlsx'),
     ('2026-06', '2026-06-30', 'June 2026 Consolidated Accounts.xlsx'),
+    ('2026-07', '2026-07-31', 'July 2026 Consolidated Accounts.xlsx'),
 ]
 
 # tab -> (seed suffix, company_name used in the models, currency, synthetic-code prefix)

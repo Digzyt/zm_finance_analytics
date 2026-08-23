@@ -242,7 +242,7 @@ To rebuild only the management P&L after editing its inputs: `dbt build --select
 
 ## What the Power BI Engineer owns
 
-Once `dbt build` succeeds, connect Power BI to the Postgres database (Import is fine at these volumes). Import schemas `consolidation`, `subsidiary`, `core`, `ref`.
+Once `dbt build` succeeds, connect Power BI to the Postgres database (Import is fine at these volumes). Import schemas `consolidation`, `subsidiary`, `core`, `ref`, and `data_quality` (the new Data Quality page — see its own section below).
 
 ### The golden rule: filter on `period`
 
@@ -369,6 +369,67 @@ Reconciliation status to be transparent about with Finance (as at 2026-04 vs the
 - **Cumulative, not monthly-movement, in the marts.** A period row is YTD-to-that-month. To show a single month's movement in BI, subtract the prior period (or add a measure that does).
 - **The mapping is provisional (~99% by value for the standard entities).** Treat numbers as demonstrably-shaped, not signed-off, until Finance confirms the account map.
 - **Reload mechanics.** After the data engineer runs `dbt build`, Power BI needs a refresh to pick up new data. Schedule once past the demo.
+
+---
+
+## Data quality control board — the Data Quality Power BI page
+
+A page that shows every reconciliation control, tested on each build, with the records
+that failed one click away. It maps 1:1 to the 26-control Reconciliation Control Matrix
+(governance pack sheet 11, `C-01`…`C-26`), so the page *is* the control matrix, live.
+
+**Bring in two tables from the `data_quality` schema. No new modelling on your side.**
+
+| Table | What it is |
+|---|---|
+| **`data_quality.dq_test_results`** | The **summary** — one row per control: `records_tested`, `records_passed`, `records_failed`, `pass_rate_pct`, `status`. This is the table behind the main visual. |
+| **`data_quality.dq_test_failures`** | The **detail** — one row per failing record, with the control's title/block/severity attached. This is the drill-through target. |
+
+(There is also `data_quality.dq_test_evaluations` — the atomic pass/fail rows behind the
+SQL controls, all periods; keep it only if you want a trend visual. The page needs the two above.)
+
+Relationship: `dq_test_results[test_id]` → `dq_test_failures[test_id]` (one-to-many, single direction).
+
+### `dq_test_results` — the columns you'll use
+
+| Column | Meaning |
+|---|---|
+| `test_id` (= `control_id`) | control id, e.g. `C-20` |
+| `block` | `A. TB intake` · `B. Manual overlays` · `C. Translation & mapping` · `D. Output & release` — group rows on this |
+| `title`, `category` | control name and short category |
+| `records_tested` / `records_passed` / `records_failed` | the counts (null for a manual control) |
+| `pass_rate_pct` | passed ÷ tested, one decimal — put a data bar on it |
+| `status` | `PASS` · `FAIL` · `WARN` · `REVIEW` · `BLOCKED` · `MANUAL` · `NOT_LIVE` · `NOT_OPERATING` |
+| `severity` | High / Medium / Low / Gate |
+| `automation` | `SQL (dbt)` (recomputes every build) · `Script` · `Manual` · `Blocked` |
+| `as_of` | the period the evidence covers — a control reading an earlier month than the current close is stale on purpose, not a bug |
+| `tolerance`, `exception_codes`, `note`, `method`, `evidence`, `owner_preparer`, `owner_reviewer` | context, from the catalog seed |
+
+`dq_test_failures` columns: `test_id · block · title · severity · period · entity · unit_type · unit_key · description · metric_value · threshold · fail_reason · exception_codes`. `metric_value` is the number that failed; `fail_reason` is the plain-English why.
+
+### Building the page
+
+1. **KPI cards** over `dq_test_results`:
+   - `Controls = DISTINCTCOUNT(dq_test_results[test_id])`
+   - `Failing = CALCULATE(DISTINCTCOUNT(dq_test_results[test_id]), dq_test_results[status]="FAIL")`
+   - `Passing = CALCULATE(DISTINCTCOUNT(dq_test_results[test_id]), dq_test_results[status]="PASS")`
+   - `Need attention = CALCULATE(DISTINCTCOUNT(dq_test_results[test_id]), dq_test_results[status] IN {"WARN","REVIEW","BLOCKED"})`
+2. **Summary table / matrix** over `dq_test_results`, grouped by `block`, columns `test_id, title, records_tested, records_passed, records_failed, pass_rate_pct, status, automation, as_of`.
+   - Conditional-format the `status` cell background by rule: PASS → green, FAIL → red, WARN/REVIEW/BLOCKED → amber, MANUAL/NOT_LIVE/NOT_OPERATING → grey.
+   - Data bar on `pass_rate_pct`. Sort by `test_id`.
+3. **Drill-through to the records.** Add a page "Failure detail", put `dq_test_failures[test_id]` in its Drillthrough well, and a table over `dq_test_failures` (`period, entity, unit_key, description, metric_value, fail_reason`). Right-click a control row → Drill through → Failure detail lands filtered to that control. Sort detail by `ABS(metric_value)` desc so material items lead.
+4. **Slicers:** `block` and `status`; add `period` if you want to view a prior close.
+
+The visual reference is **`Internal/DataQuality_PowerBI_Mockup.html`** — the intended layout and drill-through on the real July numbers. Full step-by-step in **`Internal/DataQuality_PowerBI_BuildGuide.md`**.
+
+### What it looked like at first build (July 2026)
+
+26 controls — **9 passing · 5 failing · 7 review/blocked**, the rest manual. Failing: `C-05` entity TB balancing (Malawi and ZATL July don't foot — the client's new "Profit" plug lines), `C-20` mapping coverage (22 unmapped accounts carrying a balance in July), `C-22` those unmapped foreign balances masking in the translation reserve, `C-25` report-line-map orphans (73/363), `C-11` three April elimination journals out by sub-shilling.
+
+### Two things to know
+
+- **10 controls are live SQL** (recompute on every `dbt build`): C-05, C-08, C-11, C-12, C-17, C-18, C-20, C-21, C-22, C-25. The other 16 are verified by the reseed/recon scripts or a manual attestation and carried in the `dq_external_results` seed with an `as_of` date — refresh them from that period's script outputs before you refresh the dataset (see the build guide, §5).
+- **Overlay-dependent controls read an earlier `as_of`** until their seeds are extended for the new month — `C-08` (accruals), `C-11` (eliminations), `C-12` (budget). The page shows this rather than hiding it.
 
 ---
 

@@ -1,0 +1,17 @@
+test_id,period,records_tested,records_passed,records_failed,status,run_basis,as_of,note
+C-01,2026-07,7,6,1,WARN,Script,2026-07,January period taken from the file name; all other months resolve from the workbook.
+C-02,2026-07,,,,REVIEW,Script,2026-06,"3 layout fallbacks, 4 heading rows, 1 total row open; refresh from the reseed audit for July."
+C-03,2026-07,,,,REVIEW,Script,2026-07,Appearances/disappearances monitored via the reseed audit; 24 new accounts in July (see C-20).
+C-04,2026-07,,,,PASS,Script,2026-07,Duplicate/reused client codes resolved at load via code_overrides.csv; renames confirmed in the reseed audit.
+C-06,2026-07,77,77,0,PASS,Script,2026-07,All 77 entity-periods (11 entities x 7 months) tie to the pack at account level.
+C-07,2026-07,,,,BLOCKED,Design gap,2026-07,No fiscal-year reset in the model; blocked on D5 (group financial-year start).
+C-09,2026-07,,,,PASS,Script,2026-07,Accrual and netted columns detected across all packs; positional resolutions confirmed.
+C-10,2026-07,18,,,REVIEW,Script,2026-07,Computed-tax rates taken from the client formula but not yet confirmed by Finance.
+C-13,2026-04,,,,MANUAL,Manual,2026-04,"Provision ties to KES 115,959,569 (April); ZAAC ageing query open (EXC-433)."
+C-14,2026-04,,,,MANUAL,Manual,2026-04,Exceptional items loaded (April); authorisation route not yet agreed (EXC-434).
+C-15,2026-07,,,,NOT_LIVE,Manual,2026-07,Cutover governance prepared; applies at Business Central cutover (EXC-435).
+C-16,2026-07,,,,NOT_OPERATING,Manual,2026-07,Revenue-stream allocation not returned; revenue shown at entity grain (EXC-436).
+C-19,2026-07,,,,REVIEW,Script,2026-06,"871 of 4,785 client rate references point at the wrong month; KES 779,966 confirmed effect."
+C-23,2026-06,66,66,0,PASS,Script,2026-06,66 of 66 entity-periods tied at last build; rerun the recon after the July build.
+C-24,2026-06,2484,2402,82,REVIEW,Script,2026-06,96.7% of line cells tie; 93.8% of the residual is client-side. Rerun for July.
+C-26,2026-07,,,,MANUAL,Gate,2026-07,"Release gate not yet operating; awaits owners, tolerances and sign-off points."

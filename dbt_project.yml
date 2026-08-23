@@ -54,6 +54,10 @@ models:
       consolidation:
         +schema: consolidation
 
+    data_quality:
+      +schema: data_quality
+      +materialized: table
+
 # Seed configurations
 seeds:
   zamara_finance:
