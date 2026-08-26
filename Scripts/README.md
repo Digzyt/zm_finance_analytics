@@ -8,6 +8,7 @@ Six scripts, in the order a month runs through them:
 | `reseed_from_packs.py` | Rebuilding **all months from scratch** out of the `Consolidated Accounts` packs. Use after a source change or a restatement. |
 | `extract_accruals.py` | Deriving the client's accrual overlay from the entity TB tabs into its own seed, so Power BI can show Amount / Accruals / Amount After Accruals separately. **Run after the reseed** — it resolves account codes through `reseed_audit.csv`. |
 | `extract_budget.py` | Rebuilding `budget.csv` from the *Budget and LYTD Comparison* workbook. Run whenever Finance revises the budget. |
+| `extract_debtor_analysis.py` | Rebuilding `debtor_analysis.csv` from the standardized debtor intake (`Internal/Debtors_Master_Data_Template.xlsx`). Run each month when the debtor pack is issued. |
 | `extract_client_statements.py` | Pulling the client's own `SCI Detailed` / `SFP Detailed`, per entity per month, into a spreadsheet. The benchmark. |
 | `compare_dbt_to_client.py` | Reconciling the dbt subsidiary SCI/SFP marts against that extract, line by line, and writing the recon workbook. |
 
@@ -351,3 +352,26 @@ months). Point the script at **one workbook** per run.
 - Column detection is header-driven (`CODE_HDRS`, `DESC_HDRS`, `AMT_POST`, `AMT_PLAIN`,
   `KES_HDRS`). If a new pack uses a header word we haven't seen, add it to the relevant set.
 - Section-header/total rows are skipped via `SKIP_DESC`.
+
+---
+
+## `extract_debtor_analysis.py` — the aged debtor analysis
+
+```bash
+python Scripts/extract_debtor_analysis.py            # dry run: prints row counts, entity totals, DQ notes
+python Scripts/extract_debtor_analysis.py --write    # writes seeds/reference/debtor_analysis.csv
+dbt seed --full-refresh --select debtor_analysis && dbt build --select stg_debtor_analysis+
+```
+
+Reads the standardized intake `Internal/Debtors_Master_Data_Template.xlsx` (sheet
+`Debtors_Data_Entry`), one row per aged debtor line per reporting date, and writes the
+`debtor_analysis` reference seed. Debtors are a designed manual input (BC is still in
+progress), so this is part of the monthly pack, not a system feed.
+
+- **Entity names are mapped to the canonical `entity.csv` codes** (Tanzania -> ZATL, Malawi
+  -> MALAWI, …) so the marts join `dim_entity` / `fx_rate` cleanly.
+- `period` is derived from the reporting date (`01/07/2026` -> `2026-07`) and stored ISO.
+- Amounts stay in each entity's **functional currency**; nothing is translated here.
+- Non-numeric cells in a numeric column are read as NULL and reported in the dry run's
+  data-quality notes (the template has leaked labels like 'IPMI' and working notes like
+  'whtax' into the `Collections` column on a few rows).

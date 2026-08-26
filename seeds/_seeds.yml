@@ -103,6 +103,26 @@ seeds:
   - name: elimination_journal
     description: "Intercompany elimination journal. Empty today; populated as IC pairs are identified in Module A."
 
+  - name: debtor_analysis
+    description: >
+      The client's aged debtor analysis, one row per client per reporting date,
+      in each entity's FUNCTIONAL currency. Read from the standardized intake
+      `Internal/Debtors_Master_Data_Template.xlsx` by Scripts/extract_debtor_analysis.py
+      — do not hand-edit. Entity names are the canonical codes (entity.csv);
+      the twelve ageing buckets are age_0_30 … age_gt_3y. Sourced by hand each
+      month (BC is still in progress), so this is a designed manual input, not a
+      stopgap. Consumed by stg_debtor_analysis -> rpt_debtor_analysis /
+      rpt_debtor_ageing for Power BI.
+    columns:
+      - name: period
+        tests: [not_null]
+      - name: company_name
+        tests: [not_null]
+      - name: reporting_date
+        tests: [not_null]
+      - name: client_name
+        tests: [not_null]
+
   # --- bronze (per-entity raw — replaced by Fabric tables at switch time) ---
   - name: gl_entry_zaac
     description: "BC Table 17 (G/L Entry) for ZAAC, loaded from workbook for the demo."

@@ -30,3 +30,52 @@ models:
       - dbt_utils.unique_combination_of_columns:
           combination_of_columns: [company_name, period, local_account_no]
           quote_columns: true
+
+  - name: rpt_debtor_analysis
+    description: >
+      The client-grain debtor analysis, final for Power BI — one row per
+      (company, period, client). Carries the twelve ageing buckets, reported
+      total, collections and outstanding balance in each entity's FUNCTIONAL
+      currency, plus derived analytics (overdue amount/share, current share,
+      collection rate) and the entity name/region via dim_entity. Companion to
+      rpt_debtor_ageing (the same exposure in band form); the two reconcile by
+      construction.
+      NOTE — this is LINE grain, not unique per client: a client can appear more
+      than once in a period (different department/division, or more than one
+      receivable line), exactly as the client's pack lists them. Aggregate over
+      client_name / department in Power BI; there is no single natural key on a
+      line, so no uniqueness test is asserted here.
+    columns:
+      - name: period
+        tests: [not_null]
+      - name: company_name
+        tests: [not_null]
+      - name: client_name
+        tests: [not_null]
+      - name: total
+        tests: [not_null]
+
+  - name: rpt_debtor_ageing
+    description: >
+      The aged debtor exposure in BAND form, final for Power BI — one row per
+      (company, period, aging_band) at department/division grain, from the long
+      unpivot int_debtor_ageing. Carries the band amount in functional currency,
+      band ordering and classification (current / overdue, coarse period band),
+      plus a within-group share. Reconciles to rpt_debtor_analysis by
+      construction over the same bands.
+    columns:
+      - name: period
+        tests: [not_null]
+      - name: company_name
+        tests: [not_null]
+      - name: ageing_band
+        tests: [not_null]
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - company_name
+            - period
+            - department_unit
+            - division_name
+            - ageing_band
+          quote_columns: true

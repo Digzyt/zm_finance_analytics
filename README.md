@@ -85,6 +85,12 @@ core.fct_trial_balance      company × PERIOD × statement_line spine fact
 subsidiary.rpt_subsidiary_tb  ACCOUNT-grain TB, off int_sign_normalisation +
                               stg_tb_accrual directly (not fct_trial_balance) —
                               debit-positive, foots to zero, five client columns
+
+DEBTOR ANALYSIS  (a separate manual-input branch, not part of the TB chain:
+     ref.debtor_analysis ─▶ staging.stg_debtor_analysis ─▶ subsidiary.rpt_debtor_analysis
+            functional-currency aged debtor lines                (client grain)     +
+                                                          └─▶ int_debtor_ageing ─▶ subsidiary.rpt_debtor_ageing
+                                                                                     (band grain)
 ```
 
 **Every `rpt_*` table has a `period` column** valued `2026-01` … `2026-06`. Each period is the **cumulative year-to-date position as at that month-end**, translated at that month's FX rate. `select * from consolidation.rpt_consolidated_sci` returns all six months; filter `where period = '2026-03'` for one month.
@@ -173,7 +179,7 @@ datamodel/
 │                                   #   tb_accrual, elimination_journal, bad_debt_provision,
 │                                   #   manual_accruals, manual_pl_adjustments,
 │                                   #   report_line, report_line_map, budget,
-│                                   #   budget_subsidiary
+│                                   #   budget_subsidiary, debtor_analysis
 │
 ├── macros/
 │   ├── generate_schema_name.sql
@@ -186,6 +192,7 @@ datamodel/
 │   ├── reseed_from_packs.py        # packs  -> bronze seeds  (run FIRST)
 │   ├── extract_accruals.py         # packs  -> tb_accrual.csv (needs reseed_audit.csv)
 │   ├── extract_budget.py           # budget workbook -> budget.csv (MTD -> YTD)
+│   ├── extract_debtor_analysis.py  # template -> debtor_analysis.csv (debtor analysis)
 │   ├── extract_client_statements.py # packs -> the client-side benchmark
 │   ├── compare_dbt_to_client.py    # marts vs benchmark -> the recon workbook
 │   ├── code_overrides.csv          # pinned codes for duplicate / blank-code rows
@@ -260,6 +267,8 @@ Every reporting table has a `period` column (`'2026-01'` … `'2026-06'`). Each 
 | Subsidiary Balance Sheet (per entity) | `subsidiary.rpt_subsidiary_sfp` | Slice by `company_name` + `period` |
 | **Individual Trial Balance (per entity)** | **`subsidiary.rpt_subsidiary_tb`** | **Account grain. See below.** |
 | **KES Consolidated TB** | **`subsidiary.rpt_subsidiary_tb`** | A matrix: `company_name` on columns, `amount_after_accruals_kes` as the value. No new model needed. |
+| **Debtor Analysis — client grain** | **`subsidiary.rpt_debtor_analysis`** | Line grain, one row per debtor line. Slice by `company_name` + `period` (2026-07 now). Functional currency. See the Debtor Analysis section. |
+| **Debtor Analysis — ageing profile** | **`subsidiary.rpt_debtor_ageing`** | Band grain. Reconciles to `rpt_debtor_analysis` by construction. |
 | Entity register / slicers | `core.dim_entity` | Includes `region` (Kenya / MENA / Africa) |
 | Statement-line hierarchy (rows) | `core.dim_statement_line` | `category_l1 → l2 → l3 → line_label`, plus `tb_category` |
 | Date / period dimension | `core.dim_calendar` | |
@@ -318,6 +327,39 @@ Two things to know:
 - **It is the only place unmapped accounts are visible.** Excluding them it ties to `rpt_subsidiary_sci` / `_sfp` in all 66 entity-periods; the unmapped rows appear here and nowhere else, which makes this the one table where you can see what is *not* reaching the statements.
 
 Note `accrual_column_label` may read `derived: after - amount (…)`. That flags a row where the client's netted column moved but their accrual column did not, so our decomposition is derived rather than lifted — the reported figure is still theirs.
+
+### Debtor Analysis
+
+The aged debtor analysis travels as the **`debtor_analysis`** reference seed (one row
+per debtor line, per entity, in FUNCTIONAL currency), built by
+`Scripts/extract_debtor_analysis.py` from the standardized intake
+`Internal/Debtors_Master_Data_Template.xlsx`. It is a designed manual input (BC is
+still in progress), not a system feed. Two marts expose it to Power BI:
+
+| Mart | Grain | Use for |
+|---|---|---|
+| `subsidiary.rpt_debtor_analysis` | company × period × **debtor line** (a client can appear more than once — different department/division or premium line) | Client drill-down: aged buckets, reported total, collections, outstanding balance, and derived `overdue_amount` / `overdue_share` / `current_share` / `collection_rate`. Entity name + region via `dim_entity`. |
+| `subsidiary.rpt_debtor_ageing` | company × period × department/division × **ageing band** | Ageing-profile waterfall by band (`band_label`, `band_order`, `is_current` / `is_overdue`, coarse `period_class`) and `band_share`. |
+
+Both read `stg_debtor_analysis` and reconcile by construction: the band sums in
+`rpt_debtor_ageing` equal the bucket sums in `rpt_debtor_analysis`.
+
+**Basis and conventions:**
+- **Functional currency**, exactly as the client's pack states it (KES, MWK, CFA,
+  UGX, AED, …). The group-currency view is deliberately not built — the FX basis
+  for *debtor balances* (as opposed to the TB/SCI/SFP rules) is still open with
+  Finance.
+- **`period` = `2026-07`** at present (reporting date 2026-07-01). Slice on it.
+- The twelve buckets are `age_0_30 … age_gt_3y`. The stated `total` is
+  authoritative; `age_bucket_sum` is a diagnostic. On Uganda / MENA rows the
+  client's own `Total` exceeds the bucket sum (their source pack does the same),
+  so `total` is preserved as-stated.
+- `os_balance` is filled from `Total − Collections` where the template left it
+  blank — an identity that holds on every row where both were populated.
+
+**To load a new month:** place the new template at `Internal/Debtors_Master_Data_Template.xlsx`,
+run `python Scripts/extract_debtor_analysis.py --write`, then `dbt seed --full-refresh
+--select debtor_analysis && dbt build --select stg_debtor_analysis+`. No model changes.
 
 ### Grouping rows the way Finance does
 

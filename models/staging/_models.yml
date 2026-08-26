@@ -69,3 +69,19 @@ models:
       The client's Accruals column, cross-joined onto the period spine like
       stg_gl_entry so it accumulates the same way. Zero for the eight entities whose
       tabs have no accrual column.
+
+  - name: stg_debtor_analysis
+    description: >
+      The client's aged debtor analysis, normalised from the debtor_analysis
+      reference seed (one row per client per reporting date, functional
+      currency). Casts types, derives a bucket-sum diagnostic, and fills a
+      blank O/S Balance as Total - Collections (an identity that holds wherever
+      the template populated both). Grain: company_name x period x client_name.
+      Point-in-time snapshot keyed by period, not accumulated on the period spine.
+    columns:
+      - name: period
+        tests: [not_null]
+      - name: company_name
+        tests: [not_null]
+      - name: client_name
+        tests: [not_null]
